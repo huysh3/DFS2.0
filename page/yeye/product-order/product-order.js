@@ -37,11 +37,11 @@ var pageObject = {
               order_id: _this.data.order_id
             },
             success(res) {
-              // if (res.data == 'success') {
-              //   _this.setData({
-              //     canUse: false
-              //   })
-              // }
+              if (res.data == 'success') {
+                _this.setData({
+                  canUse: false
+                })
+              }
               console.log(res)
             }
           })
@@ -64,6 +64,12 @@ var pageObject = {
         _this.setData({
           orderInfo: res.data
         })
+        if (res.data.finished_time) {
+          _this.setData({
+            useTime: res.data.finished_time,
+            canUse: false
+          })
+        }
       }
     })
   },

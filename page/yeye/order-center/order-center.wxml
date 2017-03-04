@@ -17,6 +17,7 @@
   </navigator>-->
   <navigator wx:for="{{indexOrderList}}" class="order-list-item"  url="/page/yeye/product-order/product-order?order_id={{item.order.id}}">
     <view class="ol-img">
+      <image src="{{item.product.order_banner}}?imageView/1/w/690/h/230"></image>
     </view>
     <view class="ol-title-content">
       <view class="left-part">{{item.product.name}}</view>
