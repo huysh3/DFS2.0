@@ -1,0 +1,25 @@
+<!--<view class="page">
+  <navigator url="/page/yeye/product/product?product_id={{item.id}}" wx:for="{{lists}}" class="item">
+    <image src="{{item.enter_banner}}?imageView/1/w/690/h/530"></image>
+    <view class="desc">
+      <view class="name">{{item.name}}</view>
+      <view class="price-content">
+        <view class="price">￥{{item.price}}元</view>
+        <view class="worth">￥{{item.worth}}元</view>
+      </view>    
+    </view>
+  </navigator>
+</view>-->
+
+<view class="page">
+  <navigator url="/page/yeye/product/product?product_id={{item.id}}" wx:for="{{lists}}" class="item">
+    <!-- <image src="{{item.enter_banner}}?imageMogr2/format/webp"></image> -->
+    <image src="{{item.enter_banner}}?imageView/1/w/690/h/530"></image>
+    <view class="name">{{item.name}}</view>
+    <!-- <view class="desc">{{item.lights_text}}</view> -->
+    <view class="price-content">
+      <view class="price">￥{{item.price}}</view>
+      <view class="worth">￥{{item.worth}}</view>
+    </view>
+  </navigator>
+</view>

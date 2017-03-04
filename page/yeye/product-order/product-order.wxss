@@ -1,0 +1,209 @@
+.page {
+  background-color: #f0f0f0;
+}
+
+.clearfix {
+  display: block;
+  clear: both;
+}
+
+.order-header {
+  padding: 30rpx;
+  background-color: #fff;
+}
+
+.order-header .header-img {
+  width: 300rpx;
+  height: 170rpx;
+  float: left;
+}
+
+.takeplace {
+  width: 690rpx;
+  height: 1rpx;
+  background-color: #f0f0f0;
+  margin: 40rpx 0;
+  position: relative;
+  top: 20rpx;
+}
+
+.order-header .title {
+  float: left;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  width:360rpx;
+}
+
+.order-header .subtitle {
+  float: left;
+  font-size: 24rpx;
+  color: #666;
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+  width: 300rpx;
+  display: block;
+}
+
+.order-header button {
+  width: 690rpx;
+  margin-top: 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border: 0;
+}
+
+.beforeUse {
+  font-size: 28rpx;
+}
+
+.afterUse {
+  font-size: 26rpx;
+}
+
+.order-header .desc {
+  text-align: center;
+  font-size: 24rpx;
+  color: #999;
+  padding-top: 20rpx;
+}
+
+.shop-info {
+  background-color: #fff;
+  padding: 30rpx;
+  margin-top: 20rpx;
+  position: relative;
+}
+
+.shop-info button {
+  width: 690rpx;
+}
+
+.shop-name {
+  font-size: 28rpx;
+  color: #333;
+  font-weight: bold;
+  padding: 10rpx 0 40rpx 0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.shop-location {
+  font-size: 28rpx;
+  color: #333;
+  padding: 40rpx 0 40rpx 85rpx;
+  text-indent:-85rpx;
+  line-height: 40rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.shop-contact-phone {
+  font-size: 28rpx;
+  color: #333;
+  padding: 40rpx 0 10rpx 0;
+}
+
+.phone-call-btn {
+  position: absolute;
+  font-size: 28rpx;
+  color: #cca556;
+  right: 30rpx;
+  bottom: 40rpx;
+  font-weight: bold;
+}
+
+.phone-call-active {
+  color: rgba(218, 200, 162, 0.59);
+}
+
+.pay-info {
+  padding: 0 30rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+
+.pay-info .table {
+  display: flex;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.pay-info .table:last-child {
+  border-bottom: 0;
+}
+
+.table .left-part,
+.table .right-part {
+  color: #333;
+  font-size: 28rpx;
+  height: 110rpx;
+  line-height: 110rpx;
+  flex: 1;
+}
+
+.table .left-part {
+  text-align: left;
+}
+
+.table .right-part {
+  text-align: right;
+}
+
+.product-content, .reminder-content {
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding: 30rpx;
+}
+
+.product-content .title,
+.reminder-content .title {
+  font-size: 32rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.product-content .text-content {
+  text-align: center;
+}
+
+.reminder-content .text-content .text-title,
+.product-content .text-content .text-title {
+  padding: 40rpx 0 20rpx 0;
+  font-size: 28rpx;
+  color: #cca556;
+}
+
+.product-content .text-content .text-subtitle {
+  padding: 10rpx 0;
+  font-size: 28rpx;
+}
+
+.reminder-content .text-content {
+  padding-top: 20rpx;
+}
+
+.reminder-content .text-content .text-subtitle {
+  padding: 10rpx 0;
+  font-size: 28rpx;
+  text-align: left;
+}
+
+.bottom-content {
+  padding: 40rpx 0;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+.bottom-content .refund-btn {
+  font-size: 28rpx;
+  display: inline-block;
+  color: #333;
+  padding: 10rpx 40rpx;
+  border-radius: 4rpx;
+  border: 1rpx solid #333;
+  transition: .4s all ease;
+}
+
+.bottom-content .refund-btn-active {
+  background-color: #333;
+  color: #fff;
+}

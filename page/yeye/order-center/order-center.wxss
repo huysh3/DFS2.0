@@ -1,0 +1,67 @@
+.page {
+  background-color: #f0f0f0;
+}
+
+.takeplace-90 {
+  height: 90rpx;
+}
+
+.header {
+  background-color: #fff;
+  height: 80rpx;
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 750rpx;
+}
+
+.header-left-part,
+.header-right-part {
+  flex: 1;
+  text-align: center;
+  line-height: 80rpx;
+  display: inline-block;
+  border-bottom: 1rpx solid #eee;
+}
+
+.header-left-part.active,
+.header-right-part.active {
+  border-bottom: 6rpx solid #cca556;
+  color: #cca556;
+}
+
+.order-list-item {
+  background-color: #fff;
+  padding: 0 30rpx;
+  margin-bottom: 10rpx;
+}
+
+.ol-title-content {
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+  color: #333;
+}
+
+.ol-title-content .left-part {
+  float: left;
+  font-weight: bold;
+  font-size: 32rpx;
+}
+
+.ol-title-content .right-part {
+  float: right;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.ol-body-content {
+  color: #999;
+  padding: 24rpx 0;
+}
+
+.ol-body-content .text {
+  font-size: 26rpx;
+  line-height: 46rpx;
+  /*margin-top: 20rpx;*/
+}

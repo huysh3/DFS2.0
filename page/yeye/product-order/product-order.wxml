@@ -1,0 +1,43 @@
+<view class="page">
+  <view class="order-header">
+    <image class="header-img" src="{{orderInfo.object.product.enter_banner}}?imageView/1/w/300/h/170"></image>
+    <view class="title">{{orderInfo.object.product.name}}</view>
+    <navigator class="subtitle" url="/page/yeye/product/product?product_id={{product_id}}">查看套餐详情 ></navigator>
+    <view class="clearfix takeplace"></view>
+    <button class="beforeUse" wx:if="{{canUse}}" type="primary" size="default" bindtap="useVoucher">点击核销套餐</button>
+    <button class="afterUse" wx:if="{{!canUse}}" type="primary" disabled="true" size="default">已于【{{useTime}}】核销</button>
+    <view class="desc">请到店后，向商家出示并验证套餐</view>
+  </view>
+  <view class="shop-info">
+    <view class="shop-name">{{orderInfo.object.product.shop.name}}</view>
+    <view class="shop-location">地址：{{orderInfo.object.product.shop.address}}</view>
+    <view class="shop-contact-phone">电话：{{orderInfo.object.product.shop.consumer_contact_phone}}</view>
+    <view class="phone-call-btn" hover-class="phone-call-active" hover="true" bindtap="phoneCall">联系商家</view>
+  </view>
+  <view class="pay-info">
+    <view class="table">
+      <view class="left-part">支付金额</view>
+      <view class="right-part">{{orderInfo.object.product.price}}元</view>
+    </view>
+    <view class="table">
+      <view class="left-part">支付时间</view>
+      <view class="right-part">{{orderInfo.object.created_at}}</view>
+    </view>
+  </view>
+  <view class="product-content">
+    <view class="title">套餐详情</view>
+    <view class="text-content" wx:for="{{menu_content}}">
+      <view class="text-title">- {{item.sub_title}} -</view>
+      <view class="text-subtitle" wx:for="{{item.text}}">{{item}}</view>
+    </view>
+  </view>
+  <view class="reminder-content">
+    <view class="title">温馨提示</view>
+    <view class="text-content">
+      <view class="text-subtitle" wx:for="{{orderInfo.object.product.reminder_content}}">· {{item.text}}</view>
+    </view>
+  </view>
+  <view class="bottom-content">
+    <view class="refund-btn" bindtap="refundCall" hover-class="refund-btn-active" hover="true">申请退款</view>
+  </view>
+</view>

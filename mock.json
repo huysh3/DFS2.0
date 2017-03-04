@@ -1,0 +1,64 @@
+// product-list
+{
+  "lists": [
+    {
+      "id": 1,
+      "enter_banner": "http://o7at6h6ej.bkt.clouddn.com/%E7%9A%AE%E5%8C%852.png",
+      "name": "亮泽真皮织锦手提包",
+      "price": 128,
+      "worth": 290
+    },
+    {
+      "id": 1,
+      "enter_banner": "http://o7at6h6ej.bkt.clouddn.com/%E7%9A%AE%E5%8C%852.png",
+      "name": "亮泽真皮织锦手提包",
+      "price": 128,
+      "worth": 290
+    },
+    {
+      "id": 1,
+      "enter_banner": "http://o7at6h6ej.bkt.clouddn.com/%E7%9A%AE%E5%8C%852.png",
+      "name": "亮泽真皮织锦手提包",
+      "price": 128,
+      "worth": 290
+    },
+    {
+      "id": 1,
+      "enter_banner": "http://o7at6h6ej.bkt.clouddn.com/%E7%9A%AE%E5%8C%852.png",
+      "name": "亮泽真皮织锦手提包",
+      "price": 128,
+      "worth": 290
+    }
+  ]  
+}
+
+// product
+{
+  "product": {
+    "name": "亮泽真皮织锦手提包",
+    "menu_image_url": "http://o7at6h6ej.bkt.clouddn.com/%E7%9A%AE%E5%8C%852.png",
+    "banner_image_urls": [
+      "http://o7at6h6ej.bkt.clouddn.com/%E7%9A%AE%E5%8C%852.png",
+      "http://o7at6h6ej.bkt.clouddn.com/%E7%9A%AE%E5%8C%852.png",
+      "http://o7at6h6ej.bkt.clouddn.com/%E7%9A%AE%E5%8C%852.png"
+    ],
+    "price": "198",
+    "worth": "270",
+    "desc": "Sylvie迷你手袋采用手提造型，面料下镶饰尼龙织带，并配有金色链条和搭扣。金属搭扣源自品牌经典，与织带条纹精致搭配，趣味十足。采用光滑坚韧的皮革打造。",
+    "detail": ["蓝/红尼龙织带", "蓝/红尼龙织带", "迷你尺寸：20厘米（宽） x 14厘米（高） x 8厘米（深）", "意大利创作"],
+    "shop": {
+      "carousels": [
+        "http://o7at6h6ej.bkt.clouddn.com/%E7%9A%AE%E5%8C%852.png",
+        "http://o7at6h6ej.bkt.clouddn.com/%E7%9A%AE%E5%8C%852.png",
+        "http://o7at6h6ej.bkt.clouddn.com/%E7%9A%AE%E5%8C%852.png"
+      ],
+      "name": "Mask King",
+      "city": "广州",
+      "area": "白云机场",
+      "address": "1号航站楼2层",
+      "contact_phone": "13602455397",
+    }
+  }
+}
+
+    

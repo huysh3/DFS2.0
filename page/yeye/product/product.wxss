@@ -1,0 +1,273 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 84475 */
+  src: url('//at.alicdn.com/t/font_iq0gjcai37v3rf6r.eot');
+  src: url('//at.alicdn.com/t/font_iq0gjcai37v3rf6r.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_iq0gjcai37v3rf6r.woff') format('woff'),
+  url('//at.alicdn.com/t/font_iq0gjcai37v3rf6r.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_iq0gjcai37v3rf6r.svg#iconfont') format('svg');
+}
+
+.takeplace-120 {
+  height: 120rpx;
+}
+
+.page {
+  background-color: #f0f0f0;
+}
+
+.header {
+  width: 750rpx;
+  height: 650rpx;
+}
+
+.header image {
+  width: 750rpx;
+  height: 650rpx;
+}
+
+.header-textcontent {
+  padding: 30rpx;
+  background-color: #fff;
+}
+
+.name {
+  padding-top: 10rpx;
+  font-size: 40rpx;
+  color: #333;
+}
+
+.price-content {
+  margin-top: 20rpx;
+  padding-bottom: 14rpx;
+}
+
+.price, .worth {
+  display: inline-block;
+}
+
+.price {
+  font-size: 32rpx;
+  color: #cca556;
+}
+
+.worth {
+  margin-left: 20rpx;
+  font-size: 24rpx;
+  text-decoration: line-through;
+  color: #999;
+}
+
+.lights-content,
+.menu-content,
+.shopinfo-content,
+.reminder-content {
+  background-color: #fff;
+  padding: 30rpx;
+  margin-top: 18rpx;
+}
+
+.shopinfo-content {
+  position: relative;
+}
+
+.lights-content .title,
+.menu-content .title,
+.shopinfo-content .title,
+.reminder-content .title {
+  padding: 0 0 20rpx 0;
+  font-size: 32rpx;
+  color: #333;
+  text-align: center;
+}
+
+.lights-content .content {
+  font-size: 28rpx;
+  line-height: 60rpx;
+}
+
+.menu-content {
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 28rpx;
+}
+
+.menu-content image {
+  width: 690rpx;
+  height: 350rpx;
+}
+
+.menu-content .subtitle {
+  color: #cca556;
+  margin-bottom: 10rpx;
+}
+
+.menu-content .text-block {
+  margin-top: 20rpx;
+}
+
+.text-block .text {
+  line-height: 50rpx;
+}
+
+.shopinfo-content .shop-carousel,
+.shopinfo-content .shop-carousel image {
+  width: 690rpx;
+  height: 350rpx;
+}
+
+.shopinfo-content .name {
+  font-size: 32rpx;
+  color: #333;
+  padding: 30rpx 0;
+}
+
+.shopinfo-content .location {
+  font-size: 28rpx;
+  color: #333;
+  padding-bottom: 30rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.shopinfo-content .tel-content {
+  padding: 30rpx 0;
+  padding-bottom: 0;
+}
+
+.tel-content .tel-number {
+  display: inline-block;
+  font-size: 28rpx;
+  line-height: 70rpx;
+  height: 70rpx;
+  color: #333;
+}
+
+.phone-call-btn {
+  position: absolute;
+  font-size: 28rpx;
+  color: #cca556;
+  right: 30rpx;
+  bottom:50rpx;
+}
+
+.phone-call-active {
+  color: rgba(218, 200, 162, 0.59);
+}
+
+.reminder-content .text-subtitle {
+  line-height: 50rpx;
+  font-size: 28rpx;
+}
+
+.footer {
+  width: 750rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #2f2f3b;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  border-top: 1rpx solid #eee;
+}
+
+.footer .left-part {
+  flex: 1;
+  background-color: #fff;
+}
+
+.footer .price {
+  padding-left: 20rpx;
+}
+
+.footer .right-part {
+  flex: 1;
+  background-color: #2f2f3b;
+  text-align: center;
+  color: #cca556;
+  font-weight: bold;
+}
+
+.mask {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+}
+
+.modal-content {
+  width: 70vw;
+  padding: 40rpx;
+  position: fixed;
+  background-color: #fff;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.modal-tel-input {
+  width:340rpx;
+}
+
+.modal-header {
+  padding-bottom: 50rpx;
+  font-size: 32rpx;
+  color: #333;
+  text-align: left;
+}
+
+.modal-content input {
+  text-align: left;
+  padding-left: 0;
+}
+
+.modal-content .confirm-btn {
+  transition: all .3s ease;
+}
+
+.send-captcha {
+  font-size: 27rpx;
+  color: #333;
+  position: absolute;
+  top: 150rpx;
+  right: 42rpx;
+  z-index: 3;
+  padding: 6rpx 16rpx;
+  border-left: 1rpx solid #ccc;
+}
+
+.after-send {
+  color: #999;
+}
+
+.modal-bar {
+  width: 100%;
+  height: 2rpx;
+  background-color: #ccc;
+  margin-bottom: 40rpx;
+}
+
+.confirm-btn {
+  background-color: #2f2f3b;
+  color: #cca556;
+  margin-top: 60rpx;
+  font-size: 32rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-weight: bold;
+  display: block;
+}
+
+.cancel-btn {
+  width:30rpx;
+  height:30rpx;
+  position:absolute;
+  right:26rpx;
+  top:20rpx;
+  padding: 20rpx;
+}
+
+.confirm-btn-hover {
+  color: rgb(246, 222, 170);
+}

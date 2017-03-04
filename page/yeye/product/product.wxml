@@ -1,0 +1,84 @@
+<view class="page">
+  <swiper class="header"
+          indicator-dots="{{indicatorDots}}"
+          autoplay="{{autoplay}}"
+          interval="{{interval}}"
+          duration="{{duration}}">
+    <block wx:for="{{product.banner_image_urls}}">
+      <swiper-item>
+        <image src="{{item}}?imageView2/1/w/750/h/650" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="header-textcontent">
+    <view class="name">{{product.name}}</view>
+    <view class="price-content">
+      <view class="price">￥{{product.price}}</view>
+      <view class="worth">￥{{product.worth}}</view>
+    </view>
+  </view>
+
+  <view class="lights-content">
+    <view class="title">说明</view>
+    <view class="content">
+      <!--<view wx:for="{{product.lights_text}}">· {{item.text}}</view>-->
+      <view>{{product.desc}}</view>
+    </view>
+  </view>
+
+  <view class="menu-content">
+    <view class="title">产品细节</view>
+    <image src="{{product.enter_banner}}?imageView2/1/w/690/h/350"></image>
+    <view class="content">
+      <view class="text-block" wx:for="{{product.detail}}">
+          {{item}}
+      </view>
+    </view>
+  </view>
+
+
+  <view class="shopinfo-content">
+    <view class="title">商家信息</view>
+    <swiper class="shop-carousel"
+            indicator-dots="{{indicatorDots}}"
+            autoplay="{{autoplay}}"
+            interval="{{interval}}"
+            duration="{{duration}}">
+      <block wx:for="{{product.shop.carousels}}">
+        <swiper-item>
+          <image src="{{item}}?imageView2/1/w/690/h/350" class="slide-image"/>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="name">{{product.shop.name}}</view>
+    <view class="location">{{product.shop.city}} {{product.shop.area}} {{product.shop.address}}</view>
+    <view class="tel-content">
+      <view class="tel-number">{{product.shop.contact_phone}}</view>
+      <view class="phone-call-btn" hover-class="phone-call-active" hover="true" bindtap="phoneCall">联系商家</view>
+    </view>
+  </view>
+
+  <view class="takeplace-120"></view>
+
+  <view class="footer">
+    <view class="left-part">
+      <view class="price">￥{{product.price}}</view>
+      <view class="worth">￥{{product.worth}}</view>
+    </view>
+    <view class="right-part" bindtap="buyBtnEvent">立即购买</view>
+  </view>
+
+  <!-- <div class="mask" wx:if="{{modalState}}"></div>
+  <div class="modal-content" wx:if="{{modalState}}">
+    <image class="cancel-btn" bindtap="modalCancel" src="../../../image/x.png"></image>
+    <view class="modal-header">绑定手机号</view>
+    <input type="number" class="modal-tel-input" value="{{inputPhoneNumber}}" bindinput="getPhoneNumber"  placeholder="输入手机号"/>
+    <view class="modal-bar"></view>
+    <input type="number" class="modal-captcha-input" bindinput="getCaptcha" placeholder="输入验证码"/>
+    <view class="modal-bar"></view>
+    <span wx:if="{{!hasSend}}" class="send-captcha" bindtap="sendCaptchaBtnEvent">发送验证码</span>
+    <span wx:if="{{hasSend}}" class="send-captcha after-send">重新发送 {{countdown}}</span>
+    <view class="confirm-btn" bindtap="modalConfirmEvent" hover-class="confirm-btn-hover" hover="true">确认绑定</view>
+  </div> -->
+
+</view>
