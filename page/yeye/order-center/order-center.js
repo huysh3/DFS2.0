@@ -60,7 +60,7 @@ var pageObject = {
     var orderLists = []
     var _this = this
     qcloud.request({
-      url: domain + 'Home/weapp/test',
+      url: domain + 'Home/weapp/order_list',
       login: true,
       success(res) {
         console.log(res)

@@ -30,6 +30,7 @@ var pageObject = {
     hasSend: false,
     shop_id: '',
     product_id: '',
+    price: '',
     inputCaptcha: ''
   },
   onLoad: function(options) {
@@ -45,7 +46,8 @@ var pageObject = {
       method: 'get',
       data: {
         product_id: _this.data.product_id,
-        shop_id: _this.data.shop_id
+        shop_id: _this.data.shop_id,
+        price: _this.data.price
       },
       success(res) {
         if (res.data == 'success') {
@@ -83,26 +85,6 @@ var pageObject = {
       }
     }, 1000)
   },
-  // routerGoOrderConfirm: function() {
-  //   var _this = this
-  //   wx.navigateTo({
-  //     url: '/page/yeye/order-confirm/order-confirm?product_id=' + _this.data.product.id
-  //   })
-  // },
-  // onPullDownRefresh: function() {
-  //   wx.showToast({
-  //     title: '刷新成功',
-  //     icon: 'success',
-  //     duration: 1000
-  //   })
-  // },
-  // onShareAppMessage: function () {
-  //   return {
-  //     title: '夜夜 | 精选套餐',
-  //     desc: '撸起袖子加油干',
-  //     path: 'page/yeye/product-list/product-list'
-  //   }
-  // },
   getProductInfo: function(options) {
     var _this = this
     qcloud.request({
@@ -114,7 +96,8 @@ var pageObject = {
         success: (response) => {
           _this.setData({
             shop_id: response.data.shop.id,
-            product_id: response.data.id
+            product_id: response.data.id,
+            price: response.data.price
           })
           _this.setData({product: response.data})
         },
