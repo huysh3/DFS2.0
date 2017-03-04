@@ -7,7 +7,7 @@ var pageObject = {
   },
   onLoad: function() {
     wx.setNavigationBarTitle({
-      title: '精选套餐'
+      title: '商品列表'
     })
     this.getProductList()
   },

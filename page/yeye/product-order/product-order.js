@@ -1,4 +1,6 @@
 import services from '../../../util/services'
+var domain = 'https://15580083.qcloud.la/'
+var qcloud = require('../../../vendor/qcloud-weapp-client-sdk/index');
 
 var pageObject = {
   data: {
@@ -16,8 +18,7 @@ var pageObject = {
     wx.setNavigationBarTitle({
       title: '我的订单'
     })
-    this.getOrderList(options)
-    this.getProductInfo(options)
+    this.getOrderById(options)
     this.setData({
       product_id: options.product_id
     })
@@ -25,64 +26,56 @@ var pageObject = {
   useVoucher: function() {
     var _this = this
     wx.showModal({
-      title: '确认核销',
-      content: '请确认你本人已经到店，套餐核销后不可撤销',
+      title: '确认收货',
+      content: '请确认你本人已经到店，并已拿到相关商品',
       success: function(res) {
         if (res.confirm) {
-          // 核销
+          qcloud.request({
+            url: domain + 'Home/order/order_finish',
+            login: true,
+            data: {
+              order_id: _this.data.order_id
+            },
+            success(res) {
+              // if (res.data == 'success') {
+              //   _this.setData({
+              //     canUse: false
+              //   })
+              // }
+              console.log(res)
+            }
+          })
         }
       }
     })
 
   },
-  getOrderList: function(options) {
-    var orderLists = []
+  getOrderById: function(options) {
     var _this = this
-    var order_id = options.order_id
-    this.setData({order_id: options.order_id})
-    services.fetch({
-      url: '',
-      method: 'GET'
-    }).then(res => {
-      this.setData({unfinishedOrderList: res.data.data})
-      this.setData({indexOrderList: this.data.unfinishedOrderList})
-      services.fetch({
-        url: '',
-        method: 'GET'
-      }).then(res => {
-        this.setData({historyOrderList: res.data.data})
-        wx.stopPullDownRefresh()
-        orderLists = this.data.unfinishedOrderList.concat(this.data.historyOrderList)
-        var length = orderLists.length
-        for (var i = 0; i < length; i ++) {
-          if (orderLists[i].object.id == order_id) {
-            this.setData({orderInfo: orderLists[i]})
-          }
-        }
-        if (this.data.orderInfo.object.status) {
-          this.setData({
-            canUse: false,
-            useTime: _this.data.orderInfo.object.use_at
-          })
-        } else {
-          this.setData({canUse: true})
-        }
-      })
+    _this.setData({
+      order_id: options.order_id
     })
-  },
-  getProductInfo: function(options) {
-    console.log(options.product_id)
-    // getProductInfo
+    qcloud.request({
+      url: domain + 'Home/weapp/order_info',
+      data: {
+        order_id: options.order_id
+      },
+      success(res) {
+        _this.setData({
+          orderInfo: res.data
+        })
+      }
+    })
   },
   phoneCall: function() {
     var _this = this
     wx.makePhoneCall({
-      phoneNumber: _this.data.orderInfo.object.product.shop.consumer_contact_phone
+      phoneNumber: _this.data.orderInfo.shop.contact_phone
     })
   },
   refundCall: function() {
     wx.makePhoneCall({
-      phoneNumber: '15019904962'
+      phoneNumber: ''
     })
   }
 }
