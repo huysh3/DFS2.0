@@ -2,6 +2,59 @@
   background-color: #f0f0f0;
 }
 
+
+.counter-content {
+  background-color: #fff;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 20rpx;
+}
+
+.counter-content .title {
+  float: left;
+}
+
+.counter-content .options {
+  float: right;
+}
+
+.decr, .incr, .counter {
+  display: inline-block;
+}
+
+.decr, .incr {
+  border-radius: 50%;
+  margin: 20rpx 0;
+  line-height: 38rpx;
+  width: 40rpx;
+  height: 40rpx;
+  background-color: rgb(194, 44, 15);
+  color: #fff;
+  text-align: center;
+}
+
+.counter, .incr {
+  margin-left: 40rpx;
+}
+
+.nav-content {
+  background-color: #000;
+  color: #fff;
+  padding: 0 200rpx;
+  padding-bottom: 60rpx;
+}
+
+.nav-item {
+  height: 100rpx;
+  line-height: 150rpx;
+  text-align: center;
+  border-bottom: 1rpx solid #fff;
+}
+
+/*.nav-item:last-child {
+  border-bottom: 0;
+}*/
+
 .item {
   width: 750rpx;
   /*margin: 28rpx 28rpx 0 28rpx;*/

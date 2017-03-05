@@ -7,6 +7,11 @@
   url('//at.alicdn.com/t/font_iq0gjcai37v3rf6r.svg#iconfont') format('svg');
 }
 
+.counter-content {
+  background-color: #fff;
+  height: 100rpx;
+}
+
 .takeplace-120 {
   height: 120rpx;
 }
@@ -180,9 +185,9 @@
 
 .footer .right-part {
   flex: 1;
-  background-color: #2f2f3b;
+  background-color: rgb(194, 44, 15);
+  color: #fff;
   text-align: center;
-  color: #cca556;
   font-weight: bold;
 }
 

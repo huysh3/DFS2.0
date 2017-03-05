@@ -14,8 +14,15 @@
       <view class="right-part">{{item.order.price}}元</view>
     </view>
     <view class="ol-body-content">
-      <view class="text">收款商家：{{item.shop.name}}</view>
-      <view class="text">支付时间：{{item.order.start_time}}</view>
+      <view class="text">品牌: {{item.shop.name}}</view>
+      <view class="text">SKU ID: {{item.order.start_time}}</view>
     </view>
+  </view>
+
+  <view class="takeplace-120"></view>
+
+  <view class="order-confirm-bar" wx:if="{{tabState == 'left'}}">
+    <view class="left-part"><view class="price">合计：3999元</view></view>
+    <view class="right-part">确认订单</view>
   </view>
 </view>

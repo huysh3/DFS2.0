@@ -6,6 +6,10 @@
   height: 90rpx;
 }
 
+.takeplace-120 {
+  height: 120rpx;
+}
+
 .header {
   background-color: #fff;
   height: 80rpx;
@@ -70,4 +74,32 @@
   font-size: 26rpx;
   line-height: 46rpx;
   /*margin-top: 20rpx;*/
+}
+
+.order-confirm-bar {
+  width: 750rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #2f2f3b;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  border-top: 1rpx solid #eee;
+}
+
+.order-confirm-bar .left-part {
+  flex: 1;
+  background-color: #fff;
+}
+
+.order-confirm-bar .price {
+  padding-left: 20rpx;
+}
+
+.order-confirm-bar .right-part {
+  flex: 1;
+  background-color: rgb(194, 44, 15);
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
 }

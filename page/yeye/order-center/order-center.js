@@ -42,12 +42,11 @@ var pageObject = {
               _this.setData({indexOrderList: _this.data.historyOrderList})
             } else {
               _this.setData({indexOrderList: _this.data.unfinishedOrderList})
-            }            
+            }
           }
-        })        
+        })
       }
     })
-    
   },
   showHistoryOrderList: function() {
     this.setData({indexOrderList: this.data.historyOrderList})
