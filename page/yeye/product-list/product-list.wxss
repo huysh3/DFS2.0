@@ -3,10 +3,11 @@
 }
 
 .item {
-  width: 694rpx;
-  margin: 28rpx 28rpx 0 28rpx;
+  width: 750rpx;
+  /*margin: 28rpx 28rpx 0 28rpx;*/
   background-color: #fff;
   padding-bottom: 20rpx;
+  margin-bottom: 20rpx;
 }
 
 .item image {
@@ -14,13 +15,14 @@
   height: 530rpx;
   -o-object-fit: cover;
   object-fit: cover;
-  border-bottom: 2rpx solid #f0f0f0;
+  border-bottom: 2rpx solid #aaa;
 }
 
 .item .name {
   font-size: 36rpx;
   font-weight: bold;
-  margin: 20rpx 20rpx 0 20rpx;
+  text-align: center;
+  margin: 20rpx 20rpx 20rpx 20rpx;
   color: #333;
 }
 
