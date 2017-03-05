@@ -5,17 +5,7 @@
   </view>
   <view class="takeplace-90"></view>
 
-  <!--<navigator url="/page/yeye/product-order/product-order?order_id={{item.object.id}}&product_id={{item.object.product.id}}" class="order-list-item" wx:for="{{indexOrderList}}" wx:if="{{item.type == 'product_voucher'}}">
-    <view class="ol-title-content">
-      <view class="left-part">{{item.object.product.name}}</view>
-      <view class="right-part">{{item.object.product.price}}元</view>
-    </view>
-    <view class="ol-body-content">
-      <view class="text">收款商家：{{item.object.product.shop.name}}</view>
-      <view class="text">支付时间：{{item.object.created_at}}</view>
-    </view>
-  </navigator>-->
-  <navigator wx:for="{{indexOrderList}}" class="order-list-item"  url="/page/yeye/product-order/product-order?order_id={{item.order.id}}">
+  <view wx:for="{{indexOrderList}}" class="order-list-item">
     <view class="ol-img">
       <image src="{{item.product.order_banner}}?imageView/1/w/690/h/230"></image>
     </view>
@@ -27,5 +17,5 @@
       <view class="text">收款商家：{{item.shop.name}}</view>
       <view class="text">支付时间：{{item.order.start_time}}</view>
     </view>
-  </navigator>
+  </view>
 </view>
