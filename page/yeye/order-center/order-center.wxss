@@ -33,7 +33,13 @@
 .order-list-item {
   background-color: #fff;
   padding: 0 30rpx;
+  padding-top: 30rpx;
   margin-bottom: 10rpx;
+}
+
+.order-list-item image {
+  width: 690rpx;
+  height: 230rpx;
 }
 
 .ol-title-content {

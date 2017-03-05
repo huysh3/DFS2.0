@@ -14,6 +14,7 @@
   height: 530rpx;
   -o-object-fit: cover;
   object-fit: cover;
+  border-bottom: 2rpx solid #f0f0f0;
 }
 
 .item .name {
