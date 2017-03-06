@@ -1,13 +1,4 @@
 <view class="page">
-  <view class="counter-content">
-    <view class="title">数量</view>
-    <view class="options">
-      <view class="decr">-</view>
-      <view class="counter">12</view>
-      <view class="incr">+</view>
-    </view>
-  </view>
-
   <view class="nav-content">
     <view class="nav-item">品类1</view>
     <view class="nav-item">品类2</view>

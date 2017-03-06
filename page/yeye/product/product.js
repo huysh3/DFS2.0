@@ -31,7 +31,8 @@ var pageObject = {
     shop_id: '',
     product_id: '',
     price: '',
-    inputCaptcha: ''
+    inputCaptcha: '',
+    counter: 0
   },
   onLoad: function(options) {
     wx.setNavigationBarTitle({title: '套餐详情'})
@@ -59,6 +60,20 @@ var pageObject = {
       fail(error) {
         showModel('请求失败', error);
       }
+    })
+  },
+  decr: function() {
+    var _this = this
+    if (_this.data.counter > 0) {
+      this.setData({
+        counter: _this.data.counter - 1
+      })
+    }
+  },
+  incr: function() {
+    var _this = this
+    this.setData({
+      counter: _this.data.counter + 1
     })
   },
   checkMobile: function(str) {

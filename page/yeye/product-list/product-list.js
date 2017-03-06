@@ -3,7 +3,7 @@ var qcloud = require('../../../vendor/qcloud-weapp-client-sdk/index');
 
 var pageObject = {
   data: {
-  "lists": []
+    "lists": []
   },
   onLoad: function() {
     wx.setNavigationBarTitle({

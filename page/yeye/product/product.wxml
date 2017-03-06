@@ -59,7 +59,12 @@
   </view>
 
   <view class="counter-content">
-
+    <view class="title">数量</view>
+    <view class="options">
+      <view bindtap="decr" class="decr">-</view>
+      <view class="counter">{{counter}}</view>
+      <view bindtap="incr" class="incr">+</view>
+    </view>
   </view>
 
   <view class="takeplace-120"></view>

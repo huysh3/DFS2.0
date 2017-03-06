@@ -7,10 +7,6 @@
   url('//at.alicdn.com/t/font_iq0gjcai37v3rf6r.svg#iconfont') format('svg');
 }
 
-.counter-content {
-  background-color: #fff;
-  height: 100rpx;
-}
 
 .takeplace-120 {
   height: 120rpx;
@@ -275,4 +271,50 @@
 
 .confirm-btn-hover {
   color: rgb(246, 222, 170);
+}
+
+.counter-content {
+  background-color: #fff;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 20rpx;
+  margin-top: 20rpx;
+}
+
+.counter-content .title {
+  float: left;
+}
+
+.counter-content .options {
+  float: right;
+}
+
+.decr, .incr, .counter {
+  display: inline-block;
+}
+
+.counter {
+  border: 1rpx solid #999;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  margin-top: 10rpx;
+  width: 80rpx;
+  display: inline-block;
+}
+
+.decr, .incr {
+  border-radius: 50%;
+  margin: 20rpx 0;
+  line-height: 38rpx;
+  width: 40rpx;
+  height: 40rpx;
+  background-color: #ccc;
+  border: 1rpx solid #666;
+  color: #666;
+  text-align: center;
+}
+
+.counter, .incr {
+  margin-left: 40rpx;
 }
