@@ -1,0 +1,41 @@
+.clearfix {
+  clear: both;
+}
+
+.shop-list-container {
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.ol-list-content {
+  background-color: #fff;
+}
+
+.shop-list-item {
+  background-color: #fff;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 20rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.shop-list-item:last-child {
+  border-bottom: 0;
+}
+
+.shop-list-item .left-part {
+  float: left;
+}
+
+.shop-list-item .right-part {
+  float: right;
+  font-size: 24rpx;
+}
+
+.location-icon {
+  /*float: right;*/
+  width: 40rpx;
+  height: 40rpx;
+  position: relative;
+  top: 10rpx;
+}

@@ -1,0 +1,21 @@
+<view class="page">
+  <view class="shop-list-container">
+    <view class="ol-content">
+      <navigator class="shop-list-item" url="/page/yeye/product-list/product-list">
+        <view class="left-part">DFS</view>
+        <view class="right-part"><image class="location-icon" src="../../../image/定位.png"></image>首都机场</view>
+        <view class="clearfix"></view>
+      </navigator>
+      <navigator class="shop-list-item" url="/page/yeye/product-list/product-list">
+        <view class="left-part">DFS</view>
+        <view class="right-part"><image class="location-icon" src="../../../image/定位.png"></image>首都机场</view>
+        <view class="clearfix"></view>
+      </navigator>
+      <navigator class="shop-list-item" url="/page/yeye/product-list/product-list">
+        <view class="left-part">DFS</view>
+        <view class="right-part"><image class="location-icon" src="../../../image/定位.png"></image>首都机场</view>
+        <view class="clearfix"></view>
+      </navigator>
+    </view>
+  </view>
+</view>

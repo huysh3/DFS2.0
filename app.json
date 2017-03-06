@@ -1,5 +1,7 @@
 {
   "pages": [
+    "page/yeye/city-list/city-list",
+    "page/yeye/shop-list/shop-list",
     "page/yeye/product-list/product-list",
     "page/yeye/order-confirm/order-confirm",
     "page/yeye/product/product",
@@ -19,7 +21,7 @@
     "borderStyle": "white",
     "backgroundColor": "#333",
     "list": [{
-      "pagePath": "page/yeye/product-list/product-list",
+      "pagePath": "page/yeye/city-list/city-list",
       "iconPath": "image/menu.png",
       "selectedIconPath": "image/menu-2.png",
       "text": "商品"

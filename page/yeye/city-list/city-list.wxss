@@ -1,0 +1,35 @@
+.clearfix {
+  clear: both;
+}
+
+.city-list-container {
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.city-list-item {
+  background-color: #fff;
+  width: 360rpx;
+  margin-right: 30rpx;
+  margin-top: 30rpx;
+  text-align: center;
+  float: left;
+}
+
+.city {
+  padding: 30rpx 0;
+}
+
+.avatar {
+  width: 260rpx;
+  height: 260rpx;
+  border-radius: 50%;
+}
+
+.city-list-item:nth-child(2n + 0) {
+  margin-right: 0;
+}
+
+.shop-name {
+  padding: 30rpx 0;
+}
