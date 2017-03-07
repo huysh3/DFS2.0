@@ -1,8 +1,9 @@
 <view class="page">
   <view class="nav-content">
-    <view class="nav-item">品类1</view>
-    <view class="nav-item">品类2</view>
-    <view class="nav-item">品类3</view>
+    <image src="http://o7at6h6ej.bkt.clouddn.com/0aa83654e0efe32afc22c69599777b5e.jpg" class="nav-item"></image>
+    <image src="http://o7at6h6ej.bkt.clouddn.com/9a3635349937e03c5cfbab50d9fb60b0.jpg" class="nav-item"></image>
+    <image src="http://o7at6h6ej.bkt.clouddn.com/bg3" class="nav-item"></image>
+    <view class="clearfix"></view>
   </view>
   <navigator url="/page/yeye/product/product?product_id={{item.id}}" wx:for="{{lists}}" class="item">
     <image src="{{item.enter_banner}}?imageView/1/w/690/h/530"></image>

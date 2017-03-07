@@ -2,18 +2,21 @@
   background-color: #f0f0f0;
 }
 
-.nav-content {
-  background-color: #000;
-  color: #fff;
-  padding: 0 200rpx;
-  padding-bottom: 60rpx;
+.clearfix {
+  clear: both;
 }
 
 .nav-item {
-  height: 100rpx;
+  /*height: 100rpx;
   line-height: 150rpx;
   text-align: center;
-  border-bottom: 1rpx solid #fff;
+  border-bottom: 1rpx solid #fff;*/
+  width: 750rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  color: #fff;
+  font-weight: bold;
+  float: left;
 }
 
 /*.nav-item:last-child {
