@@ -1,3 +1,11 @@
 <view>
-  <image></image>
+  <navigator url="/page/yeye/product-list/product-list">
+    <image src="http://o7at6h6ej.bkt.clouddn.com/0aa83654e0efe32afc22c69599777b5e.jpg" class="nav-item"></image>
+  </navigator>
+  <navigator url="/page/yeye/product-list/product-list">
+    <image src="http://o7at6h6ej.bkt.clouddn.com/9a3635349937e03c5cfbab50d9fb60b0.jpg" class="nav-item"></image>
+  </navigator>
+  <navigator url="/page/yeye/product-list/product-list">
+    <image src="http://o7at6h6ej.bkt.clouddn.com/bg3" class="nav-item"></image>
+  </navigator>
 </view>

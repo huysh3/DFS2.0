@@ -1,5 +1,6 @@
 {
   "pages": [
+    "page/yeye/class-list/class-list",
     "page/yeye/product-list/product-list",
     "page/yeye/order-confirm/order-confirm",
     "page/yeye/product/product",
@@ -19,15 +20,13 @@
     "borderStyle": "white",
     "backgroundColor": "#333",
     "list": [{
-      "pagePath": "page/yeye/product-list/product-list",
-      "iconPath": "image/menu.png",
-      "selectedIconPath": "image/menu-2.png",
-      "text": "商品"
+      "pagePath": "page/yeye/class-list/class-list",
+      "iconPath": "image/放大镜.png",
+      "selectedIconPath": "image/放大镜-2.png"
     }, {
       "pagePath": "page/yeye/order-center/order-center",
       "iconPath": "image/cart.png",
-      "selectedIconPath": "image/cart-2.png",
-      "text": "购物车"
+      "selectedIconPath": "image/cart-2.png"
     }]
   },
   "networkTimeout": {
