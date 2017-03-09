@@ -2,3 +2,7 @@ image {
   width: 750rpx;
   float: left;
 }
+
+.banner {
+  height: 125rpx;
+}

@@ -1,5 +1,6 @@
 {
   "pages": [
+    "page/yeye/about-DFS/about-DFS",
     "page/yeye/class-list/class-list",
     "page/yeye/product-list/product-list",
     "page/yeye/order-confirm/order-confirm",
@@ -10,7 +11,7 @@
   "window": {
     "navigationBarTextStyle": "#fff",
     "navigationBarTitleText": "DFS",
-    "navigationBarBackgroundColor": "#333",
+    "navigationBarBackgroundColor": "#000",
     "backgroundColor": "#333",
     "enablePullDownRefresh": false
   },
@@ -18,12 +19,16 @@
     "color": "#999",
     "selectedColor": "#fff",
     "borderStyle": "white",
-    "backgroundColor": "#333",
+    "backgroundColor": "#000",
     "list": [{
+      "pagePath": "page/yeye/about-DFS/about-DFS",
+      "iconPath": "image/home.png",
+      "selectedIconPath": "image/home-2.png"
+    },{
       "pagePath": "page/yeye/class-list/class-list",
       "iconPath": "image/放大镜.png",
       "selectedIconPath": "image/放大镜-2.png"
-    }, {
+    },{
       "pagePath": "page/yeye/order-center/order-center",
       "iconPath": "image/cart.png",
       "selectedIconPath": "image/cart-2.png"
