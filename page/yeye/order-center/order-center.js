@@ -111,6 +111,11 @@ var pageObject = {
         if(res.data == 'success') {
           // _this.emptyCart()
           showSuccess('订单已提交');
+          _this.setData({
+            indexOrderList: '',
+            total_price: 0,
+            unfinishedOrderList: ''
+          })
         }
       }
     })
