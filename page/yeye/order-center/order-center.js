@@ -3,6 +3,29 @@ import services from '../../../util/services'
 var domain = 'https://15580083.qcloud.la/'
 var qcloud = require('../../../vendor/qcloud-weapp-client-sdk/index');
 
+// 显示繁忙提示
+var showBusy = text => wx.showToast({
+    title: text,
+    icon: 'loading',
+    duration: 10000
+});
+
+// 显示成功提示
+var showSuccess = text => wx.showToast({
+    title: text,
+    icon: 'success'
+});
+
+// 显示失败提示
+var showModel = (title, content) => {
+    wx.hideToast();
+    wx.showModal({
+        title,
+        content: JSON.stringify(content),
+        showCancel: false
+    });
+};
+
 var pageObject = {
   data: {
     unfinishedOrderList: '',
@@ -44,11 +67,13 @@ var pageObject = {
             } else {
               _this.setData({indexOrderList: _this.data.unfinishedOrderList})
             }
-            var temp
-            _this.data.unfinishedOrderList.map(function(index) {
-              temp = temp + parseInt(index.order.price * index.order.number)
-              console.log(temp)
-            })
+            var temp = 0
+            if (_this.data.unfinishedOrderList) {
+              _this.data.unfinishedOrderList.map(function(index) {
+                temp = temp + parseInt(index.order.price * index.order.number)
+                console.log(temp)
+              })
+            }
             _this.setData({
               total_price: temp
             })
@@ -74,7 +99,11 @@ var pageObject = {
     })
   },
   confirmOrder: function() {
+    showBusy('正在通信..');
     var _this = this
+    if (!_this.data.unfinishedOrderList) {
+      return false;
+    }
     qcloud.request({
       url: domain + 'Home/order/confirmOrder',
       login: true,
@@ -92,8 +121,10 @@ var pageObject = {
       login: true,
       success(res) {
         if(res.data == 'success') {
+          showSuccess('订单已完成');
           _this.setData({
-            indexOrderList: ''
+            indexOrderList: '',
+            total_price: 0
           })
         }
       }
