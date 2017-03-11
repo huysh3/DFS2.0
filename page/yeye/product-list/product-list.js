@@ -5,11 +5,11 @@ var pageObject = {
   data: {
     "lists": []
   },
-  onLoad: function() {
+  onLoad: function(options) {
     wx.setNavigationBarTitle({
       title: '商品列表'
     })
-    this.getProductList()
+    this.getProductList(options)
   },
   onPullDownRefresh: function() {
     this.getProductList()
@@ -19,13 +19,13 @@ var pageObject = {
       duration: 1000
     })
   },
-  getProductList: function() {
+  getProductList: function(options) {
     var _this = this
     qcloud.request({
       login: true,
       url: domain + 'Home/weapp/product_list',
       data: {
-        shop_id: 1
+        class_name: options.class_name
       },
       success(res) {
         console.log(res.data)

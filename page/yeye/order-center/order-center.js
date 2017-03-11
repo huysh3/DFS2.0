@@ -11,7 +11,8 @@ var pageObject = {
     orderList: [],
     leftPartClass: 'header-left-part active',
     rightPartClass: 'header-right-part',
-    tabState: 'left'
+    tabState: 'left',
+    total_price: ''
   },
   onShow: function() {
     var _this = this
@@ -43,6 +44,14 @@ var pageObject = {
             } else {
               _this.setData({indexOrderList: _this.data.unfinishedOrderList})
             }
+            var temp
+            _this.data.unfinishedOrderList.map(function(index) {
+              temp = temp + parseInt(index.order.price * index.order.number)
+              console.log(temp)
+            })
+            _this.setData({
+              total_price: temp
+            })
           }
         })
       }
@@ -64,6 +73,32 @@ var pageObject = {
       tabState: 'left'
     })
   },
+  confirmOrder: function() {
+    var _this = this
+    qcloud.request({
+      url: domain + 'Home/order/confirmOrder',
+      login: true,
+      success(res) {
+        if(res.data == 'success') {
+          _this.emptyCart()
+        }
+      }
+    })
+  },
+  emptyCart: function() {
+    var _this = this
+    qcloud.request({
+      url: domain + 'Home/order/emptyCart',
+      login: true,
+      success(res) {
+        if(res.data == 'success') {
+          _this.setData({
+            indexOrderList: ''
+          })
+        }
+      }
+    })
+  }
 }
 
 Page(pageObject)

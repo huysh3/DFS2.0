@@ -1,7 +1,7 @@
 {
   "pages": [
-    "page/yeye/services/services",
     "page/yeye/about-DFS/about-DFS",
+    "page/yeye/services/services",
     "page/yeye/class-list/class-list",
     "page/yeye/product-list/product-list",
     "page/yeye/order-confirm/order-confirm",
@@ -22,11 +22,6 @@
     "color": "#999",
     "selectedColor": "#B62A18",
     "list": [{
-      "pagePath": "page/yeye/services/services",
-      "iconPath": "image/客服-2.png",
-      "selectedIconPath": "image/客服.png",
-      "text": "客服"
-    },{
       "pagePath": "page/yeye/about-DFS/about-DFS",
       "iconPath": "image/home-2.png",
       "selectedIconPath": "image/home.png",
@@ -41,6 +36,11 @@
       "iconPath": "image/cart-2.png",
       "selectedIconPath": "image/cart.png",
       "text": "购物车"
+    },{
+      "pagePath": "page/yeye/services/services",
+      "iconPath": "image/客服-2.png",
+      "selectedIconPath": "image/客服.png",
+      "text": "客服"
     }]
   },
   "networkTimeout": {

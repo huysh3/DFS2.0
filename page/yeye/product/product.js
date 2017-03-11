@@ -31,8 +31,9 @@ var pageObject = {
     shop_id: '',
     product_id: '',
     price: '',
+    total_price: '',
     inputCaptcha: '',
-    counter: 0
+    counter: 1
   },
   onLoad: function(options) {
     wx.setNavigationBarTitle({title: '套餐详情'})
@@ -43,12 +44,13 @@ var pageObject = {
     var _this = this
     qcloud.request({
       login: true,
-      url: domain + 'Home/order/pay',
+      url: domain + 'Home/order/addCart',
       method: 'get',
       data: {
         product_id: _this.data.product_id,
         shop_id: _this.data.shop_id,
-        price: _this.data.price
+        price: _this.data.price,
+        number: _this.data.counter
       },
       success(res) {
         if (res.data == 'success') {
@@ -66,14 +68,16 @@ var pageObject = {
     var _this = this
     if (_this.data.counter > 0) {
       this.setData({
-        counter: _this.data.counter - 1
+        counter: _this.data.counter - 1,
+        total_price: _this.data.counter * this.data.price
       })
     }
   },
   incr: function() {
     var _this = this
     this.setData({
-      counter: _this.data.counter + 1
+      counter: _this.data.counter + 1,
+      total_price: _this.data.counter * this.data.price
     })
   },
   checkMobile: function(str) {
