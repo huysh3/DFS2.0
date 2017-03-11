@@ -124,7 +124,8 @@ var pageObject = {
           showSuccess('订单已完成');
           _this.setData({
             indexOrderList: '',
-            total_price: 0
+            total_price: 0,
+            historyOrderList: ''
           })
         }
       }
