@@ -70,7 +70,7 @@ var pageObject = {
             var temp = 0
             if (_this.data.unfinishedOrderList) {
               _this.data.unfinishedOrderList.map(function(index) {
-                temp = temp + parseInt(index.order.price * index.order.number)
+                temp = temp + parseInt(index.order.price)
                 console.log(temp)
               })
             }
