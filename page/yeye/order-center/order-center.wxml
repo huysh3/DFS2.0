@@ -18,7 +18,8 @@
       <view class="text">SKU ID: {{item.product.SKU_ID}}</view>
     </view>
   </view>
-
+  <view>
+  </view>
   <view class="takeplace-120"></view>
 
   <view class="order-confirm-bar" wx:if="{{tabState == 'left'}}">
