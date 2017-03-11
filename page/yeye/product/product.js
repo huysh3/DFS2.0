@@ -59,7 +59,7 @@ var pageObject = {
       data: {
         product_id: _this.data.product_id,
         shop_id: _this.data.shop_id,
-        price: _this.data.price,
+        price: _this.data.price * _this.data.counter,
         number: _this.data.counter
       },
       success(res) {
