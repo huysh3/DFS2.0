@@ -32,15 +32,15 @@
       "selectedIconPath": "image/放大镜.png",
       "text": "目录"
     },{
-      "pagePath": "page/yeye/order-center/order-center",
-      "iconPath": "image/cart-2.png",
-      "selectedIconPath": "image/cart.png",
-      "text": "购物车"
-    },{
       "pagePath": "page/yeye/services/services",
       "iconPath": "image/客服-2.png",
       "selectedIconPath": "image/客服.png",
       "text": "客服"
+    },{
+      "pagePath": "page/yeye/order-center/order-center",
+      "iconPath": "image/cart-2.png",
+      "selectedIconPath": "image/cart.png",
+      "text": "购物车"
     }]
   },
   "networkTimeout": {
