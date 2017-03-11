@@ -1,0 +1,43 @@
+.services-container {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.banner {
+  width: 750rpx;
+  height: 125rpx;
+  float: left;
+}
+
+.body-img {
+  width: 100vw;
+  height: 1000rpx;
+  float: left;
+}
+
+.services-btn {
+  width:250rpx;
+  height:250rpx;
+  position:absolute;
+  z-index:10;
+  top:609rpx;
+  left:70rpx;
+  pointer-events: none;
+}
+
+.mobile-btn {
+  width:250rpx;
+  height:250rpx;
+  position:absolute;
+  z-index:10;
+  top:609rpx;
+  right:70rpx;
+}
+
+.contact-btn {
+  position: absolute;
+  top:687rpx;
+  left:166rpx;
+  color: rgba(0, 0, 0, 0);
+  z-index: 6;
+}

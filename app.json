@@ -1,5 +1,6 @@
 {
   "pages": [
+    "page/yeye/services/services",
     "page/yeye/about-DFS/about-DFS",
     "page/yeye/class-list/class-list",
     "page/yeye/product-list/product-list",
@@ -16,22 +17,30 @@
     "enablePullDownRefresh": false
   },
   "tabBar": {
-    "color": "#999",
-    "selectedColor": "#fff",
     "borderStyle": "white",
     "backgroundColor": "#000",
+    "color": "#999",
+    "selectedColor": "#B62A18",
     "list": [{
+      "pagePath": "page/yeye/services/services",
+      "iconPath": "image/客服-2.png",
+      "selectedIconPath": "image/客服.png",
+      "text": "客服"
+    },{
       "pagePath": "page/yeye/about-DFS/about-DFS",
-      "iconPath": "image/home.png",
-      "selectedIconPath": "image/home-2.png"
+      "iconPath": "image/home-2.png",
+      "selectedIconPath": "image/home.png",
+      "text": "主页"
     },{
       "pagePath": "page/yeye/class-list/class-list",
-      "iconPath": "image/放大镜.png",
-      "selectedIconPath": "image/放大镜-2.png"
+      "iconPath": "image/放大镜-2.png",
+      "selectedIconPath": "image/放大镜.png",
+      "text": "目录"
     },{
       "pagePath": "page/yeye/order-center/order-center",
-      "iconPath": "image/cart.png",
-      "selectedIconPath": "image/cart-2.png"
+      "iconPath": "image/cart-2.png",
+      "selectedIconPath": "image/cart.png",
+      "text": "购物车"
     }]
   },
   "networkTimeout": {
