@@ -50,7 +50,7 @@ var pageObject = {
       url: domain + 'Home/weapp/history_order_list',
       login: true,
       success(res) {
-        console.log(res)
+        console.log(res.data)
         _this.setData({
           historyOrderList: res.data
         })
@@ -109,7 +109,8 @@ var pageObject = {
       login: true,
       success(res) {
         if(res.data == 'success') {
-          _this.emptyCart()
+          // _this.emptyCart()
+          showSuccess('订单已提交');
         }
       }
     })
