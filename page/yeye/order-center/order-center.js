@@ -125,7 +125,7 @@ var pageObject = {
           _this.setData({
             indexOrderList: '',
             total_price: 0,
-            historyOrderList: ''
+            unfinishedOrderList: ''
           })
         }
       }
