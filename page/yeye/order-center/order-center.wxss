@@ -12,6 +12,7 @@
 
 .header {
   background-color: #fff;
+  color: #000;
   height: 80rpx;
   display: flex;
   position: fixed;
@@ -30,8 +31,8 @@
 
 .header-left-part.active,
 .header-right-part.active {
-  border-bottom: 6rpx solid #cca556;
-  color: #cca556;
+  border-bottom: 6rpx solid #B62A18;
+  color: #B62A18;
 }
 
 .order-list-item {

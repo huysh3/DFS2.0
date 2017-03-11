@@ -11,7 +11,7 @@
     </view>
     <view class="ol-title-content">
       <view class="left-part">{{item.product.name}}</view>
-      <view class="right-part">{{item.order.price * item.order.number}}元</view>
+      <view class="right-part">{{item.order.price}}元</view>
     </view>
     <view class="ol-body-content">
       <view class="text">品牌: {{item.shop.name}}</view>
