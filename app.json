@@ -17,7 +17,7 @@
     "enablePullDownRefresh": false
   },
   "tabBar": {
-    "borderStyle": "white",
+    "borderStyle": "black",
     "backgroundColor": "#000",
     "color": "#999",
     "selectedColor": "#B62A18",
