@@ -1,5 +1,5 @@
 <view class="services-container">
-  <image class="banner" src="../../../image/dfs-top.png"></image>
+  <image class="banner" src="../../../image/dfs-banner.png"></image>
   <image src="../../../image/services-1.png" class="body-img"></image>
   <image src="../../../image/客服-btn.png" class="services-btn"></image>
   <image src="../../../image/电联-btn.png" bindtap="phoneCall" class="mobile-btn"></image>

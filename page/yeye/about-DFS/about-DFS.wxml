@@ -1,5 +1,5 @@
 <view class="about-container">
-  <image class="banner" src="../../../image/DFS.png"></image>
+  <image class="banner" src="../../../image/DFS-banner.png"></image>
   <image class="gallary" src="../../../image/dfs-img.png"></image>
   <image class="desc" src="../../../image/dfs-desc.png"></image>
 </view>

@@ -5,5 +5,5 @@ image {
 }
 
 .banner {
-  height: 125rpx;
+  height:110rpx;
 }

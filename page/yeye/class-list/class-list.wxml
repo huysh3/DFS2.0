@@ -1,5 +1,5 @@
 <view>
-  <image class="banner" src="../../../image/dfs-top.png"></image>
+  <image class="banner" src="../../../image/DFS-banner.png"></image>
   <navigator url="/page/yeye/product-list/product-list?class_name={{item.class_name}}" wx:for="{{lists}}">
     <image src="{{item.class_url}}" class="nav-item"></image>
   </navigator>
