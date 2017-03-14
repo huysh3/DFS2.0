@@ -1,5 +1,34 @@
-<view class="about-container">
+<!-- <view class="about-container">
   <image class="banner" src="../../../image/DFS-banner.png"></image>
   <image class="gallary" src="../../../image/dfs-img.png"></image>
   <image class="desc" src="../../../image/dfs-desc.png"></image>
+</view> -->
+
+<view class="page">
+  <image class="banner" src="../../../image/DFS-banner.png"></image>
+  <navigator url="/page/yeye/product-list/product-list?class_name=1">
+    <image src="https://om536p71r.qnssl.com/c1.png" class="nav-item"></image>
+  </navigator>
+  <navigator url="/page/yeye/product-list/product-list?class_name=2">
+    <image src="https://om536p71r.qnssl.com/c2.png" class="nav-item"></image>
+  </navigator>
+  <navigator url="/page/yeye/product-list/product-list?class_name=3">
+    <image src="https://om536p71r.qnssl.com/c3.png" class="nav-item"></image>
+  </navigator>
+  <view class="clearfix">
+  </view>
+  <view class="desc">
+    330 Royal hawaiian Avenue, Honolulu
+  </view>
+  <view class="cutline">
+  </view>
+  <view class="open-time">
+    Open 9:30 to 11pm
+  </view>
+  <!-- <navigator url="/page/yeye/product-list/product-list">
+    <image src="http://o7at6h6ej.bkt.clouddn.com/9a3635349937e03c5cfbab50d9fb60b0.jpg" class="nav-item"></image>
+  </navigator>
+  <navigator url="/page/yeye/product-list/product-list">
+    <image src="http://o7at6h6ej.bkt.clouddn.com/bg3" class="nav-item"></image>
+  </navigator> -->
 </view>

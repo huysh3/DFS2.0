@@ -1,7 +1,7 @@
 <view class="page">
   <view class="header">
-    <view bindtap="showUnfinishedOrderList" class="{{leftPartClass}}">进行中</view>
-    <view bindtap="showHistoryOrderList" class="{{rightPartClass}}">已完成</view>
+    <view bindtap="showUnfinishedOrderList" class="{{leftPartClass}}">进行中 doing</view>
+    <view bindtap="showHistoryOrderList" class="{{rightPartClass}}">已完成 FDSFDS</view>
   </view>
   <view class="takeplace-90"></view>
 

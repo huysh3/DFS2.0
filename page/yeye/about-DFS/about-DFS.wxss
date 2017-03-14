@@ -1,4 +1,4 @@
-.about-container {
+/*.about-container {
   min-height: 100vh;
   background-color: #000;
 }
@@ -16,4 +16,40 @@
 .desc {
   width: 750rpx;
   height: 270rpx;
+}*/
+.clearfix {
+  clear: both;
+}
+
+.page {
+  background-color: rgb(216, 216, 216);
+}
+
+image {
+  width: 750rpx;
+  height:255rpx;
+  float: left;
+}
+
+.banner {
+  height:110rpx;
+}
+
+.cutline {
+  width: 400rpx;
+  margin: 20rpx 175rpx;
+  height: 1rpx;
+  background-color: #000;
+}
+
+.desc {
+  text-align: center;
+  padding-top: 60rpx;
+  font-size: 32rpx;
+}
+
+.open-time {
+  text-align: center;
+  font-size: 32rpx;
+  padding-bottom: 60rpx;
 }
