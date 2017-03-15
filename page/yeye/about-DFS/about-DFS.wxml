@@ -6,13 +6,13 @@
 
 <view class="page">
   <image class="banner" src="../../../image/DFS-banner.png"></image>
-  <navigator url="/page/yeye/product-list/product-list?class_name=1">
+  <navigator url="/page/yeye/product-list/product-list?class_name=Bags">
     <image src="https://om536p71r.qnssl.com/c1.png" class="nav-item"></image>
   </navigator>
-  <navigator url="/page/yeye/product-list/product-list?class_name=2">
+  <navigator url="/page/yeye/product-list/product-list?class_name=LocalFood/Snacks">
     <image src="https://om536p71r.qnssl.com/c2.png" class="nav-item"></image>
   </navigator>
-  <navigator url="/page/yeye/product-list/product-list?class_name=3">
+  <navigator url="/page/yeye/product-list/product-list?class_name=Beauty">
     <image src="https://om536p71r.qnssl.com/c3.png" class="nav-item"></image>
   </navigator>
   <view class="clearfix">

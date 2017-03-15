@@ -2,8 +2,8 @@
   "pages": [
     "page/yeye/about-DFS/about-DFS",
     "page/yeye/services/services",
-    "page/yeye/class-list/class-list",
     "page/yeye/product-list/product-list",
+    "page/yeye/class-list/class-list",
     "page/yeye/order-confirm/order-confirm",
     "page/yeye/product/product",
     "page/yeye/order-center/order-center",

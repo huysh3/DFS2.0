@@ -1,7 +1,17 @@
 <view class="services-container">
   <image class="banner" src="../../../image/dfs-banner.png"></image>
-  <image src="../../../image/services-1.png" class="body-img"></image>
-  <image src="../../../image/客服-btn.png" class="services-btn"></image>
-  <image src="../../../image/电联-btn.png" bindtap="phoneCall" class="mobile-btn"></image>
+  <view class="main-content">
+    <view class="desc">专业顾问为您服务</view>
+    <image class="avatar" src="../../../image/Call-Now-Expert.png"></image>
+    <view class="line-through"></view>
+    <view class="services-content">
+      <image class="chat-img" src="https://om536p71r.qnssl.com/chat_now.png"></image>
+      <view class="title">在线咨询</view>
+    </view>
+    <view class="call-content">
+      <image bindtap="phoneCall" class="call-img" src="https://om536p71r.qnssl.com/call_now.png"></image>
+      <view class="title">电话咨询</view>
+    </view>
+  </view>
   <contact-button class="contact-btn" type="default-light" size="40" session-from="weapp"></contact-button>
 </view>

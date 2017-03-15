@@ -1,22 +1,3 @@
-/*.about-container {
-  min-height: 100vh;
-  background-color: #000;
-}
-
-.banner {
-  width: 750rpx;
-  height:110rpx;
-}
-
-.gallary {
-  width: 750rpx;
-  height: 440rpx;
-}
-
-.desc {
-  width: 750rpx;
-  height: 270rpx;
-}*/
 .clearfix {
   clear: both;
 }

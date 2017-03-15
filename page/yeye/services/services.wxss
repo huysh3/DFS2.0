@@ -1,6 +1,28 @@
 .services-container {
   width: 100vw;
   min-height: 100vh;
+  background: url('https://om536p71r.qnssl.com/layer_pattern.png');
+  background-size: auto 27rpx;
+}
+
+.main-content {
+  padding-top: 170rpx;
+  text-align: center;
+}
+
+.avatar {
+  margin-top: 60rpx;
+  border: 4rpx solid rgb(200, 200, 200);
+  border-radius: 26rpx;
+  width: 250rpx;
+  height: 250rpx;
+  z-index: 5;
+  position: relative;
+}
+
+.desc {
+  text-align: center;
+  font-family: "FranklinITCStd-Light";
 }
 
 .banner {
@@ -9,35 +31,53 @@
   float: left;
 }
 
+.line-through {
+  width: 4rpx;
+  height: 48vh;
+  background-color: rgb(200, 200, 200);
+  position: absolute;
+  left: 50%;
+  z-index: 2;
+  bottom: 30rpx;
+}
+
+.services-content .chat-img,
+.call-content .call-img {
+  width: 130rpx;
+  height: 130rpx;
+}
+
+.services-content {
+  position: absolute;
+  top:734rpx;
+  left:80rpx;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.call-content {
+  position: absolute;
+  top:732rpx;
+  right:80rpx;
+}
+
 .body-img {
   width: 100vw;
   height: 1000rpx;
   float: left;
 }
 
-.services-btn {
-  width:250rpx;
-  height:250rpx;
-  position:absolute;
-  z-index:10;
-  top:609rpx;
-  left:70rpx;
-  pointer-events: none;
-}
-
-.mobile-btn {
-  width:250rpx;
-  height:250rpx;
-  position:absolute;
-  z-index:10;
-  top:609rpx;
-  right:70rpx;
+.title {
+  position: relative;
+  top: 20rpx;
+  font-family: "FranklinITCStd-Light";
+  font-size: 30rpx;
 }
 
 .contact-btn {
   position: absolute;
-  top:687rpx;
-  left:166rpx;
+  top:778rpx;
+  left:146rpx;
   color: rgba(0, 0, 0, 0);
-  z-index: 6;
+  z-index: 3;
 }

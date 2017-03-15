@@ -27,6 +27,7 @@
   line-height: 80rpx;
   display: inline-block;
   border-bottom: 1rpx solid #eee;
+  font-family: "FranklinITCStd-Light";
 }
 
 .header-left-part.active,
