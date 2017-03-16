@@ -15,8 +15,8 @@
   height: 90rpx;
 }
 
-.takeplace-120 {
-  height: 120rpx;
+.takeplace-160 {
+  height: 160rpx;
 }
 
 .topbar {

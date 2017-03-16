@@ -2,14 +2,14 @@
   <image class="banner" src="../../../image/DFS-banner.png"></image>
   <view class="main-content">
     <navigator url="/page/yeye/product/product?product_id={{item.id}}" wx:for="{{lists}}" class="item">
-      <view class="brand">碧欧泉 BIOTHERM</view>
+      <view class="brand">{{item.brand_name}}</view>
       <view class="name">{{item.name}}</view>
       <image src="{{item.enter_banner}}?imageView/1/w/250/h/250"></image>
       <view class="cutline"></view>
       <view class="price-content">
         <view class="price">${{item.price}}</view>
         <view class="worth">${{item.worth}}</view>
-        <view class="rmb">￥{{item.price}}</view>
+        <view class="rmb">￥{{item.RMB}}</view>
       </view>
     </navigator>
   </view>

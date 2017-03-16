@@ -35,50 +35,36 @@ var pageObject = {
     leftPartClass: 'header-left-part active',
     rightPartClass: 'header-right-part',
     tabState: 'left',
-    total_price: ''
+    total_price: '0'
   },
   onShow: function() {
     var _this = this
-    this.getOrderList()
+    this.getCartList()
   },
   onLoad: function() {
   },
-  getOrderList: function() {
+  getCartList: function() {
     var orderLists = []
     var _this = this
     qcloud.request({
-      url: domain + 'Home/weapp/history_order_list',
+      url: domain + 'Home/weapp/unfinished_order_list',
       login: true,
       success(res) {
-        console.log(res.data)
+        if (res.data.length == 0) {
+          return false;
+        }
+        var temp = 0
+        res.data.map(function(index) {
+          temp = temp + parseInt(index.order.price)
+        })
         _this.setData({
-          historyOrderList: res.data
+          orderList: res.data,
+          total_price: temp
         })
-        qcloud.request({
-          url: domain + 'Home/weapp/unfinished_order_list',
-          login: true,
-          success(res) {
-            console.log(res)
-            _this.setData({
-              unfinishedOrderList: res.data
-            })
-            if (_this.data.tabState == 'right') {
-              _this.setData({indexOrderList: _this.data.historyOrderList})
-            } else {
-              _this.setData({indexOrderList: _this.data.unfinishedOrderList})
-            }
-            var temp = 0
-            if (_this.data.unfinishedOrderList) {
-              _this.data.unfinishedOrderList.map(function(index) {
-                temp = temp + parseInt(index.order.price)
-                console.log(temp)
-              })
-            }
-            _this.setData({
-              total_price: temp
-            })
-          }
-        })
+        console.log(_this.data.orderList)
+      },
+      error(res) {
+        console.log(res.data)
       }
     })
   },
@@ -101,7 +87,8 @@ var pageObject = {
   confirmOrder: function() {
     showBusy('正在通信..');
     var _this = this
-    if (!_this.data.unfinishedOrderList) {
+    if (_this.data.orderList.length == 0) {
+      showModel('尚无商品', '请先去商品目录挑选商品');
       return false;
     }
     qcloud.request({
@@ -109,7 +96,6 @@ var pageObject = {
       login: true,
       success(res) {
         if(res.data == 'success') {
-          // _this.emptyCart()
           showSuccess('订单已提交');
           _this.setData({
             indexOrderList: '',
@@ -127,11 +113,10 @@ var pageObject = {
       login: true,
       success(res) {
         if(res.data == 'success') {
-          showSuccess('订单已完成');
+          showSuccess('购物车已清空');
           _this.setData({
-            indexOrderList: '',
-            total_price: 0,
-            unfinishedOrderList: ''
+            OrderList: '',
+            total_price: 0
           })
         }
       }

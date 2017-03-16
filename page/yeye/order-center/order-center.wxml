@@ -1,59 +1,20 @@
 <view class="page">
   <image class="banner" src="../../../image/DFS-banner.png"></image>
   <view class="topbar">
-    <view class="left-part">合计 6 件商品</view>
-    <view class="right-part">清空</view>
+    <view class="left-part">合计 {{orderList.length}} 件商品</view>
+    <view class="right-part" bindtap="emptyCart">清空</view>
   </view>
-  <view class="list-item">
+  <view class="list-item" wx:for="{{orderList}}">
     <view class="top-content">
-      <image class="product-img" src="https://om536p71r.qnssl.com/c2.png"></image>
-      <view class="brand">海蓝之谜 LA MER</view>
-      <view class="name">海蓝之谜精华露</view>
-      <view class="price">$126.00</view>
+      <image class="product-img" src="{{item.product.order_banner}}"></image>
+      <view class="brand">{{item.product.brand_name}}</view>
+      <view class="name">{{item.product.name}}</view>
+      <view class="price">${{item.product.price}}</view>
       <view class="clearfix"></view>
     </view>
     <view class="price-content">
-      <view class="total-price">$254.00</view>
-      <view class="total-rmb">￥1756.25</view>
-    </view>
-  </view>
-  <view class="list-item">
-    <view class="top-content">
-      <image class="product-img" src="https://om536p71r.qnssl.com/c2.png"></image>
-      <view class="brand">海蓝之谜 LA MER</view>
-      <view class="name">海蓝之谜精华露</view>
-      <view class="price">$126.00</view>
-      <view class="clearfix"></view>
-    </view>
-    <view class="price-content">
-      <view class="total-price">$254.00</view>
-      <view class="total-rmb">￥1756.25</view>
-    </view>
-  </view>
-  <view class="list-item">
-    <view class="top-content">
-      <image class="product-img" src="https://om536p71r.qnssl.com/c2.png"></image>
-      <view class="brand">海蓝之谜 LA MER</view>
-      <view class="name">海蓝之谜精华露</view>
-      <view class="price">$126.00</view>
-      <view class="clearfix"></view>
-    </view>
-    <view class="price-content">
-      <view class="total-price">$254.00</view>
-      <view class="total-rmb">￥1756.25</view>
-    </view>
-  </view>
-  <view class="list-item">
-    <view class="top-content">
-      <image class="product-img" src="https://om536p71r.qnssl.com/c2.png"></image>
-      <view class="brand">海蓝之谜 LA MER</view>
-      <view class="name">海蓝之谜精华露</view>
-      <view class="price">$126.00</view>
-      <view class="clearfix"></view>
-    </view>
-    <view class="price-content">
-      <view class="total-price">$254.00</view>
-      <view class="total-rmb">￥1756.25</view>
+      <view class="total-price">${{item.product.price}}</view>
+      <view class="total-rmb">￥{{item.product.RMB}}</view>
     </view>
   </view>
   <!-- <view wx:for="{{indexOrderList}}" class="order-list-item">
@@ -71,12 +32,12 @@
   </view> -->
   <view>
   </view>
-  <view class="takeplace-120"></view>
+  <view class="takeplace-160"></view>
 
   <view class="order-confirm-bar">
     <view class="top-content">
       <view class="title">总 价</view>
-      <view class="total-fee">$874.23</view>
+      <view class="total-fee">${{total_price}}</view>
       <view class="clearfix"></view>
     </view>
     <view class="center-btn" bindtap="confirmOrder">确认订单</view>
