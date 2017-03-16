@@ -1,5 +1,14 @@
 .page {
-  background-color: #f0f0f0;
+  background-color: rgb(222, 222, 222);
+}
+
+.clearfix {
+  clear: both;
+}
+
+.banner {
+  width: 750rpx;
+  height:110rpx;
 }
 
 .takeplace-90 {
@@ -10,37 +19,138 @@
   height: 120rpx;
 }
 
-.header {
+.topbar {
+  width: 710rpx;
   background-color: #fff;
-  color: #000;
-  height: 80rpx;
-  display: flex;
-  position: fixed;
-  top: 0;
-  width: 750rpx;
+  margin: 20rpx;
+  position: relative;
 }
 
-.header-left-part,
-.header-right-part {
-  flex: 1;
-  text-align: center;
-  line-height: 80rpx;
+.topbar .left-part {
   display: inline-block;
-  border-bottom: 1rpx solid #eee;
+  padding: 20rpx;
+  font-size: 30rpx;
+}
+
+.topbar .right-part {
+  float: right;
+  padding: 20rpx;
+  font-size: 30rpx;
+  position: relative;
+}
+
+.topbar .right-part::after {
+  content: '.';
+  color: rgba(0, 0, 0, 0);
+  position: absolute;
+  bottom: 15rpx;
+  right: 17rpx;
+  display: block;
+  width: 64rpx;
+  height: 2rpx;
+  background-color: #000;
+}
+
+.list-item {
+  width: 710rpx;
+  margin: 20rpx;
+  background-color: #fff;
+}
+
+.list-item .top-content {
+  padding: 20rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.list-item .top-content .product-img {
+  width: 150rpx;
+  height: 150rpx;
+  float: left;
+  margin: 0 60rpx 0 40rpx;
+}
+
+.top-content .brand,
+.top-content .name,
+.top-content .price {
+  display: block;
+  line-height: 48rpx;
+}
+
+.top-content .brand {
+  font-family: "TimesNewRomanPSMT";
+  font-size: 26rpx;
+}
+
+.top-content .name {
   font-family: "FranklinITCStd-Light";
+  font-size: 26rpx;
 }
 
-.header-left-part.active,
-.header-right-part.active {
-  border-bottom: 6rpx solid #B62A18;
+.top-content .price {
+  color: #999;
+  font-size: 24rpx;
+  font-family: "FranklinITCStd-Medium";
+}
+
+.price-content {
+  background-color: #fff;
+  padding: 20rpx 60rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+
+.price-content .total-price {
   color: #B62A18;
+  display: inline-block;
+  font-family: "FranklinITCStd-Medium";
 }
 
+.price-content .total-rmb {
+  float: right;
+  font-size: 24rpx;
+  color: #000;
+}
+
+.order-confirm-bar {
+  background-color: rgb(222, 222, 222);
+  padding-bottom: 20rpx;
+  position: fixed;
+  bottom: 0rpx;
+}
+
+.order-confirm-bar .top-content {
+  padding: 20rpx 30rpx;
+  width: 690rpx;
+}
+
+.order-confirm-bar .top-content .title {
+  display: inline-block;
+  color: #666;
+}
+
+.order-confirm-bar .top-content .total-fee {
+  float: right;
+  font-family: "FranklinITCStd-Medium";
+}
+
+.center-btn {
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #B62A18;
+  color: #fff;
+  text-align: center;
+  width: 710rpx;
+  margin-left: 20rpx;
+}
+/*
 .order-list-item {
   background-color: #fff;
   padding: 0 30rpx;
   padding-top: 30rpx;
   margin-bottom: 10rpx;
+  width: 710rpx;
+  margin: 20rpx;
+  margin-top: 10rpx;
 }
 
 .order-list-item image {
@@ -70,12 +180,10 @@
 .ol-body-content {
   color: #999;
   padding: 24rpx 0;
-}
 
 .ol-body-content .text {
   font-size: 26rpx;
   line-height: 46rpx;
-  /*margin-top: 20rpx;*/
 }
 
 .order-confirm-bar {
@@ -105,3 +213,4 @@
   text-align: center;
   font-weight: bold;
 }
+*/

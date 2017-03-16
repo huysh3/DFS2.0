@@ -27,7 +27,11 @@
   background-color: #fff;
 }
 
-.brand, .name {
+.brand {
+  font-family: "TimesNewRomanPSMT";
+}
+
+.name {
   font-family: "FranklinITCStd-Light";
 }
 
@@ -75,7 +79,7 @@
 
 .price-content .price,
 .price-content .worth {
-  font-family: "FranklinITCStd-Light";
+  font-family: "FranklinITCStd-Medium";
   display: inline-block;
 }
 

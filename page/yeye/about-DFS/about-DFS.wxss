@@ -8,7 +8,7 @@
 
 image {
   width: 750rpx;
-  height:255rpx;
+  height: 255rpx;
   float: left;
 }
 
