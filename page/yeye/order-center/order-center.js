@@ -98,11 +98,52 @@ var pageObject = {
         if(res.data == 'success') {
           showSuccess('订单已提交');
           _this.setData({
-            indexOrderList: '',
-            total_price: 0,
-            unfinishedOrderList: ''
+            orderList: '',
+            total_price: 0
           })
         }
+      }
+    })
+  },
+  emptyCartEvent() {
+    var _this = this
+    wx.showModal({
+      title: '确认清空购物车？',
+      content: '清空购物车后，商品需要重新选购',
+      success: function(res) {
+        if (res.confirm) {
+          _this.emptyCart()
+        }
+      }
+    })
+  },
+  deleteOrder(event) {
+    var _this = this
+    var targetId = event.currentTarget.dataset.id
+    showBusy('通信中..')
+    qcloud.request({
+      url: domain + 'Home/order/deleteOrder',
+      login: true,
+      data: {
+        id : targetId
+      },
+      success(res) {
+        var newOrderList = []
+        if (res.data == 'success') {
+          _this.data.orderList.map(function(item) {
+            if (item.order.id == targetId) {
+            } else {
+              newOrderList.push(item)
+            }
+          })
+          _this.setData({
+            orderList: newOrderList
+          })
+          showSuccess('删除完成')
+        }
+      },
+      error(res) {
+        console.log(res)
       }
     })
   },
@@ -115,7 +156,7 @@ var pageObject = {
         if(res.data == 'success') {
           showSuccess('购物车已清空');
           _this.setData({
-            OrderList: '',
+            orderList: '',
             total_price: 0
           })
         }

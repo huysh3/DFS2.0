@@ -55,6 +55,7 @@
   width: 710rpx;
   margin: 20rpx;
   background-color: #fff;
+  position: relative;
 }
 
 .list-item .top-content {
@@ -67,6 +68,14 @@
   height: 150rpx;
   float: left;
   margin: 0 60rpx 0 40rpx;
+}
+
+.delete-btn {
+  width: 25rpx;
+  height: 25rpx;
+  position: absolute;
+  right: 30rpx;
+  top: 30rpx;
 }
 
 .top-content .brand,

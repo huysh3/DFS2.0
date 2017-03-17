@@ -43,7 +43,12 @@ var pageObject = {
     price: '',
     total_price: '',
     inputCaptcha: '',
-    counter: 1
+    counter: 1,
+    carousels: [
+      'https://om536p71r.qnssl.com/tips_pic%20white.png',
+      'https://om536p71r.qnssl.com/tips_pic%20white.png',
+      'https://om536p71r.qnssl.com/tips_pic%20white.png'
+    ]
   },
   onLoad: function(options) {
     wx.setNavigationBarTitle({title: '套餐详情'})
@@ -90,14 +95,6 @@ var pageObject = {
       total_price: _this.data.counter * this.data.price
     })
   },
-  checkMobile: function(str) {
-    var re = /^1\d{10}$/;
-    if (re.test(str)) {
-      return true;
-    } else {
-      return false;
-    }
-  },
   countDownEvent: function() {
     var _this = this
     var sendPhoneCodeInterval = setInterval(function() {
@@ -119,7 +116,8 @@ var pageObject = {
     qcloud.request({
         url: domain + 'Home/weapp/product_info',
         data: {
-           product_id : options.product_id
+          //  product_id : options.product_id
+           product_id : 16
         },
         method: 'get',
         success: (response) => {
@@ -134,18 +132,10 @@ var pageObject = {
         }
     });
   },
-  onShareAppMessage: function(options) {
-    var _this = this
-    return {
-      title: _this.data.product.name,
-      desc: '撸起袖子加油干' + _this.data.product.id,
-      path: 'page/yeye/product/product?product_id=' + _this.data.product.id
-    }
-  },
   phoneCall: function() {
     var _this = this
     wx.makePhoneCall({
-      phoneNumber: _this.data.product.shop.consumer_contact_phone //仅为示例，并非真实的电话号码
+      phoneNumber: _this.data.product.shop.contact_phone //仅为示例，并非真实的电话号码
     })
   }
 }

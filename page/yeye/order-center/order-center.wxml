@@ -2,36 +2,23 @@
   <image class="banner" src="../../../image/DFS-banner.png"></image>
   <view class="topbar">
     <view class="left-part">合计 {{orderList.length}} 件商品</view>
-    <view class="right-part" bindtap="emptyCart">清空</view>
+    <view class="right-part" bindtap="emptyCartEvent">清空</view>
   </view>
   <view class="list-item" wx:for="{{orderList}}">
+    <image class="delete-btn" src="../../../image/x.png" data-id="{{item.order.id}}" bindtap="deleteOrder"></image>
     <view class="top-content">
       <image class="product-img" src="{{item.product.order_banner}}"></image>
       <view class="brand">{{item.product.brand_name}}</view>
       <view class="name">{{item.product.name}}</view>
-      <view class="price">${{item.product.price}}</view>
+      <view class="price">${{item.product.price}} * {{item.order.number}}</view>
       <view class="clearfix"></view>
     </view>
     <view class="price-content">
-      <view class="total-price">${{item.product.price}}</view>
-      <view class="total-rmb">￥{{item.product.RMB}}</view>
+      <view class="total-price">${{item.product.price * item.order.number}}</view>
+      <view class="total-rmb">￥{{item.product.RMB * item.order.number}}</view>
     </view>
   </view>
-  <!-- <view wx:for="{{indexOrderList}}" class="order-list-item">
-    <view class="ol-img">
-      <image src="{{item.product.order_banner}}?imageView/1/w/690/h/230"></image>
-    </view>
-    <view class="ol-title-content">
-      <view class="left-part">{{item.product.name}}</view>
-      <view class="right-part">{{item.order.price}}元</view>
-    </view>
-    <view class="ol-body-content">
-      <view class="text">品牌: {{item.shop.name}}</view>
-      <view class="text">SKU ID: {{item.product.SKU_ID}}</view>
-    </view>
-  </view> -->
-  <view>
-  </view>
+
   <view class="takeplace-160"></view>
 
   <view class="order-confirm-bar">

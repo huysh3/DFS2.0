@@ -8,26 +8,56 @@
 }
 
 
-.takeplace-220 {
-  height: 220rpx;
+.takeplace-190 {
+  height: 190rpx;
+}
+
+.clearfix {
+  clear: both;
 }
 
 .page {
   background-color: #f0f0f0;
+  padding: 20rpx;
+}
+
+.product-name-content {
+  background-color: #fff;
+  text-align: center;
+  padding-top: 30rpx;
+}
+
+.product-name-content .brand {
+  font-family: "TimesNewRomanPSMT";
+  font-size: 30rpx;
+}
+
+.product-name-content .name {
+  font-family: "FranklinITCStd-Light";
+  font-size: 34rpx;
+  font-weight: bold;
 }
 
 .header {
-  width: 750rpx;
-  height: 650rpx;
+  width: 710rpx;
+  height: 450rpx;
+}
+
+.swipe-content {
+  width: 710rpx;
+  height: 450rpx;
+  text-align: center;
+  background-color: #fff;
 }
 
 .header image {
-  width: 750rpx;
-  height: 650rpx;
+  width: 450rpx;
+  height: 450rpx;
 }
 
 .header-textcontent {
-  padding: 30rpx;
+  padding: 10rpx;
+  padding-bottom: 0;
   background-color: #fff;
 }
 
@@ -38,17 +68,26 @@
 }
 
 .price-content {
-  margin-top: 20rpx;
-  padding-bottom: 14rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  padding: 0 20rpx;
+  padding-bottom: 40rpx;
+  border-bottom: 1rpx solid #ccc;
 }
 
 .price, .worth {
   display: inline-block;
 }
 
+.rmb {
+  float: right;
+}
+
 .price {
-  font-size: 32rpx;
-  color: #cca556;
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #B62A18;
+  letter-spacing: 2rpx;
 }
 
 .worth {
@@ -58,23 +97,36 @@
   color: #999;
 }
 
-.lights-content,
-.menu-content,
-.shopinfo-content,
-.reminder-content {
+.lights-textcontent {
+  padding: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.banner {
+  height: 130rpx;
+  padding: 30rpx 0;
   background-color: #fff;
-  padding: 30rpx;
-  margin-top: 18rpx;
 }
 
-.shopinfo-content {
-  position: relative;
+.banner swiper {
+  height: 130rpx;
 }
 
-.lights-content .title,
-.menu-content .title,
-.shopinfo-content .title,
-.reminder-content .title {
+.banner .swipe-content {
+  height: 130rpx;
+}
+
+.banner .swipe-content image {
+  height: 130rpx;
+}
+
+.lights-content {
+  background-color: #fff;
+  padding: 10rpx;
+  padding-bottom: 0;
+}
+
+.lights-content .title {
   padding: 0 0 20rpx 0;
   font-size: 32rpx;
   color: #333;
@@ -86,53 +138,31 @@
   line-height: 60rpx;
 }
 
-.menu-content {
-  text-align: center;
-  line-height: 60rpx;
-  font-size: 28rpx;
+.auth-content {
+  padding: 10rpx;
+  padding-top: 0;
+  height: 115rpx;
+  background-color: #fff;
 }
 
-.menu-content image {
-  width: 690rpx;
-  height: 350rpx;
+.auth-content .auth-img {
+  width:690rpx;
+  height:115rpx;
+  border-top: 1rpx solid #aaa;
+  border-bottom: 1rpx solid #aaa;}
+
+.contact-content {
+  background-color: #fff;
+  padding: 35rpx 20rpx;
 }
 
-.menu-content .subtitle {
+.contact-content .left-part {
+  display: inline-block;
+}
+
+.contact-content .right-part {
+  float: right;
   color: #cca556;
-  margin-bottom: 10rpx;
-}
-
-.menu-content .text-block {
-  margin-top: 20rpx;
-  text-align: center;
-}
-
-.text-block .text {
-  line-height: 50rpx;
-}
-
-.shopinfo-content .shop-carousel,
-.shopinfo-content .shop-carousel image {
-  width: 690rpx;
-  height: 350rpx;
-}
-
-.shopinfo-content .name {
-  font-size: 32rpx;
-  color: #333;
-  padding: 30rpx 0;
-}
-
-.shopinfo-content .location {
-  font-size: 28rpx;
-  color: #333;
-  padding-bottom: 30rpx;
-  border-bottom: 1rpx solid #f0f0f0;
-}
-
-.shopinfo-content .tel-content {
-  padding: 30rpx 0;
-  padding-bottom: 0;
 }
 
 .tel-content .tel-number {
@@ -143,23 +173,6 @@
   color: #333;
 }
 
-.phone-call-btn {
-  position: absolute;
-  font-size: 28rpx;
-  color: #cca556;
-  right: 30rpx;
-  bottom:50rpx;
-}
-
-.phone-call-active {
-  color: rgba(218, 200, 162, 0.59);
-}
-
-.reminder-content .text-subtitle {
-  line-height: 50rpx;
-  font-size: 28rpx;
-}
-
 .footer {
   width: 750rpx;
   height: 100rpx;
@@ -167,6 +180,7 @@
   background-color: #2f2f3b;
   position: fixed;
   bottom: 0;
+  left: 0;
   display: flex;
   border-top: 1rpx solid #eee;
 }
@@ -177,7 +191,18 @@
 }
 
 .footer .price {
-  padding-left: 20rpx;
+  padding-left: 40rpx;
+  line-height: 100rpx;
+}
+
+.footer .footer-rmb {
+  font-size: 30rpx;
+  font-weight: 300;
+  display: inline-block;
+  margin-left: 20rpx;
+  line-height: 100rpx;
+  position: relative;
+  bottom: 4rpx;
 }
 
 .footer .right-part {
@@ -186,92 +211,7 @@
   color: #fff;
   text-align: center;
   font-weight: bold;
-}
 
-.mask {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.8);
-  top: 0;
-  left: 0;
-}
-
-.modal-content {
-  width: 70vw;
-  padding: 40rpx;
-  position: fixed;
-  background-color: #fff;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.modal-tel-input {
-  width:340rpx;
-}
-
-.modal-header {
-  padding-bottom: 50rpx;
-  font-size: 32rpx;
-  color: #333;
-  text-align: left;
-}
-
-.modal-content input {
-  text-align: left;
-  padding-left: 0;
-}
-
-.modal-content .confirm-btn {
-  transition: all .3s ease;
-}
-
-.send-captcha {
-  font-size: 27rpx;
-  color: #333;
-  position: absolute;
-  top: 150rpx;
-  right: 42rpx;
-  z-index: 3;
-  padding: 6rpx 16rpx;
-  border-left: 1rpx solid #ccc;
-}
-
-.after-send {
-  color: #999;
-}
-
-.modal-bar {
-  width: 100%;
-  height: 2rpx;
-  background-color: #ccc;
-  margin-bottom: 40rpx;
-}
-
-.confirm-btn {
-  background-color: #2f2f3b;
-  color: #cca556;
-  margin-top: 60rpx;
-  font-size: 32rpx;
-  height: 100rpx;
-  line-height: 100rpx;
-  font-weight: bold;
-  display: block;
-}
-
-.cancel-btn {
-  width:30rpx;
-  height:30rpx;
-  position:absolute;
-  right:26rpx;
-  top:20rpx;
-  padding: 20rpx;
-}
-
-.confirm-btn-hover {
-  color: rgb(246, 222, 170);
 }
 
 .counter-content {
@@ -282,6 +222,7 @@
   margin-top: 20rpx;
   position: fixed;
   bottom: 100rpx;
+  left: 0;
   width: 710rpx;
 }
 
@@ -298,7 +239,6 @@
 }
 
 .counter {
-  border: 1rpx solid #999;
   height: 60rpx;
   line-height: 60rpx;
   text-align: center;
@@ -309,13 +249,12 @@
 
 .decr, .incr {
   border-radius: 50%;
-  margin: 20rpx 0;
-  line-height: 38rpx;
-  width: 40rpx;
-  height: 40rpx;
-  background-color: #ccc;
-  border: 1rpx solid #666;
-  color: #666;
+  margin: 10rpx 0;
+  line-height: 50rpx;
+  width: 50rpx;
+  height: 50rpx;
+  background-color: #aaa;
+  color: #fff;
   text-align: center;
 }
 
