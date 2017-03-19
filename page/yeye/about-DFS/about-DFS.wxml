@@ -6,6 +6,9 @@
 
 <view class="page">
   <image class="banner" src="../../../image/DFS-banner.png"></image>
+  <navigator url="/page/yeye/coupon-on/coupon-on" wx:if="{{!coupon_status}}">
+    <image class="coupon-banner" src="../../../image/coupon-banner.png"></image>
+  </navigator>
   <navigator url="/page/yeye/product-list/product-list?class_name=Bags">
     <image src="https://om536p71r.qnssl.com/c1.png" class="nav-item"></image>
   </navigator>
