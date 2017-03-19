@@ -6,8 +6,11 @@
 
 <view class="page">
   <image class="banner" src="../../../image/DFS-banner.png"></image>
-  <navigator url="/page/yeye/coupon-on/coupon-on" wx:if="{{!coupon_status}}">
-    <image class="coupon-banner" src="../../../image/coupon-banner.png"></image>
+  <navigator url="/page/yeye/coupon-on/coupon-on" wx:if="{{coupon_status == 1}}">
+    <image class="coupon-banner" src="https://om536p71r.qnssl.com/yes1.png"></image>
+  </navigator>
+  <navigator url="/page/yeye/coupon-off/coupon-off" wx:if="{{coupon_status == 0}}">
+    <image class="coupon-banner" src="https://om536p71r.qnssl.com/no1.png"></image>
   </navigator>
   <navigator url="/page/yeye/product-list/product-list?class_name=Bags">
     <image src="https://om536p71r.qnssl.com/c1.png" class="nav-item"></image>

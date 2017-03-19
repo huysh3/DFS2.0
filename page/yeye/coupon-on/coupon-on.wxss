@@ -1,5 +1,36 @@
 .coupon-on-container {
-  background-color: rgb(222, 222, 222);
+  background-color: #fff;
   min-height: 100vh;
+  text-align: center;
+}
+
+.banner {
+  width: 710rpx;
+  height:450rpx;
+}
+
+input {
+  width: 500rpx;
+  background-color: #ccc;
+  box-shadow: 0 0 4rpx #f0f0f0;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-left: 125rpx;
+  margin-top: 80rpx;
+}
+
+.qrcode {
+  width: 400rpx;
+  height: 400rpx;
+}
+.text-img {
   width: 750rpx;
+  height: 812rpx;
+}
+
+.cutline {
+  width: 600rpx;
+  margin: 40rpx 75rpx;
+  height: 1rpx;
+  background-color: #000;
 }

@@ -12,6 +12,13 @@ image {
   float: left;
 }
 
+.coupon-banner {
+  background-color: #fff;
+  width: 720rpx;
+  margin: 15rpx;
+  margin-bottom: 10rpx;
+}
+
 .banner {
   height:110rpx;
 }
@@ -33,10 +40,4 @@ image {
   text-align: center;
   font-size: 32rpx;
   padding-bottom: 60rpx;
-}
-
-.coupon-banner {
-  width:750rpx;
-  height:332rpx;
-  margin-bottom:-52rpx;
 }
