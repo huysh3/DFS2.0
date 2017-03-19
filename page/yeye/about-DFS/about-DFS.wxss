@@ -34,3 +34,9 @@ image {
   font-size: 32rpx;
   padding-bottom: 60rpx;
 }
+
+.coupon-banner {
+  width:750rpx;
+  height:332rpx;
+  margin-bottom:-52rpx;
+}

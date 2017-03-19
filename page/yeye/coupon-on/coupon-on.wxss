@@ -1,0 +1,5 @@
+.coupon-on-container {
+  background-color: rgb(222, 222, 222);
+  min-height: 100vh;
+  width: 750rpx;
+}

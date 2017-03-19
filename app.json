@@ -1,7 +1,9 @@
 {
   "pages": [
-    "page/yeye/order-center/order-center",
     "page/yeye/about-DFS/about-DFS",
+    "page/yeye/coupon-on/coupon-on",
+    "page/yeye/coupon-off/coupon-off",
+    "page/yeye/order-center/order-center",
     "page/yeye/services/services",
     "page/yeye/product-list/product-list",
     "page/yeye/product/product",
@@ -23,7 +25,7 @@
     "color": "#999",
     "selectedColor": "#B62A18",
     "list": [{
-      "pagePath": "page/yeye/about-DFS/about-DFS",
+      "pagePath": "page/yeye/coupon-on/coupon-on",
       "iconPath": "image/home-2.png",
       "selectedIconPath": "image/home.png",
       "text": "主页"
