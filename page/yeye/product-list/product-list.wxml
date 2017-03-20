@@ -8,7 +8,7 @@
       <view class="cutline"></view>
       <view class="price-content">
         <view class="price">${{item.price}}</view>
-        <view class="worth">${{item.worth}}</view>
+        <view wx:if="{{item.worth !=0}}" class="worth">${{item.worth}}</view>
         <view class="rmb">￥{{item.RMB}}</view>
       </view>
     </navigator>

@@ -116,8 +116,7 @@ var pageObject = {
     qcloud.request({
         url: domain + 'Home/weapp/product_info',
         data: {
-          //  product_id : options.product_id
-           product_id : 16
+          product_id : options.product_id
         },
         method: 'get',
         success: (response) => {

@@ -21,7 +21,7 @@
   <view class="header-textcontent">
     <view class="price-content">
       <view class="price">${{product.price}}</view>
-      <view class="worth">${{product.worth}}</view>
+      <view wx:if="{{product.worth !=0}}" class="worth">${{product.worth}}</view>
       <view class="rmb">￥{{product.RMB}}</view>
       <view class="clearfix"></view>
     </view>
