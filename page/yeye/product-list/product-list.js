@@ -25,8 +25,8 @@ var pageObject = {
       login: true,
       url: domain + 'Home/weapp/product_list',
       data: {
-        // class_name: options.class_name
-        class_name: 'Bags'
+        class_name: options.class_name
+        //class_name: 'Bags'
       },
       success(res) {
         console.log(res.data)
@@ -35,8 +35,12 @@ var pageObject = {
       fail(error) {
       }
     })
-
-  }
+  },
+  routerGoHome: function() {
+    wx.switchTab({
+      url: '../about-DFS/about-DFS'
+    })
+  }  
 }
 
 Page(pageObject)

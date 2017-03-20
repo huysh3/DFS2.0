@@ -64,7 +64,7 @@ var pageObject = {
       data: {
         product_id: _this.data.product_id,
         shop_id: _this.data.shop_id,
-        price: _this.data.price * _this.data.counter,
+        price: _this.data.price,
         number: _this.data.counter
       },
       success(res) {
@@ -116,8 +116,7 @@ var pageObject = {
     qcloud.request({
         url: domain + 'Home/weapp/product_info',
         data: {
-          //  product_id : options.product_id
-           product_id : 16
+          product_id : options.product_id
         },
         method: 'get',
         success: (response) => {

@@ -1,28 +1,26 @@
-<!-- <view class="about-container">
-  <image class="banner" src="../../../image/DFS-banner.png"></image>
-  <image class="gallary" src="../../../image/dfs-img.png"></image>
-  <image class="desc" src="../../../image/dfs-desc.png"></image>
-</view> -->
-
 <view class="page">
   <image class="banner" src="../../../image/DFS-banner.png"></image>
   <navigator url="/page/yeye/coupon-on/coupon-on" wx:if="{{coupon_status == 1}}">
-    <image class="coupon-banner" src="https://om536p71r.qnssl.com/yes1.png"></image>
+    <image class="coupon-banner" src="https://om536p71r.qnssl.com/Coupon_status_yes2.png"></image>
   </navigator>
   <navigator url="/page/yeye/coupon-off/coupon-off" wx:if="{{coupon_status == 0}}">
-    <image class="coupon-banner" src="https://om536p71r.qnssl.com/no1.png"></image>
+    <image class="coupon-banner" src="https://om536p71r.qnssl.com/Coupon_status_no2.png"></image>
   </navigator>
-  <navigator url="/page/yeye/product-list/product-list?class_name=Bags">
-    <image src="https://om536p71r.qnssl.com/c1.png" class="nav-item"></image>
+  <navigator class="class-item" url="/page/yeye/product-list/product-list?class_name=Bags">
+    <image src="https://om536p71r.qnssl.com/bags_category.png" class="nav-item class-item-img"></image>
+    <view class="text">包</view>
   </navigator>
-  <navigator url="/page/yeye/product-list/product-list?class_name=LocalFood/Snacks">
-    <image src="https://om536p71r.qnssl.com/c2.png" class="nav-item"></image>
+  <navigator class="class-item" url="/page/yeye/product-list/product-list?class_name=LocalFood/Snacks">
+    <image src="https://om536p71r.qnssl.com/foods_category.png" class="nav-item class-item-img"></image>
+    <view class="text">当地美食</view>
   </navigator>
-  <navigator url="/page/yeye/product-list/product-list?class_name=Beauty">
-    <image src="https://om536p71r.qnssl.com/c3.png" class="nav-item"></image>
+  <navigator class="class-item" url="/page/yeye/product-list/product-list?class_name=Beauty">
+    <image src="https://om536p71r.qnssl.com/beauty_category.png" class="nav-item class-item-img"></image>
+    <view class="text">美妆</view>
   </navigator>
   <view class="clearfix">
   </view>
+  <image class="desc-img" src="https://om536p71r.qnssl.com/shop_address.png"></image>
   <view class="desc">
     330 Royal hawaiian Avenue, Honolulu
   </view>
@@ -31,10 +29,4 @@
   <view class="open-time">
     Open 9:30 to 11pm
   </view>
-  <!-- <navigator url="/page/yeye/product-list/product-list">
-    <image src="http://o7at6h6ej.bkt.clouddn.com/9a3635349937e03c5cfbab50d9fb60b0.jpg" class="nav-item"></image>
-  </navigator>
-  <navigator url="/page/yeye/product-list/product-list">
-    <image src="http://o7at6h6ej.bkt.clouddn.com/bg3" class="nav-item"></image>
-  </navigator> -->
 </view>

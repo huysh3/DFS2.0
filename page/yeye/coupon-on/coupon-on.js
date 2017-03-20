@@ -4,7 +4,8 @@ var qcloud = require('../../../vendor/qcloud-weapp-client-sdk/index');
 Page({
   data: {
     qrcodeState: false,
-    qrCodeSrc: '../../../image/QRCode1.png'
+    qrCodeSrc: '../../../image/QRCode1.png',
+    inputStatus: true
   },
   onShow: function() {
     var _this = this
@@ -13,9 +14,19 @@ Page({
     var _this = this
     if (e.detail.value === '347892') {
       wx.hideKeyboard()
-      _this.setData({
-        qrcodeState: true,
-        qrCodeSrc: '../../../image/QRCode2.png'
+      qcloud.request({
+        login: true,
+        url: domain + 'Home/Coupon/couponChange',
+        success(res) {
+          _this.setData({
+            qrcodeState: true,
+            qrCodeSrc: '../../../image/QRCode2.png',
+            inputStatus: false
+          })
+        },
+        fail(error) {
+          console.log(error)
+        }
       })
     }
     setTimeout(function() {

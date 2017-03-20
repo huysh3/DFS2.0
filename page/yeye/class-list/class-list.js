@@ -17,5 +17,10 @@ Page({
       fail(error) {
       }
     })
+  },
+  routerGoHome: function() {
+    wx.switchTab({
+      url: '../about-DFS/about-DFS'
+    })
   }
 })

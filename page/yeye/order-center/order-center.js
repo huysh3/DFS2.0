@@ -162,7 +162,12 @@ var pageObject = {
         }
       }
     })
-  }
+  },
+  routerGoHome: function() {
+    wx.switchTab({
+      url: '../about-DFS/about-DFS'
+    })
+  }  
 }
 
 Page(pageObject)

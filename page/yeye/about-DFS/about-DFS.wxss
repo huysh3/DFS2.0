@@ -6,9 +6,10 @@
   background-color: rgb(216, 216, 216);
 }
 
-image {
+.banner,
+.coupon-banner {
   width: 750rpx;
-  height: 255rpx;
+  height: 370rpx;
   float: left;
 }
 
@@ -40,4 +41,25 @@ image {
   text-align: center;
   font-size: 32rpx;
   padding-bottom: 60rpx;
+}
+
+.class-item {
+  display: inline-block;
+  text-align: center;
+}
+
+.class-item-img {
+  width: 220rpx;
+  height: 220rpx;
+  padding: 15rpx;
+  float: left;
+  margin: 40rpx 0;
+  margin-bottom: 0rpx;
+}
+
+.desc-img {
+  width: 710rpx;
+  height: 240rpx;
+  margin: 20rpx;
+  margin-top: 60rpx;
 }

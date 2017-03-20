@@ -8,7 +8,6 @@ Page({
   },
   onShow: function() {
     var _this = this
-
     qcloud.request({
       login: true,
       url: domain + 'Home/coupon/coupon_status',
