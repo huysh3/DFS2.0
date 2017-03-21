@@ -1,12 +1,17 @@
 .coupon-on-container {
-  background-color: #fff;
+  background-color: #f0f0f0;
   min-height: 100vh;
   text-align: center;
+  padding: 20rpx;
+}
+
+.main-content {
+  background-color: #fff;
 }
 
 .banner {
   width: 710rpx;
-  height:450rpx;
+  height:510rpx;
 }
 
 input {
@@ -15,7 +20,7 @@ input {
   box-shadow: 0 0 4rpx #f0f0f0;
   height: 80rpx;
   line-height: 80rpx;
-  margin-left: 125rpx;
+  margin-left: 105rpx;
   margin-top: 80rpx;
 }
 
@@ -30,7 +35,7 @@ input {
 
 .cutline {
   width: 600rpx;
-  margin: 40rpx 75rpx;
+  margin: 40rpx 55rpx;
   height: 1rpx;
   background-color: #000;
 }

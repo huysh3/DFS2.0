@@ -15,8 +15,8 @@
 
 .coupon-banner {
   background-color: #fff;
-  width: 720rpx;
-  margin: 15rpx;
+  width:710rpx;
+  margin:20rpx;
   margin-bottom: 10rpx;
 }
 
