@@ -1,17 +1,21 @@
 .coupon-off-container {
-  /*background-color: rgb(222, 222, 222);*/
-  background-color: #fff;
+  background-color: rgb(222, 222, 222);
   min-height: 100vh;
+  padding: 20rpx;
+}
+
+.main-content {
+  background-color: #fff;
 }
 
 .banner {
-  width: 750rpx;
-  height: 930rpx;
+  width: 710rpx;
+  height: 1000rpx;
 }
 
 .text-img {
-  width: 750rpx;
-  height: 812rpx;
+  width: 710rpx;
+  height: 921rpx;
 }
 
 .cutline {

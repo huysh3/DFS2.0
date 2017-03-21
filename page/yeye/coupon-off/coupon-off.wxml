@@ -1,7 +1,7 @@
 <view class="coupon-off-container">
   <view class="main-content">
-    <image class="banner" src="https://om536p71r.qnssl.com/coupon-on.png"></image>
+    <image class="banner" src="https://om536p71r.qnssl.com/Coupon=No_on_infopage.png"></image>
     <view class="cutline"></view>
-    <image class="text-img" src="../../../image/text-img.png"></image>
+    <image class="text-img" src="https://om536p71r.qnssl.com/legalfile.png"></image>
   </view>
 </view>

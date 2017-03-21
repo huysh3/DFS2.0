@@ -11,7 +11,7 @@
 
 .banner {
   width: 710rpx;
-  height:510rpx;
+  height:455rpx;
 }
 
 input {
@@ -29,8 +29,8 @@ input {
   height: 400rpx;
 }
 .text-img {
-  width: 750rpx;
-  height: 812rpx;
+  width: 710rpx;
+  height: 921rpx;
 }
 
 .cutline {

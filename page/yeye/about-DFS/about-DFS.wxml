@@ -1,10 +1,10 @@
 <view class="page">
   <image class="banner" src="../../../image/DFS-banner.png"></image>
   <navigator url="/page/yeye/coupon-on/coupon-on" wx:if="{{coupon_status == 1}}">
-    <image class="coupon-banner" src="https://om536p71r.qnssl.com/Coupon_status_yes2.png"></image>
+    <image class="coupon-banner" src="https://om536p71r.qnssl.com/coupon=yes_on_homepage.png"></image>
   </navigator>
   <navigator url="/page/yeye/coupon-off/coupon-off" wx:if="{{coupon_status == 0}}">
-    <image class="coupon-banner" src="https://om536p71r.qnssl.com/Coupon_status_no2.png"></image>
+    <image class="coupon-banner" src="https://om536p71r.qnssl.com/coupon=no_on_homepage.png"></image>
   </navigator>
   <navigator class="class-item" url="/page/yeye/product-list/product-list?class_name=Bags">
     <image src="https://om536p71r.qnssl.com/bags_category.png" class="nav-item class-item-img"></image>

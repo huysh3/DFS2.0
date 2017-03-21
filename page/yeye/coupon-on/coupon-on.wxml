@@ -1,9 +1,9 @@
 <view class="coupon-on-container">
   <view class="main-content">
-    <image class="banner" src="https://om536p71r.qnssl.com/Coupon=YesTop.png"></image>
+    <image class="banner" src="https://om536p71r.qnssl.com/Coupon=yes_on_infopage.png"></image>
     <image class="qrcode" src="{{qrCodeSrc}}"></image>
     <input wx:if="{{inputStatus}}" placeholder="" bindinput="judgeQrcode" auto-focus/>
     <view class="cutline"></view>
-    <image class="text-img" src="../../../image/text-img.png"></image>
+    <image class="text-img" src="https://om536p71r.qnssl.com/legalfile.png"></image>
   </view>
 </view>
