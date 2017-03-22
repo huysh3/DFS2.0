@@ -1,16 +1,17 @@
 <view class="services-container">
   <image bindtap="routerGoHome" class="banner" src="../../../image/dfs-banner.png"></image>
   <view class="main-content">
-    <view class="desc">专业顾问为您服务</view>
-    <image class="avatar" src="https://om536p71r.qnssl.com/call_now_pic1.png"></image>
+    <view class="desc">我们真诚为您服务</view>
+    <image class="avatar" src="https://om536p71r.qnssl.com/Woman.png"></image>
     <view class="line-through"></view>
+    <image class="contact-time" src="https://om536p71r.qnssl.com/CallingTimes%20.png"></image>
     <view class="services-content">
       <image class="chat-img" src="https://om536p71r.qnssl.com/chat_now.png"></image>
-      <view class="title">在线咨询</view>
+      <view class="title">在线客服</view>
     </view>
     <view class="call-content">
       <image bindtap="phoneCall" class="call-img" src="https://om536p71r.qnssl.com/call_now.png"></image>
-      <view class="title">电话咨询</view>
+      <view class="title">电话客服</view>
     </view>
   </view>
   <contact-button class="contact-btn" type="default-light" size="40" session-from="weapp"></contact-button>

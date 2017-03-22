@@ -12,8 +12,6 @@
 
 .avatar {
   margin-top: 60rpx;
-  border: 4rpx solid rgb(200, 200, 200);
-  border-radius: 26rpx;
   width: 250rpx;
   height: 250rpx;
   z-index: 5;
@@ -33,12 +31,12 @@
 
 .line-through {
   width: 4rpx;
-  height: 48vh;
+  height: 38vh;
   background-color: rgb(200, 200, 200);
   position: absolute;
   left: 50%;
   z-index: 2;
-  bottom: 30rpx;
+  bottom: 150rpx;
 }
 
 .services-content .chat-img,
@@ -80,4 +78,12 @@
   left:118rpx;
   color: rgba(0, 0, 0, 0);
   z-index: 3;
+}
+
+.contact-time {
+  width: 750rpx;
+  height: 65rpx;
+  position: absolute;
+  bottom: 50rpx;
+  left: 0;
 }
