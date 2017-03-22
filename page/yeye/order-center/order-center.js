@@ -47,7 +47,7 @@ var pageObject = {
     var orderLists = []
     var _this = this
     qcloud.request({
-      url: domain + 'Home/weapp/unfinished_order_list',
+      url: domain + 'Home/weapp/cart_list',
       login: true,
       success(res) {
         if (res.data.length == 0) {
