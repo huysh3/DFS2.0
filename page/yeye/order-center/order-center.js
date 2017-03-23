@@ -147,27 +147,30 @@ var pageObject = {
       }
     })
   },
-  emptyCart: function() {
-    var _this = this
-    qcloud.request({
-      url: domain + 'Home/order/emptyCart',
-      login: true,
-      success(res) {
-        if(res.data == 'success') {
-          showSuccess('购物车已清空');
-          _this.setData({
-            orderList: '',
-            total_price: 0
-          })
-        }
-      }
-    })
+  // emptyCart: function() {
+  //   var _this = this
+  //   qcloud.request({
+  //     url: domain + 'Home/order/emptyCart',
+  //     login: true,
+  //     success(res) {
+  //       if(res.data == 'success') {
+  //         showSuccess('购物车已清空');
+  //         _this.setData({
+  //           orderList: '',
+  //           total_price: 0
+  //         })
+  //       }
+  //     }
+  //   })
+  // },
+  routerGoHistoryOrders() {
+    
   },
   routerGoHome: function() {
     wx.switchTab({
       url: '../about-DFS/about-DFS'
     })
-  }  
+  }
 }
 
 Page(pageObject)
