@@ -50,6 +50,8 @@ var pageObject = {
       url: domain + 'Home/weapp/cart_list',
       login: true,
       success(res) {
+        console.log(res.data)
+        console.log('=================================')
         if (res.data.length == 0) {
           return false;
         }
@@ -61,7 +63,6 @@ var pageObject = {
           orderList: res.data,
           total_price: temp
         })
-        console.log(_this.data.orderList)
       },
       error(res) {
         console.log(res.data)
@@ -164,7 +165,9 @@ var pageObject = {
   //   })
   // },
   routerGoHistoryOrders() {
-    
+    wx.navigateTo({
+      url: "../history-orders/history-orders"
+    })
   },
   routerGoHome: function() {
     wx.switchTab({
