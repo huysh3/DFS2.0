@@ -154,75 +154,33 @@
   width: 710rpx;
   margin-left: 20rpx;
 }
-/*
-.order-list-item {
+
+.modal-content {
+  width: 500rpx;
+  padding: 30rpx;
   background-color: #fff;
-  padding: 0 30rpx;
-  padding-top: 30rpx;
-  margin-bottom: 10rpx;
-  width: 710rpx;
-  margin: 20rpx;
-  margin-top: 10rpx;
-}
-
-.order-list-item image {
-  width: 690rpx;
-  height: 230rpx;
-}
-
-.ol-title-content {
-  height: 100rpx;
-  line-height: 100rpx;
-  border-bottom: 1rpx solid #f0f0f0;
-  color: #333;
-}
-
-.ol-title-content .left-part {
-  float: left;
-  font-weight: bold;
-  font-size: 32rpx;
-}
-
-.ol-title-content .right-part {
-  float: right;
-  font-size: 28rpx;
-  font-weight: bold;
-}
-
-.ol-body-content {
-  color: #999;
-  padding: 24rpx 0;
-
-.ol-body-content .text {
-  font-size: 26rpx;
-  line-height: 46rpx;
-}
-
-.order-confirm-bar {
-  width: 750rpx;
-  height: 100rpx;
-  line-height: 100rpx;
-  background-color: #2f2f3b;
-  position: fixed;
-  bottom: 0;
-  display: flex;
-  border-top: 1rpx solid #eee;
-}
-
-.order-confirm-bar .left-part {
-  flex: 1;
-  background-color: #fff;
-}
-
-.order-confirm-bar .price {
-  padding-left: 20rpx;
-}
-
-.order-confirm-bar .right-part {
-  flex: 1;
-  background-color: rgb(194, 44, 15);
-  color: #fff;
+  border: 2px solid #999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  font-weight: bold;
+  box-shadow:4rpx 4rpx 8rpx #999;
 }
-*/
+
+.modal-header {
+  border-bottom: 1px solid #999;
+}
+
+.modal-content .icon {
+  width: 80rpx;
+  height: 80rpx;
+  padding: 40rpx 0;
+}
+
+.modal-body {
+  padding-top: 30rpx;
+  font-size: 26rpx;
+  line-height: 50rpx;
+  color: #666;
+}

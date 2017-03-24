@@ -35,7 +35,8 @@ var pageObject = {
     leftPartClass: 'header-left-part active',
     rightPartClass: 'header-right-part',
     tabState: 'left',
-    total_price: '0'
+    total_price: '0',
+    modalStatus: false
   },
   onShow: function() {
     var _this = this
@@ -97,11 +98,18 @@ var pageObject = {
       login: true,
       success(res) {
         if(res.data == 'success') {
-          showSuccess('订单已提交');
+          // showSuccess('订单已提交');
+          wx.hideToast();
           _this.setData({
             orderList: '',
-            total_price: 0
+            total_price: 0,
+            modalStatus: true
           })
+          setTimeout(function() {
+            _this.setData({
+              modalStatus: false
+            })
+          }, 2000)
         }
       }
     })
