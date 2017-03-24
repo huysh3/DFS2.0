@@ -1,5 +1,8 @@
 <view>
   <image bindtap="routerGoHome" class="banner" src="../../../image/DFS-banner.png"></image>
+  <navigator url="/page/yeye/promotions/promotions">
+    <image src="https://om536p71r.qnssl.com/Promotion1.png" class="nav-item"></image>
+  </navigator>
   <navigator url="/page/yeye/product-list/product-list?class_name={{item.class_name}}" wx:for="{{lists}}">
     <image src="{{item.class_url}}" class="nav-item"></image>
   </navigator>
