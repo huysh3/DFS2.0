@@ -1,71 +1,24 @@
 <view class="history-container">
   <image bindtap="routerGoHome" class="banner" src="../../../image/DFS-banner.png"></image>
   <view class="header">
-    <view class="total">合计2件商品</view>
+    <view class="total">合计 {{indexList.length}} 张订单</view>
     <view class="title">订单</view>
   </view>
-  <view class="order-card">
+
+  <view class="order-card" wx:for="{{indexList}}" wx:for-item="list">
     <view class="card-header">
-      <view class="order-id">单号: A1</view>
-      <view class="order-total-price">$243</view>
-      <view class="order-total-rmb">￥2311</view>
+      <view class="order-id">单号: {{list.order_id}}</view>
+      <view class="order-total-price">${{list.total_price}}</view>
+      <view class="order-total-rmb">￥{{list.total_price_RMB - list.total_price_RMB % 1}}</view>
     </view>
     <view class="order-card-content">
-      <view class="show-more">More</view>
-      <view class="order-card-item">
-        <view class="brand-name">欧碧泉 BIOTHERM</view>
-        <view class="product-name">男士滋养紧致1 2 3套装</view>
-        <view class="number">* 2</view>
-      </view>
-      <view class="order-card-item">
-        <view class="brand-name">欧碧泉 BIOTHERM</view>
-        <view class="product-name">男士滋养紧致1 2 3套装</view>
-        <view class="number">* 2</view>
-      </view>
-      <view class="order-card-item">
-        <view class="brand-name">欧碧泉 BIOTHERM</view>
-        <view class="product-name">男士滋养紧致1 2 3套装</view>
-        <view class="number">* 2</view>
-      </view>
-      <view class="order-card-item">
-        <view class="brand-name">欧碧泉 BIOTHERM</view>
-        <view class="product-name">男士滋养紧致1 2 3套装</view>
-        <view class="number">* 2</view>
-      </view>
-    </view>
-  </view>
-  <view class="order-card">
-    <view class="card-header">
-      <view class="order-id">单号: A2</view>
-      <view class="order-total-price">$243</view>
-      <view class="order-total-rmb">￥2311</view>
-    </view>
-    <view class="order-card-content">
-      <view class="show-more">More</view>
-      <view class="order-card-item">
-        <view class="brand-name">欧碧泉 BIOTHERM</view>
-        <view class="product-name">男士滋养紧致1 2 3套装</view>
-        <view class="number">* 2</view>
-      </view>
-      <view class="order-card-item">
-        <view class="brand-name">欧碧泉 BIOTHERM</view>
-        <view class="product-name">男士滋养紧致1 2 3套装</view>
-        <view class="number">* 2</view>
-      </view>
-    </view>
-  </view>
-  <view class="order-card">
-    <view class="card-header">
-      <view class="order-id">单号: A3</view>
-      <view class="order-total-price">$243</view>
-      <view class="order-total-rmb">￥2311</view>
-    </view>
-    <view class="order-card-content">
-      <view class="show-more">More</view>
-      <view class="order-card-item">
-        <view class="brand-name">欧碧泉 BIOTHERM</view>
-        <view class="product-name">男士滋养紧致1 2 3套装</view>
-        <view class="number">* 2</view>
+      <navigator url="/page/yeye/history-order/history-order?order_id={{list.order_id}}">
+        <view class="show-more">More</view>
+      </navigator>
+      <view class="order-card-item" wx:for="{{list.order}}">
+        <view class="brand-name">{{item.product.brand_name}}</view>
+        <view class="product-name">{{item.product.name}}</view>
+        <view class="number">* {{item.number}}</view>
       </view>
     </view>
   </view>

@@ -2,7 +2,7 @@
   <image bindtap="routerGoHome" class="banner" src="../../../image/DFS-banner.png"></image>
   <view class="topbar">
     <view class="left-part">合计 {{orderList.length}} 件商品</view>
-    <view class="right-part" bindtap="routerGoHistoryOrders">清空</view>
+    <view class="right-part" bindtap="routerGoHistoryOrders">我的订单</view>
   </view>
   <view class="list-item" wx:for="{{orderList}}">
     <image class="delete-btn" src="../../../image/x.png" data-id="{{item.order.id}}" bindtap="deleteOrder"></image>

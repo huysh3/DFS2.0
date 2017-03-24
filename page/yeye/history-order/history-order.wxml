@@ -1,90 +1,18 @@
 <view class="history-container">
   <image bindtap="routerGoHome" class="banner" src="../../../image/DFS-banner.png"></image>
   <view class="header">
-    <view class="total">合计2件商品</view>
+    <view class="total">合计{{orderInfo.order.length}}件商品</view>
   </view>
   <view class="order-card">
     <view class="card-header">
-      <view class="order-id">单号: A1</view>
+      <view class="order-id">单号: {{orderInfo.order[0].order_id}}</view>
     </view>
     <view class="order-card-content">
-      <view class="order-card-item">
-        <view class="brand-name">欧碧泉 BIOTHERM</view>
-        <view class="product-name">男士滋养紧致1 2 3套装</view>
-        <view class="number">* 2</view>
-        <view class="price">$231</view>
-      </view>
-      <view class="order-card-item">
-        <view class="brand-name">欧碧泉 BIOTHERM</view>
-        <view class="product-name">男士滋养紧致1 2 3套装</view>
-        <view class="number">* 2</view>
-        <view class="price">$231</view>
-      </view>
-      <view class="order-card-item">
-        <view class="brand-name">欧碧泉 BIOTHERM</view>
-        <view class="product-name">男士滋养紧致1 2 3套装</view>
-        <view class="number">* 2</view>
-        <view class="price">$231</view>
-      </view>
-      <view class="order-card-item">
-        <view class="brand-name">欧碧泉 BIOTHERM</view>
-        <view class="product-name">男士滋养紧致1 2 3套装</view>
-        <view class="number">* 2</view>
-        <view class="price">$231</view>
-      </view>
-      <view class="order-card-item">
-        <view class="brand-name">欧碧泉 BIOTHERM</view>
-        <view class="product-name">男士滋养紧致1 2 3套装</view>
-        <view class="number">* 2</view>
-        <view class="price">$231</view>
-      </view>
-      <view class="order-card-item">
-        <view class="brand-name">欧碧泉 BIOTHERM</view>
-        <view class="product-name">男士滋养紧致1 2 3套装</view>
-        <view class="number">* 2</view>
-        <view class="price">$231</view>
-      </view>
-      <view class="order-card-item">
-        <view class="brand-name">欧碧泉 BIOTHERM</view>
-        <view class="product-name">男士滋养紧致1 2 3套装</view>
-        <view class="number">* 2</view>
-        <view class="price">$231</view>
-      </view>
-      <view class="order-card-item">
-        <view class="brand-name">欧碧泉 BIOTHERM</view>
-        <view class="product-name">男士滋养紧致1 2 3套装</view>
-        <view class="number">* 2</view>
-        <view class="price">$231</view>
-      </view>
-      <view class="order-card-item">
-        <view class="brand-name">欧碧泉 BIOTHERM</view>
-        <view class="product-name">男士滋养紧致1 2 3套装</view>
-        <view class="number">* 2</view>
-        <view class="price">$231</view>
-      </view>
-      <view class="order-card-item">
-        <view class="brand-name">欧碧泉 BIOTHERM</view>
-        <view class="product-name">男士滋养紧致1 2 3套装</view>
-        <view class="number">* 2</view>
-        <view class="price">$231</view>
-      </view>
-      <view class="order-card-item">
-        <view class="brand-name">欧碧泉 BIOTHERM</view>
-        <view class="product-name">男士滋养紧致1 2 3套装</view>
-        <view class="number">* 2</view>
-        <view class="price">$231</view>
-      </view>
-      <view class="order-card-item">
-        <view class="brand-name">欧碧泉 BIOTHERM</view>
-        <view class="product-name">男士滋养紧致1 2 3套装</view>
-        <view class="number">* 2</view>
-        <view class="price">$231</view>
-      </view>
-      <view class="order-card-item">
-        <view class="brand-name">欧碧泉 BIOTHERM</view>
-        <view class="product-name">男士滋养紧致1 2 3套装</view>
-        <view class="number">* 2</view>
-        <view class="price">$231</view>
+      <view class="order-card-item" wx:for="{{orderInfo.order}}">
+        <view class="brand-name">{{item.product.brand_name}}</view>
+        <view class="product-name">{{item.product.name}}</view>
+        <view class="number">* {{item.number}}</view>
+        <view class="price">${{item.price}}</view>
       </view>
     </view>
   </view>

@@ -26,15 +26,27 @@ var showModel = (title, content) => {
 
 Page({
   data: {
-    indexList: []
+    indexList: [],
+    orderList: []
   },
   onShow() {
+    var _this = this
     qcloud.request({
-      url: domain + 'Home/weapp/history_order_list',
+      url: domain + 'Home/weapp/order_list',
       login: true,
       success(res) {
-        console.log(res.data)
+        _this.setData({
+          indexList: res.data
+        })
+        // console.log(_this.data.orderList)
+
+        // console.log(_this.data.indexList)
       }
+    })
+  },
+  routerGoOrder() {
+    wx.navigateTo({
+      url: "../history-order/history-order"
     })
   },
   routerGoHome: function() {
