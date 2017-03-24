@@ -48,7 +48,8 @@ var pageObject = {
       'https://om536p71r.qnssl.com/tips_pic%20white.png',
       'https://om536p71r.qnssl.com/tips_pic%20white.png',
       'https://om536p71r.qnssl.com/tips_pic%20white.png'
-    ]
+    ],
+    modalStatus: false
   },
   onLoad: function(options) {
     wx.setNavigationBarTitle({title: '套餐详情'})
@@ -69,7 +70,17 @@ var pageObject = {
       },
       success(res) {
         if (res.data == 'success') {
-          showSuccess('加入购物车');
+          wx.hideToast();
+          _this.setData({
+            orderList: '',
+            total_price: 0,
+            modalStatus: true
+          })
+          setTimeout(function() {
+            _this.setData({
+              modalStatus: false
+            })
+          }, 2000)
         } else {
           showModel('请求失败', error);
         }

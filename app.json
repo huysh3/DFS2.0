@@ -1,5 +1,7 @@
 {
   "pages": [
+    "page/yeye/class-list/class-list",
+    "page/yeye/product-list/product-list",
     "page/yeye/order-center/order-center",
     "page/yeye/about-DFS/about-DFS",
     "page/yeye/promotions/promotions",
@@ -8,8 +10,6 @@
     "page/yeye/services/services",
     "page/yeye/coupon-off/coupon-off",
     "page/yeye/coupon-on/coupon-on",
-    "page/yeye/product-list/product-list",
-    "page/yeye/class-list/class-list",
     "page/yeye/order-confirm/order-confirm",
     "page/yeye/product/product",
     "page/yeye/product-order/product-order"

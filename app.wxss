@@ -1,3 +1,5 @@
+@import "./page/component/done-model/done-model.wxss";
+
 page {
   background-color: #fbf9fe;
   height: 100%;
@@ -17,7 +19,7 @@ page {
 }
 .page-header-text {
   padding: 20rpx 40rpx;
-  border-bottom: 1px solid #ccc; 
+  border-bottom: 1px solid #ccc;
 }
 
 .page-body {

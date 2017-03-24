@@ -78,4 +78,7 @@
     </view>
     <view class="right-part" bindtap="buyBtnEvent">加入购物车</view>
   </view>
+
+  <import src="../../component/done-model/done-model.wxml"/>
+  <template is="done-model" wx:if="{{modalStatus}}"/>
 </view>
