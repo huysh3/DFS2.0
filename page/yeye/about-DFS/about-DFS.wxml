@@ -6,9 +6,9 @@
   <navigator url="/page/yeye/coupon-off/coupon-off" wx:if="{{coupon_status == 0}}">
     <image class="coupon-banner" src="https://om536p71r.qnssl.com/coupon=no_on_homepage.png"></image>
   </navigator>
-  <navigator class="class-item" url="/page/yeye/product-list/product-list?class_name=Bags">
-    <image src="https://om536p71r.qnssl.com/bags_category.png" class="nav-item class-item-img"></image>
-    <view class="text">包</view>
+  <navigator class="class-item" url="/page/yeye/product-list/product-list?class_name=Watches/jewelry">
+    <image src="https://om536p71r.qnssl.com/Watchandjewel.png" class="nav-item class-item-img"></image>
+    <view class="text">手表和首饰</view>
   </navigator>
   <navigator class="class-item" url="/page/yeye/product-list/product-list?class_name=LocalFood/Snacks">
     <image src="https://om536p71r.qnssl.com/foods_category.png" class="nav-item class-item-img"></image>
