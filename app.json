@@ -1,9 +1,9 @@
 {
   "pages": [
+    "page/yeye/about-DFS/about-DFS",
     "page/yeye/class-list/class-list",
     "page/yeye/product-list/product-list",
     "page/yeye/order-center/order-center",
-    "page/yeye/about-DFS/about-DFS",
     "page/yeye/promotions/promotions",
     "page/yeye/history-orders/history-orders",
     "page/yeye/history-order/history-order",
