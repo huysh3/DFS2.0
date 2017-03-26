@@ -34,6 +34,7 @@
 .desc {
   text-align: center;
   padding-top: 2rpx;
+  padding-bottom: 10rpx;
   font-size: 32rpx;
 }
 
