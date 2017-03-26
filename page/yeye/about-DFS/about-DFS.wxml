@@ -7,7 +7,7 @@
     <image class="coupon-banner" src="https://om536p71r.qnssl.com/coupon=no_on_homepage.png"></image>
   </navigator>
   <navigator class="class-item" url="/page/yeye/product-list/product-list?class_name=Watches/jewelry">
-    <image src="https://om536p71r.qnssl.com/Watchandjewel.png" class="nav-item class-item-img"></image>
+    <image src="https://om536p71r.qnssl.com/1111Watchandjewel.png" class="nav-item class-item-img"></image>
     <view class="text">手表和首饰</view>
   </navigator>
   <navigator class="class-item" url="/page/yeye/product-list/product-list?class_name=LocalFood/Snacks">
