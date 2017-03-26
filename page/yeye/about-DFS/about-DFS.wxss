@@ -33,7 +33,7 @@
 
 .desc {
   text-align: center;
-  padding-top: 60rpx;
+  padding-top: 2rpx;
   font-size: 32rpx;
 }
 

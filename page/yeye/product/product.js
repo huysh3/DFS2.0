@@ -46,8 +46,7 @@ var pageObject = {
     counter: 1,
     carousels: [
       'https://om536p71r.qnssl.com/tips_pic%20white.png',
-      'https://om536p71r.qnssl.com/tips_pic%20white.png',
-      'https://om536p71r.qnssl.com/tips_pic%20white.png'
+      'https://om536p71r.qnssl.com/new_Slide2.png'
     ],
     modalStatus: false
   },
