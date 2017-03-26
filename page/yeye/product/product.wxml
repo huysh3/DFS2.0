@@ -22,7 +22,7 @@
     <view class="price-content">
       <view class="price">${{product.price}}</view>
       <view wx:if="{{product.worth != 0}}" class="worth">${{product.worth}}</view>
-      <view class="rmb">￥{{product.RMB}}</view>
+      <view class="rmb">￥{{product.RMB - product.RMB % 1}}</view>
       <view class="clearfix"></view>
     </view>
   </view>
@@ -74,7 +74,7 @@
   <view class="footer">
     <view class="left-part">
       <view class="price">${{product.price * counter}}</view>
-      <view class="footer-rmb">￥{{product.RMB * counter}}</view>
+      <view class="footer-rmb">￥{{(product.RMB - product.RMB % 1) * counter}}</view>
     </view>
     <view class="right-part" bindtap="buyBtnEvent">加入购物车</view>
   </view>

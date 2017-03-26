@@ -15,7 +15,7 @@
     </view>
     <view class="price-content">
       <view class="total-price">${{item.product.price * item.order.number}}</view>
-      <view class="total-rmb">￥{{item.product.RMB * item.order.number}}</view>
+      <view class="total-rmb">￥{{(item.product.RMB - item.product.RMB % 1) * item.order.number}}</view>
     </view>
   </view>
 

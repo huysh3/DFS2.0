@@ -8,7 +8,7 @@
       <view class="price-content">
         <view class="price">${{item.price}}</view>
         <view wx:if="{{item.worth !=0}}" class="worth">${{item.worth}}</view>
-        <view class="rmb">￥{{item.RMB}}</view>
+        <view class="rmb">￥{{item.RMB - item.RMB % 1}}</view>
       </view>
     </navigator>
   </view>
