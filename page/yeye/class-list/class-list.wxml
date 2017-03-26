@@ -4,7 +4,7 @@
     <image src="{{item.class_url}}" class="nav-item"></image>
   </navigator>
   <navigator url="/page/yeye/promotions/promotions">
-    <image src="https://om536p71r.qnssl.com/Promotion1.png" class="nav-item"></image>
+    <image src="https://om536p71r.qnssl.com/Promotions6.png" class="nav-item"></image>
   </navigator>
   <!-- <navigator url="/page/yeye/product-list/product-list">
     <image src="http://o7at6h6ej.bkt.clouddn.com/9a3635349937e03c5cfbab50d9fb60b0.jpg" class="nav-item"></image>
