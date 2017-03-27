@@ -7,15 +7,15 @@
     <image class="coupon-banner" src="https://om536p71r.qnssl.com/coupon=no_on_homepage.png"></image>
   </navigator>
   <navigator class="class-item" url="/page/yeye/product-list/product-list?class_name=Watches/jewelry">
-    <image src="https://om536p71r.qnssl.com/1111Watchandjewel.png" class="nav-item class-item-img"></image>
+    <image src="https://om536p71r.qnssl.com/2222WaJ22.png" class="nav-item class-item-img"></image>
     <view class="text">腕表及香水</view>
   </navigator>
   <navigator class="class-item" url="/page/yeye/product-list/product-list?class_name=LocalFood/Snacks">
-    <image src="https://om536p71r.qnssl.com/Food8.png" class="nav-item class-item-img"></image>
+    <image src="https://om536p71r.qnssl.com/222FoodNEW.png" class="nav-item class-item-img"></image>
     <view class="text">当地美食</view>
   </navigator>
   <navigator class="class-item" url="/page/yeye/product-list/product-list?class_name=Beauty">
-    <image src="https://om536p71r.qnssl.com/Beauty8.png" class="nav-item class-item-img"></image>
+    <image src="https://om536p71r.qnssl.com/222BeautyNEW.png" class="nav-item class-item-img"></image>
     <view class="text">美妆</view>
   </navigator>
   <view class="clearfix">
