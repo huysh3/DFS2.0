@@ -8,25 +8,25 @@
   </navigator>
   <navigator class="class-item" url="/page/yeye/product-list/product-list?class_name=Watches/jewelry">
     <image src="https://om536p71r.qnssl.com/2222WaJ22.png" class="nav-item class-item-img"></image>
-    <view class="text">腕表及香水</view>
+    <view class="text">腕表珠宝</view>
   </navigator>
   <navigator class="class-item" url="/page/yeye/product-list/product-list?class_name=LocalFood/Snacks">
     <image src="https://om536p71r.qnssl.com/222FoodNEW.png" class="nav-item class-item-img"></image>
-    <view class="text">当地美食</view>
+    <view class="text">当地特产</view>
   </navigator>
   <navigator class="class-item" url="/page/yeye/product-list/product-list?class_name=Beauty">
     <image src="https://om536p71r.qnssl.com/222BeautyNEW.png" class="nav-item class-item-img"></image>
-    <view class="text">美妆</view>
+    <view class="text">美妆香水</view>
   </navigator>
   <view class="clearfix">
   </view>
   <image class="desc-img" src="https://om536p71r.qnssl.com/shop_address.png"></image>
   <view class="desc">
-    330 Royal hawaiian Avenue, Honolulu
+    檀香山 皇家夏威夷大道330号
   </view>
   <view class="cutline">
   </view>
   <view class="open-time">
-    Open 9:30 to 11pm
+    营业时间 9:30 至 23:00
   </view>
 </view>

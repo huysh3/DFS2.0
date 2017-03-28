@@ -13,7 +13,7 @@
     <block wx:for="{{product.banner_image_urls}}">
       <swiper-item>
         <view class="swipe-content">
-          <image src="{{item}}?imageView2/1/w/750/h/650" class="slide-image"/>
+          <image src="{{item}}" class="slide-image"/>
         </view>
       </swiper-item>
     </block>
