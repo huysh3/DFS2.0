@@ -12,7 +12,7 @@
       <view class="order-total-rmb">￥{{list.total_price_RMB - list.total_price_RMB % 1}}</view>
     </view>
     <view class="order-card-content">
-      <navigator url="/page/yeye/history-order/history-order?order_id={{list.order_id}}">
+      <navigator url="/page/DFS/history-order/history-order?order_id={{list.order_id}}">
         <view class="show-more">More</view>
       </navigator>
       <view class="order-card-item" wx:for="{{list.order}}">

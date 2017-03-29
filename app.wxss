@@ -1,4 +1,5 @@
 @import "./page/component/done-model/done-model.wxss";
+@import "./page/component/input-model/input-model.wxss";
 
 page {
   background-color: #fbf9fe;
@@ -160,10 +161,10 @@ page {
     text-align: center;
 }
 
-.page input{
+/*.page input{
     padding: 10px 15px;
     background-color: #fff;
-}
+}*/
 checkbox, radio{
     margin-right: 5px;
 }

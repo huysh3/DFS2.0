@@ -6,7 +6,7 @@
   </view>
   <view class="list-item" wx:for="{{orderList}}">
     <image class="delete-btn" src="../../../image/x.png" data-id="{{item.order.id}}" bindtap="deleteOrder"></image>
-    <navigator url="/page/yeye/product/product?product_id={{item.product.id}}">
+    <navigator url="/page/DFS/product/product?product_id={{item.product.id}}">
       <view class="top-content">
         <image class="product-img" src="{{item.product.order_banner}}"></image>
         <view class="brand">{{item.product.brand_name}}</view>
@@ -29,9 +29,29 @@
       <view class="total-fee">${{total_price}}</view>
       <view class="clearfix"></view>
     </view>
-    <view class="center-btn" bindtap="confirmOrder">确认订单</view>
+    <view class="center-btn" bindtap="handleConfirmBtn">确认订单</view>
   </view>
 
   <import src="../../component/done-model/done-model.wxml"/>
-  <template is="done-model" wx:if="{{modalStatus}}"/>
+  <template is="done-model" wx:if="{{doneModalStatus}}"/>
+
+  <view name="input-model" wx:if="{{inputModalState}}">
+    <view class="mask"></view>
+    <view class="input-modal-content">
+      <view class="input-modal-header">
+        输入联系电话以生成订单
+      </view>
+      <view class="modal-body">
+        <input bindinput="bindKeyInput" type="text" class="phone-input"></input>
+      </view>
+      <view class="modal-footer">
+        <view class="input-cancel-btn" bindtap="inputModalCancel">
+          取消
+        </view>
+        <view class="input-confirm-btn" bindtap="confirmOrder">
+          确认
+        </view>
+      </view>
+    </view>
+  </view>
 </view>

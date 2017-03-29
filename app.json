@@ -1,18 +1,18 @@
 {
   "pages": [
-    "page/yeye/about-DFS/about-DFS",
-    "page/yeye/class-list/class-list",
-    "page/yeye/product-list/product-list",
-    "page/yeye/order-center/order-center",
-    "page/yeye/promotions/promotions",
-    "page/yeye/history-orders/history-orders",
-    "page/yeye/history-order/history-order",
-    "page/yeye/services/services",
-    "page/yeye/coupon-off/coupon-off",
-    "page/yeye/coupon-on/coupon-on",
-    "page/yeye/order-confirm/order-confirm",
-    "page/yeye/product/product",
-    "page/yeye/product-order/product-order"
+    "page/DFS/about-DFS/about-DFS",
+    "page/DFS/class-list/class-list",
+    "page/DFS/product-list/product-list",
+    "page/DFS/order-center/order-center",
+    "page/DFS/promotions/promotions",
+    "page/DFS/history-orders/history-orders",
+    "page/DFS/history-order/history-order",
+    "page/DFS/services/services",
+    "page/DFS/coupon-off/coupon-off",
+    "page/DFS/coupon-on/coupon-on",
+    "page/DFS/order-confirm/order-confirm",
+    "page/DFS/product/product",
+    "page/DFS/product-order/product-order"
   ],
   "window": {
     "navigationBarTextStyle": "#fff",
@@ -27,22 +27,22 @@
     "color": "#999",
     "selectedColor": "#B62A18",
     "list": [{
-      "pagePath": "page/yeye/about-DFS/about-DFS",
+      "pagePath": "page/DFS/about-DFS/about-DFS",
       "iconPath": "image/home-2.png",
       "selectedIconPath": "image/home.png",
       "text": "主页"
     },{
-      "pagePath": "page/yeye/class-list/class-list",
+      "pagePath": "page/DFS/class-list/class-list",
       "iconPath": "image/放大镜-2.png",
       "selectedIconPath": "image/放大镜.png",
       "text": "目录"
     },{
-      "pagePath": "page/yeye/services/services",
+      "pagePath": "page/DFS/services/services",
       "iconPath": "image/客服-2.png",
       "selectedIconPath": "image/客服.png",
       "text": "客服"
     },{
-      "pagePath": "page/yeye/order-center/order-center",
+      "pagePath": "page/DFS/order-center/order-center",
       "iconPath": "image/cart-2.png",
       "selectedIconPath": "image/cart.png",
       "text": "购物车"

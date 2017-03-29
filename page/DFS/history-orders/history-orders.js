@@ -38,9 +38,6 @@ Page({
         _this.setData({
           indexList: res.data
         })
-        // console.log(_this.data.orderList)
-
-        // console.log(_this.data.indexList)
       }
     })
   },

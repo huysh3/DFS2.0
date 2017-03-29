@@ -2,7 +2,7 @@
   <view class="order-header">
     <image class="header-img" src="{{orderInfo.product.enter_banner}}?imageView/1/w/300/h/170"></image>
     <view class="title">{{orderInfo.product.name}}</view>
-    <!--<navigator class="subtitle" url="/page/yeye/product/product?product_id={{product_id}}">查看套餐详情 ></navigator>-->
+    <!--<navigator class="subtitle" url="/page/DFS/product/product?product_id={{product_id}}">查看套餐详情 ></navigator>-->
     <view class="clearfix takeplace"></view>
     <button class="beforeUse" wx:if="{{canUse}}" type="primary" size="default" bindtap="useVoucher">确认收货</button>
     <button class="afterUse" wx:if="{{!canUse}}" type="primary" disabled="true" size="default">已完成</button>

@@ -36,7 +36,9 @@ var pageObject = {
     rightPartClass: 'header-right-part',
     tabState: 'left',
     total_price: '0',
-    modalStatus: false
+    inputPhoneNumber: '',
+    doneModalStatus: false,
+    inputModalState: false
   },
   onShow: function() {
     var _this = this
@@ -86,7 +88,26 @@ var pageObject = {
       tabState: 'left'
     })
   },
+  handleConfirmBtn: function() {
+    this.setData({
+      inputModalState: true
+    })
+  },
+  inputModalCancel: function() {
+    this.setData({
+      inputModalState: false
+    })
+  },
+  bindKeyInput: function(e) {
+    this.setData({
+      inputPhoneNumber: e.detail.value
+    })
+  },
   confirmOrder: function() {
+    console.log(this.data.inputPhoneNumber)
+    this.setData({
+      inputModalState: false
+    })
     showBusy('正在通信..');
     var _this = this
     if (_this.data.orderList.length == 0) {
@@ -103,11 +124,11 @@ var pageObject = {
           _this.setData({
             orderList: '',
             total_price: 0,
-            modalStatus: true
+            doneModalStatus: true
           })
           setTimeout(function() {
             _this.setData({
-              modalStatus: false
+              doneModalStatus: false
             })
           }, 2000)
         }

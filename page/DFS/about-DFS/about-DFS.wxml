@@ -1,20 +1,20 @@
 <view class="page">
   <image class="banner" src="../../../image/DFS-banner.png"></image>
-  <navigator url="/page/yeye/coupon-on/coupon-on" wx:if="{{coupon_status == 1}}">
+  <navigator url="/page/DFS/coupon-on/coupon-on" wx:if="{{coupon_status == 1}}">
     <image class="coupon-banner" src="https://om536p71r.qnssl.com/coupon=yes_on_homepage.png"></image>
   </navigator>
-  <navigator url="/page/yeye/coupon-off/coupon-off" wx:if="{{coupon_status == 0}}">
+  <navigator url="/page/DFS/coupon-off/coupon-off" wx:if="{{coupon_status == 0}}">
     <image class="coupon-banner" src="https://om536p71r.qnssl.com/coupon=no_on_homepage.png"></image>
   </navigator>
-  <navigator class="class-item" url="/page/yeye/product-list/product-list?class_name=Watches/jewelry">
+  <navigator class="class-item" url="/page/DFS/product-list/product-list?class_name=Watches/jewelry">
     <image src="https://om536p71r.qnssl.com/2222WaJ22.png" class="nav-item class-item-img"></image>
     <view class="text">腕表和配饰</view>
   </navigator>
-  <navigator class="class-item" url="/page/yeye/product-list/product-list?class_name=LocalFood/Snacks">
+  <navigator class="class-item" url="/page/DFS/product-list/product-list?class_name=LocalFood/Snacks">
     <image src="https://om536p71r.qnssl.com/222FoodNEW.png" class="nav-item class-item-img"></image>
     <view class="text">当地特产</view>
   </navigator>
-  <navigator class="class-item" url="/page/yeye/product-list/product-list?class_name=Beauty">
+  <navigator class="class-item" url="/page/DFS/product-list/product-list?class_name=Beauty">
     <image src="https://om536p71r.qnssl.com/222BeautyNEW.png" class="nav-item class-item-img"></image>
     <view class="text">美妆香水</view>
   </navigator>

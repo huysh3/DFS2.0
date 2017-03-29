@@ -66,9 +66,9 @@
       "page/API/get-location/get-location",
       "page/API/open-location/open-location",
 
-      "page/yeye/index/index",
-      "page/yeye/product-list/product-list",
-      "page/yeye/order-center/order-center"
+      "page/DFS/index/index",
+      "page/DFS/product-list/product-list",
+      "page/DFS/order-center/order-center"
   ],
   "window": {
     "navigationBarTextStyle": "#fff",
@@ -83,7 +83,7 @@
     "borderStyle": "black",
     "backgroundColor": "#333",
     "list": [{
-      "pagePath": "page/yeye/index/index",
+      "pagePath": "page/DFS/index/index",
       "iconPath": "image/wechat.png",
       "selectedIconPath": "image/wechatHL.png",
       "text": "夜夜"
