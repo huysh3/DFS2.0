@@ -3,7 +3,8 @@ var qcloud = require('../../../vendor/qcloud-weapp-client-sdk/index');
 
 Page({
   data: {
-    "lists": ''
+    "lists": '',
+    "promotionStatus": false
   },
   onShow: function() {
     var _this = this
@@ -13,6 +14,11 @@ Page({
       success(res) {
         console.log(res.data)
         _this.setData({lists: res.data})
+        setTimeout(function() {
+          _this.setData({
+            promotionStatus: true
+          })
+        }, 300)
       },
       fail(error) {
       }
