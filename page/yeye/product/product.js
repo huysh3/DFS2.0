@@ -145,8 +145,8 @@ var pageObject = {
     var _this = this
     console.log(e.currentTarget.dataset.url)
     wx.previewImage({
-      current: e.currentTarget.dataset.url, // 当前显示图片的http链接
-      urls: _this.data.product.banner_image_urls // 需要预览的图片http链接列表
+      current: e.currentTarget.dataset.url,
+      urls: _this.data.product.banner_image_urls
     })
   },
   phoneCall: function() {
