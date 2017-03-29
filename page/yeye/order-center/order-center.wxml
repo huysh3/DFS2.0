@@ -6,13 +6,15 @@
   </view>
   <view class="list-item" wx:for="{{orderList}}">
     <image class="delete-btn" src="../../../image/x.png" data-id="{{item.order.id}}" bindtap="deleteOrder"></image>
-    <view class="top-content">
-      <image class="product-img" src="{{item.product.order_banner}}"></image>
-      <view class="brand">{{item.product.brand_name}}</view>
-      <view class="name">{{item.product.name}}</view>
-      <view class="price">${{item.product.price}} * {{item.order.number}}</view>
-      <view class="clearfix"></view>
-    </view>
+    <navigator url="/page/yeye/product/product?product_id={{item.product.id}}">
+      <view class="top-content">
+        <image class="product-img" src="{{item.product.order_banner}}"></image>
+        <view class="brand">{{item.product.brand_name}}</view>
+        <view class="name">{{item.product.name}}</view>
+        <view class="price">${{item.product.price}} * {{item.order.number}}</view>
+        <view class="clearfix"></view>
+      </view>
+    </navigator>
     <view class="price-content">
       <view class="total-price">${{item.product.price * item.order.number}}</view>
       <view class="total-rmb">￥{{(item.product.RMB - item.product.RMB % 1) * item.order.number}}</view>
