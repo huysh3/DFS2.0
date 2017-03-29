@@ -89,6 +89,10 @@ var pageObject = {
     })
   },
   handleConfirmBtn: function() {
+    if (this.data.orderList.length == 0) {
+      showModel('尚无商品', '请先去商品目录挑选商品');
+      return false;
+    }
     this.setData({
       inputModalState: true
     })
@@ -110,12 +114,9 @@ var pageObject = {
     })
     showBusy('正在通信..');
     var _this = this
-    if (_this.data.orderList.length == 0) {
-      showModel('尚无商品', '请先去商品目录挑选商品');
-      return false;
-    }
+
     qcloud.request({
-      url: domain + 'Home/order/confirmOrder',
+      url: domain + 'Home/order/confirmOrder?phone=' + _this.data.inputPhoneNumber,
       login: true,
       success(res) {
         if(res.data == 'success') {
