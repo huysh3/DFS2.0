@@ -26,17 +26,17 @@ var showModel = (title, content) => {
 
 Page({
   data: {
-    coupon_status: ''
+    promotion_list: []
   },
-  onShow() {
+  onLoad() {
     var _this = this
     qcloud.request({
       login: true,
-      url: domain + 'Home/coupon/coupon_status',
+      url: domain + 'Home/weapp/promotion_list',
       success(res) {
         console.log(res.data)
         _this.setData({
-          coupon_status: res.data.coupon_status
+          promotion_list: res.data
         })
       },
       fail(error) {

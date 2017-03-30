@@ -10,5 +10,7 @@
 
 .promotions-banner {
   width: 710rpx;
-  height: 370rpx;
+  height: 500rpx;
+  float: left;
+  margin-bottom: 20rpx;
 }

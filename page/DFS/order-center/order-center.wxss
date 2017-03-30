@@ -114,7 +114,9 @@
 .price-content .total-price {
   color: #B62A18;
   display: inline-block;
+  float: right;
   font-family: "FranklinITCStd-Medium";
+  margin-right: 40rpx;
 }
 
 .price-content .total-rmb {
@@ -152,5 +154,11 @@
   color: #fff;
   text-align: center;
   width: 710rpx;
+  margin-left: 20rpx;
+}
+
+.total-fee-rmb {
+  font-size: 24rpx;
+  display: inline-block;
   margin-left: 20rpx;
 }

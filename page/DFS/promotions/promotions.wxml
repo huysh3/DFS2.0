@@ -1,10 +1,7 @@
 <view class="promotions-container">
   <view class="main-content">
-    <navigator url="/page/DFS/coupon-on/coupon-on" wx:if="{{coupon_status == 1}}">
-      <image class="promotions-banner" src="https://om536p71r.qnssl.com/coupon=yes_on_homepage.png"></image>
-    </navigator>
-    <navigator url="/page/DFS/coupon-on/coupon-off" wx:if="{{coupon_status == 0}}">
-      <image class="promotions-banner" src="https://om536p71r.qnssl.com/coupon=no_on_homepage.png"></image>
-    </navigator>
+    <view wx:for="{{promotion_list}}">
+      <image class="promotions-banner" src="{{item.promition_url}}"></image>
+    </view>
   </view>
 </view>

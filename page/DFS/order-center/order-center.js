@@ -36,6 +36,7 @@ var pageObject = {
     rightPartClass: 'header-right-part',
     tabState: 'left',
     total_price: '0',
+    total_price_rmb: '0',
     inputPhoneNumber: '',
     doneModalStatus: false,
     inputModalState: false
@@ -59,12 +60,15 @@ var pageObject = {
           return false;
         }
         var temp = 0
+        var temp_rmb = 0
         res.data.map(function(index) {
           temp = temp + parseInt(index.order.price)
-        })
+          temp_rmb = temp_rmb + parseInt(index.product.RMB) * parseInt(index.order.number)
+         })
         _this.setData({
           orderList: res.data,
-          total_price: temp
+          total_price: temp,
+          total_price_rmb: temp_rmb
         })
       },
       error(res) {
