@@ -5,7 +5,7 @@
     </view>
     <view class="modal-body">
       <view class="detail">已成功生成订单</view>
-      <view class="detail">感谢您的使用</view>
+      <view class="detail">感谢惠顾DFS微信小程序商店，您的订单请于DFS夏威夷T广场免税店四楼提货处领取，如有任何问题请与客服联络。</view>
     </view>
   </view>
 </template>

@@ -74,8 +74,8 @@
 }
 
 .delete-btn {
-  width: 25rpx;
-  height: 25rpx;
+  width: 30rpx;
+  height: 30rpx;
   position: absolute;
   right: 30rpx;
   top: 30rpx;
@@ -91,11 +91,13 @@
 .top-content .brand {
   font-family: "TimesNewRomanPSMT";
   font-size: 26rpx;
+  padding-right: 60rpx;
 }
 
 .top-content .name {
   font-family: "FranklinITCStd-Light";
   font-size: 26rpx;
+  padding-right: 60rpx;
 }
 
 .top-content .price {

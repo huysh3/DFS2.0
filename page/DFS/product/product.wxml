@@ -79,6 +79,15 @@
     <view class="right-part" bindtap="buyBtnEvent">加入购物车</view>
   </view>
 
-  <import src="../../component/done-model/done-model.wxml"/>
-  <template is="done-model" wx:if="{{modalStatus}}"/>
+  <view name="done-model" wx:if="{{modalStatus}}">
+    <view class="modal-content">
+      <view class="modal-header">
+        <image class="icon" src="https://om536p71r.qnssl.com/shopping-cart.png"></image>
+      </view>
+      <view class="modal-body">
+        <view class="detail">已加入购物车</view>
+        <view class="detail">请到购物车进行确认</view>
+      </view>
+    </view>
+  </view>
 </view>

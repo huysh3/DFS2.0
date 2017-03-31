@@ -12,7 +12,7 @@ Page({
   },
   judgeQrcode: function(e) {
     var _this = this
-    if (e.detail.value === '347892') {
+    if (e.detail.value === '30WECHATPROMO') {
       wx.hideKeyboard()
       qcloud.request({
         login: true,
@@ -20,7 +20,7 @@ Page({
         success(res) {
           _this.setData({
             qrcodeState: true,
-            qrCodeSrc: '../../../image/QRCode2.png',
+            qrCodeSrc: 'https://om536p71r.qnssl.com/truecouponqrcode.png',
             inputStatus: false
           })
         },

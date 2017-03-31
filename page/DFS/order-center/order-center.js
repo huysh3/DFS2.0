@@ -135,7 +135,7 @@ var pageObject = {
             _this.setData({
               doneModalStatus: false
             })
-          }, 2000)
+          }, 4000)
         }
       }
     })

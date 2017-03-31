@@ -24,7 +24,7 @@
 
 .product-name-content .name {
   font-family: "FranklinITCStd-Light";
-  font-size: 34rpx;
+  font-size: 40rpx;
   font-weight: bold;
 }
 
@@ -107,7 +107,8 @@
 }
 
 .banner .swipe-content image {
-  height: 130rpx;
+  width: 600rpx;
+  height:118rpx;
 }
 
 .lights-content {
@@ -118,13 +119,13 @@
 
 .lights-content .title {
   padding: 0 0 20rpx 0;
-  font-size: 32rpx;
+  font-size: 36rpx;
   color: #333;
   text-align: center;
 }
 
 .lights-content .content {
-  font-size: 28rpx;
+  font-size: 32rpx;
   line-height: 60rpx;
 }
 
@@ -206,9 +207,10 @@
 
 .counter-content {
   background-color: #fff;
-  height: 80rpx;
-  line-height: 80rpx;
+  height: 120rpx;
+  line-height: 120rpx;
   padding: 0 20rpx;
+  border-top: 1rpx solid #ccc;
   margin-top: 20rpx;
   position: fixed;
   bottom: 100rpx;

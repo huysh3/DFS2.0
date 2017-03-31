@@ -1,15 +1,15 @@
 {
   "pages": [
     "page/DFS/about-DFS/about-DFS",
-    "page/DFS/promotions/promotions",
     "page/DFS/order-center/order-center",
+    "page/DFS/coupon-off/coupon-off",
+    "page/DFS/coupon-on/coupon-on",
+    "page/DFS/promotions/promotions",
     "page/DFS/class-list/class-list",
     "page/DFS/product-list/product-list",
     "page/DFS/history-orders/history-orders",
     "page/DFS/history-order/history-order",
     "page/DFS/services/services",
-    "page/DFS/coupon-off/coupon-off",
-    "page/DFS/coupon-on/coupon-on",
     "page/DFS/order-confirm/order-confirm",
     "page/DFS/product/product",
     "page/DFS/product-order/product-order"

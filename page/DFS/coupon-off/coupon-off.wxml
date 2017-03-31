@@ -2,6 +2,16 @@
   <view class="main-content">
     <image class="banner" src="https://om536p71r.qnssl.com/Coupon=No_on_infopage.png"></image>
     <view class="cutline"></view>
-    <image class="text-img" src="https://om536p71r.qnssl.com/legalfile.png"></image>
+    <view class="text-content">
+      <text class="title">活动规则：</text>
+      <text class="desc">
+        * 礼券不可在美妆护肤商品，烟酒商品，或土特产食品类商品消费上使用
+        *Promotion is not valid at Beauty, Liquor and Tobacco, Food and Destination purchase.
+        * 每笔消费限用一张礼券
+        * One GC per transaction
+        * DFS集团有对此活动的最终解释权
+        * DFS Group reserves the right of final explanation of this promotion.
+      </text>
+    </view>
   </view>
 </view>

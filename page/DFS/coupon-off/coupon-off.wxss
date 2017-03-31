@@ -24,3 +24,19 @@
   height: 1rpx;
   background-color: #000;
 }
+
+.text-content {
+  padding: 60rpx;
+  color: #333;
+}
+
+.title {
+  font-size: 32rpx;
+  margin-bottom: 30rpx;
+  font-weight: bold;
+}
+
+.desc {
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
