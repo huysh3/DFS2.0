@@ -12,7 +12,7 @@ Page({
   },
   judgeQrcode: function(e) {
     var _this = this
-    if (e.detail.value === '30WECHATPROMO') {
+    if (e.detail.value === '330') {
       wx.hideKeyboard()
       qcloud.request({
         login: true,

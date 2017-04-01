@@ -11,7 +11,7 @@
     <view class="text">腕表 & 配饰</view>
   </navigator>
   <navigator class="class-item" url="/page/DFS/product-list/product-list?class_name=LocalFood/Snacks">
-    <image src="https://om536p71r.qnssl.com/222FoodNEW.png" class="nav-item class-item-img"></image>
+    <image src="https://om536p71r.qnssl.com/3333FoodImage.png" class="nav-item class-item-img"></image>
     <view class="text">当地特产</view>
   </navigator>
   <navigator class="class-item" url="/page/DFS/product-list/product-list?class_name=Beauty">
