@@ -37,3 +37,11 @@
   line-height: 50rpx;
   color: #666;
 }
+
+.close-model {
+  position: absolute;
+  right: 20rpx;
+  top: 20rpx;
+  width: 28rpx;
+  height: 28rpx;
+}

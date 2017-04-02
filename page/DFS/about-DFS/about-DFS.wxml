@@ -29,4 +29,7 @@
   <view class="open-time">
     营业时间 9:30 至 23:00
   </view>
+  <navigator url="/page/DFS/tips/tips" class="show-tips">
+    使用规范
+  </navigator>
 </view>

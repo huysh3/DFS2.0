@@ -1,5 +1,6 @@
 <template name="done-model">
   <view class="modal-content">
+    <image bindtap="modalHide" class="close-model" src="../../../image/x.png"></image>
     <view class="modal-header">
       <image class="icon" src="https://om536p71r.qnssl.com/shopping-cart.png"></image>
     </view>

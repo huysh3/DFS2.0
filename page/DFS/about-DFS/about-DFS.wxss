@@ -41,7 +41,6 @@
 .open-time {
   text-align: center;
   font-size: 32rpx;
-  padding-bottom: 60rpx;
 }
 
 .class-item {
@@ -63,4 +62,10 @@
   height: 240rpx;
   margin: 20rpx;
   margin-top: 60rpx;
+}
+
+.show-tips {
+  text-align: center;
+  color: #999;
+  padding: 30rpx 0;
 }

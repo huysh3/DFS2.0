@@ -68,6 +68,7 @@ var pageObject = {
         number: _this.data.counter
       },
       success(res) {
+        console.log(res.data)
         if (res.data == 'success') {
           wx.hideToast();
           _this.setData({
@@ -81,11 +82,11 @@ var pageObject = {
             })
           }, 2000)
         } else {
-          showModel('请求失败', error);
+          showModel('加车失败', res.data);
         }
       },
       fail(error) {
-        showModel('请求失败', error);
+        showModel('请求失败', 'error');
       }
     })
   },

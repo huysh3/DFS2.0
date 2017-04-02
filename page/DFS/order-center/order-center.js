@@ -131,11 +131,6 @@ var pageObject = {
             total_price: 0,
             doneModalStatus: true
           })
-          setTimeout(function() {
-            _this.setData({
-              doneModalStatus: false
-            })
-          }, 4000)
         }
       }
     })
@@ -182,22 +177,11 @@ var pageObject = {
       }
     })
   },
-  // emptyCart: function() {
-  //   var _this = this
-  //   qcloud.request({
-  //     url: domain + 'Home/order/emptyCart',
-  //     login: true,
-  //     success(res) {
-  //       if(res.data == 'success') {
-  //         showSuccess('购物车已清空');
-  //         _this.setData({
-  //           orderList: '',
-  //           total_price: 0
-  //         })
-  //       }
-  //     }
-  //   })
-  // },
+  modalHide() {
+    this.setData({
+      doneModalStatus: false
+    })
+  },
   routerGoHistoryOrders() {
     wx.navigateTo({
       url: "../history-orders/history-orders"
