@@ -25,4 +25,4 @@
 </view>
 <view class="footbar-takeplace"></view>
 <import src="../../component/footbar/footbar.wxml"/>
-<template is="footbar"/>  
+<template is="footbar" data="{{tabStatus}}"/>

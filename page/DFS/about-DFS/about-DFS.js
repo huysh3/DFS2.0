@@ -4,10 +4,11 @@ var qcloud = require('../../../vendor/qcloud-weapp-client-sdk/index');
 Page({
   data: {
     "lists": '',
-    coupon_status: '',
+    coupon_status: ''
   },
   onShow: function() {
     var _this = this
+    wx.setStorageSync('tabStatus', 'aboutDFS')
     qcloud.request({
       login: true,
       url: domain + 'Home/coupon/coupon_status',

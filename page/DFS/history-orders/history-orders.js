@@ -27,10 +27,14 @@ var showModel = (title, content) => {
 Page({
   data: {
     indexList: [],
-    orderList: []
+    orderList: [],
+    tabStatus: wx.getStorageSync('tabStatus')
   },
   onShow() {
     var _this = this
+    this.setData({
+      tabStatus: wx.getStorageSync('tabStatus')
+    })
     qcloud.request({
       url: domain + 'Home/weapp/order_list',
       login: true,

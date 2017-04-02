@@ -5,10 +5,14 @@ Page({
   data: {
     qrcodeState: false,
     qrCodeSrc: '../../../image/QRCode1.png',
-    inputStatus: true
+    inputStatus: true,
+    tabStatus: wx.getStorageSync('tabStatus')
   },
   onShow: function() {
     var _this = this
+    this.setData({
+      tabStatus: wx.getStorageSync('tabStatus')
+    })
   },
   judgeQrcode: function(e) {
     var _this = this

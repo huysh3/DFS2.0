@@ -35,3 +35,7 @@
   padding-bottom: 0;
   margin-bottom: 0;
 }
+
+.footbar-item .title.active {
+  color: #B62A18;
+}

@@ -27,7 +27,13 @@ var showModel = (title, content) => {
 Page({
   data: {
     indexList: [],
-    orderInfo: {}
+    orderInfo: {},
+    tabStatus: wx.getStorageSync('tabStatus')
+  },
+  onShow() {
+    this.setData({
+      tabStatus: wx.getStorageSync('tabStatus')
+    })    
   },
   onLoad(options) {
     var _this = this

@@ -3,7 +3,13 @@ var qcloud = require('../../../vendor/qcloud-weapp-client-sdk/index');
 
 var pageObject = {
   data: {
-    "lists": []
+    "lists": [],
+    "tabStatus": wx.getStorageSync('tabStatus')
+  },
+  onShow: function() {
+    this.setData({
+      "tabStatus": wx.getStorageSync('tabStatus')
+    })
   },
   onLoad: function(options) {
     wx.setNavigationBarTitle({
@@ -40,7 +46,7 @@ var pageObject = {
     wx.switchTab({
       url: '../about-DFS/about-DFS'
     })
-  }  
+  }
 }
 
 Page(pageObject)

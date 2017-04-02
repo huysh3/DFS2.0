@@ -44,6 +44,7 @@ var pageObject = {
   onShow: function() {
     var _this = this
     this.getCartList()
+    wx.setStorageSync('tabStatus', 'orderCenter')
   },
   onLoad: function() {
   },
