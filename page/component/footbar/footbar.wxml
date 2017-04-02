@@ -1,0 +1,20 @@
+<template name="footbar">
+  <view class="footbar-content">
+    <navigator open-type="switchTab" url="/page/DFS/about-DFS/about-DFS" class="footbar-item">
+      <image class="footbar-img" src="../../../image/home-2.png"></image>
+      <view class="title">主页</view>
+    </navigator>
+    <navigator open-type="switchTab" url="/page/DFS/class-list/class-list" class="footbar-item">
+      <image class="footbar-img" src="../../../image/放大镜-2.png"></image>
+      <view class="title">目录</view>
+    </navigator>
+    <navigator open-type="switchTab" url="/page/DFS/services/services" class="footbar-item">
+      <image class="footbar-img" src="../../../image/客服-2.png"></image>
+      <view class="title">客服</view>
+    </navigator>
+    <navigator open-type="switchTab" url="/page/DFS/order-center/order-center" class="footbar-item">
+      <image class="footbar-img" src="../../../image/cart-2.png"></image>
+      <view class="title">购物车</view>
+    </navigator>
+  </view>
+</template>

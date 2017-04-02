@@ -16,4 +16,7 @@
       </text>
     </view>
   </view>
+  <view class="footbar-takeplace"></view>
+  <import src="../../component/footbar/footbar.wxml"/>
+  <template is="footbar"/>
 </view>

@@ -1,0 +1,37 @@
+.footbar {
+
+}
+
+.footbar-content {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 15rpx 0;
+  width: 750rpx;
+  background-color: #000;
+  display: flex;
+}
+
+.footbar-item {
+  flex: 1;
+  text-align: center !important;
+  color: #fff;
+}
+
+.footbar-img {
+  width: 48rpx;
+  height: 48rpx;
+  margin-top: 4rpx;
+  padding-bottom: 6rpx;
+  text-align: center !important;
+}
+
+.footbar-item .title {
+  font-size: 20rpx;
+  position: relative;
+  left: 2rpx;
+  font-weight: lighter;
+  text-align: center !important;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}

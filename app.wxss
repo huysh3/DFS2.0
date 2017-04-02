@@ -1,5 +1,6 @@
 @import "./page/component/done-model/done-model.wxss";
 @import "./page/component/input-model/input-model.wxss";
+@import "./page/component/footbar/footbar.wxss";
 
 page {
   background-color: #fbf9fe;
@@ -215,4 +216,7 @@ checkbox, radio{
 }
 .section__ctn{
 
+}
+.footbar-takeplace {
+  height: 110rpx;
 }

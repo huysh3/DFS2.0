@@ -1,12 +1,12 @@
 {
   "pages": [
     "page/DFS/about-DFS/about-DFS",
+    "page/DFS/product-list/product-list",
+    "page/DFS/class-list/class-list",
     "page/DFS/order-center/order-center",
     "page/DFS/coupon-off/coupon-off",
     "page/DFS/coupon-on/coupon-on",
     "page/DFS/promotions/promotions",
-    "page/DFS/class-list/class-list",
-    "page/DFS/product-list/product-list",
     "page/DFS/history-orders/history-orders",
     "page/DFS/history-order/history-order",
     "page/DFS/services/services",
