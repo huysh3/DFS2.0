@@ -108,7 +108,7 @@
 
 .price-content {
   background-color: #fff;
-  padding: 20rpx 60rpx;
+  padding: 20rpx 30rpx;
   height: 50rpx;
   line-height: 50rpx;
 }
