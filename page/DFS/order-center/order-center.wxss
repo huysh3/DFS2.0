@@ -124,6 +124,8 @@
 .price-content .total-rmb {
   float: right;
   font-size: 24rpx;
+  position:relative;
+  top:2rpx;
   color: #000;
 }
 
