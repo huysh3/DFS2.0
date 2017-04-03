@@ -55,8 +55,6 @@ var pageObject = {
       url: domain + 'Home/weapp/cart_list',
       login: true,
       success(res) {
-        console.log(res.data)
-        console.log('=================================')
         if (res.data.length == 0) {
           return false;
         }
@@ -113,7 +111,6 @@ var pageObject = {
     })
   },
   confirmOrder: function() {
-    console.log(this.data.inputPhoneNumber)
     this.setData({
       inputModalState: false
     })

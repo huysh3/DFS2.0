@@ -13,7 +13,6 @@ Page({
       login: true,
       url: domain + 'Home/weapp/class_list',
       success(res) {
-        console.log(res.data)
         _this.setData({lists: res.data})
         setTimeout(function() {
           _this.setData({

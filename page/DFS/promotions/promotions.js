@@ -34,7 +34,6 @@ Page({
       login: true,
       url: domain + 'Home/weapp/promotion_list',
       success(res) {
-        console.log(res.data)
         _this.setData({
           promotion_list: res.data
         })

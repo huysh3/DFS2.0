@@ -35,7 +35,6 @@ var pageObject = {
         //class_name: 'Bags'
       },
       success(res) {
-        console.log(res.data)
         _this.setData({lists: res.data})
       },
       fail(error) {

@@ -6,7 +6,6 @@ var pageObject = {
     phoneNumber: ''
   },
   onLoad: function(options) {
-    console.log(options.product_id)
     this.getProductInfo(options)
     try {
       this.setData({
