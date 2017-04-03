@@ -4,6 +4,10 @@
   padding: 20rpx;
 }
 
+.clearfix {
+  clear: both;
+}
+
 .main-content {
   /*background-color: #fff;*/
 }

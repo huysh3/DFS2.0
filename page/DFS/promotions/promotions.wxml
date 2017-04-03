@@ -1,7 +1,8 @@
 <view class="promotions-container">
   <view class="main-content">
-    <view wx:for="{{promotion_list}}">
-      <image class="promotions-banner" src="{{item.promition_url}}"></image>
+    <view wx:for="{{img_list}}">
+      <image class="promotions-banner" src="{{item.url}}" style="height: {{item.height}};"></image>
     </view>
   </view>
+  <view class="clearfix"></view>
 </view>

@@ -68,7 +68,6 @@ var pageObject = {
         number: _this.data.counter
       },
       success(res) {
-        console.log(res.data)
         if (res.data == 'success') {
           wx.hideToast();
           _this.setData({
