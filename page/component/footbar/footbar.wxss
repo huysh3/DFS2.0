@@ -30,7 +30,7 @@
 .footbar-item .title {
   font-weight: bold;
   font-size: 24rpx;
-  color: #999;
+  color: #fff;
   position: relative;
   /*left: 1rpx;*/
   top: 1rpx;
