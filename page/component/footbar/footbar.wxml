@@ -6,8 +6,8 @@
       <view class="title {{tabStatus == 'aboutDFS' ? 'active' : ''}}">主页</view>
     </navigator>
     <navigator open-type="redirectTo" url="/page/DFS/class-list/class-list" class="footbar-item">
-      <image wx:if="{{tabStatus != 'classList'}}" class="footbar-img" src="../../../image/放大镜-2.png"></image>
-      <image wx:if="{{tabStatus == 'classList'}}" class="footbar-img" src="../../../image/放大镜.png"></image>
+      <image wx:if="{{tabStatus != 'classList'}}" class="footbar-img" src="../../../image/class-2.png"></image>
+      <image wx:if="{{tabStatus == 'classList'}}" class="footbar-img" src="../../../image/class.png"></image>
       <view class="title {{tabStatus == 'classList' ? 'active' : ''}}">目录</view>
     </navigator>
     <navigator open-type="redirectTo" url="/page/DFS/order-center/order-center" class="footbar-item">
@@ -16,8 +16,8 @@
       <view class="title {{tabStatus == 'orderCenter' ? 'active' : ''}}">购物车</view>
     </navigator>
     <navigator open-type="redirectTo" url="/page/DFS/history-orders/history-orders" class="footbar-item">
-      <image wx:if="{{tabStatus != 'historyOrders'}}" class="footbar-img" src="../../../image/我-2.png"></image>
-      <image wx:if="{{tabStatus == 'historyOrders'}}" class="footbar-img" src="../../../image/我.png"></image>
+      <image wx:if="{{tabStatus != 'historyOrders'}}" class="footbar-img" src="../../../image/my-2.png"></image>
+      <image wx:if="{{tabStatus == 'historyOrders'}}" class="footbar-img" src="../../../image/my.png"></image>
       <view class="title {{tabStatus == 'historyOrders' ? 'active' : ''}}">我的</view>
     </navigator>
   </view>
