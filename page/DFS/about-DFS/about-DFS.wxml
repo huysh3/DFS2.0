@@ -4,7 +4,7 @@
     <image class="coupon-banner" src="https://om536p71r.qnssl.com/3couponPicture1.png"></image>
   </navigator>
   <navigator url="/page/DFS/coupon-off/coupon-off" wx:if="{{coupon_status == 0}}">
-    <image class="coupon-banner" src="https://om536p71r.qnssl.com/Coupon=no3.31.png"></image>
+    <image class="coupon-banner" src="https://om536p71r.qnssl.com/444Coupon4.4.png"></image>
   </navigator>
   <navigator class="class-item" url="/page/DFS/product-list/product-list?class_name=Watches/jewelry">
     <image src="https://om536p71r.qnssl.com/2222WaJ22.png" class="nav-item class-item-img"></image>

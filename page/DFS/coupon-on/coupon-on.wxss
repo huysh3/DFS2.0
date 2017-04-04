@@ -43,6 +43,7 @@ input {
 .text-content {
   padding: 60rpx;
   color: #333;
+  text-align: left;
 }
 
 .title {

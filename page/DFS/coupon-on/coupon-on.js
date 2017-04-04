@@ -24,7 +24,7 @@ Page({
         success(res) {
           _this.setData({
             qrcodeState: true,
-            qrCodeSrc: 'https://om536p71r.qnssl.com/truecouponqrcode.png',
+            qrCodeSrc: 'https://om536p71r.qnssl.com/4444QRCODE4.4.png',
             inputStatus: false
           })
         },
