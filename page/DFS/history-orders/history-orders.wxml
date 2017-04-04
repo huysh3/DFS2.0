@@ -23,6 +23,6 @@
     </view>
   </view>
 </view>
-<view class="footbar-takeplace"></view>
-<import src="../../component/footbar/footbar.wxml"/>
-<template is="footbar" data="{{tabStatus}}"/>
+
+<import src="../../component/service-btn/service-btn.wxml"/>
+<template is="service-btn"/>

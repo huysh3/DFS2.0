@@ -16,3 +16,6 @@
   <import src="../../component/footbar/footbar.wxml"/>
   <template data="{{tabStatus}}" is="footbar"/>
 </view>
+
+<import src="../../component/service-btn/service-btn.wxml"/>
+<template is="service-btn"/>

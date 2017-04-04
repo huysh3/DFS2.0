@@ -1,0 +1,13 @@
+.service-btn-container {
+  position: fixed;
+  right: 0;
+  bottom:300rpx;
+  background-color: #000;
+  color: #fff;
+  padding: 15rpx 25rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  border-top-left-radius: 100rpx;
+  border-bottom-left-radius: 100rpx;
+  box-shadow: 2rpx 2rpx 4rpx #666;
+}

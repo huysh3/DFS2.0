@@ -1,0 +1,7 @@
+<template name="service-btn">
+  <view class="service-btn-container">
+    <navigator url="/page/DFS/services/services">
+      客服
+    </navigator>
+  </view>
+</template>

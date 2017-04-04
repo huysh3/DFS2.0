@@ -55,3 +55,6 @@
     </view>
   </view>
 </view>
+
+<import src="../../component/service-btn/service-btn.wxml"/>
+<template is="service-btn"/>

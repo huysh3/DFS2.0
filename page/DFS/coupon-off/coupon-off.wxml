@@ -1,6 +1,6 @@
 <view class="coupon-off-container">
   <view class="main-content">
-    <image class="banner" src="https://om536p71r.qnssl.com/Coupon=No_on_infopage.png"></image>
+    <image class="banner" mode="widthFix" src="https://om536p71r.qnssl.com/404040Coupons3.png"></image>
     <view class="cutline"></view>
     <view class="text-content">
       <text class="title">活动规则：</text>

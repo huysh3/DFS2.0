@@ -10,6 +10,7 @@
   width: 750rpx;
   background-color: #000;
   display: flex;
+  z-index:999;
 }
 
 .footbar-item {
