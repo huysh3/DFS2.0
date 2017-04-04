@@ -49,7 +49,7 @@ Page({
     })
   },
   routerGoHome: function() {
-    wx.switchTab({
+    wx.redirectTo({
       url: '../about-DFS/about-DFS'
     })
   }

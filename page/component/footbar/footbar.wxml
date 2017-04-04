@@ -1,24 +1,24 @@
 <template name="footbar">
   <view class="footbar-content">
-    <navigator open-type="switchTab" url="/page/DFS/about-DFS/about-DFS" class="footbar-item">
+    <navigator open-type="redirectTo" url="/page/DFS/about-DFS/about-DFS" class="footbar-item">
       <image wx:if="{{tabStatus != 'aboutDFS'}}" class="footbar-img" src="../../../image/home-2.png"></image>
       <image wx:if="{{tabStatus == 'aboutDFS'}}" class="footbar-img" src="../../../image/home.png"></image>
       <view class="title {{tabStatus == 'aboutDFS' ? 'active' : ''}}">主页</view>
     </navigator>
-    <navigator open-type="switchTab" url="/page/DFS/class-list/class-list" class="footbar-item">
+    <navigator open-type="redirectTo" url="/page/DFS/class-list/class-list" class="footbar-item">
       <image wx:if="{{tabStatus != 'classList'}}" class="footbar-img" src="../../../image/放大镜-2.png"></image>
       <image wx:if="{{tabStatus == 'classList'}}" class="footbar-img" src="../../../image/放大镜.png"></image>
       <view class="title {{tabStatus == 'classList' ? 'active' : ''}}">目录</view>
     </navigator>
-    <navigator open-type="switchTab" url="/page/DFS/services/services" class="footbar-item">
-      <image wx:if="{{tabStatus != 'services'}}" class="footbar-img" src="../../../image/客服-2.png"></image>
-      <image wx:if="{{tabStatus == 'services'}}" class="footbar-img" src="../../../image/客服.png"></image>
-      <view class="title {{tabStatus == 'services' ? 'active' : ''}}">客服</view>
-    </navigator>
-    <navigator open-type="switchTab" url="/page/DFS/order-center/order-center" class="footbar-item">
+    <navigator open-type="redirectTo" url="/page/DFS/order-center/order-center" class="footbar-item">
       <image wx:if="{{tabStatus != 'orderCenter'}}" class="footbar-img" src="../../../image/cart-2.png"></image>
       <image wx:if="{{tabStatus == 'orderCenter'}}" class="footbar-img" src="../../../image/cart.png"></image>
       <view class="title {{tabStatus == 'orderCenter' ? 'active' : ''}}">购物车</view>
+    </navigator>
+    <navigator open-type="redirectTo" url="/page/DFS/history-orders/history-orders" class="footbar-item">
+      <image wx:if="{{tabStatus != 'historyOrders'}}" class="footbar-img" src="../../../image/我-2.png"></image>
+      <image wx:if="{{tabStatus == 'historyOrders'}}" class="footbar-img" src="../../../image/我.png"></image>
+      <view class="title {{tabStatus == 'historyOrders' ? 'active' : ''}}">我的</view>
     </navigator>
   </view>
 </template>

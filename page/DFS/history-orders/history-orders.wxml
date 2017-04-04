@@ -4,25 +4,28 @@
     <view class="total">合计 {{indexList.length}} 张订单</view>
     <view class="title">订单</view>
   </view>
-
-  <view class="order-card" wx:for="{{indexList}}" wx:for-item="list">
-    <view class="card-header">
-      <view class="order-id">单号: {{list.order_id}}</view>
-      <view class="order-total-price">${{list.total_price}}</view>
-      <view class="order-total-rmb">￥{{list.total_price_RMB - list.total_price_RMB % 1}}</view>
-    </view>
-    <view class="order-card-content">
-      <navigator url="/page/DFS/history-order/history-order?order_id={{list.order_id}}">
-        <view class="show-more">More</view>
-      </navigator>
-      <view class="order-card-item" wx:for="{{list.order}}">
-        <view class="brand-name">{{item.product.brand_name}}</view>
-        <view class="product-name">{{item.product.name}}</view>
-        <view class="number">* {{item.number}}</view>
+  <navigator class="order-card" url="/page/DFS/history-order/history-order?order_id={{list.order_id}}" wx:for="{{indexList}}" wx:for-item="list">
+    <view>
+      <view class="card-header">
+        <view class="order-id">单号: {{list.order_id}}</view>
+        <view class="order-total-price">${{list.total_price}}</view>
+        <view class="order-total-rmb">￥{{list.total_price_RMB - list.total_price_RMB % 1}}</view>
+      </view>
+      <view class="order-card-content">
+        <view class="order-card-item" wx:for="{{list.order}}">
+          <view class="brand-name">{{item.product.brand_name}}</view>
+          <view class="product-name">{{item.product.name}}</view>
+          <view class="number">* {{item.number}}</view>
+        </view>
       </view>
     </view>
-  </view>
+  </navigator>
+
 </view>
 
 <import src="../../component/service-btn/service-btn.wxml"/>
 <template is="service-btn"/>
+
+<view class="footbar-takeplace"></view>
+<import src="../../component/footbar/footbar.wxml"/>
+<template is="footbar" data="{{tabStatus}}"/>

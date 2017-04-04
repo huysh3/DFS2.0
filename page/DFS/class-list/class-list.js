@@ -4,7 +4,8 @@ var qcloud = require('../../../vendor/qcloud-weapp-client-sdk/index');
 Page({
   data: {
     "lists": '',
-    "promotionStatus": false
+    "promotionStatus": false,
+    tabStatus: 'classList'
   },
   onShow: function() {
     var _this = this
@@ -25,7 +26,7 @@ Page({
     })
   },
   routerGoHome: function() {
-    wx.switchTab({
+    wx.redirectTo({
       url: '../about-DFS/about-DFS'
     })
   }

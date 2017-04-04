@@ -221,3 +221,7 @@ checkbox, radio{
 .footbar-takeplace {
   height: 110rpx;
 }
+
+.clearfix {
+  clear: both;
+}

@@ -1,15 +1,14 @@
 <view>
-  <image bindtap="routerGoHome" class="banner" src="../../../image/DFS-banner.png"></image>
+  <image mode="widthFix" bindtap="routerGoHome" class="banner" src="../../../image/DFS-banner.png"></image>
   <navigator url="/page/DFS/product-list/product-list?class_name={{item.class_name}}" wx:for="{{lists}}">
     <image src="{{item.class_url}}" class="nav-item"></image>
   </navigator>
   <navigator url="/page/DFS/promotions/promotions" wx:if="{{promotionStatus}}">
     <image src="https://om536p71r.qnssl.com/Promotions6.png" class="nav-item"></image>
   </navigator>
-  <!-- <navigator url="/page/DFS/product-list/product-list">
-    <image src="http://o7at6h6ej.bkt.clouddn.com/9a3635349937e03c5cfbab50d9fb60b0.jpg" class="nav-item"></image>
-  </navigator>
-  <navigator url="/page/DFS/product-list/product-list">
-    <image src="http://o7at6h6ej.bkt.clouddn.com/bg3" class="nav-item"></image>
-  </navigator> -->
+  <view class="clearfix"></view>
 </view>
+
+<view class="footbar-takeplace"></view>
+<import src="../../component/footbar/footbar.wxml"/>
+<template is="footbar" data="{{tabStatus}}"/>

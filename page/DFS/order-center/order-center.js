@@ -39,7 +39,8 @@ var pageObject = {
     total_price_rmb: '0',
     inputPhoneNumber: '',
     doneModalStatus: false,
-    inputModalState: false
+    inputModalState: false,
+    tabStatus: 'orderCenter'
   },
   onShow: function() {
     var _this = this
@@ -186,7 +187,7 @@ var pageObject = {
     })
   },
   routerGoHome: function() {
-    wx.switchTab({
+    wx.redirectTo({
       url: '../about-DFS/about-DFS'
     })
   }

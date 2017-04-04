@@ -1,9 +1,10 @@
-image {
+.nav-item {
   width: 750rpx;
   height:255rpx;
   float: left;
 }
 
 .banner {
-  height:110rpx;
+  width: 750rpx;
+  float: left;
 }

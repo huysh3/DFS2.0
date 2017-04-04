@@ -6,7 +6,7 @@
   </view>
   <view class="list-item" wx:for="{{orderList}}">
     <image class="delete-btn" src="../../../image/x.png" data-id="{{item.order.id}}" bindtap="deleteOrder"></image>
-    <navigator url="/page/DFS/product/product?product_id={{item.product.id}}">
+    <navigator open-type="redirectTo" url="/page/DFS/product/product?product_id={{item.product.id}}">
       <view class="top-content">
         <image class="product-img" src="{{item.product.order_banner}}"></image>
         <view class="brand">{{item.product.brand_name}}</view>

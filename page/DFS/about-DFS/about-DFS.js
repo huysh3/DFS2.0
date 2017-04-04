@@ -4,7 +4,8 @@ var qcloud = require('../../../vendor/qcloud-weapp-client-sdk/index');
 Page({
   data: {
     "lists": '',
-    coupon_status: ''
+    coupon_status: '',
+    tabStatus: 'aboutDFS'
   },
   onShow: function() {
     var _this = this

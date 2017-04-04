@@ -28,6 +28,7 @@
 }
 
 .footbar-item .title {
+  font-weight: bold;
   font-size: 24rpx;
   color: #999;
   position: relative;
@@ -40,5 +41,6 @@
 }
 
 .footbar-item .title.active {
+  font-weight: bold;
   color: #B62A18;
 }

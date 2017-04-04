@@ -1,16 +1,16 @@
 <view class="page">
   <view class="city-list-container">
-    <navigator class="city-list-item" url="/page/DFS/shop-list/shop-list">
+    <navigator open-type="redirectTo" class="city-list-item" url="/page/DFS/shop-list/shop-list">
       <view class="city">Peking</view>
       <image class="avatar" src="http://7xotti.com2.z0.glb.qiniucdn.com/FrC0nC7EWFV3uOwOhEDWBGZf-1Q1"></image>
       <view class="shop-name">DFS, NanYuan Airport</view>
     </navigator>
-    <navigator class="city-list-item" url="/page/DFS/shop-list/shop-list">
+    <navigator open-type="redirectTo" class="city-list-item" url="/page/DFS/shop-list/shop-list">
       <view class="city">Peking</view>
       <image class="avatar" src="http://7xotti.com2.z0.glb.qiniucdn.com/FrC0nC7EWFV3uOwOhEDWBGZf-1Q1"></image>
       <view class="shop-name">DFS, NanYuan Airport</view>
     </navigator>
-    <navigator class="city-list-item" url="/page/DFS/shop-list/shop-list">
+    <navigator open-type="redirectTo" class="city-list-item" url="/page/DFS/shop-list/shop-list">
       <view class="city">Peking</view>
       <image class="avatar" src="http://7xotti.com2.z0.glb.qiniucdn.com/FrC0nC7EWFV3uOwOhEDWBGZf-1Q1"></image>
       <view class="shop-name">DFS, NanYuan Airport</view>

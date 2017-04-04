@@ -28,13 +28,11 @@ Page({
   data: {
     indexList: [],
     orderList: [],
-    tabStatus: wx.getStorageSync('tabStatus')
+    tabStatus: 'historyOrders'
   },
   onShow() {
     var _this = this
-    this.setData({
-      tabStatus: wx.getStorageSync('tabStatus')
-    })
+    wx.setStorageSync('tabStatus', 'historyOrders')
     qcloud.request({
       url: domain + 'Home/weapp/order_list',
       login: true,
@@ -51,7 +49,7 @@ Page({
     })
   },
   routerGoHome: function() {
-    wx.switchTab({
+    wx.redirectTo({
       url: '../about-DFS/about-DFS'
     })
   }
