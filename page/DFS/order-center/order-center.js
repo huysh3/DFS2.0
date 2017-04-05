@@ -64,7 +64,7 @@ var pageObject = {
         res.data.map(function(index) {
           temp = temp + parseInt(index.order.price)
           temp_rmb = temp_rmb + parseInt(index.product.RMB) * parseInt(index.order.number)
-         })
+        })
         _this.setData({
           orderList: res.data,
           total_price: temp,
@@ -165,8 +165,16 @@ var pageObject = {
               newOrderList.push(item)
             }
           })
+          var temp = 0
+          var temp_rmb = 0
+          newOrderList.map(function(index) {
+            temp = temp + parseInt(index.order.price)
+            temp_rmb = temp_rmb + parseInt(index.product.RMB) * parseInt(index.order.number)
+          })
           _this.setData({
-            orderList: newOrderList
+            orderList: newOrderList,
+            total_price: temp,
+            total_price_rmb: temp_rmb
           })
           showSuccess('删除完成')
         }

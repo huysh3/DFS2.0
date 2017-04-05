@@ -26,7 +26,7 @@ var showModel = (title, content) => {
 };
 
 App({
-  onLaunch: function () {
+  onShow: function () {
     qcloud.setLoginUrl(config.service.loginUrl);
     this.doLogin()
   },
