@@ -31,7 +31,7 @@ Page({
   onLoad() {
     var _this = this
     qcloud.request({
-      login: true,
+      // login: true,
       url: domain + 'Home/weapp/promotion_list',
       success(res) {
         _this.setData({

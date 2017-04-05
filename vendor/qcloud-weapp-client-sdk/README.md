@@ -73,7 +73,7 @@ qcloud.request({
 // 使用 login 参数之前，需要设置登录地址
 qcloud.setLoginUrl('https://199447.qcloud.la/login');
 qcloud.request({
-    login: true,
+    // login: true,
     url: 'http://199447.qcloud.la/user',
     success: function (response) {
         console.log(response);

@@ -19,7 +19,7 @@ Page({
     if (e.detail.value === '330') {
       wx.hideKeyboard()
       qcloud.request({
-        login: true,
+        // login: true,
         url: domain + 'Home/Coupon/couponChange',
         success(res) {
           _this.setData({

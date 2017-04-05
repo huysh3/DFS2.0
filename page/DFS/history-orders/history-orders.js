@@ -35,7 +35,7 @@ Page({
     wx.setStorageSync('tabStatus', 'historyOrders')
     qcloud.request({
       url: domain + 'Home/weapp/order_list',
-      login: true,
+      // login: true,
       success(res) {
         _this.setData({
           indexList: res.data

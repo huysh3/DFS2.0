@@ -28,7 +28,7 @@ var pageObject = {
   getProductList: function(options) {
     var _this = this
     qcloud.request({
-      login: true,
+      // login: true,
       url: domain + 'Home/weapp/product_list',
       data: {
         class_name: options.class_name

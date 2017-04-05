@@ -11,7 +11,7 @@ Page({
     var _this = this
     wx.setStorageSync('tabStatus', 'classList')
     qcloud.request({
-      login: true,
+      // login: true,
       url: domain + 'Home/weapp/class_list',
       success(res) {
         _this.setData({lists: res.data})

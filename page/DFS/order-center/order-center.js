@@ -54,7 +54,7 @@ var pageObject = {
     var _this = this
     qcloud.request({
       url: domain + 'Home/weapp/cart_list',
-      login: true,
+      // login: true,
       success(res) {
         if (res.data.length == 0) {
           return false;
@@ -120,7 +120,7 @@ var pageObject = {
 
     qcloud.request({
       url: domain + 'Home/order/confirmOrder?phone=' + _this.data.inputPhoneNumber,
-      login: true,
+      // login: true,
       success(res) {
         if(res.data == 'success') {
           // showSuccess('订单已提交');
@@ -128,6 +128,7 @@ var pageObject = {
           _this.setData({
             orderList: '',
             total_price: 0,
+            total_price_rmb: 0,
             doneModalStatus: true
           })
         }
@@ -152,7 +153,7 @@ var pageObject = {
     showBusy('通信中..')
     qcloud.request({
       url: domain + 'Home/order/deleteOrder',
-      login: true,
+      // login: true,
       data: {
         id : targetId
       },

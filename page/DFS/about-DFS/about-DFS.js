@@ -11,7 +11,7 @@ Page({
     var _this = this
     wx.setStorageSync('tabStatus', 'aboutDFS')
     qcloud.request({
-      login: true,
+      // login: true,
       url: domain + 'Home/coupon/coupon_status',
       success(res) {
         _this.setData({
