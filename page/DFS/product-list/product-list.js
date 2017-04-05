@@ -45,6 +45,18 @@ var pageObject = {
     wx.redirectTo({
       url: '../about-DFS/about-DFS'
     })
+  },
+  onShareAppMessage: function () {
+    return {
+      title: 'DFS购物商品列表',
+      path: '/page/DFS/product-list/product-list?options',
+      success: function(res) {
+        // 分享成功
+      },
+      fail: function(res) {
+        // 分享失败
+      }
+    }
   }
 }
 

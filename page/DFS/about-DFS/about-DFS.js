@@ -21,5 +21,17 @@ Page({
       fail(error) {
       }
     })
+  },
+  onShareAppMessage: function () {
+    return {
+      title: 'DFS购物微信小程序',
+      path: '/page/DFS/about-DFS/about-DFS',
+      success: function(res) {
+        // 分享成功
+      },
+      fail: function(res) {
+        // 分享失败
+      }
+    }
   }
 })

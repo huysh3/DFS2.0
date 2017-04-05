@@ -50,6 +50,18 @@ var pageObject = {
     ],
     modalStatus: false
   },
+  onShareAppMessage: function () {
+    return {
+      title: 'DFS购物超值商品',
+      path: '/page/DFS/product/product',
+      success: function(res) {
+        // 分享成功
+      },
+      fail: function(res) {
+        // 分享失败
+      }
+    }
+  },
   onLoad: function(options) {
     wx.setNavigationBarTitle({title: '套餐详情'})
     this.getProductInfo(options)
@@ -58,7 +70,6 @@ var pageObject = {
     showBusy('正在通信..');
     var _this = this
     qcloud.request({
-      login: true,
       url: domain + 'Home/order/addCart',
       method: 'get',
       data: {
