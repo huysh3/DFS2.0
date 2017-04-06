@@ -51,9 +51,10 @@ var pageObject = {
     modalStatus: false
   },
   onShareAppMessage: function () {
+    var _this = this
     return {
       title: 'DFS购物超值商品',
-      path: '/page/DFS/product/product',
+      path: '/page/DFS/product/product?product_id=' + _this.data.product_id,
       success: function(res) {
         // 分享成功
       },
@@ -63,7 +64,7 @@ var pageObject = {
     }
   },
   onLoad: function(options) {
-    wx.setNavigationBarTitle({title: '套餐详情'})
+    wx.setNavigationBarTitle({title: '商品详情'})
     this.getProductInfo(options)
   },
   buyBtnEvent: function() {

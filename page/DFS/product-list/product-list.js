@@ -4,7 +4,8 @@ var qcloud = require('../../../vendor/qcloud-weapp-client-sdk/index');
 var pageObject = {
   data: {
     "lists": [],
-    "tabStatus": wx.getStorageSync('tabStatus')
+    "tabStatus": wx.getStorageSync('tabStatus'),
+    "class_name": ''
   },
   onShow: function() {
     this.setData({
@@ -12,6 +13,9 @@ var pageObject = {
     })
   },
   onLoad: function(options) {
+    this.setData({
+      'class_name': options.class_name
+    })
     wx.setNavigationBarTitle({
       title: '商品列表'
     })
@@ -47,9 +51,10 @@ var pageObject = {
     })
   },
   onShareAppMessage: function () {
+    var _this = this
     return {
       title: 'DFS购物商品列表',
-      path: '/page/DFS/product-list/product-list?options',
+      path: '/page/DFS/product-list/product-list?class_name=' + _this.data.class_name,
       success: function(res) {
         // 分享成功
       },
