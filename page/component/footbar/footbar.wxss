@@ -21,18 +21,17 @@
 }
 
 .footbar-img {
-  width: 48rpx;
-  height: 48rpx;
+  width: 40rpx;
+  height: 40rpx;
   margin-top: 4rpx;
   text-align: center !important;
 }
 
 .footbar-item .title {
   font-weight: bold;
-  font-size: 24rpx;
+  font-size: 22rpx;
   color: #fff;
   position: relative;
-  font-weight: lighter;
   text-align: center !important;
   padding-bottom: 0;
   margin-bottom: 0;
