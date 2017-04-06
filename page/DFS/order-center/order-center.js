@@ -133,12 +133,14 @@ var pageObject = {
       success(res) {
         if(res.data == 'success') {
           // showSuccess('订单已提交');
+          wx.setStorageSync('cartBadgeNum', 0)
           wx.hideToast();
           _this.setData({
             orderList: '',
             total_price: 0,
             total_price_rmb: 0,
-            doneModalStatus: true
+            doneModalStatus: true,
+            "footbarState.cartBadgeNum": 0
           })
         }
       }
