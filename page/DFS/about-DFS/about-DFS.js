@@ -14,9 +14,11 @@ Page({
     var _this = this
     this.setData({ "footbarState.cartBadgeNum": wx.getStorageSync('cartBadgeNum') })
     wx.setStorageSync('tabStatus', 'aboutDFS')
-    qcloud.request({
-      // login: true,
+    wx.request({
       url: domain + 'Home/coupon/coupon_status',
+      data: {
+        uid: wx.getStorageSync('uid')
+      },
       success(res) {
         _this.setData({
           coupon_status: res.data.coupon_status

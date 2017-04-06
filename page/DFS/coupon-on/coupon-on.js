@@ -18,9 +18,11 @@ Page({
     var _this = this
     if (e.detail.value === '330') {
       wx.hideKeyboard()
-      qcloud.request({
-        // login: true,
+      wx.request({
         url: domain + 'Home/Coupon/couponChange',
+        data: {
+          uid: wx.getStorageSync('uid')
+        },
         success(res) {
           _this.setData({
             qrcodeState: true,

@@ -56,9 +56,11 @@ var pageObject = {
   getCartList: function() {
     var orderLists = []
     var _this = this
-    qcloud.request({
+    wx.request({
       url: domain + 'Home/weapp/cart_list',
-      // login: true,
+      data: {
+        uid: wx.getStorageSync('uid')
+      },
       success(res) {
         if (res.data.length == 0) {
           return false;
@@ -122,9 +124,12 @@ var pageObject = {
     showBusy('正在通信..');
     var _this = this
 
-    qcloud.request({
-      url: domain + 'Home/order/confirmOrder?phone=' + _this.data.inputPhoneNumber,
-      // login: true,
+    wx.request({
+      url: domain + 'Home/order/confirmOrder',
+      data: {
+        phone: _this.data.inputPhoneNumber,
+        uid: wx.getStorageSync('uid')
+      },
       success(res) {
         if(res.data == 'success') {
           // showSuccess('订单已提交');

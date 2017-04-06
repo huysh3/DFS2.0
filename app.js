@@ -37,6 +37,13 @@ App({
           success(result) {
               showSuccess('登录成功');
               console.log('登录成功', result);
+              qcloud.request({
+                url: 'https://15580083.qcloud.la/Home/weapp/getUid',
+                success(response) {
+                  console.log(response)
+                  wx.setStorageSync('uid', response.data)
+                }
+              })
           },
           fail(error) {
               showModel('登录失败', error);
@@ -45,8 +52,11 @@ App({
   },
   getCartBadge: function() {
     var _this = this
-    qcloud.request({
+    wx.request({
       url: 'https://15580083.qcloud.la/Home/weapp/getCartNumber',
+      data: {
+        uid: wx.getStorageSync('uid')
+      },
       success(res) {
         _this.cartBadgeNum = res.data
         wx.setStorageSync('cartBadgeNum', res.data)

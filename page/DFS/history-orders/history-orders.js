@@ -37,8 +37,11 @@ Page({
     var _this = this
     wx.setStorageSync('tabStatus', 'historyOrders')
     this.setData({ "footbarState.cartBadgeNum": wx.getStorageSync('cartBadgeNum') })
-    qcloud.request({
+    wx.request({
       url: domain + 'Home/weapp/order_list',
+      data: {
+        uid: wx.getStorageSync('uid')
+      },      
       // login: true,
       success(res) {
         _this.setData({

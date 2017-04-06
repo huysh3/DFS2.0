@@ -71,14 +71,15 @@ var pageObject = {
   buyBtnEvent: function() {
     showBusy('正在通信..');
     var _this = this
-    qcloud.request({
+    wx.request({
       url: domain + 'Home/order/addCart',
       method: 'get',
       data: {
         product_id: _this.data.product_id,
         shop_id: _this.data.shop_id,
         price: _this.data.price,
-        number: _this.data.counter
+        number: _this.data.counter,
+        uid: wx.getStorageSync('uid')
       },
       success(res) {
         if (res.data == 'success') {

@@ -37,9 +37,12 @@ Page({
   },
   onLoad(options) {
     var _this = this
-    qcloud.request({
-      url: domain + 'Home/weapp/order_info?order_id=' + options.order_id,
-      // login: true,
+    wx.request({
+      url: domain + 'Home/weapp/order_info',
+      data: {
+        order_id: options.order_id,
+        uid: wx.getStorageSync('uid')
+      },
       success(res) {
         console.log(res.data)
         _this.setData({
