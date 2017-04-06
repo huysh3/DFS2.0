@@ -1,7 +1,6 @@
 // 引入 QCloud 小程序增强 SDK
 var qcloud = require('./vendor/qcloud-weapp-client-sdk/index');
 var config = require('./config');
-
 // 显示繁忙提示
 var showBusy = text => wx.showToast({
     title: text,
@@ -29,6 +28,7 @@ App({
   onShow: function () {
     qcloud.setLoginUrl(config.service.loginUrl);
     this.doLogin()
+    this.getCartBadge()
   },
   doLogin: function() {
       showBusy('正在登录');
@@ -43,10 +43,18 @@ App({
           }
       });
   },
-  globalData: {
-    hasLogin: false,
-    session_id: '',
-    userinfo: '',
-    user: ''
-  }
+  getCartBadge: function() {
+    var _this = this
+    qcloud.request({
+      url: 'https://15580083.qcloud.la/Home/weapp/getCartNumber',
+      success(res) {
+        _this.cartBadgeNum = res.data
+        wx.setStorageSync('cartBadgeNum', res.data)
+      },
+      fail(error) {
+        showModel('获取数据失败', error)
+      }
+    });
+  },
+  cartBadgeNum: 0
 })

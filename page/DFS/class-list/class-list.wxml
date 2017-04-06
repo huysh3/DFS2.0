@@ -11,4 +11,4 @@
 
 <view class="footbar-takeplace"></view>
 <import src="../../component/footbar/footbar.wxml"/>
-<template is="footbar" data="{{tabStatus}}"/>
+<template is="footbar" data="{{footbarState}}"/>

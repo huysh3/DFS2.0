@@ -33,7 +33,7 @@ Page({
   onShow() {
     this.setData({
       tabStatus: wx.getStorageSync('tabStatus')
-    })    
+    })
   },
   onLoad(options) {
     var _this = this

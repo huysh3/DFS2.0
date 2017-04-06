@@ -6,7 +6,7 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  padding: 11rpx 0;
+  padding: 4rpx 0;
   width: 750rpx;
   background-color: #000;
   display: flex;
@@ -17,13 +17,13 @@
   flex: 1;
   text-align: center !important;
   color: #fff;
+  position: relative;
 }
 
 .footbar-img {
   width: 48rpx;
   height: 48rpx;
   margin-top: 4rpx;
-  padding-bottom: 6rpx;
   text-align: center !important;
 }
 
@@ -32,8 +32,6 @@
   font-size: 24rpx;
   color: #fff;
   position: relative;
-  /*left: 1rpx;*/
-  top: 1rpx;
   font-weight: lighter;
   text-align: center !important;
   padding-bottom: 0;
@@ -43,4 +41,20 @@
 .footbar-item .title.active {
   font-weight: bold;
   color: #B62A18;
+}
+
+.badge {
+  background-color: rgb(208, 44, 15);
+  color: #fff;
+  padding: 5rpx;
+  font-size: 20rpx;
+  margin: 0;
+  position: absolute;
+  top: 6rpx;
+  right: 50rpx;
+  border-radius: 50%;
+  width: 20rpx;
+  height: 20rpx;
+  line-height: 20rpx;
+  text-align: center;
 }

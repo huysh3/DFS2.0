@@ -1,6 +1,7 @@
 import services from '../../../util/services'
 var domain = 'https://15580083.qcloud.la/'
 var qcloud = require('../../../vendor/qcloud-weapp-client-sdk/index');
+var app = getApp()
 
 // 显示繁忙提示
 var showBusy = text => wx.showToast({
@@ -87,6 +88,7 @@ var pageObject = {
             total_price: 0,
             modalStatus: true
           })
+          wx.setStorageSync('cartBadgeNum', parseInt(wx.getStorageSync('cartBadgeNum')) + 1)
           setTimeout(function() {
             _this.setData({
               modalStatus: false

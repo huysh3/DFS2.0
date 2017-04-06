@@ -1,15 +1,21 @@
 var domain = 'https://15580083.qcloud.la/'
 var qcloud = require('../../../vendor/qcloud-weapp-client-sdk/index');
+var app = getApp()
 
 Page({
   data: {
     "lists": '',
     "promotionStatus": false,
-    tabStatus: 'classList'
+    footbarState: {
+      tabStatus: 'classList',
+      cartBadgeNum: app.cartBadgeNum
+    }
   },
   onShow: function() {
     var _this = this
     wx.setStorageSync('tabStatus', 'classList')
+    this.setData({ "footbarState.cartBadgeNum": wx.getStorageSync('cartBadgeNum') })
+    app.getCartBadge()
     qcloud.request({
       // login: true,
       url: domain + 'Home/weapp/class_list',

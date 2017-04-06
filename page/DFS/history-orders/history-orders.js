@@ -28,11 +28,15 @@ Page({
   data: {
     indexList: [],
     orderList: [],
-    tabStatus: 'historyOrders'
+    footbarState: {
+      tabStatus: 'historyOrders',
+      cartBadgeNum: wx.getStorageSync('cartBadgeNum')
+    }
   },
   onShow() {
     var _this = this
     wx.setStorageSync('tabStatus', 'historyOrders')
+    this.setData({ "footbarState.cartBadgeNum": wx.getStorageSync('cartBadgeNum') })
     qcloud.request({
       url: domain + 'Home/weapp/order_list',
       // login: true,

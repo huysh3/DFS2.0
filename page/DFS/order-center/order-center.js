@@ -40,12 +40,16 @@ var pageObject = {
     inputPhoneNumber: '',
     doneModalStatus: false,
     inputModalState: false,
-    tabStatus: 'orderCenter'
+    footbarState: {
+      tabStatus: 'orderCenter',
+      cartBadgeNum: wx.getStorageSync('cartBadgeNum')
+    }
   },
   onShow: function() {
     var _this = this
     this.getCartList()
     wx.setStorageSync('tabStatus', 'orderCenter')
+    this.setData({ "footbarState.cartBadgeNum": wx.getStorageSync('cartBadgeNum') })
   },
   onLoad: function() {
   },
@@ -153,7 +157,6 @@ var pageObject = {
     showBusy('通信中..')
     qcloud.request({
       url: domain + 'Home/order/deleteOrder',
-      // login: true,
       data: {
         id : targetId
       },
@@ -172,10 +175,12 @@ var pageObject = {
             temp = temp + parseInt(index.order.price)
             temp_rmb = temp_rmb + parseInt(index.product.RMB) * parseInt(index.order.number)
           })
+          wx.setStorageSync('cartBadgeNum', parseInt(wx.getStorageSync('cartBadgeNum')) - 1)
           _this.setData({
             orderList: newOrderList,
             total_price: temp,
-            total_price_rmb: temp_rmb
+            total_price_rmb: temp_rmb,
+            "footbarState.cartBadgeNum": wx.getStorageSync('cartBadgeNum')
           })
           showSuccess('删除完成')
         }

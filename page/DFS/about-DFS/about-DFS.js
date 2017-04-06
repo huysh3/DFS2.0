@@ -5,10 +5,14 @@ Page({
   data: {
     "lists": '',
     coupon_status: '',
-    tabStatus: 'aboutDFS'
+    footbarState: {
+      tabStatus: 'aboutDFS',
+      cartBadgeNum: wx.getStorageSync('cartBadgeNum')
+    }
   },
   onShow: function() {
     var _this = this
+    this.setData({ "footbarState.cartBadgeNum": wx.getStorageSync('cartBadgeNum') })
     wx.setStorageSync('tabStatus', 'aboutDFS')
     qcloud.request({
       // login: true,
