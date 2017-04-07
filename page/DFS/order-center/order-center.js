@@ -162,7 +162,7 @@ var pageObject = {
     var _this = this
     var targetId = event.currentTarget.dataset.id
     showBusy('通信中..')
-    qcloud.request({
+    wx.request({
       url: domain + 'Home/order/deleteOrder',
       data: {
         id : targetId

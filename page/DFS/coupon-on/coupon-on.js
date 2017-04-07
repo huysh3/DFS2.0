@@ -39,6 +39,6 @@ Page({
       _this.setData({
         qrCodeSrc: '../../../image/QRCode1.png'
       })
-    }, 30000)
+    }, 300000)
   }
 })

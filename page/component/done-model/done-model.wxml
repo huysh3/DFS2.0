@@ -6,7 +6,7 @@
     </view>
     <view class="modal-body">
       <view class="detail">已成功生成订单</view>
-      <view class="detail">感谢惠顾DFS微信小程序商店，您的订单请于DFS夏威夷T广场免税店四楼提货处领取，如有任何问题请与客服联络。</view>
+      <view class="detail">预定商品库存有限，请到夏威夷T广场免税店4层提货处完成付款步骤确保顺利提货，售完即止，如有任何问题请与客服联系。</view>
     </view>
   </view>
 </template>

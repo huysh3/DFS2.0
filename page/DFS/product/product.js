@@ -138,7 +138,7 @@ var pageObject = {
   },
   getProductInfo: function(options) {
     var _this = this
-    qcloud.request({
+    wx.request({
         url: domain + 'Home/weapp/product_info',
         data: {
           product_id : options.product_id

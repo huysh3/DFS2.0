@@ -86,7 +86,7 @@
       </view>
       <view class="modal-body">
         <view class="detail">已加入购物车</view>
-        <view class="detail">预定商品库存有限，请到夏威夷T广场免税店4层提货处完成付款步骤确保顺利提货，售完即止，如有任何问题请与客服联系。</view>
+        <view class="detail">请到购物车进行确认</view>
       </view>
     </view>
   </view>

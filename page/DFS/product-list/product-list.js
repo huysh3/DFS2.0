@@ -31,7 +31,7 @@ var pageObject = {
   },
   getProductList: function(options) {
     var _this = this
-    qcloud.request({
+    wx.request({
       // login: true,
       url: domain + 'Home/weapp/product_list',
       data: {

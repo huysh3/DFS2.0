@@ -16,7 +16,7 @@ Page({
     wx.setStorageSync('tabStatus', 'classList')
     this.setData({ "footbarState.cartBadgeNum": wx.getStorageSync('cartBadgeNum') })
     app.getCartBadge()
-    qcloud.request({
+    wx.request({
       // login: true,
       url: domain + 'Home/weapp/class_list',
       success(res) {

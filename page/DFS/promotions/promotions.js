@@ -30,7 +30,7 @@ Page({
   },
   onLoad() {
     var _this = this
-    qcloud.request({
+    wx.request({
       // login: true,
       url: domain + 'Home/weapp/promotion_list',
       success(res) {
