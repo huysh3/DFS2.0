@@ -219,6 +219,7 @@ checkbox, radio{
 
 }
 .footbar-takeplace {
+  background-color: rgb(222, 222, 222);
   height: 110rpx;
 }
 

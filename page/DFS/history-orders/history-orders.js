@@ -38,10 +38,11 @@ Page({
     wx.setStorageSync('tabStatus', 'historyOrders')
     this.setData({ "footbarState.cartBadgeNum": wx.getStorageSync('cartBadgeNum') })
     wx.request({
-      url: domain + 'Home/weapp/order_list',
+      // url: domain + 'Home/weapp/order_list',
+      url: domain + 'Home/weapp/test',
       data: {
         uid: wx.getStorageSync('uid')
-      },      
+      },
       // login: true,
       success(res) {
         _this.setData({

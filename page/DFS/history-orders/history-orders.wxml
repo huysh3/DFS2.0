@@ -7,7 +7,9 @@
   <navigator class="order-card" url="/page/DFS/history-order/history-order?order_id={{list.order_id}}" wx:for="{{indexList}}" wx:for-item="list">
     <view>
       <view class="card-header">
-        <view class="order-id">单号: {{list.order_id}}</view>
+        <view class="order-id">
+          单号: {{list.order_id}}<text wx:if="{{list.order_status_string == '待提货'}}" style="color: rgb(29, 180, 53)">({{list.order_status_string}})</text><text wx:if="{{list.order_status_string != '待提货'}}">({{list.order_status_string}})</text>
+        </view>
         <view class="order-total-price">${{list.total_price}}</view>
         <view class="order-total-rmb">￥{{list.total_price_RMB - list.total_price_RMB % 1}}</view>
       </view>
