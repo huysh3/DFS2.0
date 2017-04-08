@@ -29,7 +29,11 @@
       <view class="total-fee">${{total_price}} <view class="total-fee-rmb">(￥{{total_price_rmb}})</view></view>
       <view class="clearfix"></view>
     </view>
-    <view class="center-btn" bindtap="handleConfirmBtn">确认订单</view>
+    <view class="btn-content">
+      <view class="left-btn" bindtap="handleCombineBtn">预留订单</view>
+      <view class="right-btn" bindtap="handleConfirmBtn"><image mode="widthFix" class="wechat-icon" src="../../../image/wechat.png"></image>微信支付</view>
+    </view>
+
   </view>
 
   <import src="../../component/done-model/done-model.wxml"/>
