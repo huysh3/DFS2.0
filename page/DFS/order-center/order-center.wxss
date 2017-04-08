@@ -161,6 +161,35 @@
   margin-left: 20rpx;
 }
 
+.btn-content {
+  display: flex;
+  height: 80rpx;
+}
+
+.btn-content .left-btn,
+.btn-content .right-btn {
+  flex: 1;
+  color: #fff;
+  text-align: center;
+  line-height: 80rpx;
+  margin: 0 20rpx;
+}
+
+.wechat-icon {
+  width: 40rpx;
+  position: relative;
+  top: 8rpx;
+  margin-right: 10rpx;
+}
+
+.btn-content .left-btn {
+  background-color: #B62A18;
+}
+
+.btn-content .right-btn {
+  background-color: rgb(30, 191, 22);
+}
+
 .total-fee-rmb {
   font-size: 24rpx;
   display: inline-block;
