@@ -1,4 +1,5 @@
 .history-container {
+  overflow-x: hidden;
   min-height: 100vh;
   padding: 20rpx;
   background-color: rgb(222, 222, 222);
