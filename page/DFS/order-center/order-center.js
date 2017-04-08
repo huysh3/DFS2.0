@@ -125,23 +125,57 @@ var pageObject = {
     var _this = this
 
     wx.request({
-      url: domain + 'Home/order/confirmOrder',
+      // url: domain + 'Home/order/confirmOrder',
+      url: domain + 'Home/order/combineOrder',
       data: {
         phone: _this.data.inputPhoneNumber,
         uid: wx.getStorageSync('uid')
       },
       success(res) {
-        if(res.data == 'success') {
+        if(res.data) {
           // showSuccess('订单已提交');
           wx.setStorageSync('cartBadgeNum', 0)
-          wx.hideToast();
           _this.setData({
             orderList: '',
             total_price: 0,
             total_price_rmb: 0,
-            doneModalStatus: true,
             "footbarState.cartBadgeNum": 0
           })
+          _this.callPay(res.data)
+        }
+      }
+    })
+  },
+  callPay(order_id) {
+    var _this = this
+    wx.request({
+      url: domain + 'Pay/Wechatpay/callPay',
+      data: {
+        order_id: order_id,
+        uid: wx.getStorageSync('uid')
+      },
+      success(res) {
+        wx.hideToast();
+        console.log(res.data.data.timeStamp)
+        if (res.data.result == 'success') {
+          wx.requestPayment({
+            'timeStamp': res.data.data.timeStamp,
+            'nonceStr': res.data.data.nonceStr,
+            'package': res.data.data.package,
+            'signType': res.data.data.signType,
+            'paySign': res.data.data.paySign,
+            'success':function(){
+              // merchant handles success payment scenario, such as wx.navigateTo sucess page
+              _this.setData({
+                doneModalStatus: true
+              })
+            },
+            'fail':function(res){
+              showModel('支付失败', '请到【我的】中查看订单并尝试支付')
+            }
+          })
+        } else {
+          showModel('拉起支付失败', res.data.result)
         }
       }
     })
