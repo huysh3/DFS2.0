@@ -74,11 +74,11 @@
 }
 
 .delete-btn {
-  width: 30rpx;
-  height: 30rpx;
-  position: absolute;
-  right: 30rpx;
-  top: 30rpx;
+  width:50rpx;
+  height:50rpx;
+  position:absolute;
+  right:20rpx;
+  top:20rpx;
 }
 
 .top-content .brand,

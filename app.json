@@ -1,9 +1,9 @@
 {
   "pages": [
-    "page/DFS/touchEvent/touchEvent",
-    "page/DFS/about-DFS/about-DFS",
-    "page/DFS/product-list/product-list",
     "page/DFS/order-center/order-center",
+    "page/DFS/about-DFS/about-DFS",
+    "page/DFS/touchEvent/touchEvent",
+    "page/DFS/product-list/product-list",
     "page/DFS/promotions/promotions",
     "page/DFS/tips/tips",
     "page/DFS/class-list/class-list",

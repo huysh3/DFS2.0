@@ -5,7 +5,7 @@
     <view class="right-part" bindtap="routerGoHistoryOrders">我的订单</view>
   </view>
   <view class="list-item" wx:for="{{orderList}}">
-    <image class="delete-btn" src="../../../image/x.png" data-id="{{item.order.id}}" bindtap="deleteOrder"></image>
+    <image class="delete-btn" src="../../../image/x.png" data-id="{{item.order.id}}" catchtap="deleteOrder"></image>
     <navigator url="/page/DFS/product/product?product_id={{item.product.id}}">
       <view class="top-content">
         <image class="product-img" src="{{item.product.order_banner}}"></image>
