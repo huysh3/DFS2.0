@@ -226,3 +226,13 @@ checkbox, radio{
 .clearfix {
   clear: both;
 }
+
+.dfs-banner {
+  width: 750rpx;
+  height:110rpx;
+}
+
+
+.scroll-view_H{
+  white-space: nowrap;
+}

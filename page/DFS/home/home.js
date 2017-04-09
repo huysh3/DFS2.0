@@ -31,7 +31,7 @@ Page({
   onShareAppMessage: function () {
     return {
       title: 'DFS购物微信小程序',
-      path: '/page/DFS/about-DFS/about-DFS',
+      path: '/page/DFS/home/home',
       success: function(res) {
         // 分享成功
       },

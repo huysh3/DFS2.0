@@ -1,0 +1,175 @@
+.clearfix {
+  clear: both;
+}
+
+.page {
+  /*background-color: rgb(222, 222, 222);*/
+  background-color: #fff;
+}
+
+.cutline {
+  width: 750rpx;
+  height: 50rpx;
+  background-color: #f0f0f0;
+}
+
+.home-banner {
+  width: 750rpx;
+  float: left;
+  margin-top: -5rpx;
+}
+
+.coupon-banner {
+  width: 750rpx;
+  padding: 20rpx 0;
+}
+
+.selected-content {
+  padding: 0 20rpx;
+}
+
+.selected-content .title {
+  font-size: 32rpx;
+  padding: 20rpx 0;
+  font-weight: bold;
+}
+
+.scroll-view-item_H {
+  display: inline-block;
+}
+
+.scroll-view_H {
+  width: 710rpx;
+  height: 420rpx;
+  padding: 20rpx;
+}
+
+.scroll-item {
+  width: 200rpx;
+  padding-right: 80rpx;
+  text-align: center;
+}
+
+.scroll-item:last-child {
+  padding-right: 20rpx;
+}
+
+.selected-content .item-img,
+.class-content .item-img {
+  width: 200rpx;
+  height: 300rpx;
+}
+
+.selected-content .item-title,
+.class-content .item-title {
+  white-space: normal;
+  width: 200rpx;
+  font-size: 24rpx;
+  padding: 20rpx 0;
+}
+
+.selected-content .item-price,
+.class-content .item-price {
+  color: #B62A18;
+}
+
+.class-content .class-banner {
+  width: 750rpx;
+}
+
+.class-list-content .item-img {
+  width: 140rpx;
+  height: 140rpx;
+}
+
+.class-list-content .item-title {
+  font-size: 24rpx;
+}
+
+.class-list-content .scroll-item {
+  width: 150rpx;
+  padding-right: 0;
+}
+
+.class-list-content .scroll-view_H {
+  width: 710rpx;
+  height:172rpx;
+}
+
+.logo-content .logo-item {
+  width: 375rpx;
+  display: inline-block;
+}
+
+.desc-content {
+  text-align: center;
+}
+
+.desc-content .desc-img {
+  width: 750rpx;
+}
+
+.desc-text-content .location {
+  font-size: 28rpx;
+  margin-top: 30rpx;
+  color: #999;
+}
+
+.desc-text-content .business-hours {
+  font-size: 24rpx;
+  margin-top: 20rpx;
+  color: #999;
+}
+
+.show-tips {
+  font-size: 24rpx;
+  margin-top: 40rpx;
+  padding-bottom: 40rpx;
+}
+
+/*
+.cutline {
+  width: 400rpx;
+  margin: 20rpx 175rpx;
+  height: 1rpx;
+  background-color: #000;
+}
+
+.desc {
+  text-align: center;
+  padding-top: 2rpx;
+  padding-bottom: 10rpx;
+  font-size: 32rpx;
+}
+
+.open-time {
+  text-align: center;
+  font-size: 32rpx;
+}
+
+.class-item {
+  display: inline-block;
+  text-align: center;
+}
+
+.class-item-img {
+  width: 220rpx;
+  height: 220rpx;
+  padding: 15rpx;
+  float: left;
+  margin: 40rpx 0;
+  margin-bottom: 0rpx;
+}
+
+.desc-img {
+  width: 710rpx;
+  height: 240rpx;
+  margin: 20rpx;
+  margin-top: 60rpx;
+}
+
+.show-tips {
+  text-align: center;
+  color: #999;
+  padding: 30rpx 0;
+}*/

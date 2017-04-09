@@ -1,6 +1,6 @@
 {
   "pages": [
-    "page/DFS/about-DFS/about-DFS",
+    "page/DFS/home/home",
     "page/DFS/promotions/promotions",
     "page/DFS/product-list/product-list",
     "page/DFS/order-center/order-center",
@@ -28,7 +28,7 @@
     "color": "#999",
     "selectedColor": "#B62A18",
     "list": [{
-      "pagePath": "page/DFS/about-DFS/about-DFS",
+      "pagePath": "page/DFS/home/home",
       "iconPath": "image/home-2.png",
       "selectedIconPath": "image/home.png",
       "text": "主页"

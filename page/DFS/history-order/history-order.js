@@ -53,7 +53,7 @@ Page({
   },
   routerGoHome: function() {
     wx.redirectTo({
-      url: '../about-DFS/about-DFS'
+      url: '../home/home'
     })
   }
 })

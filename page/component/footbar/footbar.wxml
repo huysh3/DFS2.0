@@ -1,6 +1,6 @@
 <template name="footbar">
   <view class="footbar-content">
-    <navigator open-type="redirectTo" url="/page/DFS/about-DFS/about-DFS" class="footbar-item">
+    <navigator open-type="redirectTo" url="/page/DFS/home/home" class="footbar-item">
       <image wx:if="{{footbarState.tabStatus != 'aboutDFS'}}" class="footbar-img" src="../../../image/home-2.png"></image>
       <image wx:if="{{footbarState.tabStatus == 'aboutDFS'}}" class="footbar-img" src="../../../image/home.png"></image>
       <view class="title {{footbarState.tabStatus == 'aboutDFS' ? 'active' : ''}}">主页</view>
