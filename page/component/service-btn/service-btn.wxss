@@ -10,4 +10,5 @@
   border-top-left-radius: 100rpx;
   border-bottom-left-radius: 100rpx;
   box-shadow: 2rpx 2rpx 4rpx #666;
+  z-index: 99;
 }

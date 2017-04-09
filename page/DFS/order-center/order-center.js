@@ -100,17 +100,35 @@ var pageObject = {
     })
   },
   // 需要支付
+  // 无需手机号弹窗
   handleConfirmBtn: function() {
+    var _this = this
     if (this.data.orderList.length == 0) {
       showModel('尚无商品', '请先去商品目录挑选商品');
       return false;
     }
-    this.setData({
-      inputModalState: true,
-      needPay: true
+    showBusy('正在通信..');
+    wx.request({
+      url: domain + 'Home/order/combineOrder',
+      data: {
+        uid: wx.getStorageSync('uid')
+      },
+      success(res) {
+        if(res.data) {
+          wx.setStorageSync('cartBadgeNum', 0)
+          _this.setData({
+            orderList: '',
+            total_price: 0,
+            total_price_rmb: 0,
+            "footbarState.cartBadgeNum": 0
+          })
+          _this.callPay(res.data)
+        }
+      }
     })
   },
   // 无需支付
+  // 预购订单用confirm，手机号弹窗
   handleCombineBtn: function() {
     if (this.data.orderList.length == 0) {
       showModel('尚无商品', '请先去商品目录挑选商品');
@@ -138,7 +156,7 @@ var pageObject = {
     showBusy('正在通信..');
     var _this = this
     wx.request({
-      url: domain + 'Home/order/combineOrder',
+      url: domain + 'Home/order/confirmOrder',
       data: {
         phone: _this.data.inputPhoneNumber,
         uid: wx.getStorageSync('uid')
@@ -153,14 +171,10 @@ var pageObject = {
             total_price_rmb: 0,
             "footbarState.cartBadgeNum": 0
           })
-          if (_this.data.needPay) {
-            _this.callPay(res.data)
-          } else {
-            wx.hideToast();
-            _this.setData({
-              doneModalStatus: true
-            })
-          }
+          wx.hideToast();
+          _this.setData({
+            doneModalStatus: true
+          })
         }
       }
     })
