@@ -41,6 +41,9 @@ var pageObject = {
     doneModalStatus: false,
     inputModalState: false,
     needPay: false,
+    modalProps: {
+      text: ''
+    },
     footbarState: {
       tabStatus: 'orderCenter',
       cartBadgeNum: wx.getStorageSync('cartBadgeNum')
@@ -173,6 +176,7 @@ var pageObject = {
           })
           wx.hideToast();
           _this.setData({
+            "modalProps.text": '预定商品库存有限，请到夏威夷T广场免税店4层提货处完成付款步骤确保顺利提货，售完即止，如有任何问题请与客服联系。',
             doneModalStatus: true
           })
         }
@@ -182,7 +186,7 @@ var pageObject = {
   callPay(order_id) {
     var _this = this
     wx.request({
-      url: domain + 'Pay/Wechatpay/callPay',
+      url: domain + 'Pay/Wechatpay/test',
       data: {
         order_id: order_id,
         uid: wx.getStorageSync('uid')
@@ -198,8 +202,9 @@ var pageObject = {
             'signType': res.data.data.signType,
             'paySign': res.data.data.paySign,
             'success':function(){
-              // merchant handles success payment scenario, such as wx.navigateTo sucess page
+              // 支付成功
               _this.setData({
+                "modalProps.text": '订单已经生成，请到夏威夷T广场免税店4层提货处提货，如有任何问题请与客服联系。谢谢惠顾！',
                 doneModalStatus: true
               })
             },
