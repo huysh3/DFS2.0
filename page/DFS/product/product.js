@@ -36,7 +36,6 @@ var pageObject = {
     autoplay: true,
     interval: 5000,
     duration: 400,
-    modalState: false,
     inputPhoneNumber: '',
     hasSend: false,
     shop_id: '',
@@ -90,11 +89,6 @@ var pageObject = {
             modalStatus: true
           })
           wx.setStorageSync('cartBadgeNum', parseInt(wx.getStorageSync('cartBadgeNum')) + 1)
-          setTimeout(function() {
-            _this.setData({
-              modalStatus: false
-            })
-          }, 2000)
         } else {
           showModel('加车失败', res.data);
         }
@@ -118,6 +112,11 @@ var pageObject = {
     this.setData({
       counter: _this.data.counter + 1,
       total_price: _this.data.counter * this.data.price
+    })
+  },
+  modalHide() {
+    this.setData({
+      modalStatus: false
     })
   },
   countDownEvent: function() {

@@ -79,6 +79,7 @@
     <view class="right-part" bindtap="buyBtnEvent">加入购物车</view>
   </view>
 
+  <view wx:if="{{modalStatus}}" class="mask"></view>
   <view name="done-model" wx:if="{{modalStatus}}">
     <view class="modal-content">
       <view class="modal-header">
@@ -87,6 +88,10 @@
       <view class="modal-body">
         <view class="detail">已加入购物车</view>
         <view class="detail">请到购物车进行确认</view>
+      </view>
+      <view class="options-content">
+        <view bindtap="modalHide" class="left-btn">继续购物</view>
+        <navigator open-type="redirect" url="../order-center/order-center" class="right-btn">前往购物车</navigator>
       </view>
     </view>
   </view>

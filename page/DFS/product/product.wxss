@@ -253,3 +253,19 @@
 .counter, .incr {
   margin-left: 40rpx;
 }
+
+.options-content {
+  padding-top: 20rpx;
+  display: flex;
+  height: 80rpx;
+}
+
+.options-content .left-btn,
+.options-content .right-btn {
+  flex: 1;
+  margin: 0 20rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background-color: #B62A18;
+  color: #fff;
+}
