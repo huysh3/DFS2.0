@@ -1,7 +1,7 @@
 {
   "pages": [
-    "page/DFS/order-center/order-center",
     "page/DFS/about-DFS/about-DFS",
+    "page/DFS/order-center/order-center",
     "page/DFS/touchEvent/touchEvent",
     "page/DFS/product-list/product-list",
     "page/DFS/promotions/promotions",
