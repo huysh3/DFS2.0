@@ -186,7 +186,7 @@ var pageObject = {
   callPay(order_id) {
     var _this = this
     wx.request({
-      url: domain + 'Pay/Wechatpay/test',
+      url: domain + 'Pay/Wechatpay/callPay',
       data: {
         order_id: order_id,
         uid: wx.getStorageSync('uid')
