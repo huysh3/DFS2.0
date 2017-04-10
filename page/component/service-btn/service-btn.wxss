@@ -2,13 +2,23 @@
   position: fixed;
   right: 0;
   bottom:300rpx;
-  background-color: #000;
-  color: #fff;
+  background-color: #eee;
   padding: 15rpx 25rpx;
+  padding-right: 10rpx;
   font-size: 28rpx;
   font-weight: bold;
   border-top-left-radius: 100rpx;
   border-bottom-left-radius: 100rpx;
-  box-shadow: 2rpx 2rpx 4rpx #666;
   z-index: 99;
+}
+
+.service-btn-icon {
+  width: 25rpx;
+  display: inline-block;
+  margin-right: 10rpx;
+}
+
+.service-btn-text {
+  display: inline-block;
+  color: #000;
 }

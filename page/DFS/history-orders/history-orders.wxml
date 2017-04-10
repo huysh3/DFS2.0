@@ -1,4 +1,53 @@
-<view class="history-container">
+<view class="history-orders-container">
+  <image bindtap="routerGoHome" class="dfs-banner" src="../../../image/DFS-banner.png"></image>
+  <view class="item-content">
+    <view class="item-header">
+      <view class="title">合并订单</view>
+      <view class="order-state">订单确认</view>
+    </view>
+    <view class="scroll-content"></view>
+    <view class="item-footer">
+      <view class="price-content">
+        <view class="title">订单合计</view>
+        <view class="item-total-price">$350</view>
+        <view class="item-total-rmb">(￥4800.00)</view>
+      </view>
+      <view class="amount-content">共 4 件</view>
+    </view>
+  </view>
+  <view class="item-content">
+    <view class="item-header">
+      <view class="title">合并订单</view>
+      <view class="order-state">订单确认</view>
+    </view>
+    <view class="scroll-content"></view>
+    <view class="item-footer">
+      <view class="price-content">
+        <view class="title">订单合计</view>
+        <view class="item-total-price">$350</view>
+        <view class="item-total-rmb">(￥4800.00)</view>
+      </view>
+      <view class="amount-content">共 4 件</view>
+    </view>
+  </view>
+  <view class="item-content">
+    <view class="item-header">
+      <view class="title">合并订单</view>
+      <view class="order-state">订单确认</view>
+    </view>
+    <view class="scroll-content"></view>
+    <view class="item-footer">
+      <view class="price-content">
+        <view class="title">订单合计</view>
+        <view class="item-total-price">$350</view>
+        <view class="item-total-rmb">(￥4800.00)</view>
+      </view>
+      <view class="amount-content">共 4 件</view>
+    </view>
+  </view>
+</view>
+
+<!-- <view class="history-container">
   <image bindtap="routerGoHome" class="banner" src="../../../image/DFS-banner.png"></image>
   <view class="header">
     <view class="total">合计 {{indexList.length}} 张订单</view>
@@ -23,11 +72,11 @@
     </view>
   </navigator>
 
-</view>
+</view> -->
 
 <import src="../../component/service-btn/service-btn.wxml"/>
 <template is="service-btn"/>
 
-<view class="footbar-takeplace"></view>
+<view style="background-color: #f0f0f0;" class="footbar-takeplace"></view>
 <import src="../../component/footbar/footbar.wxml"/>
 <template is="footbar" data="{{footbarState}}"/>

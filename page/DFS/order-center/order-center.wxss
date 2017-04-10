@@ -1,4 +1,147 @@
 .page {
+  background-color: #f0f0f0;
+}
+
+.item-content {
+  background-color: #fff;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  position: relative;
+}
+
+.item-image {
+  width: 250rpx;
+  float: left;
+  margin-right: 20rpx;
+}
+
+.desc-content {
+  float: right;
+  width: 440rpx;
+}
+
+.desc-content .item-name {
+  font-size: 32rpx;
+  color: #000;
+  font-weight: bold;
+}
+
+.desc-content .item-brand {
+  font-size: 24rpx;
+  color: #999;
+  padding: 4rpx 0;
+}
+
+.desc-content .item-price {
+  font-size: 28rpx;
+  color: #B62A18;
+}
+
+.desc-content .counter {
+  margin-top: 20rpx;
+  display: flex;
+}
+
+.counter .decr,
+.counter .incr {
+  width: 35rpx;
+  height: 35rpx;
+  text-align: center;
+  line-height: 31rpx;
+  border: 1rpx solid #aaa;
+  border-radius: 3rpx;
+}
+
+.counter .number {
+  padding: 0 20rpx;
+  font-size: 28rpx;
+  position: relative;
+  top: 3rpx;
+}
+
+.delete-btn {
+  width: 44rpx;
+  height: 44rpx;
+  position: absolute;
+  right: 10rpx;
+  top: 16rpx;
+}
+
+.footer-content {
+  position: fixed;
+  bottom: 86rpx;
+  background-color: #fff;
+  padding: 0 20rpx;
+  width: 710rpx;
+  border-top: 1rpx solid #ccc;
+}
+
+.top-content {
+  display: flex;
+  padding: 20rpx 0;
+  height: 40rpx;
+}
+
+.top-content .title,
+.top-content .price-content {
+  flex: 1;
+  line-height: 40rpx;
+}
+
+.top-content .price-content {
+  text-align: right;
+}
+
+.top-content .price-content .title {
+  font-size: 24rpx;
+  color: #000;
+  line-height: 40rpx;
+}
+
+.top-content .price-content .price {
+  font-size: 32rpx;
+  color: #B62A18;
+  display: inline-block;
+  line-height: 40rpx;
+}
+
+.top-content .price-content .rmb {
+  margin-left: 20rpx;
+  font-size: 24rpx;
+  display: inline-block;
+  color: #999;
+  line-height: 40rpx;
+}
+
+.options-content {
+  padding-bottom: 30rpx;
+  display: flex;
+}
+
+.options-content .confirm-btn,
+.options-content .pay-btn {
+  flex: 1;
+  text-align: center;
+  color: #fff;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  border-radius: 7rpx;
+}
+
+.options-content .confirm-btn {
+  background-color: rgb(209, 24, 25);
+  margin-right: 30rpx;
+}
+
+.options-content .pay-btn {
+  margin-left: 30rpx;
+  background-color: rgb(44, 177, 78);
+}
+
+.options-content {}
+
+/*.page {
   background-color: rgb(222, 222, 222);
 }
 
@@ -34,25 +177,12 @@
 
 .topbar .right-part {
   float: right;
-  /*height: 30rpx;*/
   margin: 20rpx;
   font-size: 30rpx;
   position: relative;
   border-left: 1rpx solid #000;
   padding-left: 20rpx;
 }
-
-/*.topbar .right-part::after {
-  content: '.';
-  color: rgba(0, 0, 0, 0);
-  position: absolute;
-  bottom: 15rpx;
-  right: 17rpx;
-  display: block;
-  width: 64rpx;
-  height: 2rpx;
-  background-color: #000;
-}*/
 
 .list-item {
   width: 710rpx;
@@ -194,4 +324,4 @@
   font-size: 24rpx;
   display: inline-block;
   margin-left: 20rpx;
-}
+}*/

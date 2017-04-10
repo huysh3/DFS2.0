@@ -1,4 +1,82 @@
-.history-container {
+.history-orders-container {
+  background-color: #f0f0f0;
+}
+
+page {
+  background-color: #f0f0f0;
+}
+
+.item-content {
+  padding: 0 20rpx;
+  background-color: #fff;
+  margin-bottom: 30rpx;
+}
+
+.item-header {
+  display: flex;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+
+.item-header .title,
+.item-header .order-state {
+  flex: 1;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.item-header .title {
+  font-size: 32rpx;
+  color: #000;
+  font-weight: bold;
+}
+
+.item-header .order-state {
+  font-size: 28rpx;
+  color: #B62A18;
+  text-align: right;
+}
+
+.scroll-content {
+  height: 200rpx;
+  display: block;
+  background-color: #fff;
+}
+
+.item-footer {
+  background-color: #fff;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-top: 1rpx solid #f0f0f0;
+  display: flex;
+}
+
+.item-footer .price-content {
+  flex: 4;
+  display: flex;
+  font-size: 32rpx;
+}
+
+.item-footer .item-total-price {
+  margin-left: 20rpx;
+  color: #B62A18;
+}
+
+.item-footer .item-total-rmb {
+  font-size: 24rpx;
+  color: #999;
+  margin-left: 20rpx;
+}
+
+.item-footer .amount-content {
+  flex: 1;
+  text-align: right;
+  font-size: 24rpx;
+  color: #999;
+}
+
+
+
+/*.history-container {
   overflow-x: hidden;
   min-height: 100vh;
   padding: 20rpx;
@@ -97,4 +175,4 @@
   right: 20rpx;
   font-size: 28rpx;
   text-decoration: underline;
-}
+}*/
