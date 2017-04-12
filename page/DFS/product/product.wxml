@@ -33,7 +33,7 @@
 
     <image mode="widthFix" src="https://ww2.sinaimg.cn/large/006tNc79gy1fekfoudbgaj30sn04eq3o.jpg" class="security-image"></image>
 
-    <view class="counter">
+    <!--<view class="counter">
       <view class="left-part">
         <view class="total-price">$123</view>
         <view class="total-rmb">(￥1231)</view>
@@ -43,7 +43,7 @@
         <view class="number">12</view>
         <view class="incr">+</view>
       </view>
-    </view>
+    </view>-->
 
     <view class="footer">
       <view class="cart-icon"><image class="icon" src="https://ww2.sinaimg.cn/large/006tNc79gy1fekg1gmy7fj301t01ka9t.jpg"></image></view>
