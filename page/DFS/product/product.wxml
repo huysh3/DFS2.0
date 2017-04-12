@@ -1,4 +1,57 @@
-<view class="page">
+<view class="product-container">
+    <swiper class="header" 
+            indicator-dots="{{indicatorDots}}" 
+            autoplay="{{autoplay}}" 
+            interval="{{interval}}" 
+            loop="true" 
+            duration="{{duration}}">
+        <block>
+            <swiper-item>
+                <view class="swipe-content">
+                    <image mode="widthFix" src="https://ww3.sinaimg.cn/large/006tNc79gy1fekf59vkuij30v90iltkr.jpg" bindtap="previewImgs" data-url="{{item}}" class="slide-image" />
+                </view>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="product-info">
+      <view class="product-name">Guerlain</view>
+      <view class="product-intro">
+        体验串成与不休的研发李亮呈现的传奇奢华真品，将在尽量实际，五代相传的悠久历史，法国娇兰香水世家接力臻完美
+      </view>
+      <view class="product-price-content">
+        <view class="price">$123</view>
+        <view class="rmb">(￥123)</view>
+      </view>
+    </view>
+
+    <image mode="widthFix" class="coupon-image" src="https://ww4.sinaimg.cn/large/006tNc79gy1fekfklrjnmj30v90afgnw.jpg"></image>
+
+    <view class="product-desc">
+      <view class="title">产品信息</view>
+      <view class="desc">我们的巧克力盒装曲奇饼具有优质的松脆饼干，辅以丰富美味的Guittard巧克力，令人一试难忘</view>
+    </view>
+
+    <image mode="widthFix" src="https://ww2.sinaimg.cn/large/006tNc79gy1fekfoudbgaj30sn04eq3o.jpg" class="security-image"></image>
+
+    <view class="counter">
+      <view class="left-part">
+        <view class="total-price">$123</view>
+        <view class="total-rmb">(￥1231)</view>
+      </view>
+      <view class="right-part">
+        <view class="decr">-</view>
+        <view class="number">12</view>
+        <view class="incr">+</view>
+      </view>
+    </view>
+
+    <view class="footer">
+      <view class="cart-icon"><image class="icon" src="https://ww2.sinaimg.cn/large/006tNc79gy1fekg1gmy7fj301t01ka9t.jpg"></image></view>
+      <view class="add-cart-btn">加入购物车</view>
+      <view class="buy-now-btn">立即购买</view>      
+    </view>
+</view>
+<!-- <view class="page">
   <view class="product-name-content">
     <view class="brand">{{product.brand_name}}</view>
     <view class="name">{{product.name}}</view>
@@ -95,7 +148,7 @@
       </view>
     </view>
   </view>
-</view>
+</view> -->
 
-<import src="../../component/service-btn/service-btn.wxml"/>
-<template is="service-btn"/>
+<import src="../../component/service-btn/service-btn.wxml" />
+<template is="service-btn" />
