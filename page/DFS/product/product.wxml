@@ -8,7 +8,7 @@
         <block>
             <swiper-item>
                 <view class="swipe-content">
-                    <image mode="widthFix" src="https://ww3.sinaimg.cn/large/006tNc79gy1fekf59vkuij30v90iltkr.jpg" bindtap="previewImgs" data-url="{{item}}" class="slide-image" />
+                    <image mode="widthFix" src="https://ww3.sinaimg.cn/large/006tNc79gy1felon7syarj30jy09yjs4.jpg" bindtap="previewImgs" data-url="{{item}}" class="slide-image" />
                 </view>
             </swiper-item>
         </block>

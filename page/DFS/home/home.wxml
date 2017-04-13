@@ -1,7 +1,6 @@
 <view class="page">
   <image class="dfs-banner" mode="widthFix" src="../../../image/DFS-banner.png"></image>
-  <image class="home-banner" mode="widthFix" src="https://ww2.sinaimg.cn/large/006tKfTcgy1feh04uryz6j30ku0b40ys.jpg"></image>
-  <image class="coupon-banner" mode="widthFix" src="https://ww4.sinaimg.cn/large/006tKfTcgy1feh06nbdudj30ku06y0tr.jpg"></image>
+  <image class="home-banner" mode="widthFix" src="https://ww1.sinaimg.cn/large/006tNc79gy1felonja0f7j30jy09yjs4.jpg"></image>
   <view class="selected-content">
     <view class="title">为您甄选</view>
     <scroll-view class="scroll-view_H" scroll-x="true">
@@ -41,7 +40,7 @@
   <view class="cutline"></view>
 
   <view class="class-content">
-    <image mode="widthFix" class="class-banner" src="https://ww2.sinaimg.cn/large/006tKfTcgy1feh17yrl9qj30ku0a012p.jpg"></image>
+    <image mode="widthFix" class="class-banner" src="https://ww3.sinaimg.cn/large/006tNc79gy1feloosonysj30ku0cl79x.jpg"></image>
     <scroll-view class="scroll-view_H" scroll-x="true">
       <view class="scroll-view-item_H scroll-item">
         <image mode="widthFix" class="item-img" src="https://ww2.sinaimg.cn/large/006tKfTcgy1feh0tm8n9hj309l0aiq59.jpg"></image>
@@ -76,9 +75,7 @@
     </scroll-view>
   </view>
 
-  <view class="cutline"></view>
-
-  <view class="class-list-content">
+  <!--<view class="class-list-content">
     <scroll-view class="scroll-view_H" scroll-x="true">
       <view class="scroll-view-item_H scroll-item">
         <image mode="widthFix" class="item-img" src="https://ww3.sinaimg.cn/large/006tKfTcgy1feh1bfdf2aj3073069q3t.jpg"></image>
@@ -105,12 +102,12 @@
         <view class="item-title">当地特产</view>
       </view>
     </scroll-view>
-  </view>
+  </view>-->
 
   <view class="cutline"></view>
 
   <view class="class-content">
-    <image mode="widthFix" class="class-banner" src="https://ww2.sinaimg.cn/large/006tKfTcgy1feh1m1e51cj30ku0a0qat.jpg"></image>
+    <image mode="widthFix" class="class-banner" src="https://ww2.sinaimg.cn/large/006tNc79gy1felopf62h5j30ku0cn41p.jpg"></image>
     <scroll-view class="scroll-view_H" scroll-x="true">
       <view class="scroll-view-item_H scroll-item">
         <image mode="widthFix" class="item-img" src="https://ww2.sinaimg.cn/large/006tKfTcgy1feh0tm8n9hj309l0aiq59.jpg"></image>
@@ -147,50 +144,12 @@
 
   <view class="cutline"></view>
 
-  <view class="class-content">
-    <image mode="widthFix" class="class-banner" src="https://ww4.sinaimg.cn/large/006tKfTcgy1feh1mboj9wj30ku0a07c3.jpg"></image>
-    <scroll-view class="scroll-view_H" scroll-x="true">
-      <view class="scroll-view-item_H scroll-item">
-        <image mode="widthFix" class="item-img" src="https://ww2.sinaimg.cn/large/006tKfTcgy1feh0tm8n9hj309l0aiq59.jpg"></image>
-        <view class="item-title">Emporio Armani 42mm Giana Tbar</view>
-        <view class="item-price">$231</view>
-      </view>
-      <view class="scroll-view-item_H scroll-item">
-        <image mode="widthFix" class="item-img" src="https://ww2.sinaimg.cn/large/006tKfTcgy1feh0tm8n9hj309l0aiq59.jpg"></image>
-        <view class="item-title">Emporio Armani 42mm Giana Tbar</view>
-        <view class="item-price">$231</view>
-      </view>
-      <view class="scroll-view-item_H scroll-item">
-        <image mode="widthFix" class="item-img" src="https://ww2.sinaimg.cn/large/006tKfTcgy1feh0tm8n9hj309l0aiq59.jpg"></image>
-        <view class="item-title">Emporio Armani 42mm Giana Tbar</view>
-        <view class="item-price">$231</view>
-      </view>
-      <view class="scroll-view-item_H scroll-item">
-        <image mode="widthFix" class="item-img" src="https://ww2.sinaimg.cn/large/006tKfTcgy1feh0tm8n9hj309l0aiq59.jpg"></image>
-        <view class="item-title">Emporio Armani 42mm Giana Tbar</view>
-        <view class="item-price">$231</view>
-      </view>
-      <view class="scroll-view-item_H scroll-item">
-        <image mode="widthFix" class="item-img" src="https://ww2.sinaimg.cn/large/006tKfTcgy1feh0tm8n9hj309l0aiq59.jpg"></image>
-        <view class="item-title">Emporio Armani 42mm Giana Tbar</view>
-        <view class="item-price">$231</view>
-      </view>
-      <view class="scroll-view-item_H scroll-item">
-        <image mode="widthFix" class="item-img" src="https://ww2.sinaimg.cn/large/006tKfTcgy1feh0tm8n9hj309l0aiq59.jpg"></image>
-        <view class="item-title">Emporio Armani 42mm Giana Tbar</view>
-        <view class="item-price">$231</view>
-      </view>
-    </scroll-view>
-  </view>
-
-  <view class="cutline"></view>
-
-  <view class="logo-content">
+  <!--<view class="logo-content">
     <image mode="widthFix" class="logo-item" src="https://ww3.sinaimg.cn/large/006tKfTcgy1feh1nae4bgj308r041t90.jpg"></image>
     <image mode="widthFix" class="logo-item" src="https://ww3.sinaimg.cn/large/006tKfTcgy1feh1nae4bgj308r041t90.jpg"></image>
     <image mode="widthFix" class="logo-item" src="https://ww3.sinaimg.cn/large/006tKfTcgy1feh1nae4bgj308r041t90.jpg"></image>
     <image mode="widthFix" class="logo-item" src="https://ww3.sinaimg.cn/large/006tKfTcgy1feh1nae4bgj308r041t90.jpg"></image>
-  </view>
+  </view>-->
 
   <view class="desc-content">
     <image mode="widthFix" class="desc-img" src="https://om536p71r.qnssl.com/shop_address.png"></image>

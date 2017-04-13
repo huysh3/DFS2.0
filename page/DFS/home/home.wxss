@@ -40,7 +40,7 @@
 
 .scroll-view_H {
   width: 710rpx;
-  height: 420rpx;
+  height:373rpx;
   padding: 20rpx;
 }
 

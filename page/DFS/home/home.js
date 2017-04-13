@@ -8,6 +8,57 @@ Page({
     footbarState: {
       tabStatus: 'aboutDFS',
       cartBadgeNum: wx.getStorageSync('cartBadgeNum')
+    },
+    mockJson: {
+      banner_img: [
+        {
+          img_url: '',
+          navigator_url: '/page/DFS/coupon-on/coupon-on'
+        },
+        {
+          img_url: '',
+          navigator_url: ''
+        },
+        {
+          img_url: '',
+          navigator_url: ''
+        },
+      ],
+      selected_products: [
+        {
+          product: {}
+        },
+        {
+          product: {}
+        },
+        {
+          product: {}
+        }
+      ],
+      perfume: [
+        {
+          product: {}
+        },
+        {
+          product: {}
+        },
+        {
+          product: {}
+        },
+        // ...
+      ],
+      bags: [
+        {
+          product: {}
+        },
+        {
+          product: {}
+        },
+        {
+          product: {}
+        },
+        // ...
+      ]
     }
   },
   onShow: function() {
