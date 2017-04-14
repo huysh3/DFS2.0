@@ -65,7 +65,7 @@ var pageObject = {
   },
   onLoad: function(options) {
     wx.setNavigationBarTitle({title: '商品详情'})
-    // this.getProductInfo(options)
+    this.getProductInfo(options)
   },
   buyBtnEvent: function() {
     showBusy('正在通信..');

@@ -40,8 +40,9 @@
 
 .scroll-view_H {
   width: 710rpx;
-  height:373rpx;
+  height:345rpx;
   padding: 20rpx;
+  position: relative;
 }
 
 .scroll-item {
@@ -66,11 +67,16 @@
   width: 200rpx;
   font-size: 24rpx;
   padding: 20rpx 0;
+  position: absolute;
+  top: 200rpx;
 }
 
 .selected-content .item-price,
 .class-content .item-price {
   color: #B62A18;
+  width: 200rpx;
+  position: absolute;
+  top: 290rpx;
 }
 
 .class-content .class-banner {

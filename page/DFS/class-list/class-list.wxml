@@ -1,4 +1,4 @@
-<view>
+<!--<view>
   <image mode="widthFix" bindtap="routerGoHome" class="banner" src="../../../image/DFS-banner.png"></image>
   <navigator url="/page/DFS/product-list/product-list?class_name={{item.class_name}}" wx:for="{{lists}}">
     <image src="{{item.class_url}}" class="nav-item"></image>
@@ -7,8 +7,19 @@
     <image src="https://om536p71r.qnssl.com/Promotions6.png" class="nav-item"></image>
   </navigator>
   <view class="clearfix"></view>
+</view>-->
+
+<view class="class-list-container">
+  <image mode="widthFix" bindtap="routerGoHome" class="dfs-banner" src="../../../image/DFS-banner.png"></image>
+  <navigator url="/page/DFS/promotions/promotions">
+    <image mode="widthFix" class="top-banner" src="https://ww3.sinaimg.cn/large/006tNc79gy1femottcte0j30v90go7e2.jpg"></image>
+  </navigator>
+  <navigator url="/page/DFS/product-list/product-list?class_name={{item.class_name}}" wx:for="{{lists}}">
+    <image mode="widthFix" class="nav-item" src="https://ww4.sinaimg.cn/large/006tNc79gy1femp2x74nej30fn0dwjuj.jpg"></image>
+  </navigator>
+  <view class="clearfix"></view>
 </view>
 
-<view class="footbar-takeplace"></view>
+<view style="background-color: #fff;" class="footbar-takeplace"></view>
 <import src="../../component/footbar/footbar.wxml"/>
 <template is="footbar" data="{{footbarState}}"/>

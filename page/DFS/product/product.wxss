@@ -8,10 +8,7 @@ page {
 
 .header {
   width: 750rpx;
-}
-
-.header {
-  height: 446rpx;
+  height: 750rpx;
 }
 
 .header .slide-image {
@@ -119,260 +116,61 @@ page {
   height: 35rpx;
 }
 
-/*.takeplace-190 {
-  height: 190rpx;
-}
-
-.clearfix {
-  clear: both;
-}
-
-.page {
-  background-color: #f0f0f0;
-  padding: 20rpx;
-}
-
-.product-name-content {
-  background-color: #fff;
-  text-align: center;
-  padding-top: 30rpx;
-}
-
-.product-name-content .brand {
-  font-family: "TimesNewRomanPSMT";
-  font-size: 30rpx;
-}
-
-.product-name-content .name {
-  font-family: "FranklinITCStd-Light";
-  font-size: 40rpx;
-  font-weight: bold;
-}
-
-.header {
+.counter {
   width: 710rpx;
-  height: 450rpx;
-}
-
-.swipe-content {
-  width: 710rpx;
-  height: 450rpx;
-  text-align: center;
-  background-color: #fff;
-}
-
-.header image {
-  width: 450rpx;
-  height: 450rpx;
-}
-
-.header-textcontent {
-  padding: 10rpx;
-  padding-bottom: 0;
-  background-color: #fff;
-}
-
-.name {
-  padding-top: 10rpx;
-  font-size: 40rpx;
-  color: #333;
-}
-
-.price-content {
-  height: 40rpx;
-  line-height: 40rpx;
-  padding: 0 20rpx;
-  padding-bottom: 40rpx;
-  border-bottom: 1rpx solid #ccc;
-}
-
-.price, .worth {
-  display: inline-block;
-}
-
-.rmb {
-  float: right;
-}
-
-.price {
-  font-size: 40rpx;
-  font-weight: bold;
-  color: #B62A18;
-  letter-spacing: 2rpx;
-}
-
-.worth {
-  margin-left: 20rpx;
-  font-size: 24rpx;
-  text-decoration: line-through;
-  color: #999;
-}
-
-.lights-textcontent {
+  height: 100rpx;
   padding: 20rpx;
-  border-bottom: 1rpx solid #ccc;
-}
-
-.banner {
-  height: 130rpx;
-  padding: 30rpx 0;
+  position: fixed;
+  bottom: 100rpx;
   background-color: #fff;
+  border-top: 1rpx solid #f0f0f0;
 }
 
-.banner swiper {
-  height: 130rpx;
-}
-
-.banner .swipe-content {
-  height: 130rpx;
-}
-
-.banner .swipe-content image {
-  width: 600rpx;
-  height:118rpx;
-}
-
-.lights-content {
-  background-color: #fff;
-  padding: 10rpx;
-  padding-bottom: 0;
-}
-
-.lights-content .title {
-  padding: 0 0 20rpx 0;
-  font-size: 36rpx;
-  color: #333;
-  text-align: center;
-}
-
-.lights-content .content {
-  font-size: 32rpx;
-  line-height: 60rpx;
-}
-
-.auth-content {
-  padding: 10rpx;
-  padding-top: 0;
-  height: 115rpx;
-  background-color: #fff;
-}
-
-.auth-content .auth-img {
-  width:690rpx;
-  height:115rpx;
-  border-top: 1rpx solid #aaa;
-  border-bottom: 1rpx solid #aaa;}
-
-.contact-content {
-  background-color: #fff;
-  padding: 35rpx 20rpx;
-}
-
-.contact-content .left-part {
+.counter .left-part,
+.counter .right-part {
   display: inline-block;
-}
-
-.contact-content .right-part {
-  float: right;
-  color: #cca556;
-}
-
-.tel-content .tel-number {
-  display: inline-block;
-  font-size: 28rpx;
-  line-height: 70rpx;
-  height: 70rpx;
-  color: #333;
-}
-
-.footer {
-  width: 750rpx;
   height: 100rpx;
   line-height: 100rpx;
-  background-color: #2f2f3b;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  border-top: 1rpx solid #eee;
 }
 
-.footer .left-part {
-  flex: 1;
-  background-color: #fff;
-}
-
-.footer .price {
-  padding-left: 40rpx;
-  line-height: 100rpx;
-}
-
-.footer .footer-rmb {
-  font-size: 30rpx;
-  font-weight: 300;
+.counter .left-part .total-price {
   display: inline-block;
+  font-size: 32rpx;
+  color: #B62A18;
+}
+.counter .left-part .total-rmb {
+  display: inline-block;
+  font-size: 24rpx;
+  color: #999;
   margin-left: 20rpx;
-  line-height: 100rpx;
   position: relative;
   bottom: 4rpx;
 }
-
-.footer .right-part {
-  flex: 1;
-  background-color: rgb(194, 44, 15);
-  color: #fff;
+.counter .right-part {
   text-align: center;
-  font-weight: bold;
-
-}
-
-.counter-content {
-  background-color: #fff;
-  height: 120rpx;
-  line-height: 120rpx;
-  padding: 0 20rpx;
-  border-top: 1rpx solid #ccc;
-  margin-top: 20rpx;
-  position: fixed;
-  bottom: 100rpx;
-  left: 0;
-  width: 710rpx;
-}
-
-.counter-content .title {
-  float: left;
-}
-
-.counter-content .options {
   float: right;
 }
-
-.decr, .incr, .counter {
+.counter .right-part .decr,
+.counter .right-part .incr,
+.counter .right-part .number {
+  /*flex: 1;*/
   display: inline-block;
+  font-size: 40rpx;
 }
 
-.counter {
-  height: 60rpx;
-  line-height: 60rpx;
-  text-align: center;
-  margin-top: 10rpx;
-  width: 80rpx;
+.counter .incr,
+.counter .decr {
+  border: 1rpx solid #aaa;
   display: inline-block;
-}
-
-.decr, .incr {
-  border-radius: 50%;
-  margin: 10rpx 0;
-  line-height: 60rpx;
   width: 60rpx;
   height: 60rpx;
-  background-color: #aaa;
-  color: #fff;
-  text-align: center;
+  line-height: 64rpx;
+  margin-top: 20rpx;
 }
 
-.counter, .incr {
-  margin-left: 40rpx;
+.counter .right-part .number {
+  font-size: 32rpx;
+  margin: 0 40rpx;
 }
 
 .options-content {
@@ -386,7 +184,8 @@ page {
   flex: 1;
   margin: 0 20rpx;
   line-height: 80rpx;
+  font-size: 32rpx;
   text-align: center;
   background-color: #B62A18;
   color: #fff;
-}*/
+}

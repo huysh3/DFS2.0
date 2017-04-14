@@ -9,57 +9,9 @@ Page({
       tabStatus: 'aboutDFS',
       cartBadgeNum: wx.getStorageSync('cartBadgeNum')
     },
-    mockJson: {
-      banner_img: [
-        {
-          img_url: '',
-          navigator_url: '/page/DFS/coupon-on/coupon-on'
-        },
-        {
-          img_url: '',
-          navigator_url: ''
-        },
-        {
-          img_url: '',
-          navigator_url: ''
-        },
-      ],
-      selected_products: [
-        {
-          product: {}
-        },
-        {
-          product: {}
-        },
-        {
-          product: {}
-        }
-      ],
-      perfume: [
-        {
-          product: {}
-        },
-        {
-          product: {}
-        },
-        {
-          product: {}
-        },
-        // ...
-      ],
-      bags: [
-        {
-          product: {}
-        },
-        {
-          product: {}
-        },
-        {
-          product: {}
-        },
-        // ...
-      ]
-    }
+    beauty_list: [],
+    selected_list: [],
+    bags_list: []
   },
   onShow: function() {
     var _this = this
@@ -76,6 +28,21 @@ Page({
         })
       },
       fail(error) {
+      }
+    })
+    this.getSlideShow()
+  },
+  getSlideShow: function() {
+    var _this = this
+    wx.request({
+      url: domain + 'Test/Slideshow/getSlideShow',
+      success(res) {
+        console.log(res.data)
+        _this.setData({
+          selected_list: res.data.special,
+          beauty_list: res.data.Beauty,
+          bags_list: res.data.Bags
+        })
       }
     })
   },

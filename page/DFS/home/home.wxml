@@ -4,74 +4,27 @@
   <view class="selected-content">
     <view class="title">为您甄选</view>
     <scroll-view class="scroll-view_H" scroll-x="true">
-      <view class="scroll-view-item_H scroll-item">
-        <image mode="widthFix" class="item-img" src="https://ww2.sinaimg.cn/large/006tKfTcgy1feh0tm8n9hj309l0aiq59.jpg"></image>
-        <view class="item-title">Emporio Armani 42mm Giana Tbar</view>
-        <view class="item-price">$231</view>
-      </view>
-      <view class="scroll-view-item_H scroll-item">
-        <image mode="widthFix" class="item-img" src="https://ww2.sinaimg.cn/large/006tKfTcgy1feh0tm8n9hj309l0aiq59.jpg"></image>
-        <view class="item-title">Emporio Armani 42mm Giana Tbar</view>
-        <view class="item-price">$231</view>
-      </view>
-      <view class="scroll-view-item_H scroll-item">
-        <image mode="widthFix" class="item-img" src="https://ww2.sinaimg.cn/large/006tKfTcgy1feh0tm8n9hj309l0aiq59.jpg"></image>
-        <view class="item-title">Emporio Armani 42mm Giana Tbar</view>
-        <view class="item-price">$231</view>
-      </view>
-      <view class="scroll-view-item_H scroll-item">
-        <image mode="widthFix" class="item-img" src="https://ww2.sinaimg.cn/large/006tKfTcgy1feh0tm8n9hj309l0aiq59.jpg"></image>
-        <view class="item-title">Emporio Armani 42mm Giana Tbar</view>
-        <view class="item-price">$231</view>
-      </view>
-      <view class="scroll-view-item_H scroll-item">
-        <image mode="widthFix" class="item-img" src="https://ww2.sinaimg.cn/large/006tKfTcgy1feh0tm8n9hj309l0aiq59.jpg"></image>
-        <view class="item-title">Emporio Armani 42mm Giana Tbar</view>
-        <view class="item-price">$231</view>
-      </view>
-      <view class="scroll-view-item_H scroll-item">
-        <image mode="widthFix" class="item-img" src="https://ww2.sinaimg.cn/large/006tKfTcgy1feh0tm8n9hj309l0aiq59.jpg"></image>
-        <view class="item-title">Emporio Armani 42mm Giana Tbar</view>
-        <view class="item-price">$231</view>
-      </view>
+      <navigator url="../product/product?product_id={{item.product_id}}" class="scroll-view-item_H scroll-item" wx:for="{{selected_list}}">
+        <image mode="widthFix" class="item-img" src="{{item.enter_banner}}"></image>
+        <view class="item-title">{{item.product_name}}</view>
+        <view class="item-price">${{item.price}}</view>
+      </navigator>
     </scroll-view>
   </view>
 
   <view class="cutline"></view>
 
   <view class="class-content">
-    <image mode="widthFix" class="class-banner" src="https://ww3.sinaimg.cn/large/006tNc79gy1feloosonysj30ku0cl79x.jpg"></image>
+    <navigator url="../product-list/product-list?class_name=Beauty">
+      <image mode="widthFix" class="class-banner" src="https://ww3.sinaimg.cn/large/006tNc79gy1feloosonysj30ku0cl79x.jpg"></image>
+    </navigator>
     <scroll-view class="scroll-view_H" scroll-x="true">
-      <view class="scroll-view-item_H scroll-item">
-        <image mode="widthFix" class="item-img" src="https://ww2.sinaimg.cn/large/006tKfTcgy1feh0tm8n9hj309l0aiq59.jpg"></image>
-        <view class="item-title">Emporio Armani 42mm Giana Tbar</view>
-        <view class="item-price">$231</view>
-      </view>
-      <view class="scroll-view-item_H scroll-item">
-        <image mode="widthFix" class="item-img" src="https://ww2.sinaimg.cn/large/006tKfTcgy1feh0tm8n9hj309l0aiq59.jpg"></image>
-        <view class="item-title">Emporio Armani 42mm Giana Tbar</view>
-        <view class="item-price">$231</view>
-      </view>
-      <view class="scroll-view-item_H scroll-item">
-        <image mode="widthFix" class="item-img" src="https://ww2.sinaimg.cn/large/006tKfTcgy1feh0tm8n9hj309l0aiq59.jpg"></image>
-        <view class="item-title">Emporio Armani 42mm Giana Tbar</view>
-        <view class="item-price">$231</view>
-      </view>
-      <view class="scroll-view-item_H scroll-item">
-        <image mode="widthFix" class="item-img" src="https://ww2.sinaimg.cn/large/006tKfTcgy1feh0tm8n9hj309l0aiq59.jpg"></image>
-        <view class="item-title">Emporio Armani 42mm Giana Tbar</view>
-        <view class="item-price">$231</view>
-      </view>
-      <view class="scroll-view-item_H scroll-item">
-        <image mode="widthFix" class="item-img" src="https://ww2.sinaimg.cn/large/006tKfTcgy1feh0tm8n9hj309l0aiq59.jpg"></image>
-        <view class="item-title">Emporio Armani 42mm Giana Tbar</view>
-        <view class="item-price">$231</view>
-      </view>
-      <view class="scroll-view-item_H scroll-item">
-        <image mode="widthFix" class="item-img" src="https://ww2.sinaimg.cn/large/006tKfTcgy1feh0tm8n9hj309l0aiq59.jpg"></image>
-        <view class="item-title">Emporio Armani 42mm Giana Tbar</view>
-        <view class="item-price">$231</view>
-      </view>
+      <navigator url="../product/product?product_id={{item.product_id}}" class="scroll-view-item_H scroll-item" wx:for="{{beauty_list}}">
+        <image mode="widthFix" class="item-img" src="{{item.enter_banner}}"></image>
+        <view class="item-title">{{item.product_name}}</view>
+        <view class="item-price">${{item.price}}</view>
+      </navigator>
+      <view class="clearfix"></view>
     </scroll-view>
   </view>
 
@@ -107,38 +60,15 @@
   <view class="cutline"></view>
 
   <view class="class-content">
-    <image mode="widthFix" class="class-banner" src="https://ww2.sinaimg.cn/large/006tNc79gy1felopf62h5j30ku0cn41p.jpg"></image>
+    <navigator url="../product-list/product-list?class_name=Bags">
+      <image mode="widthFix" class="class-banner" src="https://ww2.sinaimg.cn/large/006tNc79gy1felopf62h5j30ku0cn41p.jpg"></image>
+    </navigator>
     <scroll-view class="scroll-view_H" scroll-x="true">
-      <view class="scroll-view-item_H scroll-item">
-        <image mode="widthFix" class="item-img" src="https://ww2.sinaimg.cn/large/006tKfTcgy1feh0tm8n9hj309l0aiq59.jpg"></image>
-        <view class="item-title">Emporio Armani 42mm Giana Tbar</view>
-        <view class="item-price">$231</view>
-      </view>
-      <view class="scroll-view-item_H scroll-item">
-        <image mode="widthFix" class="item-img" src="https://ww2.sinaimg.cn/large/006tKfTcgy1feh0tm8n9hj309l0aiq59.jpg"></image>
-        <view class="item-title">Emporio Armani 42mm Giana Tbar</view>
-        <view class="item-price">$231</view>
-      </view>
-      <view class="scroll-view-item_H scroll-item">
-        <image mode="widthFix" class="item-img" src="https://ww2.sinaimg.cn/large/006tKfTcgy1feh0tm8n9hj309l0aiq59.jpg"></image>
-        <view class="item-title">Emporio Armani 42mm Giana Tbar</view>
-        <view class="item-price">$231</view>
-      </view>
-      <view class="scroll-view-item_H scroll-item">
-        <image mode="widthFix" class="item-img" src="https://ww2.sinaimg.cn/large/006tKfTcgy1feh0tm8n9hj309l0aiq59.jpg"></image>
-        <view class="item-title">Emporio Armani 42mm Giana Tbar</view>
-        <view class="item-price">$231</view>
-      </view>
-      <view class="scroll-view-item_H scroll-item">
-        <image mode="widthFix" class="item-img" src="https://ww2.sinaimg.cn/large/006tKfTcgy1feh0tm8n9hj309l0aiq59.jpg"></image>
-        <view class="item-title">Emporio Armani 42mm Giana Tbar</view>
-        <view class="item-price">$231</view>
-      </view>
-      <view class="scroll-view-item_H scroll-item">
-        <image mode="widthFix" class="item-img" src="https://ww2.sinaimg.cn/large/006tKfTcgy1feh0tm8n9hj309l0aiq59.jpg"></image>
-        <view class="item-title">Emporio Armani 42mm Giana Tbar</view>
-        <view class="item-price">$231</view>
-      </view>
+      <navigator url="../product/product?product_id={{item.product_id}}" class="scroll-view-item_H scroll-item" wx:for="{{bags_list}}">
+        <image mode="widthFix" class="item-img" src="{{item.enter_banner}}"></image>
+        <view class="item-title">{{item.product_name}}</view>
+        <view class="item-price">${{item.price}}</view>
+      </navigator>
     </scroll-view>
   </view>
 

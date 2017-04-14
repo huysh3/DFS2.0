@@ -1,4 +1,4 @@
-.nav-item {
+/*.nav-item {
   width: 750rpx;
   height:255rpx;
   float: left;
@@ -7,4 +7,12 @@
 .banner {
   width: 750rpx;
   float: left;
+}*/
+page {
+  background-color: #fff;
+}
+
+.nav-item {
+  float: left;
+  width: 375rpx;
 }
