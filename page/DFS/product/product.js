@@ -48,6 +48,10 @@ var pageObject = {
       'https://om536p71r.qnssl.com/tips_pic%20white.png',
       'https://om536p71r.qnssl.com/new_Slide2.png'
     ],
+    modalProps: {
+      title: '操作成功',
+      text: ''
+    },
     modalStatus: false
   },
   onShareAppMessage: function () {
@@ -86,6 +90,8 @@ var pageObject = {
           _this.setData({
             orderList: '',
             total_price: 0,
+            'modalProps.title': '已加入购物车',
+            'modalProps.text': '请到购物车进行商品结算',
             modalStatus: true
           })
           wx.setStorageSync('cartBadgeNum', parseInt(wx.getStorageSync('cartBadgeNum')) + 1)
@@ -207,10 +213,11 @@ var pageObject = {
                     'paySign': res.data.data.paySign,
                     'success': function() {
                         // 支付成功
-                          _this.setData({
-                              "modalProps.text": '订单已经生成，请到夏威夷T广场免税店4层提货处提货，如有任何问题请与客服联系。谢谢惠顾！',
-                              modalStatus: true
-                          })                        
+                        _this.setData({
+                            "modalProps.title": '支付成功',
+                            "modalProps.text": '订单已经生成，请到夏威夷T广场免税店4层提货处提货，如有任何问题请与客服联系。谢谢惠顾！',
+                            modalStatus: true
+                        })
                     },
                     'fail': function(res) {
                         showModel('支付失败', '请重新尝试支付')

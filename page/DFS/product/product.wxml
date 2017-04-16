@@ -60,8 +60,8 @@
       <image class="icon" src="https://om536p71r.qnssl.com/shopping-cart.png"></image>
     </view>
     <view class="modal-body">
-      <view class="detail">已加入购物车</view>
-      <view class="detail">请到购物车进行确认</view>
+      <view class="detail">{{modalProps.title}}</view>
+      <view class="detail">{{modalProps.text}}</view>
     </view>
     <view class="options-content">
       <view bindtap="modalHide" class="left-btn">继续购物</view>
