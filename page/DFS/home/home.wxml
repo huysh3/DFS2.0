@@ -24,7 +24,6 @@
         <view class="item-title">{{item.product_name}}</view>
         <view class="item-price">${{item.price}}</view>
       </navigator>
-      <view class="clearfix"></view>
     </scroll-view>
   </view>
 

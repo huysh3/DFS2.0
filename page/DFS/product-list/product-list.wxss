@@ -109,7 +109,10 @@
 }
 
 .product-img {
-  width: 750rpx;
+  height:600rpx;
+  width:600rpx;
+  background-color:#fff;
+  padding:0 75rpx;
   margin-bottom: -8rpx;
 }
 

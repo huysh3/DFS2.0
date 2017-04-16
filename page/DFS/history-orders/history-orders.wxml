@@ -1,50 +1,27 @@
 <view class="history-orders-container">
   <image bindtap="routerGoHome" class="dfs-banner" src="../../../image/DFS-banner.png"></image>
-  <view class="item-content">
+  <navigator url="/page/DFS/history-order/history-order?order_id={{list.order_id}}" class="item-content" wx:for="{{indexList}}" wx:for-item="list">
     <view class="item-header">
       <view class="title">合并订单</view>
-      <view class="order-state">订单确认</view>
+      <view style="color: rgb(29, 180, 53)" wx:if="{{list.order_status_string == '待提货'}}" class="order-state">{{list.order_status_string}}</view>
+      <view wx:if="{{list.order_status_string != '待提货'}}" class="order-state">{{list.order_status_string}}</view>
     </view>
-    <view class="scroll-content"></view>
+    <view class="scroll-content">
+      <scroll-view class="scroll-view_H" scroll-x="true">
+        <view class="scroll-view-item_H scroll-item" wx:for="{{list.order}}">
+          <image mode="widthFix" class="item-img" src="{{item.product.order_banner}}"></image>
+        </view>
+      </scroll-view>      
+    </view>
     <view class="item-footer">
       <view class="price-content">
         <view class="title">订单合计</view>
-        <view class="item-total-price">$350</view>
-        <view class="item-total-rmb">(￥4800.00)</view>
+        <view class="item-total-price">${{list.total_price}}</view>
+        <view class="item-total-rmb">(￥{{list.total_price_RMB - list.total_price_RMB % 1}})</view>
       </view>
-      <view class="amount-content">共 4 件</view>
+      <view class="amount-content">共 {{list.order.length}} 件</view>
     </view>
-  </view>
-  <view class="item-content">
-    <view class="item-header">
-      <view class="title">合并订单</view>
-      <view class="order-state">订单确认</view>
-    </view>
-    <view class="scroll-content"></view>
-    <view class="item-footer">
-      <view class="price-content">
-        <view class="title">订单合计</view>
-        <view class="item-total-price">$350</view>
-        <view class="item-total-rmb">(￥4800.00)</view>
-      </view>
-      <view class="amount-content">共 4 件</view>
-    </view>
-  </view>
-  <view class="item-content">
-    <view class="item-header">
-      <view class="title">合并订单</view>
-      <view class="order-state">订单确认</view>
-    </view>
-    <view class="scroll-content"></view>
-    <view class="item-footer">
-      <view class="price-content">
-        <view class="title">订单合计</view>
-        <view class="item-total-price">$350</view>
-        <view class="item-total-rmb">(￥4800.00)</view>
-      </view>
-      <view class="amount-content">共 4 件</view>
-    </view>
-  </view>
+  </navigator>
 </view>
 
 <!-- <view class="history-container">

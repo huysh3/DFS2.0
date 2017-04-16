@@ -74,6 +74,18 @@ page {
   color: #999;
 }
 
+.scroll-content .item-img {
+  width: 160rpx;
+  margin: 15rpx;
+  /*border: 1rpx solid #f0f0f0;*/
+}
+.scroll-view-item_H {
+  display: inline-block;
+}
+.scroll-view_H {
+  height: 200rpx;
+}
+
 
 
 /*.history-container {

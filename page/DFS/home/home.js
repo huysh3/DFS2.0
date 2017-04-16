@@ -17,6 +17,7 @@ Page({
     var _this = this
     this.setData({ "footbarState.cartBadgeNum": wx.getStorageSync('cartBadgeNum') })
     wx.setStorageSync('tabStatus', 'aboutDFS')
+    this.getBanner()
     wx.request({
       url: domain + 'Home/coupon/coupon_status',
       data: {
@@ -43,6 +44,16 @@ Page({
           beauty_list: res.data.Beauty,
           bags_list: res.data.Bags
         })
+      }
+    })
+  },
+  getBanner: function() {
+    var _this = this
+    wx.request({
+      url: domain + 'Test/Banner/getBanner',
+      success(res) {
+        console.log(res.data)
+
       }
     })
   },

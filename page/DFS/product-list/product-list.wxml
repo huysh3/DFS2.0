@@ -20,7 +20,7 @@
 <view class="page">
   <image mode="widthFix" bindtap="routerGoHome" class="banner" src="../../../image/DFS-banner.png"></image>
   <navigator url="/page/DFS/product/product?product_id={{item.id}}" wx:for="{{lists}}" class="list-item">
-    <image class="product-img" mode="widthFix" src="{{item.enter_banner}}"></image>
+    <image class="product-img" src="{{item.enter_banner}}"></image>
     <view class="product-info-content">
       <view class="product-brand">{{item.brand_name}}</view>
       <view class="product-name">{{item.name}}</view>

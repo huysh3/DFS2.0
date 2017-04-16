@@ -1,81 +1,22 @@
 <view class="page">
   <image bindtap="routerGoHome" class="dfs-banner" src="../../../image/DFS-banner.png"></image>
-  <view class="item-content">
-    <image mode="widthFix" class="item-image" src="https://ww1.sinaimg.cn/large/006tKfTcgy1fei3k7wvv6j308q06kdhv.jpg"></image>
+
+  <view class="item-content" wx:for="{{orderList}}">
+    <image mode="widthFix" class="item-image" src="{{item.product.order_banner}}"></image>
     <view class="desc-content">
-      <view class="item-name">夏威夷系列曲奇饼 12件装</view>
-      <view class="item-brand">火奴鲁鲁曲奇公司</view>
-      <view class="item-price">$214</view>
+      <view class="item-name">{{item.product.name}}</view>
+      <view class="item-brand">{{item.product.brand_name}}</view>
+      <view class="item-price">${{item.product.price}}</view>
       <view class="counter">
-        <view class="decr">-</view>
-        <view class="number">0</view>
-        <view class="incr">+</view>
+        <view data-index="{{index}}" bindtap="orderChange" data-id="{{item.order.id}}" data-option="-1" class="decr">-</view>
+        <view class="number">{{item.order.number}}</view>
+        <view data-index="{{index}}" bindtap="orderChange" data-id="{{item.order.id}}" data-option="1" class="incr">+</view>
       </view>
     </view>
     <view class="clearfix"></view>
     <image class="delete-btn" src="../../../image/x.png" data-id="{{item.order.id}}" catchtap="deleteOrder"></image>
   </view>
-  <view class="item-content">
-    <image mode="widthFix" class="item-image" src="https://ww1.sinaimg.cn/large/006tKfTcgy1fei3k7wvv6j308q06kdhv.jpg"></image>
-    <view class="desc-content">
-      <view class="item-name">夏威夷系列曲奇饼 12件装</view>
-      <view class="item-brand">火奴鲁鲁曲奇公司</view>
-      <view class="item-price">$214</view>
-      <view class="counter">
-        <view class="decr">-</view>
-        <view class="number">0</view>
-        <view class="incr">+</view>
-      </view>
-    </view>
-    <view class="clearfix"></view>
-    <image class="delete-btn" src="../../../image/x.png" data-id="{{item.order.id}}" catchtap="deleteOrder"></image>
-  </view>
-  <view class="item-content">
-    <image mode="widthFix" class="item-image" src="https://ww1.sinaimg.cn/large/006tKfTcgy1fei3k7wvv6j308q06kdhv.jpg"></image>
-    <view class="desc-content">
-      <view class="item-name">夏威夷系列曲奇饼 12件装</view>
-      <view class="item-brand">火奴鲁鲁曲奇公司</view>
-      <view class="item-price">$214</view>
-      <view class="counter">
-        <view class="decr">-</view>
-        <view class="number">0</view>
-        <view class="incr">+</view>
-      </view>
-    </view>
-    <view class="clearfix"></view>
-    <image class="delete-btn" src="../../../image/x.png" data-id="{{item.order.id}}" catchtap="deleteOrder"></image>
-  </view>
-  <view class="item-content">
-    <image mode="widthFix" class="item-image" src="https://ww1.sinaimg.cn/large/006tKfTcgy1fei3k7wvv6j308q06kdhv.jpg"></image>
-    <view class="desc-content">
-      <view class="item-name">夏威夷系列曲奇饼 12件装</view>
-      <view class="item-brand">火奴鲁鲁曲奇公司</view>
-      <view class="item-price">$214</view>
-      <view class="counter">
-        <view class="decr">-</view>
-        <view class="number">0</view>
-        <view class="incr">+</view>
-      </view>
-    </view>
-    <view class="clearfix"></view>
-    <image class="delete-btn" src="../../../image/x.png" data-id="{{item.order.id}}" catchtap="deleteOrder"></image>
-  </view>
-  <view class="item-content">
-    <image mode="widthFix" class="item-image" src="https://ww1.sinaimg.cn/large/006tKfTcgy1fei3k7wvv6j308q06kdhv.jpg"></image>
-    <view class="desc-content">
-      <view class="item-name">夏威夷系列曲奇饼 12件装</view>
-      <view class="item-brand">火奴鲁鲁曲奇公司</view>
-      <view class="item-price">$214</view>
-      <view class="counter">
-        <view class="decr">-</view>
-        <view class="number">0</view>
-        <view class="incr">+</view>
-      </view>
-    </view>
-    <view class="clearfix"></view>
-    <image class="delete-btn" src="../../../image/x.png" data-id="{{item.order.id}}" catchtap="deleteOrder"></image>
-  </view>
-  
+
   <view class="footbar-takeplace" style="background-color: #f0f0f0;"></view>
   <view class="footbar-takeplace" style="background-color: #f0f0f0;"></view>
 
@@ -83,13 +24,13 @@
     <view class="top-content">
       <view class="title">总价</view>
       <view class="price-content">
-        <view class="price">$123</view>
-        <view class="rmb">(￥1322)</view>
+        <view class="price">${{total_price}}</view>
+        <view class="rmb">(￥{{total_price_rmb}})</view>
       </view>
     </view>
     <view class="options-content">
-      <view class="confirm-btn">预留订单</view>
-      <view class="pay-btn">微信支付</view>
+      <view class="confirm-btn" bindtap="handleCombineBtn">预留订单</view>
+      <view class="pay-btn" bindtap="handleConfirmBtn">微信支付</view>
     </view>
   </view>
   <!-- <image bindtap="routerGoHome" class="banner" src="../../../image/DFS-banner.png"></image>
