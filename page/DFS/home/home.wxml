@@ -1,6 +1,6 @@
 <view class="page">
-  <image class="dfs-banner" mode="widthFix" src="../../../image/DFS-banner.png"></image>
-  <image class="home-banner" mode="widthFix" src="https://ww1.sinaimg.cn/large/006tNc79gy1felonja0f7j30jy09yjs4.jpg"></image>
+  <image class="dfs-banner" mode="widthFix" src="http://ww3.sinaimg.cn/large/006tKfTcgy1fesmnh0i59j30v903qweh.jpg"></image>
+  <image class="home-banner" mode="widthFix" src="http://ww2.sinaimg.cn/large/006tKfTcgy1fesmny5bb4j30v90gl133.jpg"></image>
   <view class="selected-content">
     <view class="title">为您甄选</view>
     <scroll-view class="scroll-view_H" scroll-x="true">
@@ -16,7 +16,7 @@
 
   <view class="class-content">
     <navigator url="../product-list/product-list?class_name=Beauty">
-      <image mode="widthFix" class="class-banner" src="https://ww3.sinaimg.cn/large/006tNc79gy1feloosonysj30ku0cl79x.jpg"></image>
+      <image mode="widthFix" class="class-banner" src="http://ww1.sinaimg.cn/large/006tKfTcgy1fesms0ya74j30v90iwqbn.jpg"></image>
     </navigator>
     <scroll-view class="scroll-view_H" scroll-x="true">
       <navigator url="../product/product?product_id={{item.product_id}}" class="scroll-view-item_H scroll-item" wx:for="{{beauty_list}}">
@@ -26,41 +26,11 @@
       </navigator>
     </scroll-view>
   </view>
-
-  <!--<view class="class-list-content">
-    <scroll-view class="scroll-view_H" scroll-x="true">
-      <view class="scroll-view-item_H scroll-item">
-        <image mode="widthFix" class="item-img" src="https://ww3.sinaimg.cn/large/006tKfTcgy1feh1bfdf2aj3073069q3t.jpg"></image>
-        <view class="item-title">腕表&配饰</view>
-      </view>
-      <view class="scroll-view-item_H scroll-item">
-        <image mode="widthFix" class="item-img" src="https://ww3.sinaimg.cn/large/006tKfTcgy1feh1bfdf2aj3073069q3t.jpg"></image>
-        <view class="item-title">当地特产</view>
-      </view>
-      <view class="scroll-view-item_H scroll-item">
-        <image mode="widthFix" class="item-img" src="https://ww3.sinaimg.cn/large/006tKfTcgy1feh1bfdf2aj3073069q3t.jpg"></image>
-        <view class="item-title">当地特产</view>
-      </view>
-      <view class="scroll-view-item_H scroll-item">
-        <image mode="widthFix" class="item-img" src="https://ww3.sinaimg.cn/large/006tKfTcgy1feh1bfdf2aj3073069q3t.jpg"></image>
-        <view class="item-title">当地特产</view>
-      </view>
-      <view class="scroll-view-item_H scroll-item">
-        <image mode="widthFix" class="item-img" src="https://ww3.sinaimg.cn/large/006tKfTcgy1feh1bfdf2aj3073069q3t.jpg"></image>
-        <view class="item-title">当地特产</view>
-      </view>
-      <view class="scroll-view-item_H scroll-item">
-        <image mode="widthFix" class="item-img" src="https://ww3.sinaimg.cn/large/006tKfTcgy1feh1bfdf2aj3073069q3t.jpg"></image>
-        <view class="item-title">当地特产</view>
-      </view>
-    </scroll-view>
-  </view>-->
-
   <view class="cutline"></view>
 
   <view class="class-content">
     <navigator url="../product-list/product-list?class_name=Bags">
-      <image mode="widthFix" class="class-banner" src="https://ww2.sinaimg.cn/large/006tNc79gy1felopf62h5j30ku0cn41p.jpg"></image>
+      <image mode="widthFix" class="class-banner" src="http://ww2.sinaimg.cn/large/006tKfTcgy1fesms9xhplj30v90iz0y0.jpg"></image>
     </navigator>
     <scroll-view class="scroll-view_H" scroll-x="true">
       <navigator url="../product/product?product_id={{item.product_id}}" class="scroll-view-item_H scroll-item" wx:for="{{bags_list}}">
@@ -70,18 +40,38 @@
       </navigator>
     </scroll-view>
   </view>
-
   <view class="cutline"></view>
 
-  <!--<view class="logo-content">
-    <image mode="widthFix" class="logo-item" src="https://ww3.sinaimg.cn/large/006tKfTcgy1feh1nae4bgj308r041t90.jpg"></image>
-    <image mode="widthFix" class="logo-item" src="https://ww3.sinaimg.cn/large/006tKfTcgy1feh1nae4bgj308r041t90.jpg"></image>
-    <image mode="widthFix" class="logo-item" src="https://ww3.sinaimg.cn/large/006tKfTcgy1feh1nae4bgj308r041t90.jpg"></image>
-    <image mode="widthFix" class="logo-item" src="https://ww3.sinaimg.cn/large/006tKfTcgy1feh1nae4bgj308r041t90.jpg"></image>
-  </view>-->
+  <view class="class-content">
+    <navigator url="../product-list/product-list?class_name=Watches/jewelry">
+      <image mode="widthFix" class="class-banner" src="http://ww3.sinaimg.cn/large/006tKfTcgy1fesmttqnvfj30v90iwqc4.jpg"></image>
+    </navigator>
+    <scroll-view class="scroll-view_H" scroll-x="true">
+      <navigator url="../product/product?product_id={{item.product_id}}" class="scroll-view-item_H scroll-item" wx:for="{{watch_list}}">
+        <image mode="widthFix" class="item-img" src="{{item.enter_banner}}"></image>
+        <view class="item-title">{{item.product_name}}</view>
+        <view class="item-price">${{item.price}}</view>
+      </navigator>
+    </scroll-view>
+  </view>
+  <view class="cutline"></view>
+
+  <view class="class-content">
+    <navigator url="../product-list/product-list?class_name=LocalFood/Snacks">
+      <image mode="widthFix" class="class-banner" src="http://ww2.sinaimg.cn/large/006tKfTcgy1fesmud6c4uj30v90iz465.jpg"></image>
+    </navigator>
+    <scroll-view class="scroll-view_H" scroll-x="true">
+      <navigator url="../product/product?product_id={{item.product_id}}" class="scroll-view-item_H scroll-item" wx:for="{{food_list}}">
+        <image mode="widthFix" class="item-img" src="{{item.enter_banner}}"></image>
+        <view class="item-title">{{item.product_name}}</view>
+        <view class="item-price">${{item.price}}</view>
+      </navigator>
+    </scroll-view>
+  </view>
+  <view class="cutline"></view>
 
   <view class="desc-content">
-    <image mode="widthFix" class="desc-img" src="https://om536p71r.qnssl.com/shop_address.png"></image>
+    <image mode="widthFix" class="desc-img" bindtap="viewLocation" src="https://om536p71r.qnssl.com/shop_address.png"></image>
     <view class="desc-text-content">
       <view class="location">檀香山 皇家夏威夷道330号</view>
       <view class="business-hours">营业时间 9:30 到 22:30</view>
@@ -90,38 +80,6 @@
       使用规范
     </navigator>
   </view>
-  <!-- <navigator url="/page/DFS/coupon-on/coupon-on" wx:if="{{coupon_status == 1}}">
-    <image class="coupon-banner" src="https://om536p71r.qnssl.com/3couponPicture1.png"></image>
-  </navigator>
-  <navigator url="/page/DFS/coupon-off/coupon-off" wx:if="{{coupon_status == 0}}">
-    <image class="coupon-banner" src="https://om536p71r.qnssl.com/444Coupon4.4.png"></image>
-  </navigator>
-  <navigator class="class-item" url="/page/DFS/product-list/product-list?class_name=Watches/jewelry">
-    <image src="https://om536p71r.qnssl.com/2222WaJ22.png" class="nav-item class-item-img"></image>
-    <view class="text">腕表 & 配饰</view>
-  </navigator>
-  <navigator class="class-item" url="/page/DFS/product-list/product-list?class_name=LocalFood/Snacks">
-    <image src="https://om536p71r.qnssl.com/3333FoodImage.png" class="nav-item class-item-img"></image>
-    <view class="text">当地特产</view>
-  </navigator>
-  <navigator class="class-item" url="/page/DFS/product-list/product-list?class_name=Beauty">
-    <image src="https://om536p71r.qnssl.com/222BeautyNEW.png" class="nav-item class-item-img"></image>
-    <view class="text">美妆香水</view>
-  </navigator>
-  <view class="clearfix">
-  </view>
-  <image class="desc-img" src="https://om536p71r.qnssl.com/shop_address.png"></image>
-  <view class="desc">
-    檀香山 皇家夏威夷大道330号
-  </view>
-  <view class="cutline">
-  </view>
-  <view class="open-time">
-    营业时间 9:30 至 23:00
-  </view>
-  <navigator url="/page/DFS/tips/tips" class="show-tips">
-    使用规范
-  </navigator> -->
 </view>
 
 <view class="footbar-takeplace"></view>

@@ -16,3 +16,7 @@ page {
   float: left;
   width: 375rpx;
 }
+
+.logo-wall {
+  width: 750rpx;
+}

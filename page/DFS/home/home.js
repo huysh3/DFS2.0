@@ -42,7 +42,9 @@ Page({
         _this.setData({
           selected_list: res.data.special,
           beauty_list: res.data.Beauty,
-          bags_list: res.data.Bags
+          bags_list: res.data.Bags,
+          watch_list: res.data['Watches/jewelry'],
+          food_list: res.data['LocalFood/Snacks']
         })
       }
     })
@@ -68,5 +70,20 @@ Page({
         // 分享失败
       }
     }
+  },
+  viewLocation: function() {
+    wx.getLocation({
+      type: 'gcj02', //返回可以用于wx.openLocation的经纬度
+      success: function(res) {
+        var latitude = 21.287834
+        var longitude = -157.840876
+        console.log(res)
+        wx.openLocation({
+          latitude: latitude,
+          longitude: longitude,
+          scale: 28
+        })
+      }
+    })    
   }
 })

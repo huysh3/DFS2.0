@@ -14,11 +14,22 @@
   <navigator url="/page/DFS/promotions/promotions">
     <image mode="widthFix" class="top-banner" src="https://ww3.sinaimg.cn/large/006tNc79gy1femottcte0j30v90go7e2.jpg"></image>
   </navigator>
-  <navigator url="/page/DFS/product-list/product-list?class_name={{item.class_name}}" wx:for="{{lists}}">
-    <image mode="widthFix" class="nav-item" src="https://ww4.sinaimg.cn/large/006tNc79gy1femp2x74nej30fn0dwjuj.jpg"></image>
+  <navigator url="/page/DFS/product-list/product-list?class_name=LocalFood/Snacks">
+    <image mode="widthFix" class="nav-item" src="../../../image/class_list_1.png"></image>
+  </navigator>
+  <navigator url="/page/DFS/product-list/product-list?class_name=Beauty">
+    <image mode="widthFix" class="nav-item" src="../../../image/class_list_2.png"></image>
+  </navigator>
+  <navigator url="/page/DFS/product-list/product-list?class_name=Watches/jewelry">
+    <image mode="widthFix" class="nav-item" src="../../../image/class_list_3.png"></image>
+  </navigator>
+  <navigator url="/page/DFS/product-list/product-list?class_name=Bags">
+    <image mode="widthFix" class="nav-item" src="../../../image/class_list_4.png"></image>
   </navigator>
   <view class="clearfix"></view>
 </view>
+
+<image mode="widthFix" class="logo-wall" src="http://ww2.sinaimg.cn/large/006tKfTcgy1fesmg3ad47j30ks0fzacr.jpg"></image>
 
 <view style="background-color: #fff;" class="footbar-takeplace"></view>
 <import src="../../component/footbar/footbar.wxml"/>
