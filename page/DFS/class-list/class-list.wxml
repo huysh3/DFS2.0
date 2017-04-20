@@ -1,16 +1,5 @@
-<!--<view>
-  <image mode="widthFix" bindtap="routerGoHome" class="banner" src="../../../image/DFS-banner.png"></image>
-  <navigator url="/page/DFS/product-list/product-list?class_name={{item.class_name}}" wx:for="{{lists}}">
-    <image src="{{item.class_url}}" class="nav-item"></image>
-  </navigator>
-  <navigator url="/page/DFS/promotions/promotions" wx:if="{{promotionStatus}}">
-    <image src="https://om536p71r.qnssl.com/Promotions6.png" class="nav-item"></image>
-  </navigator>
-  <view class="clearfix"></view>
-</view>-->
-
 <view class="class-list-container">
-  <image mode="widthFix" bindtap="routerGoHome" class="dfs-banner" src="../../../image/DFS-banner.png"></image>
+  <image mode="widthFix" bindtap="routerGoHome" class="dfs-banner" src="http://ww3.sinaimg.cn/large/006tKfTcgy1fesmnh0i59j30v903qweh.jpg"></image>
   <navigator url="/page/DFS/promotions/promotions">
     <image mode="widthFix" class="top-banner" src="https://ww3.sinaimg.cn/large/006tNc79gy1femottcte0j30v90go7e2.jpg"></image>
   </navigator>

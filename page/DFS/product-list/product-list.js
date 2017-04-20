@@ -16,6 +16,7 @@ var pageObject = {
     this.setData({
       'class_name': options.class_name
     })
+    console.log(options.class_name)
     wx.setNavigationBarTitle({
       title: '商品列表'
     })
@@ -32,7 +33,6 @@ var pageObject = {
   getProductList: function(options) {
     var _this = this
     wx.request({
-      // login: true,
       url: domain + 'Home/weapp/product_list',
       data: {
         class_name: options.class_name
@@ -49,20 +49,20 @@ var pageObject = {
     wx.redirectTo({
       url: '../home/home'
     })
-  },
-  onShareAppMessage: function () {
-    var _this = this
-    return {
-      title: 'DFS购物商品列表',
-      path: '/page/DFS/product-list/product-list?class_name=' + _this.data.class_name,
-      success: function(res) {
-        // 分享成功
-      },
-      fail: function(res) {
-        // 分享失败
-      }
-    }
   }
+  // onShareAppMessage: function () {
+  //   var _this = this
+  //   return {
+  //     title: 'DFS购物商品列表',
+  //     path: '/page/DFS/product-list/product-list?class_name=' + _this.data.class_name,
+  //     success: function(res) {
+  //       // 分享成功
+  //     },
+  //     fail: function(res) {
+  //       // 分享失败
+  //     }
+  //   }
+  // }
 }
 
 Page(pageObject)

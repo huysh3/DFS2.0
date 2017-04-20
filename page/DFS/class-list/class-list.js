@@ -24,7 +24,8 @@ Page({
     app.getCartBadge()
     wx.request({
       // login: true,
-      url: domain + 'Home/weapp/class_list',
+      // url: domain + 'Home/weapp/class_list',
+      url: domain + 'Test/weapp/class_list',
       success(res) {
         _this.setData({lists: res.data})
         setTimeout(function() {

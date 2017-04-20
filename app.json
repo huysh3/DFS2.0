@@ -1,6 +1,7 @@
 {
     "pages": [
         "page/DFS/home/home",
+        "page/DFS/search-page/search-page",
         "page/DFS/services/services",
         "page/DFS/product-cart/product-cart",
         "page/DFS/history-orders/history-orders",

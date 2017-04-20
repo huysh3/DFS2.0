@@ -54,19 +54,19 @@ var pageObject = {
     },
     modalStatus: false
   },
-  onShareAppMessage: function () {
-    var _this = this
-    return {
-      title: 'DFS购物超值商品',
-      path: '/page/DFS/product/product?product_id=' + _this.data.product_id,
-      success: function(res) {
-        // 分享成功
-      },
-      fail: function(res) {
-        // 分享失败
-      }
-    }
-  },
+  // onShareAppMessage: function () {
+  //   var _this = this
+  //   return {
+  //     title: 'DFS购物超值商品',
+  //     path: '/page/DFS/product/product?product_id=' + _this.data.product_id,
+  //     success: function(res) {
+  //       // 分享成功
+  //     },
+  //     fail: function(res) {
+  //       // 分享失败
+  //     }
+  //   }
+  // },
   onLoad: function(options) {
     wx.setNavigationBarTitle({title: '商品详情'})
     this.getProductInfo(options)
@@ -75,7 +75,8 @@ var pageObject = {
     showBusy('正在通信..');
     var _this = this
     wx.request({
-      url: domain + 'Home/order/addCart',
+      // url: domain + 'Home/order/addCart',
+      url: domain + 'Test/order/addCart',
       method: 'get',
       data: {
         product_id: _this.data.product_id,
@@ -144,7 +145,8 @@ var pageObject = {
   getProductInfo: function(options) {
     var _this = this
     wx.request({
-        url: domain + 'Home/weapp/product_info',
+        // url: domain + 'Home/weapp/product_info',
+        url: domain + 'Test/weapp/product_info',
         data: {
           product_id : options.product_id
         },

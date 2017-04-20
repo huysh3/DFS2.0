@@ -229,7 +229,6 @@ checkbox, radio{
 
 .dfs-banner {
   width: 750rpx;
-  height:110rpx;
 }
 
 
