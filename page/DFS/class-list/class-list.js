@@ -26,6 +26,9 @@ Page({
       // login: true,
       // url: domain + 'Home/weapp/class_list',
       url: domain + 'Test/weapp/class_list',
+      data: {
+        shop_id: wx.getStorageSync('shop_id')
+      },
       success(res) {
         _this.setData({lists: res.data})
         setTimeout(function() {

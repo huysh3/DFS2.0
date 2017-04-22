@@ -1,13 +1,3 @@
-/*.nav-item {
-  width: 750rpx;
-  height:255rpx;
-  float: left;
-}
-
-.banner {
-  width: 750rpx;
-  float: left;
-}*/
 page {
   background-color: #fff;
 }
@@ -15,6 +5,10 @@ page {
 .nav-item {
   float: left;
   width: 375rpx;
+}
+
+.top-banner {
+  width: 750rpx;
 }
 
 .logo-wall {

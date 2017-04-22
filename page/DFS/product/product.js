@@ -83,6 +83,7 @@ var pageObject = {
         shop_id: _this.data.shop_id,
         price: _this.data.price,
         number: _this.data.counter,
+        shop_id: wx.getStorageSync('shop_id'),        
         uid: wx.getStorageSync('uid')
       },
       success(res) {
@@ -148,7 +149,8 @@ var pageObject = {
         // url: domain + 'Home/weapp/product_info',
         url: domain + 'Test/weapp/product_info',
         data: {
-          product_id : options.product_id
+          product_id : options.product_id,
+          shop_id: wx.getStorageSync('shop_id')        
         },
         method: 'get',
         success: (response) => {
@@ -201,6 +203,7 @@ var pageObject = {
         // url: domain + 'Pay/Wechatpay/callPay',
         data: {
             order_id: order_id,
+            shop_id: wx.getStorageSync('shop_id'),
             uid: wx.getStorageSync('uid')
         },
         success(res) {

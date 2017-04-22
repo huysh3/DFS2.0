@@ -1,3 +1,60 @@
+.top-content {
+  position: relative;
+}
+
+.show-city-list {
+  position: absolute;
+  right: 20rpx;
+  top: 30rpx;
+}
+
+.show-city-list .show-city-icon {
+  display: inline-block;
+  width: 20rpx;
+  position: relative;
+  top: -5rpx;
+}
+
+.show-city-list .text {
+  font-size: 28rpx;
+  display: inline-block;
+  margin-right: 10rpx;
+}
+
+.select-city-modal {
+  position: absolute;
+  right: 20rpx;
+  top: 100rpx;
+}
+
+.select-city-modal .city-item {
+  padding: 20rpx;
+  background-color: #fff;
+  border-bottom: 1rpx solid #f0f0f0;
+  transition: all .3s ease;
+  display: flex;
+}
+
+.city-item .city-image {
+  width: 110rpx;
+  border-radius: 50%;
+}
+
+.city-item .city-name {
+  font-size: 24rpx;
+  line-height: 110rpx;
+  padding-left: 20rpx;
+  flex: 1;
+}
+
+.select-city-modal .city-item-hover {
+  background-color: #f0f0f0;
+}
+
+.header {
+  height: 390rpx;
+}
+
 .clearfix {
   clear: both;
 }

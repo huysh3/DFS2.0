@@ -63,7 +63,8 @@ var pageObject = {
     wx.request({
       url: domain + 'Home/weapp/cart_list',
       data: {
-        uid: wx.getStorageSync('uid')
+        uid: wx.getStorageSync('uid'),
+        shop_id: wx.getStorageSync('shop_id')
       },
       success(res) {
         if (res.data.length == 0) {
@@ -114,7 +115,8 @@ var pageObject = {
       wx.request({
           url: domain + 'Home/order/combineOrder',
           data: {
-              uid: wx.getStorageSync('uid')
+              uid: wx.getStorageSync('uid'),
+              shop_id: wx.getStorageSync('shop_id')        
           },
           success(res) {
               if (res.data) {
@@ -155,7 +157,8 @@ var pageObject = {
           url: domain + 'Home/order/confirmOrder',
           data: {
               phone: _this.data.inputPhoneNumber,
-              uid: wx.getStorageSync('uid')
+              uid: wx.getStorageSync('uid'),
+              shop_id: wx.getStorageSync('shop_id')
           },
           success(res) {
               if (res.data) {
@@ -183,7 +186,8 @@ var pageObject = {
           // url: domain + 'Pay/Wechatpay/callPay',
           data: {
               order_id: order_id,
-              uid: wx.getStorageSync('uid')
+              uid: wx.getStorageSync('uid'),
+              shop_id: wx.getStorageSync('shop_id')        
           },
           success(res) {
               wx.hideToast();
@@ -240,7 +244,8 @@ var pageObject = {
       url: domain + 'Test/order/changeCartNumber',
       data: {
         id: _id,
-        option: _option
+        option: _option,
+        shop_id: wx.getStorageSync('shop_id')        
       },
       success(res) {
         console.log(res)
@@ -269,7 +274,8 @@ var pageObject = {
     wx.request({
       url: domain + 'Home/order/deleteOrder',
       data: {
-        id : targetId
+        id : targetId,
+        shop_id: wx.getStorageSync('shop_id')        
       },
       success(res) {
         if (res.data == 'success') {

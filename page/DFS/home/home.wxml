@@ -1,5 +1,11 @@
 <view class="page">
-  <image class="dfs-banner" mode="widthFix" src="http://ww3.sinaimg.cn/large/006tKfTcgy1fesmnh0i59j30v903qweh.jpg"></image>
+  <view class="top-content">
+    <image class="dfs-banner" mode="widthFix" src="http://ww3.sinaimg.cn/large/006tKfTcgy1fesmnh0i59j30v903qweh.jpg"></image>
+    <view class="show-city-list" bindtap="changeShopListState">
+      <view class="text">旧金山</view>
+      <image mode="widthFix" class="show-city-icon" src="../../../image/down.png"></image>
+    </view>
+  </view>
   <image class="home-banner" mode="widthFix" src="http://ww2.sinaimg.cn/large/006tKfTcgy1fesmny5bb4j30v90gl133.jpg"></image>
   <navigator url="../search-page/search-page">
     <image mode="widthFix" class="search-bar" src="http://ww3.sinaimg.cn/large/006tKfTcgy1fetjhguny5j31al05g0sx.jpg"></image>
@@ -18,61 +24,19 @@
 
   <view class="cutline"></view>
 
-  <view class="class-content">
-    <navigator url="../product-list/product-list?class_name=Beauty">
-      <image mode="widthFix" class="class-banner" src="http://ww1.sinaimg.cn/large/006tKfTcgy1fesms0ya74j30v90iwqbn.jpg"></image>
+  <view class="class-content" wx:for="{{classList}}" wx:for-item="idx">
+    <navigator url="../product-list/product-list?class_name={{idx.class_name}}">
+      <image mode="widthFix" class="class-banner" src="{{idx.class_banner}}"></image>
     </navigator>
     <scroll-view class="scroll-view_H" scroll-x="true">
-      <navigator url="../product/product?product_id={{item.product_id}}" class="scroll-view-item_H scroll-item" wx:for="{{beauty_list}}">
+      <navigator url="../product/product?product_id={{item.product_id}}" class="scroll-view-item_H scroll-item" wx:for="{{idx.goods}}">
         <image mode="widthFix" class="item-img" src="{{item.enter_banner}}"></image>
         <view class="item-title">{{item.product_name}}</view>
         <view class="item-price">${{item.price}}</view>
       </navigator>
     </scroll-view>
+    <view class="cutline"></view>
   </view>
-  <view class="cutline"></view>
-
-  <view class="class-content">
-    <navigator url="../product-list/product-list?class_name=Bags">
-      <image mode="widthFix" class="class-banner" src="http://ww2.sinaimg.cn/large/006tKfTcgy1fesms9xhplj30v90iz0y0.jpg"></image>
-    </navigator>
-    <scroll-view class="scroll-view_H" scroll-x="true">
-      <navigator url="../product/product?product_id={{item.product_id}}" class="scroll-view-item_H scroll-item" wx:for="{{bags_list}}">
-        <image mode="widthFix" class="item-img" src="{{item.enter_banner}}"></image>
-        <view class="item-title">{{item.product_name}}</view>
-        <view class="item-price">${{item.price}}</view>
-      </navigator>
-    </scroll-view>
-  </view>
-  <view class="cutline"></view>
-
-  <view class="class-content">
-    <navigator url="../product-list/product-list?class_name=Watches/jewelry">
-      <image mode="widthFix" class="class-banner" src="http://ww3.sinaimg.cn/large/006tKfTcgy1fesmttqnvfj30v90iwqc4.jpg"></image>
-    </navigator>
-    <scroll-view class="scroll-view_H" scroll-x="true">
-      <navigator url="../product/product?product_id={{item.product_id}}" class="scroll-view-item_H scroll-item" wx:for="{{watch_list}}">
-        <image mode="widthFix" class="item-img" src="{{item.enter_banner}}"></image>
-        <view class="item-title">{{item.product_name}}</view>
-        <view class="item-price">${{item.price}}</view>
-      </navigator>
-    </scroll-view>
-  </view>
-  <view class="cutline"></view>
-
-  <view class="class-content">
-    <navigator url="../product-list/product-list?class_name=LocalFood/Snacks">
-      <image mode="widthFix" class="class-banner" src="http://ww2.sinaimg.cn/large/006tKfTcgy1fesmud6c4uj30v90iz465.jpg"></image>
-    </navigator>
-    <scroll-view class="scroll-view_H" scroll-x="true">
-      <navigator url="../product/product?product_id={{item.product_id}}" class="scroll-view-item_H scroll-item" wx:for="{{food_list}}">
-        <image mode="widthFix" class="item-img" src="{{item.enter_banner}}"></image>
-        <view class="item-title">{{item.product_name}}</view>
-        <view class="item-price">${{item.price}}</view>
-      </navigator>
-    </scroll-view>
-  </view>
-  <view class="cutline"></view>
 
   <view class="desc-content">
     <image mode="widthFix" class="desc-img" bindtap="viewLocation" src="https://om536p71r.qnssl.com/shop_address.png"></image>
@@ -83,6 +47,17 @@
     <navigator url="/page/DFS/tips/tips" class="show-tips">
       使用规范
     </navigator>
+  </view>
+
+  <view class="select-city-modal" wx:if="{{shopListState}}">
+    <view data-id="{{item.id}}" 
+          class="city-item" 
+          hover-class="city-item-hover" 
+          bindtap="changeShop" 
+          wx:for="{{shopList}}">
+      <image mode="widthFix" src="{{item.enter_banner}}" class="city-image"></image>
+      <view class="city-name">{{item.name}}</view>
+    </view>
   </view>
 </view>
 

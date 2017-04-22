@@ -35,8 +35,8 @@ var pageObject = {
     wx.request({
       url: domain + 'Home/weapp/product_list',
       data: {
-        class_name: options.class_name
-        //class_name: 'Bags'
+        class_name: options.class_name,
+        shop_id: wx.getStorageSync('shop_id')
       },
       success(res) {
         _this.setData({lists: res.data})
