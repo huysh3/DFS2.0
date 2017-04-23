@@ -1,5 +1,5 @@
 <view class="history-orders-container">
-  <image mode="widthFix" bindtap="routerGoHome" class="dfs-banner" src="http://ww3.sinaimg.cn/large/006tKfTcgy1fesmnh0i59j30v903qweh.jpg"></image>
+  <image mode="widthFix" bindtap="routerGoHome" class="dfs-banner" src="{{shopInfo.header_banner}}"></image>
   <navigator url="/page/DFS/history-order/history-order?order_id={{list.order_id}}" class="item-content" wx:for="{{indexList}}" wx:for-item="list">
     <view class="item-header">
       <view class="title">合并订单</view>

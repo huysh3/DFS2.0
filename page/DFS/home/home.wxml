@@ -1,8 +1,8 @@
 <view class="page">
   <view class="top-content">
-    <image class="dfs-banner" mode="widthFix" src="http://ww3.sinaimg.cn/large/006tKfTcgy1fesmnh0i59j30v903qweh.jpg"></image>
+    <image class="dfs-banner" mode="widthFix" src="{{shopInfo.header_banner}}"></image>
     <view class="show-city-list" bindtap="changeShopListState">
-      <view class="text">旧金山</view>
+      <view class="text">{{currentShop}}</view>
       <image mode="widthFix" class="show-city-icon" src="../../../image/down.png"></image>
     </view>
   </view>
@@ -41,8 +41,8 @@
   <view class="desc-content">
     <image mode="widthFix" class="desc-img" bindtap="viewLocation" src="https://om536p71r.qnssl.com/shop_address.png"></image>
     <view class="desc-text-content">
-      <view class="location">檀香山 皇家夏威夷道330号</view>
-      <view class="business-hours">营业时间 9:30 到 22:30</view>
+      <view class="location">{{shopInfo.area}} {{shopInfo.address}}</view>
+      <view class="business-hours">{{shopInfo.open_hours}}</view>
     </view>
     <navigator url="/page/DFS/tips/tips" class="show-tips">
       使用规范
@@ -51,6 +51,7 @@
 
   <view class="select-city-modal" wx:if="{{shopListState}}">
     <view data-id="{{item.id}}" 
+          data-shopname="{{item.name}}"
           class="city-item" 
           hover-class="city-item-hover" 
           bindtap="changeShop" 

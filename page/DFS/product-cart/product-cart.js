@@ -47,13 +47,15 @@ var pageObject = {
     footbarState: {
       tabStatus: 'orderCenter',
       cartBadgeNum: wx.getStorageSync('cartBadgeNum')
-    }
+    },
+    shopInfo: wx.getStorageSync('shopInfo')
   },
   onShow: function() {
     var _this = this
     this.getCartList()
     wx.setStorageSync('tabStatus', 'orderCenter')
     this.setData({ "footbarState.cartBadgeNum": wx.getStorageSync('cartBadgeNum') })
+    this.setData({ 'shopInfo': wx.getStorageSync('shopInfo') })
   },
   onLoad: function() {
   },

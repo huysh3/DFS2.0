@@ -2,7 +2,7 @@
 <template is="service-btn"/>
 
 <view class="page">
-  <image mode="widthFix" bindtap="routerGoHome" class="banner" src="http://ww3.sinaimg.cn/large/006tKfTcgy1fesmnh0i59j30v903qweh.jpg"></image>
+  <image mode="widthFix" bindtap="routerGoHome" class="banner" src="{{shopInfo.header_banner}}"></image>
   <navigator url="/page/DFS/product/product?product_id={{item.id}}" wx:for="{{lists}}" class="list-item">
     <image class="product-img" src="{{item.enter_banner}}"></image>
     <view class="product-info-content">

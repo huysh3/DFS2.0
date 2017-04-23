@@ -19,11 +19,11 @@ Page({
   },
   onShow: function() {
     var _this = this
+    this.init()
     wx.setStorageSync('tabStatus', 'classList')
     this.setData({ "footbarState.cartBadgeNum": wx.getStorageSync('cartBadgeNum') })
     app.getCartBadge()
     wx.request({
-      // login: true,
       // url: domain + 'Home/weapp/class_list',
       url: domain + 'Test/weapp/class_list',
       data: {
@@ -39,6 +39,11 @@ Page({
       },
       fail(error) {
       }
+    })
+  },
+  init: function() {
+    this.setData({
+      shopInfo: wx.getStorageSync('shopInfo')
     })
   },
   routerGoHome: function() {

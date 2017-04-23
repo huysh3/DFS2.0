@@ -1,5 +1,5 @@
 <view class="history-container">
-  <image mode="widthFix" bindtap="routerGoHome" class="banner" src="http://ww3.sinaimg.cn/large/006tKfTcgy1fesmnh0i59j30v903qweh.jpg"></image>
+  <image mode="widthFix" bindtap="routerGoHome" class="banner" src="{{shopInfo.header_banner}}"></image>
   <view class="header">
     <view class="total">合计{{orderInfo.order.length}}件商品</view>
   </view>

@@ -28,12 +28,14 @@ Page({
   data: {
     indexList: [],
     orderInfo: {},
+    shopInfo: wx.getStorageSync('shopInfo'),
     tabStatus: wx.getStorageSync('tabStatus')
   },
   onShow() {
     this.setData({
       tabStatus: wx.getStorageSync('tabStatus')
     })
+    this.setData({ 'shopInfo': wx.getStorageSync('shopInfo') })
   },
   onLoad(options) {
     var _this = this

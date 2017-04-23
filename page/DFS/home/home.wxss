@@ -12,7 +12,7 @@
   display: inline-block;
   width: 20rpx;
   position: relative;
-  top: -5rpx;
+  top: -3rpx;
 }
 
 .show-city-list .text {

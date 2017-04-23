@@ -18,6 +18,7 @@ Page({
     autoplay: true,
     interval: 5000,
     duration: 400,    
+    currentShop: '',
     shopListState: false
   },
   onShow: function() {
@@ -57,6 +58,13 @@ Page({
         _this.setData({
           shopList: res.data
         })
+        res.data.map((index) => {
+          if (index.id == wx.getStorageSync('shop_id')) {
+            _this.setData({
+              currentShop: index.name
+            })
+          }
+        })
       }
     })
   },
@@ -70,6 +78,9 @@ Page({
   changeShop: function(event) {
     wx.setStorageSync('shop_id', event.currentTarget.dataset.id)
     this.changeShopListState()
+    this.setData({
+      currentShop: event.currentTarget.dataset.shopname
+    })
     this.init()
   },
   getSlideShow: function() {
@@ -114,6 +125,7 @@ Page({
         _this.setData({
           shopInfo: res.data
         })
+        wx.setStorageSync('shopInfo', res.data)
       }
     })
   },

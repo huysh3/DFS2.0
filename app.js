@@ -29,6 +29,9 @@ App({
     qcloud.setLoginUrl(config.service.loginUrl);
     this.doLogin()
     this.getCartBadge()
+    if (!wx.getStorageSync('shop_id')) {
+      wx.setStorageSync('shop_id', '1')
+    }
   },
   doLogin: function() {
       showBusy('正在登录');

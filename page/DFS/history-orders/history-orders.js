@@ -28,6 +28,7 @@ Page({
   data: {
     indexList: [],
     orderList: [],
+    shopInfo: wx.getStorageSync('shopInfo'),
     footbarState: {
       tabStatus: 'historyOrders',
       cartBadgeNum: wx.getStorageSync('cartBadgeNum')
@@ -37,6 +38,7 @@ Page({
     var _this = this
     wx.setStorageSync('tabStatus', 'historyOrders')
     this.setData({ "footbarState.cartBadgeNum": wx.getStorageSync('cartBadgeNum') })
+    this.setData({ 'shopInfo': wx.getStorageSync('shopInfo') })
     wx.request({
       url: domain + 'Home/weapp/order_list',
       // url: domain + 'Home/weapp/test',

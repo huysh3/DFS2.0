@@ -5,12 +5,14 @@ var pageObject = {
   data: {
     "lists": [],
     "tabStatus": wx.getStorageSync('tabStatus'),
+    shopInfo: wx.getStorageSync('shopInfo'),
     "class_name": ''
   },
   onShow: function() {
     this.setData({
       "tabStatus": wx.getStorageSync('tabStatus')
     })
+    this.setData({ 'shopInfo': wx.getStorageSync('shopInfo') })
   },
   onLoad: function(options) {
     this.setData({

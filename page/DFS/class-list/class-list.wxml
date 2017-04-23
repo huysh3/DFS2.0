@@ -1,5 +1,5 @@
 <view class="class-list-container">
-  <image mode="widthFix" bindtap="routerGoHome" class="dfs-banner" src="http://ww3.sinaimg.cn/large/006tKfTcgy1fesmnh0i59j30v903qweh.jpg"></image>
+  <image mode="widthFix" bindtap="routerGoHome" class="dfs-banner" src="{{shopInfo.header_banner}}"></image>
   <navigator url="/page/DFS/promotions/promotions">
     <image mode="widthFix" class="top-banner" src="https://ww3.sinaimg.cn/large/006tNc79gy1femottcte0j30v90go7e2.jpg"></image>
   </navigator>

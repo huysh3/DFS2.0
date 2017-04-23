@@ -32,6 +32,7 @@ var pageObject = {
     historyOrderList: '',
     indexOrderList: [],
     orderList: [],
+    shopInfo: wx.getStorageSync('shopInfo'),    
     leftPartClass: 'header-left-part active',
     rightPartClass: 'header-right-part',
     tabState: 'left',
@@ -53,6 +54,7 @@ var pageObject = {
     var _this = this
     this.getCartList()
     wx.setStorageSync('tabStatus', 'orderCenter')
+    this.setData({ 'shopInfo': wx.getStorageSync('shopInfo') })
     this.setData({ "footbarState.cartBadgeNum": wx.getStorageSync('cartBadgeNum') })
   },
   onLoad: function() {
