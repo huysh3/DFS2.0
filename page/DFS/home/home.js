@@ -25,12 +25,12 @@ Page({
     this.init()
   },
   init: function() {
+    this.getCouponStatus()
     this.setData({ "footbarState.cartBadgeNum": wx.getStorageSync('cartBadgeNum') })
     wx.setStorageSync('tabStatus', 'aboutDFS')    
     this.getShopInfo()
     this.getShopList()
     this.getSlideShow()
-    this.getCouponStatus()
   },
   getCouponStatus: function() {
     var _this = this

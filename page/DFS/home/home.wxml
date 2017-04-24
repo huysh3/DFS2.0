@@ -6,7 +6,12 @@
       <image mode="widthFix" class="show-city-icon" src="../../../image/down.png"></image>
     </view>
   </view>
-  <image class="home-banner" mode="widthFix" src="http://ww2.sinaimg.cn/large/006tKfTcgy1fesmny5bb4j30v90gl133.jpg"></image>
+  <navigator url="/page/DFS/coupon-on/coupon-on" wx:if="{{coupon_status == 1}}">
+    <image class="home-banner" mode="widthFix" src="http://ww2.sinaimg.cn/large/006tKfTcgy1fesmny5bb4j30v90gl133.jpg"></image>
+  </navigator>
+  <navigator url="/page/DFS/coupon-off/coupon-off" wx:if="{{coupon_status == 0}}">
+    <image class="home-banner" mode="widthFix" src="http://ww2.sinaimg.cn/large/006tKfTcgy1fesmny5bb4j30v90gl133.jpg"></image>
+  </navigator>  
   <navigator url="../search-page/search-page">
     <image mode="widthFix" class="search-bar" src="http://ww3.sinaimg.cn/large/006tKfTcgy1fetjhguny5j31al05g0sx.jpg"></image>
     <view class="clearfix"></view>
