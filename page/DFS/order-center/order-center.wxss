@@ -139,8 +139,12 @@
   background-color: rgb(44, 177, 78);
 }
 
-.options-content {}
-
+.wechat-icon {
+  width: 36rpx;
+  position: relative;
+  top: 8rpx;
+  margin-right: 10rpx;
+}
 /*.page {
   background-color: rgb(222, 222, 222);
 }

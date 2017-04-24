@@ -30,7 +30,7 @@
     </view>
     <view class="options-content">
       <view class="confirm-btn" bindtap="handleCombineBtn">预留订单</view>
-      <view class="pay-btn" bindtap="handleConfirmBtn">微信支付</view>
+      <view class="pay-btn" bindtap="handleConfirmBtn"><image mode="widthFix" class="wechat-icon" src="../../../image/wechat.png"></image>微信支付</view>
     </view>
   </view>
 
