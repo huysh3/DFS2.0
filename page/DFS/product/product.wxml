@@ -14,7 +14,7 @@
         </block>
     </swiper>
     <view class="product-info">
-      <view class="product-name">Guerlain</view>
+      <view class="product-name">{{product.name}}</view>
       <view class="product-intro">
         {{product.brand_name}}
       </view>
