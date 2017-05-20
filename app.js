@@ -32,6 +32,17 @@ App({
     if (!wx.getStorageSync('shop_id')) {
       wx.setStorageSync('shop_id', '1')
     }
+    // wx.showModal({
+    //   title: '',
+    //   content: '请确认你是否已满18岁',
+    //   success: function(res) {
+    //     if (res.confirm) {
+    //       wx.setStorageSync('isAdult', true)
+    //     } else if (res.cancel) {
+    //       wx.setStorageSync('isAdult', false)
+    //     }
+    //   }
+    // })    
   },
   doLogin: function() {
       showBusy('正在登录');
@@ -41,7 +52,7 @@ App({
               showSuccess('登录成功');
               console.log('登录成功', result);
               qcloud.request({
-                url: 'https://15580083.qcloud.la/Home/weapp/getUid',
+                url: 'https://15580083.qcloud.la/V1/weapp/getUid',
                 success(response) {
                   console.log(response)
                   wx.setStorageSync('uid', response.data)
@@ -56,7 +67,7 @@ App({
   getCartBadge: function() {
     var _this = this
     wx.request({
-      url: 'https://15580083.qcloud.la/Home/weapp/getCartNumber',
+      url: 'https://15580083.qcloud.la/V1/weapp/getCartNumber',
       data: {
         uid: wx.getStorageSync('uid')
       },

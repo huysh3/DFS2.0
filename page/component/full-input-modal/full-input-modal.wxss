@@ -1,0 +1,99 @@
+.full-input-modal-content {
+  width: 500rpx;
+  padding: 30rpx;
+  background-color: #fff;
+  border: 2px solid #999;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.full-input-modal-header {
+  line-height: 70rpx;
+  text-align: left;
+}
+
+.full-input-modal-birthday-header {
+  line-height: 70rpx;
+  text-align: left;
+}
+
+.full-modal-birthday-body {
+  display: flex;
+  font-size: 26rpx;
+  line-height: 50rpx;
+  color: #666;
+}
+
+.full-modal-birthday-body span{
+  position: relative;
+  top: 10rpx;
+}
+
+.full-birthday-input {
+  flex: 1;
+  border: 1rpx solid #999;
+  height: 60rpx;
+  padding: 5rpx 15rpx;
+  line-height: 40rpx;
+  text-align: left;
+}
+
+.full-modal-content .icon {
+  width: 80rpx;
+  height: 80rpx;
+  padding: 40rpx 0;
+}
+
+.full-modal-body {
+  font-size: 26rpx;
+  line-height: 50rpx;
+  color: #666;
+}
+
+.full-modal-footer {
+  padding-top: 40rpx;
+  display: flex;
+}
+
+.full-input-confirm-btn {
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: #B62A18;
+  color: #fff;
+  text-align: center;
+  margin: 0 20rpx;
+  flex: 1;
+  font-size: 28rpx;
+}
+
+.full-input-cancel-btn {
+  background-color: rgb(188, 188, 188);
+  color: #000;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  text-align: center;
+  flex: 1;
+  margin: 0 20rpx;
+}
+
+.full-phone-input {
+  border: 1rpx solid #999;
+  height: 60rpx;
+  padding: 5rpx 15rpx;
+  line-height: 40rpx;
+  text-align: left;
+}
+
+.mask {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+

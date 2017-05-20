@@ -37,7 +37,7 @@
   <import src="../../component/done-model/done-model.wxml"/>
   <template is="done-model" data="{{modalProps}}" wx:if="{{doneModalStatus}}"/>
 
-  <view name="input-model" wx:if="{{inputModalState}}">
+  <!--<view name="input-model" wx:if="{{inputModalState}}">
     <view class="mask"></view>
     <view class="input-modal-content">
       <view class="input-modal-header">
@@ -55,7 +55,50 @@
         </view>
       </view>
     </view>
+  </view>-->
+  <view name="input-model" wx:if="{{fullInputModalState}}">
+  <!--<view name="full-input-model">-->
+    <view class="mask"></view>
+    <view class="full-input-modal-content">
+      <view class="full-input-modal-header">
+        收件人
+      </view>
+      <view class="full-modal-body">
+        <input bindinput="bindConsigneeInput" type="text" class="full-phone-input"></input>
+      </view>
+      <view class="full-input-modal-header">
+        护照号
+      </view>
+      <view class="full-modal-body">
+        <input bindinput="bindPSPInput" type="text" class="full-phone-input"></input>
+      </view>
+      <view class="full-input-modal-header">
+        航班号
+      </view>
+      <view class="full-modal-body">
+        <input bindinput="bindFLTInput" type="text" class="full-phone-input"></input>
+      </view>
+      <view class="full-input-modal-birthday-header">
+        生日
+      </view>
+      <view class="full-modal-birthday-body">
+        <input bindinput="bindYearInput" type="text" class="full-birthday-input" placeholder="年"></input>
+        <span> — </span>
+        <input bindinput="bindMonthInput" type="text" class="full-birthday-input" placeholder="月"></input>
+        <span> — </span>
+        <input bindinput="bindDayInput" type="text" class="full-birthday-input" placeholder="日"></input>
+      </view>
+      <view class="full-modal-footer">
+        <view class="full-input-cancel-btn" bindtap="inputModalCancel">
+          取消
+        </view>
+        <view class="full-input-confirm-btn" bindtap="confirmOrder">
+          确认
+        </view>
+      </view>
+    </view>
   </view>
+
 </view>
 
 <import src="../../component/service-btn/service-btn.wxml"/>

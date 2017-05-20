@@ -39,8 +39,17 @@ var pageObject = {
     total_price: '0',
     total_price_rmb: '0',
     inputPhoneNumber: '',
+
+    inputConsignee: '',
+    inputPSP: '',
+    inputFLT: '',
+    inputYear: '',
+    inputMonth: '',
+    inputDay: '',
+
     doneModalStatus: false,
     inputModalState: false,
+    fullInputModalState: false,
     needPay: false,
     modalProps: {
       text: ''
@@ -134,20 +143,46 @@ var pageObject = {
       showModel('尚无商品', '请先去商品目录挑选商品');
       return false;
     }
-    this.setData({
-      inputModalState: true,
-      needPay: false
-    })
+    if (wx.getStorageSync('shop_id') == '1') {
+      this.setData({
+        inputModalState: true,
+        needPay: false
+      })
+    } 
+    if (wx.getStorageSync('shop_id') == '2') {
+      this.setData({
+        fullInputModalState: true,
+        needPay: false
+      })
+    }
+    
   },
   inputModalCancel: function() {
     this.setData({
-      inputModalState: false
+      inputModalState: false,
+      fullInputModalState: false
     })
   },
   bindKeyInput: function(e) {
-    this.setData({
-      inputPhoneNumber: e.detail.value
-    })
+    this.setData({ inputPhoneNumber: e.detail.value })
+  },
+  bindConsigneeInput: function(e) {
+    this.setData({ inputConsignee: e.detail.value })
+  },
+  bindPSPInput: function(e) {
+    this.setData({ inputPSP: e.detail.value })
+  },
+  bindFLTInput: function(e) {
+    this.setData({ inputFLT: e.detail.value })
+  },
+  bindYearInput: function(e) {
+    this.setData({ inputYear: e.detail.value })
+  },
+  bindMonthInput: function(e) {
+    this.setData({ inputMonth: e.detail.value })
+  },
+  bindDayInput: function(e) {
+    this.setData({ inputDay: e.detail.value })
   },
   confirmOrder: function() {
       this.setData({

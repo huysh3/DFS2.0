@@ -11,6 +11,23 @@ page {
   height: 750rpx;
 }
 
+.swipe-container {
+  position: relative;
+}
+
+.tag {
+  background-color:#B62A18;
+  width:300rpx;
+  text-align:center;
+  transform:rotate(45deg);
+  height:60rpx;
+  line-height: 60rpx;
+  position:absolute;
+  right:-78rpx;
+  top:41rpx;
+  color:#fff;
+}
+
 .header .slide-image {
   width: 750rpx;
 }

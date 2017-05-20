@@ -1,14 +1,14 @@
 {
     "pages": [
+        "page/DFS/order-center/order-center",
         "page/DFS/home/home",
+        "page/DFS/product/product",
         "page/DFS/search-page/search-page",
         "page/DFS/services/services",
         "page/DFS/product-cart/product-cart",
         "page/DFS/history-orders/history-orders",
-        "page/DFS/product/product",
         "page/DFS/class-list/class-list",
         "page/DFS/product-list/product-list",
-        "page/DFS/order-center/order-center",
         "page/DFS/touchEvent/touchEvent",
         "page/DFS/promotions/promotions",
         "page/DFS/tips/tips",

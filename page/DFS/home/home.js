@@ -35,7 +35,7 @@ Page({
   getCouponStatus: function() {
     var _this = this
     wx.request({
-      url: domain + 'Home/coupon/coupon_status',
+      url: domain + 'V1/coupon/coupon_status',
       data: {
         shop_id: wx.getStorageSync('shop_id'),
         uid: wx.getStorageSync('uid')
@@ -52,13 +52,13 @@ Page({
   getShopList: function() {
     var _this = this
     wx.request({
-      url: domain + 'Test/weapp/shopList',
+      url: domain + 'V1/weapp/shopList',
       success(res) {
         console.log(res.data)
         _this.setData({
-          shopList: res.data
+          shopList: res.data.data
         })
-        res.data.map((index) => {
+        res.data.data.map((index) => {
           if (index.id == wx.getStorageSync('shop_id')) {
             _this.setData({
               currentShop: index.name
@@ -86,13 +86,12 @@ Page({
   getSlideShow: function() {
     var _this = this
     wx.request({
-      url: domain + 'Test/Slideshow/getSlideShow',
+      url: domain + 'V1/Slideshow/getSlideShow',
       data: {
         shop_id: wx.getStorageSync('shop_id')
       },
       success(res) {
-        console.log(res.data)
-        if (!res.data.length) {
+        if (!res.data.data.length) {
           _this.setData({
             selected_list: [],
             beauty_list: [],
@@ -103,12 +102,12 @@ Page({
           })
         }
         _this.setData({
-          selected_list: res.data.special,
-          beauty_list: res.data.Beauty,
-          bags_list: res.data.Bags,
-          watch_list: res.data['Watches/jewelry'],
-          food_list: res.data['LocalFood/Snacks'],
-          classList: res.data.class
+          selected_list: res.data.data.special,
+          beauty_list: res.data.data.Beauty,
+          bags_list: res.data.data.Bags,
+          watch_list: res.data.data['Watches/jewelry'],
+          food_list: res.data.data['LocalFood/Snacks'],
+          classList: res.data.data.class
         })
       }
     })
@@ -116,16 +115,17 @@ Page({
   getShopInfo: function() {
     var _this = this
     wx.request({
-      url: domain + 'Test/weapp/shopInfo',
+      url: domain + 'V1/weapp/shopInfo',
       data: {
         shop_id: wx.getStorageSync('shop_id')
       },
       success(res) {
-        console.log(res.data)
+        console.log(res.data.data)
+        console.log('=========================')
         _this.setData({
-          shopInfo: res.data
+          shopInfo: res.data.data
         })
-        wx.setStorageSync('shopInfo', res.data)
+        wx.setStorageSync('shopInfo', res.data.data)
       }
     })
   },
