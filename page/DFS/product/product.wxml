@@ -24,7 +24,14 @@
         <view class="rmb">(￥{{product.RMB - product.RMB % 1}})</view>
       </view>
     </view>
-
+    <view bindtap="showBonusModal" class="bonus-product--container">
+      <view class="bonus-product--before"></view>
+      <view class="bonus-product--text">买就送</view>
+      <view class="bonus-product--after"></view>
+    </view>
+    <view class="discount--container">
+      只要满足XX条件，就可以获得XX折扣
+    </view>
     <image mode="widthFix" class="coupon-image" src="https://ww4.sinaimg.cn/large/006tNc79gy1fekfklrjnmj30v90afgnw.jpg"></image>
 
     <view class="product-desc">
@@ -98,6 +105,15 @@
       <view class="full-input-cancel-btn" bindtap="inputModalCancel">取消</view>
       <view class="full-input-confirm-btn" bindtap="confirmOrder">确认</view>
     </view>
+  </view>
+</view>
+
+<view class="bonus-modal--container" wx:if="{{bonusModalStatus}}">
+  <view class="mask"></view>
+  <view class="modal--body">
+    <image class="modal--img" src="{{product.banner_image_urls[0]}}"></image>
+    <view class="modal--desc">买了就送这个</view>
+    <view bindtap="hideBonusModal" class="modal--footer">确定</view>
   </view>
 </view>
 

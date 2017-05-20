@@ -145,11 +145,23 @@ var pageObject = {
         url: domain + 'V1/weapp/product_info',
         data: {
           product_id : options.product_id,
-          adult: 1,
-          shop_id: wx.getStorageSync('shop_id')        
+          adult: wx.getStorageSync('adult'),
+          shop_id: wx.getStorageSync('shop_id')
         },
         method: 'get',
         success: (response) => {
+          if (response.data.code != 1) {
+            wx.showModal({
+              title: '抱歉',
+              content: response.data.msg,
+              showCancel: false,
+              success: function(res) {
+                wx.navigateBack({
+                  delta: 1
+                })                
+              }
+            })            
+          }
           _this.setData({
             shop_id: response.data.data.shop.id,
             product_id: response.data.data.id,
@@ -226,6 +238,16 @@ var pageObject = {
         _this.callPay(res.data.data)
       }
     })    
+  },
+  showBonusModal() {
+    this.setData({
+      bonusModalStatus: true
+    })
+  },
+  hideBonusModal() {
+    this.setData({
+      bonusModalStatus: false
+    })
   },
   bindConsigneeInput: function(e) {
     this.setData({ inputConsignee: e.detail.value })

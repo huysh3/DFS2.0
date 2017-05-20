@@ -32,17 +32,17 @@ App({
     if (!wx.getStorageSync('shop_id')) {
       wx.setStorageSync('shop_id', '1')
     }
-    // wx.showModal({
-    //   title: '',
-    //   content: '请确认你是否已满18岁',
-    //   success: function(res) {
-    //     if (res.confirm) {
-    //       wx.setStorageSync('isAdult', true)
-    //     } else if (res.cancel) {
-    //       wx.setStorageSync('isAdult', false)
-    //     }
-    //   }
-    // })    
+    wx.showModal({
+      title: '',
+      content: '请确认你是否已满18岁',
+      success: function(res) {
+        if (res.confirm) {
+          wx.setStorageSync('adult', 1)
+        } else if (res.cancel) {
+          wx.setStorageSync('adult', 0)
+        }
+      }
+    })
   },
   doLogin: function() {
       showBusy('正在登录');

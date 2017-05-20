@@ -208,3 +208,86 @@ page {
   background-color: #B62A18;
   color: #fff;
 }
+
+.bonus-product--container {
+  width: 650rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: #fff;
+  margin: 20rpx 50rpx;
+  background-color: #B62A18;
+  position: relative;
+}
+
+.bonus-modal--container {
+  position: fixed;
+}
+
+.bonus-product--container .bonus-product--before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-left: 50rpx solid rgba(0, 0, 0, 0);
+  border-top: 50rpx solid #B62A18;
+  border-bottom: 50rpx solid #B62A18;
+  border-right: 50rpx solid #B62A18;
+  background-color: #fff;
+}
+
+.bonus-product--container .bonus-product--after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-left: 50rpx solid #B62A18;
+  border-top: 50rpx solid #B62A18;
+  border-bottom: 50rpx solid #B62A18;
+  border-right: 50rpx solid rgba(0, 0, 0, 0);
+  background-color: #fff; 
+}
+
+.discount--container {
+  width: 650rpx;
+  margin: 20rpx 50rpx;
+  margin-top: 60rpx;
+  padding: 20rpx 0;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 32rpx;
+  color: #333;
+  text-align: center;
+  border-top: 1rpx solid #666;
+  border-bottom: 1rpx solid #666;
+}
+
+.bonus-modal--container .modal--body {
+  padding: 40rpx;
+  background-color: #fff;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);  
+  text-align: center;
+}
+
+.bonus-modal--container .modal--img {
+  width: 350rpx;
+  height: 350rpx;
+}
+
+.bonus-modal--container .modal--desc {
+  font-size: 28rpx;
+  color: #999;
+}
+
+.bonus-modal--container .modal--footer {
+  width: 350rpx;
+  border-radius: 4rpx;
+  margin-top: 40rpx;
+  height: 60rpx;
+  background-color: #B62A18;
+  font-size: 28rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 60rpx;
+}
