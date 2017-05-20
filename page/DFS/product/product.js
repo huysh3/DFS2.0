@@ -43,6 +43,15 @@ var pageObject = {
     price: '',
     total_price: '',
     inputCaptcha: '',
+
+    fullInputModalState: false,
+    inputConsignee: '',
+    inputPSP: '',
+    inputFLT: '',
+    inputYear: '',
+    inputMonth: '',
+    inputDay: '',
+
     counter: 1,
     carousels: [
       'https://om536p71r.qnssl.com/tips_pic%20white.png',
@@ -54,19 +63,6 @@ var pageObject = {
     },
     modalStatus: false
   },
-  // onShareAppMessage: function () {
-  //   var _this = this
-  //   return {
-  //     title: 'DFS购物超值商品',
-  //     path: '/page/DFS/product/product?product_id=' + _this.data.product_id,
-  //     success: function(res) {
-  //       // 分享成功
-  //     },
-  //     fail: function(res) {
-  //       // 分享失败
-  //     }
-  //   }
-  // },
   onLoad: function(options) {
     wx.setNavigationBarTitle({title: '商品详情'})
     this.getProductInfo(options)
@@ -76,7 +72,7 @@ var pageObject = {
     var _this = this
     wx.request({
       // url: domain + 'Home/order/addCart',
-      url: domain + 'Test/order/addCart',
+      url: domain + 'V1/order/addCart',
       method: 'get',
       data: {
         product_id: _this.data.product_id,
@@ -87,7 +83,7 @@ var pageObject = {
         uid: wx.getStorageSync('uid')
       },
       success(res) {
-        if (res.data == 'success') {
+        if (res.data.code == '1') {
           wx.hideToast();
           _this.setData({
             orderList: '',
@@ -146,20 +142,20 @@ var pageObject = {
   getProductInfo: function(options) {
     var _this = this
     wx.request({
-        // url: domain + 'Home/weapp/product_info',
-        url: domain + 'Test/weapp/product_info',
+        url: domain + 'V1/weapp/product_info',
         data: {
           product_id : options.product_id,
+          adult: 1,
           shop_id: wx.getStorageSync('shop_id')        
         },
         method: 'get',
         success: (response) => {
           _this.setData({
-            shop_id: response.data.shop.id,
-            product_id: response.data.id,
-            price: response.data.price
+            shop_id: response.data.data.shop.id,
+            product_id: response.data.data.id,
+            price: response.data.data.price
           })
-          _this.setData({product: response.data})
+          _this.setData({product: response.data.data})
         },
         fail: (err) => {
         }
@@ -179,28 +175,81 @@ var pageObject = {
       phoneNumber: _this.data.product.shop.contact_phone //仅为示例，并非真实的电话号码
     })
   },
+  inputModalCancel: function() {
+    this.setData({
+      fullInputModalState: false
+    })
+  },
   buyNow: function() {
     var _this = this
+    if (wx.getStorageSync('shop_id') == 1) {
+      wx.request({
+        url: domain + 'V1/order/buyNow',
+        data: {
+          product_id: _this.data.product_id,
+          shop_id: _this.data.shop_id,
+          price: _this.data.price,
+          number: _this.data.counter,
+          uid: wx.getStorageSync('uid')
+        },
+        success(res) {
+          showBusy('正在通信..');
+          _this.callPay(res.data)
+        }
+      })
+    }
+    if (wx.getStorageSync('shop_id') == 2) {
+      _this.setData({
+        fullInputModalState: true
+      })
+    }
+  },
+  confirmOrder() {
+    var _this = this
+    showBusy('正在通信..');
+    _this.inputModalCancel()
     wx.request({
-      url: domain + 'Test/order/buyNow',
+      url: domain + 'V1/order/buyNow',
       data: {
         product_id: _this.data.product_id,
         shop_id: _this.data.shop_id,
         price: _this.data.price,
         number: _this.data.counter,
-        uid: wx.getStorageSync('uid')
+        uid: wx.getStorageSync('uid'),
+        consignee: _this.data.inputConsignee,
+        psp_num: _this.data.inputPSP,
+        flt_num: _this.data.inputFLT,
+        birthdate: _this.data.inputYear + '-' + _this.data.inputMonth + '-' +  _this.data.inputDay          
       },
       success(res) {
         showBusy('正在通信..');
-        _this.callPay(res.data)
+        _this.callPay(res.data.data)
       }
-    })
+    })    
   },
+  bindConsigneeInput: function(e) {
+    this.setData({ inputConsignee: e.detail.value })
+  },
+  bindPSPInput: function(e) {
+    this.setData({ inputPSP: e.detail.value })
+  },
+  bindFLTInput: function(e) {
+    this.setData({ inputFLT: e.detail.value })
+  },
+  bindYearInput: function(e) {
+    this.setData({ inputYear: e.detail.value })
+  },
+  bindMonthInput: function(e) {
+    // this.setData({ inputMonth: parseInt(e.detail.value) < 10 ? '0' + e.detail.value : e.detail.value })
+    this.setData({ inputMonth: e.detail.value })
+  },
+  bindDayInput: function(e) {
+    this.setData({ inputDay: e.detail.value })
+  },  
   callPay(order_id) {
     var _this = this
     wx.request({
-        url: domain + 'Test/Wechatpay/callPay',
-        // url: domain + 'Pay/Wechatpay/callPay',
+        url: domain + 'V1/Wechatpay/callPay',
         data: {
             order_id: order_id,
             shop_id: wx.getStorageSync('shop_id'),
@@ -208,14 +257,13 @@ var pageObject = {
         },
         success(res) {
             wx.hideToast();
-            console.log(res.data.data.timeStamp)
-            if (res.data.result == 'success') {
+            if (JSON.parse(res.data.data).result == 'success') {
                 wx.requestPayment({
-                    'timeStamp': res.data.data.timeStamp,
-                    'nonceStr': res.data.data.nonceStr,
-                    'package': res.data.data.package,
-                    'signType': res.data.data.signType,
-                    'paySign': res.data.data.paySign,
+                    'timeStamp': JSON.parse(res.data.data).data.timeStamp,
+                    'nonceStr': JSON.parse(res.data.data).data.nonceStr,
+                    'package': JSON.parse(res.data.data).data.package,
+                    'signType': JSON.parse(res.data.data).data.signType,
+                    'paySign': JSON.parse(res.data.data).data.paySign,
                     'success': function() {
                         // 支付成功
                         _this.setData({
@@ -229,7 +277,7 @@ var pageObject = {
                     }
                 })
             } else {
-                showModel('拉起支付失败', res.data.result)
+                showModel('拉起支付失败', JSON.parse(res.data.data).result)
             }
         }
     })

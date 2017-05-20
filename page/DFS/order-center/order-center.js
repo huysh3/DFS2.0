@@ -72,29 +72,30 @@ var pageObject = {
     var orderLists = []
     var _this = this
     wx.request({
-      url: domain + 'Home/weapp/cart_list',
+      url: domain + 'V1/weapp/cart_list',
       data: {
         uid: wx.getStorageSync('uid'),
         shop_id: wx.getStorageSync('shop_id')
       },
       success(res) {
-        if (res.data.length == 0) {
+        console.log(res)
+        if (res.data.data.length == 0) {
           return false;
         }
         var temp = 0
         var temp_rmb = 0
-        res.data.map(function(index) {
+        res.data.data.map(function(index) {
           temp = temp + parseInt(index.order.price)
           temp_rmb = temp_rmb + parseInt(index.product.RMB) * parseInt(index.order.number)
         })
         _this.setData({
-          orderList: res.data,
+          orderList: res.data.data,
           total_price: temp,
           total_price_rmb: temp_rmb
         })
       },
       error(res) {
-        console.log(res.data)
+        console.log(res.data.data)
       }
     })
   },
@@ -122,19 +123,28 @@ var pageObject = {
           showModel('尚无商品', '请先去商品目录挑选商品');
           return false;
       }
-      showBusy('正在通信..');
-      wx.request({
-          url: domain + 'Home/order/combineOrder',
-          data: {
-              uid: wx.getStorageSync('uid'),
-              shop_id: wx.getStorageSync('shop_id')        
-          },
-          success(res) {
-              if (res.data) {
-                  _this.callPay(res.data)
-              }
-          }
-      })
+      if (wx.getStorageSync('shop_id') == 1) {
+        showBusy('正在通信..');
+        wx.request({
+            url: domain + 'V1/order/combineOrder',
+            data: {
+                uid: wx.getStorageSync('uid'),
+                shop_id: wx.getStorageSync('shop_id')        
+            },
+            success(res) {
+                if (res.data.data) {
+                    _this.callPay(res.data.data)
+                }
+            }
+        })
+      }
+      // 如果shop_id == 2
+      if (wx.getStorageSync('shop_id') == 2) {
+        this.setData({
+          fullInputModalState: true,
+          needPay: true
+        })        
+      }
   },
   // 无需支付
   // 预购订单用confirm，手机号弹窗
@@ -179,26 +189,26 @@ var pageObject = {
     this.setData({ inputYear: e.detail.value })
   },
   bindMonthInput: function(e) {
+    // this.setData({ inputMonth: parseInt(e.detail.value) < 10 ? '0' + e.detail.value : e.detail.value })
     this.setData({ inputMonth: e.detail.value })
   },
   bindDayInput: function(e) {
     this.setData({ inputDay: e.detail.value })
   },
   confirmOrder: function() {
-      this.setData({
-          inputModalState: false
-      })
-      showBusy('正在通信..');
-      var _this = this
+    var _this = this
+    showBusy('正在通信..');
+    _this.inputModalCancel()
+    if (wx.getStorageSync('shop_id') == 1) {
       wx.request({
-          url: domain + 'Home/order/confirmOrder',
+          url: domain + 'V1/order/confirmOrder',
           data: {
               phone: _this.data.inputPhoneNumber,
               uid: wx.getStorageSync('uid'),
-              shop_id: wx.getStorageSync('shop_id')        
+              shop_id: wx.getStorageSync('shop_id'),
           },
           success(res) {
-              if (res.data) {
+              if (res.data.code == '1') {
                   // showSuccess('订单已提交');
                   wx.setStorageSync('cartBadgeNum', 0)
                   _this.setData({
@@ -215,12 +225,64 @@ var pageObject = {
               }
           }
       })
+    }
+    if (wx.getStorageSync('shop_id') == 2) {
+      if (!_this.data.needPay) {
+        // 店铺2预留订单
+        wx.request({
+            url: domain + 'V1/order/confirmOrder',
+            data: {
+                uid: wx.getStorageSync('uid'),
+                shop_id: wx.getStorageSync('shop_id'),
+                consignee: _this.data.inputConsignee,
+                psp_num: _this.data.inputPSP,
+                flt_num: _this.data.inputFLT,
+                birthdate: _this.data.inputYear + '-' +  _this.data.inputMonth + '-' +  _this.data.inputDay
+            },
+            success(res) {
+                if (res.data.code == '1') {
+                    // showSuccess('订单已提交');
+                    wx.setStorageSync('cartBadgeNum', 0)
+                    _this.setData({
+                        orderList: '',
+                        total_price: 0,
+                        total_price_rmb: 0,
+                        "footbarState.cartBadgeNum": 0
+                    })
+                    wx.hideToast();
+                    _this.setData({
+                        "modalProps.text": '预定商品库存有限，请到夏威夷T广场免税店4层提货处完成付款步骤确保顺利提货，售完即止，如有任何问题请与客服联系。',
+                        doneModalStatus: true
+                    })
+                }
+            }
+        })
+      }
+      if (_this.data.needPay) {
+        // 店铺2立即支付
+        wx.request({
+            url: domain + 'V1/order/combineOrder',
+            data: {
+                uid: wx.getStorageSync('uid'),
+                shop_id: wx.getStorageSync('shop_id'),
+                consignee: _this.data.inputConsignee,
+                psp_num: _this.data.inputPSP,
+                flt_num: _this.data.inputFLT,
+                birthdate: _this.data.inputYear + '-' + _this.data.inputMonth + '-' +  _this.data.inputDay
+            },
+            success(res) {
+                if (res.data.data) {
+                    _this.callPay(res.data.data)
+                }
+            }
+        })        
+      }
+    }
   },
   callPay(order_id) {
       var _this = this
       wx.request({
-          url: domain + 'Test/Wechatpay/callPay',
-          // url: domain + 'Pay/Wechatpay/callPay',
+          url: domain + 'V1/Wechatpay/callPay',
           data: {
               order_id: order_id,
               uid: wx.getStorageSync('uid'),
@@ -228,14 +290,14 @@ var pageObject = {
           },
           success(res) {
               wx.hideToast();
-              console.log(res.data.data.timeStamp)
-              if (res.data.result == 'success') {
+              // 之前
+              if (JSON.parse(res.data.data).result == 'success') {
                   wx.requestPayment({
-                      'timeStamp': res.data.data.timeStamp,
-                      'nonceStr': res.data.data.nonceStr,
-                      'package': res.data.data.package,
-                      'signType': res.data.data.signType,
-                      'paySign': res.data.data.paySign,
+                      'timeStamp': JSON.parse(res.data.data).data.timeStamp,
+                      'nonceStr': JSON.parse(res.data.data).data.nonceStr,
+                      'package': JSON.parse(res.data.data).data.package,
+                      'signType': JSON.parse(res.data.data).data.signType,
+                      'paySign': JSON.parse(res.data.data).data.paySign,
                       'success': function() {
                           // 支付成功
                           wx.setStorageSync('cartBadgeNum', 0)
@@ -255,7 +317,7 @@ var pageObject = {
                       }
                   })
               } else {
-                  showModel('拉起支付失败', res.data.result)
+                  showModel('拉起支付失败', JSON.parse(res.data.data).result)
               }
           }
       })
@@ -278,7 +340,7 @@ var pageObject = {
     var _option = event.currentTarget.dataset.option
     var _index = event.currentTarget.dataset.index
     wx.request({
-      url: domain + 'Test/order/changeCartNumber',
+      url: domain + 'V1/order/changeCartNumber',
       data: {
         id: _id,
         option: _option,
@@ -309,7 +371,7 @@ var pageObject = {
     var targetId = event.currentTarget.dataset.id
     showBusy('通信中..')
     wx.request({
-      url: domain + 'Home/order/deleteOrder',
+      url: domain + 'V1/order/deleteOrder',
       data: {
         id : targetId,
         shop_id: wx.getStorageSync('shop_id')        

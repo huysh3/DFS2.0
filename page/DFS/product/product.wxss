@@ -1,3 +1,5 @@
+@import "../../component/full-input-modal/full-input-modal.wxss";
+
 page {
   background-color: #fff;
 }
