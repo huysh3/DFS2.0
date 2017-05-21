@@ -23,6 +23,11 @@ Page({
   },
   onShow: function() {
     this.init()
+    if (!wx.getStorageSync('shopListFlag')) {
+      this.setData({
+        shopListState: true
+      })    
+    }
   },
   init: function() {
     this.getCouponStatus()
@@ -77,6 +82,7 @@ Page({
   },
   changeShop: function(event) {
     wx.setStorageSync('shop_id', event.currentTarget.dataset.id)
+    wx.setStorageSync('shopListFlag', true)
     this.changeShopListState()
     this.setData({
       currentShop: event.currentTarget.dataset.shopname
