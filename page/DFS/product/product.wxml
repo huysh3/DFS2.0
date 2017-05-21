@@ -24,14 +24,14 @@
         <view class="rmb">(￥{{product.RMB - product.RMB % 1}})</view>
       </view>
     </view>
-    <view bindtap="showBonusModal" class="bonus-product--container">
+    <!--<view bindtap="showBonusModal" class="bonus-product--container">
       <view class="bonus-product--before"></view>
       <view class="bonus-product--text">买就送</view>
       <view class="bonus-product--after"></view>
-    </view>
-    <view class="discount--container">
+    </view>-->
+    <!--<view class="discount--container">
       只要满足XX条件，就可以获得XX折扣
-    </view>
+    </view>-->
     <image mode="widthFix" class="coupon-image" src="https://ww4.sinaimg.cn/large/006tNc79gy1fekfklrjnmj30v90afgnw.jpg"></image>
 
     <view class="product-desc">
@@ -39,7 +39,7 @@
       <view class="desc">{{product.desc}}</view>
     </view>
 
-    <image mode="widthFix" src="https://ww2.sinaimg.cn/large/006tNc79gy1fekfoudbgaj30sn04eq3o.jpg" class="security-image"></image>
+    <image mode="widthFix" src="https://om536p71r.qnssl.com/sws-trustment-%E5%BA%95%E9%83%A8icon@1.5x.png" class="security-image"></image>
 
     <view class="counter">
       <view class="left-part">

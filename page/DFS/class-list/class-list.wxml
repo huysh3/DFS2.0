@@ -3,7 +3,10 @@
   <navigator url="/page/DFS/promotions/promotions">
     <image mode="widthFix" class="top-banner" src="https://ww3.sinaimg.cn/large/006tNc79gy1femottcte0j30v90go7e2.jpg"></image>
   </navigator>
-  <navigator url="/page/DFS/product-list/product-list?class_name=LocalFood/Snacks">
+  <navigator wx:for="{{lists}}" url="/page/DFS/product-list/product-list?class_name={{item.class_name}}">
+    <image mode="widthFix" class="nav-item" src="{{item.class_banner}}"></image>
+  </navigator>
+  <!--<navigator url="/page/DFS/product-list/product-list?class_name=LocalFood/Snacks">
     <image mode="widthFix" class="nav-item" src="../../../image/class_list_1.png"></image>
   </navigator>
   <navigator url="/page/DFS/product-list/product-list?class_name=Beauty">
@@ -14,7 +17,7 @@
   </navigator>
   <navigator url="/page/DFS/product-list/product-list?class_name=Bags">
     <image mode="widthFix" class="nav-item" src="../../../image/class_list_4.png"></image>
-  </navigator>
+  </navigator>-->
   <view class="clearfix"></view>
 </view>
 
