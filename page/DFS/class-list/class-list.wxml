@@ -3,8 +3,8 @@
   <navigator url="/page/DFS/promotions/promotions">
     <image mode="widthFix" class="top-banner" src="https://ww3.sinaimg.cn/large/006tNc79gy1femottcte0j30v90go7e2.jpg"></image>
   </navigator>
-  <navigator wx:for="{{lists}}" url="/page/DFS/product-list/product-list?class_name={{item.class_url}}">
-    <image mode="widthFix" class="nav-item" src="{{item.class_banner}}"></image>
+  <navigator wx:for="{{lists}}" url="/page/DFS/product-list/product-list?class_name={{item.class_name}}">
+    <image mode="widthFix" class="nav-item" src="{{item.class_url}}"></image>
   </navigator>
   <!--<navigator url="/page/DFS/product-list/product-list?class_name=LocalFood/Snacks">
     <image mode="widthFix" class="nav-item" src="../../../image/class_list_1.png"></image>
