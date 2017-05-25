@@ -66,6 +66,9 @@ var pageObject = {
   onLoad: function(options) {
     wx.setNavigationBarTitle({title: '商品详情'})
     this.getProductInfo(options)
+    this.setData({
+      shop_id: wx.getStorageSync('shop_id')
+    })
   },
   buyBtnEvent: function() {
     showBusy('正在通信..');
@@ -76,7 +79,6 @@ var pageObject = {
       method: 'get',
       data: {
         product_id: _this.data.product_id,
-        shop_id: _this.data.shop_id,
         price: _this.data.price,
         number: _this.data.counter,
         shop_id: wx.getStorageSync('shop_id'),        
@@ -163,7 +165,7 @@ var pageObject = {
             })            
           }
           _this.setData({
-            shop_id: response.data.data.shop.id,
+            // shop_id: response.data.data.shop.id,
             product_id: response.data.data.id,
             price: response.data.data.price
           })

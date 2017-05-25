@@ -28,9 +28,12 @@
         <view class="rmb">(￥{{total_price_rmb}})</view>
       </view>
     </view>
-    <view class="options-content">
+    <view wx:if="{{shop_id == 1}}" class="options-content">
       <view class="confirm-btn" bindtap="handleCombineBtn">预留订单</view>
       <view class="pay-btn" bindtap="handleConfirmBtn"><image mode="widthFix" class="wechat-icon" src="../../../image/wechat.png"></image>微信支付</view>
+    </view>
+    <view wx:if="{{shop_id == 2}}" class="options-content">
+      <view class="confirm-btn" style="margin-right: 0;" bindtap="handleCombineBtn">预留订单</view>
     </view>
   </view>
 
