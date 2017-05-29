@@ -34,8 +34,8 @@ App({
     }
     setTimeout(function() {
       wx.showModal({
-        title: '',
-        content: '请确认你是否已满18岁',
+        title: '是否已满18岁？',
+        content: '本平台均为免税品，持国际机票的旅客,可免8.75%商品消费税. 未年满18周岁的顾客不可浏览或购买烟酒. 畅销产品，低价保障！',
         success: function(res) {
           if (res.confirm) {
             wx.setStorageSync('adult', 1)
