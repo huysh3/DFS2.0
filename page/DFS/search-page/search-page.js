@@ -17,15 +17,15 @@ Page({
     handleSearchEvent: function() {
         var _this = this
         wx.request({
-            url: domain + 'Test/weapp/productSearch',
+            url: domain + 'V1/weapp/productSearch',
             data: {
                 shop_id: wx.getStorageSync('shop_id'),
                 name: _this.data.inputValue
             },
             success(res) {
-                console.log(res.data)
+                console.log(res.data.data)
                 _this.setData({
-                    resultList: res.data
+                    resultList: res.data.data
                 })
             }
         })

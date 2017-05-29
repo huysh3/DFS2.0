@@ -44,7 +44,7 @@
   </view>
 
   <view class="desc-content">
-    <image mode="widthFix" class="desc-img" bindtap="viewLocation" src="https://om536p71r.qnssl.com/shop_address.png"></image>
+    <image mode="widthFix" class="desc-img" src="https://om536p71r.qnssl.com/shop_address.png"></image>
     <view class="desc-text-content">
       <view class="location">{{shopInfo.area}} {{shopInfo.address}}</view>
       <view class="business-hours">{{shopInfo.open_hours}}</view>

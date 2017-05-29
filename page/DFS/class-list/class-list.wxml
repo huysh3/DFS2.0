@@ -21,7 +21,7 @@
   <view class="clearfix"></view>
 </view>
 
-<image mode="widthFix" class="logo-wall" src="http://ww2.sinaimg.cn/large/006tKfTcgy1fesmg3ad47j30ks0fzacr.jpg"></image>
+<!--<image mode="widthFix" class="logo-wall" src="http://ww2.sinaimg.cn/large/006tKfTcgy1fesmg3ad47j30ks0fzacr.jpg"></image>-->
 
 <view style="background-color: #fff;" class="footbar-takeplace"></view>
 <import src="../../component/footbar/footbar.wxml"/>

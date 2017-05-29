@@ -9,7 +9,7 @@
             <swiper-item>
                 <view class="swipe-content">
                     <image mode="widthFix" src="{{item}}" bindtap="previewImgs" data-url="{{item}}" class="slide-image" />
-                    <view class="tag">推荐</view>
+                    <!--<view class="tag">推荐</view>-->
                 </view>
             </swiper-item>
         </block>
