@@ -35,13 +35,27 @@ var pageObject = {
   getProductList: function(options) {
     var _this = this
     wx.request({
-      url: domain + 'Home/weapp/product_list',
+      url: domain + 'V1/weapp/product_list',
       data: {
         class_name: options.class_name,
         shop_id: wx.getStorageSync('shop_id')
       },
       success(res) {
-        _this.setData({lists: res.data})
+        if (res.data.code != 1) {
+          wx.showModal({
+            title: '抱歉',
+            content: res.data.msg,
+            showCancel: false,
+            success: function (res) {
+              wx.navigateBack({
+                delta: 1
+              })
+            }
+          })
+        }
+        if (res.data.code == 1) {
+          _this.setData({ lists: res.data.data })
+        }
       },
       fail(error) {
       }

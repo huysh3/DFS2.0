@@ -162,7 +162,7 @@ var pageObject = {
                   delta: 1
                 })                
               }
-            })            
+            })       
           }
           _this.setData({
             // shop_id: response.data.data.shop.id,

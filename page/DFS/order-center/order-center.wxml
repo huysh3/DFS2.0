@@ -80,7 +80,7 @@
       <view class="full-modal-body">
         <input bindinput="bindFLTInput" type="text" class="full-phone-input"></input>
       </view>
-      <view class="full-input-modal-birthday-header">
+      <!--<view class="full-input-modal-birthday-header">
         生日
       </view>
       <view class="full-modal-birthday-body">
@@ -89,7 +89,18 @@
         <input bindinput="bindMonthInput" type="text" class="full-birthday-input" placeholder="月"></input>
         <span> — </span>
         <input bindinput="bindDayInput" type="text" class="full-birthday-input" placeholder="日"></input>
+      </view>-->
+      <view class="full-input-modal-birthday-header">
+        登机时间
       </view>
+      <view class="full-modal-birthday-body">
+        <input bindinput="bindYearInput" type="text" class="full-birthday-input" placeholder="日"></input>
+        <span> — </span>
+        <input bindinput="bindMonthInput" type="text" class="full-birthday-input" placeholder="时"></input>
+        <span> — </span>
+        <input bindinput="bindDayInput" type="text" class="full-birthday-input" placeholder="分"></input>
+      </view>
+      
       <view class="full-modal-footer">
         <view class="full-input-cancel-btn" bindtap="inputModalCancel">
           取消

@@ -239,7 +239,7 @@ var pageObject = {
                 consignee: _this.data.inputConsignee,
                 psp_num: _this.data.inputPSP,
                 flt_num: _this.data.inputFLT,
-                birthdate: _this.data.inputYear + '-' +  _this.data.inputMonth + '-' +  _this.data.inputDay
+                takeoff_time: _this.data.inputYear + '-' +  _this.data.inputMonth + '-' +  _this.data.inputDay
             },
             success(res) {
                 if (res.data.code == '1') {
@@ -253,7 +253,7 @@ var pageObject = {
                     })
                     wx.hideToast();
                     _this.setData({
-                        "modalProps.text": '预定商品库存有限，请到夏威夷T广场免税店4层提货处完成付款步骤确保顺利提货，售完即止，如有任何问题请与客服联系。',
+                      "modalProps.text": '预定已成功预订产品库存有限，请至少在飞机起飞前一小时，于旧金山机场免税店国际离境G区Chopard腕表专柜，或者A区Pandora首饰专柜，完成身份核实以及付款手续，确保顺利提货。未付款前，产品存货不予保障。售完即止，如有任何问题请与客服联系。',
                         doneModalStatus: true
                     })
                 }
@@ -379,7 +379,7 @@ var pageObject = {
         shop_id: wx.getStorageSync('shop_id')        
       },
       success(res) {
-        if (res.data == 'success') {
+        if (res.data.data == 'success') {
           var newOrderList = []
           _this.data.orderList.map(function(item) {
             if (item.order.id == targetId) {
