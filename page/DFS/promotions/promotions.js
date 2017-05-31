@@ -32,10 +32,10 @@ Page({
     var _this = this
     wx.request({
       // login: true,
-      url: domain + 'Home/weapp/promotion_list',
+      url: domain + 'V1/weapp/promotion_list',
       success(res) {
         _this.setData({
-          promotion_list: res.data
+          promotion_list: res.data.data
         })
       },
       fail(error) {

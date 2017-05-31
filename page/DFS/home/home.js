@@ -9,6 +9,7 @@ Page({
       tabStatus: 'aboutDFS',
       cartBadgeNum: wx.getStorageSync('cartBadgeNum')
     },
+    bannerUrl: '',
     classList: [],
     shopList: [],
     beauty_list: [],
@@ -19,6 +20,7 @@ Page({
     interval: 5000,
     duration: 400,    
     currentShop: '',
+    shop_id: '',
     shopListState: false
   },
   onShow: function() {
@@ -30,8 +32,10 @@ Page({
     }
   },
   init: function() {
+    this.getBanner()
     this.getCouponStatus()
     this.setData({ "footbarState.cartBadgeNum": wx.getStorageSync('cartBadgeNum') })
+    this.setData({ "shop_id": wx.getStorageSync('shop_id') })
     wx.setStorageSync('tabStatus', 'aboutDFS')    
     this.getShopInfo()
     this.getShopList()
@@ -132,6 +136,25 @@ Page({
           shopInfo: res.data.data
         })
         wx.setStorageSync('shopInfo', res.data.data)
+      }
+    })
+  },
+  getBanner: function() {
+    var _this = this
+    wx.request({
+      url: domain + 'V1/Banner/getBanner',
+      data: {
+        shop_id: wx.getStorageSync('shop_id')
+      },
+      success(res) {
+        if (res.data.code == 1) {
+          console.log(res.data.data)
+          _this.setData({
+            bannerUrl: res.data.data[0].img_url
+          })
+        } else {
+          showModel('登录失败', errmsg);
+        }
       }
     })
   },

@@ -1,6 +1,7 @@
 {
     "pages": [
         "page/DFS/home/home",
+        "page/DFS/coupon-off/coupon-off",
         "page/DFS/order-center/order-center",
         "page/DFS/product/product",
         "page/DFS/search-page/search-page",
@@ -12,7 +13,6 @@
         "page/DFS/touchEvent/touchEvent",
         "page/DFS/promotions/promotions",
         "page/DFS/tips/tips",
-        "page/DFS/coupon-off/coupon-off",
         "page/DFS/coupon-on/coupon-on",
         "page/DFS/history-order/history-order",
         "page/DFS/order-confirm/order-confirm"

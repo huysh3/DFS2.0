@@ -350,8 +350,8 @@ var pageObject = {
       },
       success(res) {
         console.log(res)
-        if (res.data != 'success') {
-          showModel('操作失败', res.data)
+        if (res.data.code != '1') {
+          showModel('操作失败', res.data.msg)
           return false;
         }
         var tempOrderList = _this.data.orderList
@@ -379,7 +379,7 @@ var pageObject = {
         shop_id: wx.getStorageSync('shop_id')        
       },
       success(res) {
-        if (res.data.data == 'success') {
+        if (res.data.code == '1') {
           var newOrderList = []
           _this.data.orderList.map(function(item) {
             if (item.order.id == targetId) {

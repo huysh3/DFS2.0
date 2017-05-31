@@ -1,5 +1,5 @@
 <view class="coupon-off-container">
-  <view class="main-content">
+  <view class="main-content" wx:if="{{shop_id == 1}}">
     <image class="banner" mode="widthFix" src="https://om536p71r.qnssl.com/404040Coupons3.png"></image>
     <view class="cutline"></view>
     <view class="text-content">
@@ -13,6 +13,25 @@
 ·     One gift voucher per transaction per person
 ·     DFS集团有对此活动的最终解释权
 ·     DFS Group reserves the right of final explanation of this promotion.
+      </text>
+    </view>
+  </view>
+  <view class="main-content" wx:if="{{shop_id == 2}}">
+    <image class="banner" mode="widthFix" src="http://omi5dzcil.bkt.clouddn.com/2017-05-31-153442.jpg"></image>
+    <view class="cutline"></view>
+    <view class="text-content">
+      <text class="title">活动规则 Terms & Conditions：</text>
+      <text class="desc">
+        此优惠仅适用于DFS SFO 微信网上预定小程序，顾客需于飞机起飞前3小时完成线上预定，若少于规定时间订购，恕不适用此优惠。
+        The promotion is only applied for customer who made the purchase on the DFS SFO We Chat Mini Store. In order to receive the discount, the pre-order need to be done 3 hours prior the departure time.
+        此优惠不可转让，不可折现。
+        Promotion cannot be exchanged for cash or transferred to other persons.
+        次优惠限每人一次
+        The promotion is limited per person.
+        以上优惠恕不与店内其它优惠并用。
+        The promotion cannot be combined with other store promotion. 
+        DFS 集团有对此活动的最终解释权。
+        DFS Group reserves the right of final explanation of this promotion.
       </text>
     </view>
   </view>
