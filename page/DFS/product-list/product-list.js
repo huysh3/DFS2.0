@@ -38,7 +38,8 @@ var pageObject = {
       url: domain + 'V1/weapp/product_list',
       data: {
         class_name: options.class_name,
-        shop_id: wx.getStorageSync('shop_id')
+        shop_id: wx.getStorageSync('shop_id'),
+        adult: wx.getStorageSync('adult')
       },
       success(res) {
         if (res.data.code != 1) {
