@@ -63,6 +63,9 @@
   <view name="input-model" wx:if="{{fullInputModalState}}">
     <view class="mask"></view>
     <view class="full-input-modal-content">
+      <view class="full-input-modal-header" style="line-height:40rpx;font-size:24rpx;color:#999;text-align:center;font-weight:bold;">
+        温馨提示，每人限购四瓶红酒，两瓶烈酒。
+      </view>      
       <view class="full-input-modal-header">
         收件人
       </view>

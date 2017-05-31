@@ -208,7 +208,7 @@ var pageObject = {
         },
         success(res) {
           showBusy('正在通信..');
-          _this.callPay(res.data)
+          _this.callPay(res.data.data)
         }
       })
     }
