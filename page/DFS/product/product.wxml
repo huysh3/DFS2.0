@@ -34,7 +34,7 @@
     </view>-->
     <image wx:if="{{shop_id == 1}}" mode="widthFix" class="coupon-image" src="https://ww4.sinaimg.cn/large/006tNc79gy1fekfklrjnmj30v90afgnw.jpg"></image>
     <!-- 20170601 -->
-    <image wx:if="{{shop_id == 2}}" mode="widthFix" class="coupon-image" src="https://ww4.sinaimg.cn/large/006tNc79gy1fekfklrjnmj30v90afgnw.jpg"></image>
+    <image wx:if="{{shop_id == 2}}" mode="widthFix" class="coupon-image" src="http://omi5dzcil.bkt.clouddn.com/2017-05-31-170210.jpg"></image>
 
     <view class="product-desc">
       <view class="title">产品信息</view>
