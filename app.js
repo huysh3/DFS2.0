@@ -34,7 +34,7 @@ App({
     }
     setTimeout(function() {
       wx.showModal({
-        title: '是否已满18岁？',
+        title: '是否已满21岁？',
         content: '本平台均为免税品，持国际机票的旅客,可免8.75%商品消费税. 未年满18周岁的顾客不可浏览或购买烟酒. 畅销产品，低价保障！',
         success: function(res) {
           if (res.confirm) {
@@ -54,7 +54,7 @@ App({
               showSuccess('登录成功');
               console.log('登录成功', result);
               qcloud.request({
-                url: 'https://15580083.qcloud.la/V1/weapp/getUid',
+                url: 'https://15580083.qcloud.la/V2/weapp/getUid',
                 success(response) {
                   console.log(response)
                   wx.setStorageSync('uid', response.data.data)
@@ -69,7 +69,7 @@ App({
   getCartBadge: function() {
     var _this = this
     wx.request({
-      url: 'https://15580083.qcloud.la/V1/weapp/getCartNumber',
+      url: 'https://15580083.qcloud.la/V2/weapp/getCartNumber',
       data: {
         uid: wx.getStorageSync('uid'),
         shop_id: wx.getStorageSync('shop_id')

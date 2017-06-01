@@ -183,7 +183,7 @@ page {
   display: inline-block;
   width: 60rpx;
   height: 60rpx;
-  line-height: 64rpx;
+  line-height: 50rpx;
   margin-top: 20rpx;
 }
 

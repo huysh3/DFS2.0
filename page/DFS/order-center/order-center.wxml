@@ -94,7 +94,7 @@
         <input bindinput="bindDayInput" type="text" class="full-birthday-input" placeholder="日"></input>
       </view>-->
       <view class="full-input-modal-birthday-header">
-        登机时间
+        起飞时间
       </view>
       <view class="full-modal-birthday-body">
         <input bindinput="bindYearInput" type="text" class="full-birthday-input" placeholder="日"></input>

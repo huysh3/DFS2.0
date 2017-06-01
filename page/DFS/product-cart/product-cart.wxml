@@ -85,7 +85,7 @@
         <input bindinput="bindFLTInput" type="text" class="full-phone-input"></input>
       </view>
       <view class="full-input-modal-birthday-header">
-        登机时间
+        起飞时间
       </view>
       <view class="full-modal-birthday-body">
         <input bindinput="bindYearInput" type="text" class="full-birthday-input" placeholder="日"></input>

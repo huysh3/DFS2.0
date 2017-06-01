@@ -24,7 +24,7 @@ Page({
     this.setData({ "footbarState.cartBadgeNum": wx.getStorageSync('cartBadgeNum') })
     app.getCartBadge()
     wx.request({
-      url: domain + 'V1/weapp/class_list',
+      url: domain + 'V2/weapp/class_list',
       data: {
         shop_id: wx.getStorageSync('shop_id')
       },

@@ -17,7 +17,7 @@
     </view>
   </view>
   <view class="main-content" wx:if="{{shop_id == 2}}">
-    <image class="banner" mode="widthFix" src="http://omi5dzcil.bkt.clouddn.com/2017-05-31-dfs.jpg"></image>
+    <image class="banner" mode="widthFix" src="http://omi5dzcil.bkt.clouddn.com/2017-06-01-dfs-.jpg"></image>
     <view class="cutline"></view>
     <view class="text-content">
       <text class="title">活动规则 Terms & Conditions：</text>

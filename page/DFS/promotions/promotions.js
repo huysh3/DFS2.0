@@ -31,7 +31,7 @@ Page({
   onLoad() {
     var _this = this
     wx.request({
-      url: domain + 'V1/weapp/promotion_list',
+      url: domain + 'V2/weapp/promotion_list',
       data: {
         shop_id: wx.getStorageSync('shop_id')
       },

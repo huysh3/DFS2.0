@@ -74,7 +74,7 @@ var pageObject = {
     var orderLists = []
     var _this = this
     wx.request({
-      url: domain + 'V1/weapp/cart_list',
+      url: domain + 'V2/weapp/cart_list',
       data: {
         uid: wx.getStorageSync('uid'),
         shop_id: wx.getStorageSync('shop_id')
@@ -128,7 +128,7 @@ var pageObject = {
       if (wx.getStorageSync('shop_id') == 1) {
         showBusy('正在通信..');
         wx.request({
-            url: domain + 'V1/order/combineOrder',
+            url: domain + 'V2/order/combineOrder',
             data: {
                 uid: wx.getStorageSync('uid'),
                 shop_id: wx.getStorageSync('shop_id')        
@@ -203,7 +203,7 @@ var pageObject = {
     _this.inputModalCancel()
     if (wx.getStorageSync('shop_id') == 1) {
       wx.request({
-          url: domain + 'V1/order/confirmOrder',
+          url: domain + 'V2/order/confirmOrder',
           data: {
               phone: _this.data.inputPhoneNumber,
               uid: wx.getStorageSync('uid'),
@@ -232,7 +232,7 @@ var pageObject = {
       if (!_this.data.needPay) {
         // 店铺2预留订单
         wx.request({
-            url: domain + 'V1/order/confirmOrder',
+            url: domain + 'V2/order/confirmOrder',
             data: {
                 uid: wx.getStorageSync('uid'),
                 shop_id: wx.getStorageSync('shop_id'),
@@ -263,7 +263,7 @@ var pageObject = {
       if (_this.data.needPay) {
         // 店铺2立即支付
         wx.request({
-            url: domain + 'V1/order/combineOrder',
+            url: domain + 'V2/order/combineOrder',
             data: {
                 uid: wx.getStorageSync('uid'),
                 shop_id: wx.getStorageSync('shop_id'),
@@ -284,7 +284,7 @@ var pageObject = {
   callPay(order_id) {
       var _this = this
       wx.request({
-          url: domain + 'V1/Wechatpay/callPay',
+          url: domain + 'V2/Wechatpay/callPay',
           data: {
               order_id: order_id,
               uid: wx.getStorageSync('uid'),
@@ -342,7 +342,7 @@ var pageObject = {
     var _option = event.currentTarget.dataset.option
     var _index = event.currentTarget.dataset.index
     wx.request({
-      url: domain + 'V1/order/changeCartNumber',
+      url: domain + 'V2/order/changeCartNumber',
       data: {
         id: _id,
         option: _option,
@@ -373,7 +373,7 @@ var pageObject = {
     var targetId = event.currentTarget.dataset.id
     showBusy('通信中..')
     wx.request({
-      url: domain + 'V1/order/deleteOrder',
+      url: domain + 'V2/order/deleteOrder',
       data: {
         id : targetId,
         shop_id: wx.getStorageSync('shop_id')        

@@ -19,7 +19,7 @@
 }
 
 .cutline {
-  width: 600rpx;
+  width: 560rpx;
   margin: 40rpx 75rpx;
   height: 1rpx;
   background-color: #000;
