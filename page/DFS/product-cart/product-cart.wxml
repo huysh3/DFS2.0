@@ -6,7 +6,7 @@
     <view class="desc-content">
       <view class="item-name">{{item.product.name}}</view>
       <view class="item-brand">{{item.product.brand_name}}</view>
-      <view class="item-price">${{item.product.price}}</view>
+      <view class="item-price">${{item.product.price * item.order.number}}</view>
       <view class="counter">
         <view data-index="{{index}}" bindtap="orderChange" data-id="{{item.order.id}}" data-option="-1" class="decr">-</view>
         <view class="number">{{item.order.number}}</view>
