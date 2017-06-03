@@ -134,9 +134,13 @@ var pageObject = {
                 shop_id: wx.getStorageSync('shop_id')        
             },
             success(res) {
-                if (res.data.data) {
-                    _this.callPay(res.data.data)
-                }
+              if (res.data.code == '0') {
+                showModel('操作失败', res.data.msg)
+                return;
+              }              
+              if (res.data.data) {
+                  _this.callPay(res.data.data)
+              }
             }
         })
       }
@@ -210,21 +214,25 @@ var pageObject = {
               shop_id: wx.getStorageSync('shop_id'),
           },
           success(res) {
-              if (res.data.code == '1') {
-                  // showSuccess('订单已提交');
-                  wx.setStorageSync('cartBadgeNum', 0)
-                  _this.setData({
-                      orderList: '',
-                      total_price: 0,
-                      total_price_rmb: 0,
-                      "footbarState.cartBadgeNum": 0
-                  })
-                  wx.hideToast();
-                  _this.setData({
-                      "modalProps.text": '已成功生成订单，预定商品库存有限，请到夏威夷T广场免税店4层提货处完成付款步骤确保顺利提货，售完即止，如有任何问题请与客服联系。',
-                      doneModalStatus: true
-                  })
-              }
+            if (res.data.code == '0') {
+              showModel('操作失败', res.data.msg)
+              return ;
+            }
+            if (res.data.code == '1') {
+                // showSuccess('订单已提交');
+                wx.setStorageSync('cartBadgeNum', 0)
+                _this.setData({
+                    orderList: '',
+                    total_price: 0,
+                    total_price_rmb: 0,
+                    "footbarState.cartBadgeNum": 0
+                })
+                wx.hideToast();
+                _this.setData({
+                    "modalProps.text": '已成功生成订单，预定商品库存有限，请到夏威夷T广场免税店4层提货处完成付款步骤确保顺利提货，售完即止，如有任何问题请与客服联系。',
+                    doneModalStatus: true
+                })
+            }
           }
       })
     }
@@ -242,21 +250,25 @@ var pageObject = {
                 takeoff_time: _this.data.inputYear + '-' +  _this.data.inputMonth + '-' +  _this.data.inputDay
             },
             success(res) {
-                if (res.data.code == '1') {
-                    // showSuccess('订单已提交');
-                    wx.setStorageSync('cartBadgeNum', 0)
-                    _this.setData({
-                        orderList: '',
-                        total_price: 0,
-                        total_price_rmb: 0,
-                        "footbarState.cartBadgeNum": 0
-                    })
-                    wx.hideToast();
-                    _this.setData({
-                      "modalProps.text": '顾客需在登机前3小时预定，已成功生成订单，预定已成功预订产品库存有限，请至少在飞机起飞前一小时，于旧金山机场免税店国际离境G区Chopard腕表专柜，或者A区Pandora首饰专柜，完成身份核实以及付款手续，确保顺利提货。未付款前，产品存货不予保障。售完即止，如有任何问题请与客服联系。',
-                        doneModalStatus: true
-                    })
-                }
+              if (res.data.code == '0') {
+                showModel('操作失败', res.data.msg)
+                return;
+              }              
+              if (res.data.code == '1') {
+                  // showSuccess('订单已提交');
+                  wx.setStorageSync('cartBadgeNum', 0)
+                  _this.setData({
+                      orderList: '',
+                      total_price: 0,
+                      total_price_rmb: 0,
+                      "footbarState.cartBadgeNum": 0
+                  })
+                  wx.hideToast();
+                  _this.setData({
+                    "modalProps.text": '顾客需在登机前3小时预定，已成功生成订单，预定已成功预订产品库存有限，请至少在飞机起飞前一小时，于旧金山机场免税店国际离境G区Chopard腕表专柜，或者A区Pandora首饰专柜，完成身份核实以及付款手续，确保顺利提货。未付款前，产品存货不予保障。售完即止，如有任何问题请与客服联系。',
+                      doneModalStatus: true
+                  })
+              }
             }
         })
       }
@@ -273,9 +285,13 @@ var pageObject = {
                 birthdate: _this.data.inputYear + '-' + _this.data.inputMonth + '-' +  _this.data.inputDay
             },
             success(res) {
-                if (res.data.data) {
-                    _this.callPay(res.data.data)
-                }
+              if (res.data.code == '0') {
+                showModel('操作失败', res.data.msg)
+                return;
+              }              
+              if (res.data.data) {
+                  _this.callPay(res.data.data)
+              }
             }
         })        
       }

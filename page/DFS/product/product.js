@@ -74,7 +74,6 @@ var pageObject = {
     showBusy('正在通信..');
     var _this = this
     wx.request({
-      // url: domain + 'Home/order/addCart',
       url: domain + 'V2/order/addCart',
       method: 'get',
       data: {
@@ -85,6 +84,10 @@ var pageObject = {
         uid: wx.getStorageSync('uid')
       },
       success(res) {
+        if (res.data.code == '0') {
+          showModel('操作失败', res.data.msg)
+          return;
+        }
         if (res.data.code == '1') {
           wx.hideToast();
           _this.setData({
@@ -207,6 +210,10 @@ var pageObject = {
           uid: wx.getStorageSync('uid')
         },
         success(res) {
+          if (res.data.code == '0') {
+            showModel('操作失败', res.data.msg)
+            return;
+          }          
           showBusy('正在通信..');
           _this.callPay(res.data.data)
         }
@@ -236,6 +243,10 @@ var pageObject = {
         birthdate: _this.data.inputYear + '-' + _this.data.inputMonth + '-' +  _this.data.inputDay          
       },
       success(res) {
+        if (res.data.code == '0') {
+          showModel('操作失败', res.data.msg)
+          return;
+        }        
         showBusy('正在通信..');
         _this.callPay(res.data.data)
       }
