@@ -2,6 +2,7 @@
   min-height: 100vh;
   padding: 20rpx;
   background-color: rgb(222, 222, 222);
+  overflow-x: hidden;
 }
 
 .banner {
@@ -17,6 +18,10 @@
   display: flex;
   padding: 20rpx;
   font-size: 32rpx;
+  font-weight: bold;
+}
+
+.order-price {
   font-weight: bold;
 }
 
@@ -61,7 +66,7 @@
 
 .order-card-item {
   position: relative;
-  font-weight: bold;
+  /* font-weight: bold; */
   margin-bottom: 20rpx;
   padding: 20rpx 0;
 }
@@ -70,7 +75,7 @@
   padding: 20rpx;
   padding-bottom: 50rpx;
   font-size: 32rpx;
-  font-weight: bold;
+  /* font-weight: bold; */
   position: relative;
 }
 
@@ -81,12 +86,12 @@
 
 .brand-name,
 .product-name {
-  padding-right: 200rpx;
+  padding-right: 270rpx;
 }
 
 .number {
   position: absolute;
-  right: 120rpx;
+  right:170rpx;
   bottom: 20rpx;
 }
 
@@ -104,4 +109,18 @@
   right: 20rpx;
   font-size: 28rpx;
   text-decoration: underline;
+}
+
+.order--table-cell {
+  display: flex;
+  padding: 20rpx;
+  font-size: 28rpx;
+}
+
+.order--table-cell .card--left-part {
+  width: 200rpx;  
+}
+
+.order--table-cell .card--right-part {
+  flex: 1;
 }

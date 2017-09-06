@@ -1,19 +1,59 @@
 <view class="history-container">
   <image mode="widthFix" bindtap="routerGoHome" class="banner" src="{{shopInfo.header_banner}}"></image>
   <view class="header">
-    <view class="total">合计{{orderInfo.order.length}}件商品</view>
+    <view class="total">合计{{orderInfo.product.length}}件商品</view>
+    <view class="order-price">${{orderInfo.order.total_price}}</view>
+  </view>
+  
+  <view wx:if="{{orderInfo.order.shop_id == '2'}}" class="order-card text-content" style="font-size: 28rpx; line-height: 40rpx;">
+      <view style="text-align: center; color: #B62A18; font-weight: bold; font-size: 40rpx; padding-bottom: 20rpx;">恭喜您，订单已成功！</view> 
+      <view style="padding: 0 40rpx;">
+        请在飞机起飞前1小时，
+        于旧金山机场免税店国际离境G区Chopard腕表专柜，
+        或者A区Pandora首饰专柜，完成身份核实以及付款手续，
+        确保顺利提货。 
+        未付款前，产品存货不予保障。售完即止，
+        如有任何问题请与客服联系，
+        或直接拨打旧金山机场免税店值班经理电话
+        650 444 1920。
+      </view>
   </view>
   <view class="order-card">
     <view class="card-header">
-      <view class="order-id">单号: {{orderInfo.order[0].order_id}}</view>
+      <view class="order-id">单号: {{orderInfo.order.order_id}}</view>
     </view>
     <view class="order-card-content">
-      <view class="order-card-item" wx:for="{{orderInfo.order}}">
-        <view class="brand-name">{{item.product.brand_name}}</view>
-        <view class="product-name">{{item.product.name}}</view>
+      <view class="order-card-item" wx:for="{{orderInfo.product}}">
+        <view class="brand-name">{{item.brand_name}}</view>
+        <view class="product-name">{{item.name}}</view>
         <view class="number">* {{item.number}}</view>
-        <view class="price">${{item.price}}</view>
+        <view class="price">${{item.price * item.number}}</view>
       </view>
     </view>
+  </view>
+  <view class="order-card" wx:if="{{orderInfo.order.shop_id == '2'}}">
+    <view class="order--table-cell">
+      <view class="card--left-part">订单时间</view>
+      <view class="card--right-part">{{orderInfo.order.order_time}}</view>
+    </view>
+    <view class="order--table-cell">
+      <view class="card--left-part">姓名</view>
+      <view class="card--right-part">{{orderInfo.order.consignee}}</view>
+    </view>
+    <view class="order--table-cell">
+      <view class="card--left-part">护照</view>
+      <view class="card--right-part">{{orderInfo.order.psp_num}}</view>
+    </view>
+    <view class="order--table-cell">
+      <view class="card--left-part">航班号</view>
+      <view class="card--right-part">{{orderInfo.order.flt_num}}</view>
+    </view>
+    <view class="order--table-cell">
+      <view class="card--left-part">航班时间</view>
+      <view class="card--right-part">{{orderInfo.order.takeoff_time}}</view>
+    </view>
+  </view>
+  <view wx:if="{{orderInfo.order.shop_id == '2'}}" class="order-card" style="text-align: center;">
+    <image mode="widthFix" style="height: 200rpx;" src="https://15580083.qcloud.la/{{orderInfo.order.barcode}}"></image>
   </view>
 </view>

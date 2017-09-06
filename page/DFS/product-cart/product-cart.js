@@ -434,6 +434,9 @@ var pageObject = {
     this.setData({
       doneModalStatus: false
     })
+    wx.reLaunch({
+      url: '../history-orders/history-orders'
+    })    
   },
   routerGoHistoryOrders() {
     wx.navigateTo({

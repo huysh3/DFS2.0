@@ -23,6 +23,15 @@ Page({
     shop_id: '',
     shopListState: false
   },
+  onLoad: function(options) {
+    if (JSON.stringify(options) != "{}") {
+      wx.setStorageSync('shopListFlag', 'true')
+      console.log('shop_id', options.shop_id)
+      wx.setStorageSync('shop_id', options.shop_id) 
+    } else {
+      return;
+    }
+  },
   onShow: function() {
     this.init()
     if (!wx.getStorageSync('shopListFlag')) {

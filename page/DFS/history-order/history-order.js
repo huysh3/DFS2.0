@@ -40,15 +40,15 @@ Page({
   onLoad(options) {
     var _this = this
     wx.request({
-      url: domain + 'Home/weapp/order_info',
+      url: domain + 'V2/weapp/orderInfo',
       data: {
         order_id: options.order_id,
         uid: wx.getStorageSync('uid')
       },
       success(res) {
-        console.log(res.data)
+        console.log(res.data.data)
         _this.setData({
-          orderInfo: res.data
+          orderInfo: res.data.data
         })
       }
     })

@@ -38,6 +38,9 @@
   </view>
 
   <import src="../../component/done-model/done-model.wxml"/>
+  <view class="input-model" wx:if="{{doneModalStatus}}">
+    <view class="mask"></view>
+  </view>
   <template is="done-model" data="{{modalProps}}" wx:if="{{doneModalStatus}}"/>
 
   <view name="input-model" wx:if="{{inputModalState}}">
