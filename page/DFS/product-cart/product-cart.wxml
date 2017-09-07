@@ -50,7 +50,7 @@
         输入联系电话以生成订单
       </view>
       <view class="modal-body">
-        <input bindinput="bindKeyInput" type="text" class="phone-input"></input>
+        <input bindinput="bindKeyInput" type="text" class="phone-input" value="{{inputPhoneNumber}}"></input>
       </view>
       <view class="modal-footer">
         <view class="input-cancel-btn" bindtap="inputModalCancel">
@@ -91,11 +91,16 @@
         起飞时间
       </view>
       <view class="full-modal-birthday-body">
-        <input bindinput="bindYearInput" type="text" class="full-birthday-input" placeholder="日"></input>
-        <span> — </span>
-        <input bindinput="bindMonthInput" type="text" class="full-birthday-input" placeholder="时"></input>
-        <span> — </span>
-        <input bindinput="bindDayInput" type="text" class="full-birthday-input" placeholder="分"></input>
+        <picker class="date-picker" mode="date" value="{{inputDate}}" bindchange="bindDateChange">
+          <view class="picker">
+            {{ inputDate ? inputDate : '选择日期' }}
+          </view>
+        </picker>
+        <picker class="time-picker" mode="time" value="{{inputTime}}" bindchange="bindTimeChange">
+          <view class="picker">
+            {{ inputTime ? inputTime : '选择时间' }}
+          </view>
+        </picker>
       </view>
       <view class="full-modal-footer">
         <view class="full-input-cancel-btn" bindtap="inputModalCancel">

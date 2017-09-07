@@ -86,27 +86,21 @@
       <view class="full-modal-body">
         <input bindinput="bindFLTInput" type="text" class="full-phone-input"></input>
       </view>
-      <!--<view class="full-input-modal-birthday-header">
-        生日
-      </view>
-      <view class="full-modal-birthday-body">
-        <input bindinput="bindYearInput" type="text" class="full-birthday-input" placeholder="年"></input>
-        <span> — </span>
-        <input bindinput="bindMonthInput" type="text" class="full-birthday-input" placeholder="月"></input>
-        <span> — </span>
-        <input bindinput="bindDayInput" type="text" class="full-birthday-input" placeholder="日"></input>
-      </view>-->
       <view class="full-input-modal-birthday-header">
         起飞时间
       </view>
       <view class="full-modal-birthday-body">
-        <input bindinput="bindYearInput" type="text" class="full-birthday-input" placeholder="日"></input>
-        <span> — </span>
-        <input bindinput="bindMonthInput" type="text" class="full-birthday-input" placeholder="时"></input>
-        <span> — </span>
-        <input bindinput="bindDayInput" type="text" class="full-birthday-input" placeholder="分"></input>
+        <picker class="date-picker" mode="date" value="{{inputDate}}" bindchange="bindDateChange">
+          <view class="picker">
+            {{ inputDate ? inputDate : '选择日期' }}
+          </view>
+        </picker>
+        <picker class="time-picker" mode="time" value="{{inputTime}}" bindchange="bindTimeChange">
+          <view class="picker">
+            {{ inputTime ? inputTime : '选择时间' }}
+          </view>
+        </picker>
       </view>
-      
       <view class="full-modal-footer">
         <view class="full-input-cancel-btn" bindtap="inputModalCancel">
           取消

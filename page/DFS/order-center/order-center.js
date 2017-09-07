@@ -47,6 +47,10 @@ var pageObject = {
     inputYear: '',
     inputMonth: '',
     inputDay: '',
+    inputHour: '',
+    inputMinute: '',
+    inputDate: '',
+    inputTime: '',
 
     doneModalStatus: false,
     inputModalState: false,
@@ -191,20 +195,27 @@ var pageObject = {
   bindFLTInput: function(e) {
     this.setData({ inputFLT: e.detail.value })
   },
-  bindYearInput: function(e) {
-    this.setData({ inputYear: e.detail.value })
-  },
   bindMonthInput: function(e) {
-    // this.setData({ inputMonth: parseInt(e.detail.value) < 10 ? '0' + e.detail.value : e.detail.value })
     this.setData({ inputMonth: e.detail.value })
   },
   bindDayInput: function(e) {
     this.setData({ inputDay: e.detail.value })
   },
+  bindHourInput: function(e) {
+    this.setData({ inputHour: e.detail.value })
+  },
+  bindMinuteInput: function(e) {
+    this.setData({ inputMinute: e.detail.value })
+  },
+  bindDateChange: function (e) {
+    this.setData({ inputDate: e.detail.value })
+  },
+  bindTimeChange: function (e) {
+    this.setData({ inputTime: e.detail.value })
+  },  
   confirmOrder: function() {
     var _this = this
     showBusy('正在通信..');
-    _this.inputModalCancel()
     if (wx.getStorageSync('shop_id') == 1) {
       wx.request({
           url: domain + 'V2/order/confirmOrder',
@@ -220,6 +231,7 @@ var pageObject = {
             }
             if (res.data.code == '1') {
                 // showSuccess('订单已提交');
+                _this.inputModalCancel()            
                 wx.setStorageSync('cartBadgeNum', 0)
                 _this.setData({
                     orderList: '',
@@ -247,7 +259,7 @@ var pageObject = {
                 consignee: _this.data.inputConsignee,
                 psp_num: _this.data.inputPSP,
                 flt_num: _this.data.inputFLT,
-                takeoff_time: _this.data.inputYear + '-' +  _this.data.inputMonth + '-' +  _this.data.inputDay
+                takeoff_time: _this.data.inputDate + ' ' + _this.data.inputTime
             },
             success(res) {
               if (res.data.code == '0') {
@@ -256,6 +268,7 @@ var pageObject = {
               }              
               if (res.data.code == '1') {
                   // showSuccess('订单已提交');
+                  _this.inputModalCancel()              
                   wx.setStorageSync('cartBadgeNum', 0)
                   _this.setData({
                       orderList: '',
@@ -290,7 +303,8 @@ var pageObject = {
                 return;
               }              
               if (res.data.data) {
-                  _this.callPay(res.data.data)
+                _this.inputModalCancel()
+                _this.callPay(res.data.data)
               }
             }
         })        

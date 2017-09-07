@@ -25,11 +25,17 @@
   font-size: 26rpx;
   line-height: 50rpx;
   color: #666;
+  justify-content: space-between;
 }
 
 .full-modal-birthday-body span{
   position: relative;
   top: 10rpx;
+}
+
+.full-modal-birthday-body .picker {
+  border: 1rpx solid #999;
+  width: 220rpx;
 }
 
 .full-birthday-input {
