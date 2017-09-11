@@ -53,7 +53,7 @@ Page({
   getCouponStatus: function() {
     var _this = this
     wx.request({
-      url: domain + 'V2/coupon/coupon_status',
+      url: domain + 'V3/coupon/coupon_status',
       data: {
         shop_id: wx.getStorageSync('shop_id'),
         uid: wx.getStorageSync('uid')
@@ -70,7 +70,7 @@ Page({
   getShopList: function() {
     var _this = this
     wx.request({
-      url: domain + 'V2/weapp/shopList',
+      url: domain + 'V3/weapp/shopList',
       success(res) {
         console.log(res.data)
         _this.setData({
@@ -105,7 +105,7 @@ Page({
   getSlideShow: function() {
     var _this = this
     wx.request({
-      url: domain + 'V2/Slideshow/getSlideShow',
+      url: domain + 'V3/Slideshow/getSlideShow',
       data: {
         shop_id: wx.getStorageSync('shop_id')
       },
@@ -134,7 +134,7 @@ Page({
   getShopInfo: function() {
     var _this = this
     wx.request({
-      url: domain + 'V2/weapp/shopInfo',
+      url: domain + 'V3/weapp/shopInfo',
       data: {
         shop_id: wx.getStorageSync('shop_id')
       },
@@ -151,7 +151,7 @@ Page({
   getBanner: function() {
     var _this = this
     wx.request({
-      url: domain + 'V2/Banner/getBanner',
+      url: domain + 'V3/Banner/getBanner',
       data: {
         shop_id: wx.getStorageSync('shop_id')
       },

@@ -74,7 +74,7 @@ var pageObject = {
     showBusy('正在通信..');
     var _this = this
     wx.request({
-      url: domain + 'V2/order/addCart',
+      url: domain + 'V3/order/addCart',
       method: 'get',
       data: {
         product_id: _this.data.product_id,
@@ -147,7 +147,7 @@ var pageObject = {
   getProductInfo: function(options) {
     var _this = this
     wx.request({
-        url: domain + 'V2/weapp/product_info',
+        url: domain + 'V3/weapp/product_info',
         data: {
           product_id : options.product_id,
           adult: wx.getStorageSync('adult'),
@@ -201,7 +201,7 @@ var pageObject = {
     var _this = this
     if (wx.getStorageSync('shop_id') == 1) {
       wx.request({
-        url: domain + 'V2/order/buyNow',
+        url: domain + 'V3/order/buyNow',
         data: {
           product_id: _this.data.product_id,
           shop_id: _this.data.shop_id,
@@ -230,7 +230,7 @@ var pageObject = {
     showBusy('正在通信..');
     _this.inputModalCancel()
     wx.request({
-      url: domain + 'V2/order/buyNow',
+      url: domain + 'V3/order/buyNow',
       data: {
         product_id: _this.data.product_id,
         shop_id: _this.data.shop_id,
@@ -284,7 +284,7 @@ var pageObject = {
   callPay(order_id) {
     var _this = this
     wx.request({
-        url: domain + 'V2/Wechatpay/callPay',
+        url: domain + 'V3/Wechatpay/callPay',
         data: {
             order_id: order_id,
             shop_id: wx.getStorageSync('shop_id'),
